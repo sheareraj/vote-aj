@@ -268,21 +268,37 @@ export default function App() {
               Simple, lightweight lead form for supporters.
             </div>
             <div className="mt-6 grid gap-4">
-              <input
-                className="rounded-2xl border border-slate-300 px-4 py-3 outline-none ring-0"
-                placeholder="Full name"
-              />
-              <input
-                className="rounded-2xl border border-slate-300 px-4 py-3 outline-none ring-0"
-                placeholder="Email address"
-              />
-              <input
-                className="rounded-2xl border border-slate-300 px-4 py-3 outline-none ring-0"
-                placeholder="Postal code"
-              />
-              <button className="rounded-2xl bg-blue-900 px-5 py-3 font-semibold text-white transition hover:-translate-y-0.5">
-                Sign Up
-              </button>
+              <form
+                action="https://formspree.io/f/YOUR_FORM_ID"
+                method="POST"
+                className="mt-6 grid gap-4"
+              >
+                <input
+                  name="name"
+                  className="rounded-2xl border border-slate-300 px-4 py-3"
+                  placeholder="Full name"
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  className="rounded-2xl border border-slate-300 px-4 py-3"
+                  placeholder="Email address"
+                />
+
+                <input
+                  name="postalCode"
+                  className="rounded-2xl border border-slate-300 px-4 py-3"
+                  placeholder="Postal code"
+                />
+
+                <button
+                  type="submit"
+                  className="rounded-2xl bg-blue-900 px-5 py-3 font-semibold text-white"
+                >
+                  Sign Up
+                </button>
+              </form>
             </div>
           </div>
         </div>
