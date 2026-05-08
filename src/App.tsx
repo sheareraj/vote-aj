@@ -149,7 +149,7 @@ export default function App() {
                 ['Ward', 'Monaghan Ward'],
                 ['City', 'Peterborough'],
                 ['Focus', 'Practical growth, infrastructure, accountability'],
-                ['Approach', 'Responsive, professional, community-driven'],
+                ['Approach', 'Responsive, transparent, data-driven decisions'],
               ].map(([k, v]) => (
                 <div
                   key={k}
@@ -235,12 +235,15 @@ export default function App() {
             </ul>
           </div>
           <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-950 shadow-xl">
-            <div className="aspect-video bg-[linear-gradient(135deg,#0b1730,#183c73)]">
-              <div className="flex h-full items-center justify-center">
-                <div className="rounded-full bg-white/15 px-8 py-5 text-lg font-semibold text-white backdrop-blur">
-                  Video Embed Area
-                </div>
-              </div>
+            <div className="aspect-video">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/BRqkrA3_uwY"
+                title="AJ Shearer Campaign Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>
