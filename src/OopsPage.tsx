@@ -22,7 +22,7 @@ export default function OopsPage() {
           </p>
 
           <div className="mt-8 overflow-hidden rounded-2xl bg-slate-950">
-            <div className="aspect-video">
+            <div className="aspect-square max-w-md mx-auto">
               <iframe
                 className="h-full w-full"
                 src="https://www.youtube.com/embed/9QfezQ3jfTs"
