@@ -314,14 +314,17 @@ export default function App() {
             Monaghan Ward, Peterborough
           </div>
           <div className="flex gap-5">
-            <a href="#about" className="hover:text-blue-900">
-              About
-            </a>
-            <a href="#priorities" className="hover:text-blue-900">
-              Priorities
-            </a>
-            <a href="#involved" className="hover:text-blue-900">
-              Contact
+            <a href="#about" className="hover:text-blue-900">About</a>
+            <a href="#priorities" className="hover:text-blue-900">Priorities</a>
+            <a href="#involved" className="hover:text-blue-900">Contact</a>
+
+            <a
+              href="https://www.facebook.com/profile.php?id=61589293620797"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-blue-900 hover:underline"
+            >
+              Facebook
             </a>
           </div>
         </div>
