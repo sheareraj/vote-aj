@@ -7,12 +7,9 @@ export default function OopsPage() {
         </a>
 
         <div className="mt-10 rounded-3xl bg-white p-6 text-slate-900 shadow-2xl">
-          <div className="text-sm font-bold uppercase tracking-[0.25em] text-blue-900">
-            Sorry I missed you
-          </div>
 
-          <h1 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">
-            Oops — I missed you at the door.
+          <h1 className="mt-3 text-4xl font-black tracking-tight text-blue-900 md:text-5xl">
+            Sorry I missed you at the door!
           </h1>
 
           <p className="mt-5 text-lg leading-8 text-slate-600">
@@ -35,7 +32,7 @@ export default function OopsPage() {
           </div>
 
           <form
-            action="https://formspree.io/f/YOUR_FORM_ID"
+            action="https://formspree.io/f/xvzldnvz"
             method="POST"
             className="mt-8 grid gap-4"
           >
@@ -84,7 +81,7 @@ export default function OopsPage() {
             </button>
           </form>
 
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-8 flex justify-center">
             <a
               href="/"
               className="rounded-full bg-blue-900 px-6 py-3 font-semibold text-white"
@@ -92,12 +89,6 @@ export default function OopsPage() {
               Visit Main Campaign Site
             </a>
 
-            <a
-              href="/#involved"
-              className="rounded-full border border-slate-300 px-6 py-3 font-semibold text-slate-700"
-            >
-              Get Involved
-            </a>
           </div>
         </div>
       </div>
