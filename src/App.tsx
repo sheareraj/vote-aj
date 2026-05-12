@@ -169,9 +169,9 @@ export default function App() {
 
             <div>
               <img
-                src="/family-photo.jpg"
+                src="/images/family-photo.jpg"
                 alt="AJ Shearer and family"
-                className="w-full rounded-[2rem] shadow-2xl"
+                className="w-full rounded-3xl shadow-xl"
               />
             </div>
           </div>
