@@ -29,7 +29,7 @@ export default function App() {
             href="#involved"
             className="rounded-full bg-blue-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5"
           >
-            Support AJ
+            Get in touch
           </a>
         </div>
       </header>
@@ -51,20 +51,6 @@ export default function App() {
               Focused on growth, livability, accountability, and common-sense
               city building in Peterborough.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#involved"
-                className="rounded-full bg-white px-6 py-3 font-semibold text-blue-900 shadow-lg transition hover:-translate-y-0.5"
-              >
-                Join the Campaign
-              </a>
-              <a
-                href="#video"
-                className="rounded-full border border-white/30 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
-              >
-                Watch Video
-              </a>
-            </div>
           </div>
 
           <div className="grid gap-4">
@@ -116,30 +102,83 @@ export default function App() {
           </div>
         </div>
       </section>
-
-      <section id="about" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-start">
-          <div>
+      <section id="about" className="bg-white py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center">
             <div className="text-sm font-bold uppercase tracking-[0.25em] text-blue-900">
               About AJ
             </div>
+
             <h2 className="mt-3 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">
-              Rooted locally. Focused on results.
+              Rooted in Peterborough. Focused on family and community.
             </h2>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              AJ Shearer is running to bring thoughtful, practical leadership to
-              Monaghan Ward. With experience in business, data, and
-              community-focused problem solving, AJ is committed to making city
-              decisions that are transparent, affordable, and grounded in what
-              residents actually need.
-            </p>
-            <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">
-              This campaign is built around clear communication,
-              neighbourhood-level priorities, and a belief that residents
-              deserve a councillor who listens, explains decisions plainly, and
-              follows through.
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+              AJ Shearer is a husband, father, business professional, and long-time
+              member of the Peterborough community who is committed to helping build
+              a stronger, safer, and more affordable future for local families.
             </p>
           </div>
+
+          <div className="mt-16 grid gap-12 md:grid-cols-[1fr_1.1fr] md:items-start">
+            <div className="space-y-10">
+              <div>
+                <h3 className="text-2xl font-black tracking-tight text-blue-900">
+                  Family First
+                </h3>
+
+                <p className="mt-4 text-lg leading-8 text-slate-600">
+                  AJ and his wife Seanna are raising their two boys in Peterborough
+                  and care deeply about building a city where families can feel safe,
+                  connected, and optimistic about the future.
+                </p>
+              </div>
+
+              <div className="border-t border-slate-200 pt-10">
+                <h3 className="text-2xl font-black tracking-tight text-blue-900">
+                  Professional Background
+                </h3>
+
+                <p className="mt-4 text-lg leading-8 text-slate-600">
+                  With a background in aerospace engineering, business intelligence,
+                  data analytics, and real estate, AJ brings a practical,
+                  data-driven perspective to solving problems and making decisions
+                  that deliver long-term value for residents.
+                </p>
+              </div>
+
+              <div className="border-t border-slate-200 pt-10">
+                <h3 className="text-2xl font-black tracking-tight text-blue-900">
+                  Deep Local Roots
+                </h3>
+
+                <p className="mt-4 text-lg leading-8 text-slate-600">
+                  AJ’s family has deep roots in the Peterborough area spanning seven
+                  generations. Their connection to the region stretches back
+                  generations through local businesses, families, neighbourhoods,
+                  and community involvement.
+                </p>
+
+                <p className="mt-4 text-lg leading-8 text-slate-600">
+                  Peterborough is home — and AJ believes the city’s future should be
+                  built in a way that preserves what people love about the community
+                  while creating new opportunities for the next generation.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <img
+                src="/family-photo.jpg"
+                alt="AJ Shearer and family"
+                className="w-full rounded-[2rem] shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-start">
           <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
             <div className="text-sm font-bold uppercase tracking-[0.25em] text-blue-900">
               At a glance
@@ -181,29 +220,27 @@ export default function App() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
               [
-                'Affordable, sensible growth',
+                'Affordable, Sensible Growth',
                 'Support smart housing and development that respects existing neighbourhoods while helping Peterborough grow responsibly.',
               ],
               [
-                'Infrastructure that works',
+                'Infrastructure That Works',
                 'Push for roads, sidewalks, parks, and public assets that are maintained properly and planned with long-term value in mind.',
               ],
               [
-                'Better accountability at City Hall',
+                'Better Accountability',
                 'Advocate for plain-language communication, financial discipline, and decisions residents can actually follow.',
               ],
-            ].map(([title, body], i) => (
+            ].map(([title, body]) => (
               <div
                 key={title}
                 className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-slate-200"
               >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-900 text-lg font-black text-white">
-                  {i + 1}
-                </div>
-                <h3 className="text-2xl font-black tracking-tight text-slate-900">
+                <div className="mb-5 inline-flex rounded-full bg-blue-900 px-5 py-2 text-sm font-black uppercase tracking-wide text-white">
                   {title}
-                </h3>
-                <p className="mt-4 text-base leading-7 text-slate-600">
+                </div>
+
+                <p className="text-base leading-7 text-slate-600">
                   {body}
                 </p>
               </div>
@@ -211,29 +248,40 @@ export default function App() {
           </div>
         </div>
       </section>
-
-      <section id="video" className="mx-auto max-w-6xl px-6 py-20">
+      <section id="GetInvolved" className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
           <div>
             <div className="text-sm font-bold uppercase tracking-[0.25em] text-blue-900">
-              Video
+              Thank You
             </div>
+
             <h2 className="mt-3 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">
-              Keep the message personal and direct.
+              Thanks for taking the time to learn a little more about me and the campaign.
             </h2>
+
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              A short, well-produced campaign video can help residents quickly
-              understand who AJ is, why he is running, and what he wants to
-              accomplish for Monaghan Ward.
+              Peterborough is an incredible place to raise a family, build a career,
+              and put down roots. I’m running because I believe we can make smarter,
+              more practical decisions that help keep our city affordable, safe, and
+              moving in the right direction.
             </p>
-            <ul className="mt-6 space-y-3 text-slate-700">
-              <li>• One main introduction video near the top of the page</li>
-              <li>
-                • Optional short clips for issues, endorsements, or events
-              </li>
-              <li>• Clear captions and mobile-friendly playback</li>
-            </ul>
+
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+              If you’re looking for additional information, have questions about the
+              campaign, or simply want to connect, please don’t hesitate to reach
+              out. I’d genuinely love to hear from you.
+            </p>
+
+            <div className="mt-8">
+              <a
+                href="#Contact"
+                className="inline-flex items-center rounded-2xl bg-blue-900 px-6 py-3 text-base font-bold text-white transition hover:bg-blue-800"
+              >
+                Get In Touch
+              </a>
+            </div>
           </div>
+
           <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-950 shadow-xl">
             <div className="aspect-video">
               <iframe
@@ -265,10 +313,10 @@ export default function App() {
           </div>
           <div className="rounded-3xl bg-white p-6 text-slate-900 shadow-2xl">
             <div className="text-xl font-black tracking-tight">
-              Join the campaign
+              Get in touch
             </div>
             <div className="mt-1 text-sm text-slate-500">
-              Simple, lightweight lead form for supporters.
+              I'm more excited to hear from you than you are to fill out this form!
             </div>
             <div className="mt-6 grid gap-4">
               <form
@@ -293,6 +341,13 @@ export default function App() {
                   name="postalCode"
                   className="rounded-2xl border border-slate-300 px-4 py-3"
                   placeholder="Postal code"
+                />
+
+                <textarea
+                  name="mutual_help"
+                  placeholder="How can we help each other?"
+                  rows={4}
+                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-500 focus:border-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-200"
                 />
 
                 <button
