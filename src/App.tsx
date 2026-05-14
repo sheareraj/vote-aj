@@ -31,6 +31,12 @@ export default function App() {
             Get in touch
           </a>
           <a
+            href="#involved"
+            className="rounded-full bg-[#651024] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#7d1830]"
+          >
+            Order a Sign
+          </a>
+          <a
             href="/resume"
             className="rounded-full bg-[#651024] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#7d1830]"
           >
