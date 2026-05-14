@@ -106,7 +106,7 @@ export default function App() {
 
             </p>
           </div>
-          <div>
+          <div className="mx-auto max-w-md">
             <img
               src="/images/family-photo.jpg"
               alt="AJ Shearer and family"
@@ -114,7 +114,7 @@ export default function App() {
             />
           </div>
           <div className="mt-16 grid gap-12 md:grid-cols-[1fr_1.1fr] md:items-start">
-            <div className="space-y-10">
+            <div className="space-y-10 text-center">
               <div>
                 <h3 className="text-2xl font-black tracking-tight text-[#651024]">
                   Family First
