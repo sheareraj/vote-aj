@@ -19,9 +19,6 @@ export default function App() {
             <a href="#priorities" className="hover:text-[#651024]">
               Priorities
             </a>
-            <a href="#video" className="hover:text-[#651024]">
-              Video
-            </a>
             <a href="#involved" className="hover:text-[#651024]">
               Get Involved
             </a>
@@ -83,7 +80,7 @@ export default function App() {
               </div>
             </div>
 
-            
+
           </div>
         </div>
       </section>
@@ -334,7 +331,17 @@ export default function App() {
                 className="rounded-2xl border border-[#d9b8c2] px-4 py-3 outline-none focus:border-[#651024]"
                 placeholder="Postal code"
               />
+              <label className="flex items-center gap-3 rounded-2xl border border-[#d9b8c2] px-4 py-3 text-[#2b0b14]">
+                <input
+                  type="checkbox"
+                  name="lawnSign"
+                  className="h-5 w-5 accent-[#651024]"
+                />
 
+                <span className="font-medium">
+                  I want a lawn sign
+                </span>
+              </label>
               <textarea
                 name="mutual_help"
                 placeholder="How can we help each other?"
