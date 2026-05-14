@@ -259,14 +259,6 @@ export default function App() {
               out. I’d genuinely love to hear from you.
             </p>
 
-            <div className="mt-8">
-              <a
-                href="#Contact"
-                className="inline-flex items-center rounded-2xl bg-[#651024] px-6 py-3 text-base font-bold text-white transition hover:bg-[#7d1830]"
-              >
-                Get In Touch
-              </a>
-            </div>
           </div>
 
           <div className="overflow-hidden rounded-[2rem] border border-[#ead7dd] bg-[#2b0b14] shadow-xl">
