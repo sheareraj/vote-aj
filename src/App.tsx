@@ -117,7 +117,7 @@ export default function App() {
             />
           </div>
           <div className="mx-auto mt-16 max-w-3xl">
-          <div className="space-y-10 text-center mx-auto max-w-xl">
+            <div className="space-y-10 text-center mx-auto max-w-xl">
               <div>
                 <h3 className="text-2xl font-black tracking-tight text-[#651024]">
                   Family First
