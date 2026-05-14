@@ -116,8 +116,8 @@ export default function App() {
               className="w-full rounded-3xl shadow-xl"
             />
           </div>
-          <div className="mt-16 grid gap-12 md:grid-cols-[1fr_1.1fr] md:items-start">
-            <div className="space-y-10 text-center">
+          <div className="mx-auto mt-16 max-w-3xl">
+          <div className="space-y-10 text-center mx-auto max-w-xl">
               <div>
                 <h3 className="text-2xl font-black tracking-tight text-[#651024]">
                   Family First
