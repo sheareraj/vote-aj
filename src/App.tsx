@@ -132,22 +132,7 @@ export default function App() {
         </div>
   </div>
 </section>
-      <section className="bg-[#651024] py-20">
-  <div className="mx-auto max-w-[600px] px-6">
-    <div className="overflow-hidden rounded-[2rem] shadow-2xl">
-      <div className="aspect-video">
-        <iframe
-          className="h-full w-full"
-          src="https://www.youtube.com/embed/BRqkrA3_uwY"
-          title="AJ Shearer Campaign Video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        />
-      </div>
-    </div>
-  </div>
-</section>
+
 
       <section id="about" className="bg-white py-20">
         <div className="mx-auto max-w-6xl px-6">

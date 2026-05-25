@@ -24,18 +24,7 @@ export default function ResumePage() {
                             </p>
                         </div>
 
-                        <div className="overflow-hidden rounded-[2rem] bg-[#2b0b14] shadow-md">
-                            <div className="aspect-video">
-                                <iframe
-                                    className="h-full w-full"
-                                    src="https://www.youtube.com/embed/BRqkrA3_uwY"
-                                    title="AJ Shearer Resume Introduction"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerPolicy="strict-origin-when-cross-origin"
-                                    allowFullScreen
-                                />
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </header>
