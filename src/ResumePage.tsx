@@ -1,6 +1,6 @@
 export default function ResumePage() {
     return (
-        <div className="min-h-screen bg-[#f8f1f3] text-[#2b0b14]">
+        <div className="min-h-screen bg-[#f8f1f3] text-[#3a1a22]">
             <header className="bg-[#651024] px-6 py-10 text-white">
                 <div className="mx-auto max-w-6xl">
                     <a href="/" className="text-sm font-semibold text-[#f3dfe5] hover:underline">
@@ -13,7 +13,7 @@ export default function ResumePage() {
                                 AJ Shearer
                             </div>
 
-                            <h1 className="mt-3 text-5xl font-black tracking-tight md:text-6xl">
+                            <h1 className="mt-3 text-5xl font-bold tracking-tight md:text-6xl">
                                 Experience, skills, and community roots.
                             </h1>
 
@@ -24,7 +24,7 @@ export default function ResumePage() {
                             </p>
                         </div>
 
-                        <div className="overflow-hidden rounded-[2rem] bg-[#2b0b14] shadow-2xl">
+                        <div className="overflow-hidden rounded-[2rem] bg-[#2b0b14] shadow-md">
                             <div className="aspect-video">
                                 <iframe
                                     className="h-full w-full"
@@ -41,23 +41,23 @@ export default function ResumePage() {
             </header>
 
             <main className="mx-auto max-w-6xl px-6 py-20">
-                <section className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-[#ead7dd] md:p-10">
+                <section className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
                     <div className="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
                         Where I’ve developed my skills
                     </div>
 
-                    <h2 className="mt-3 text-4xl font-black tracking-tight text-[#2b0b14]">
+                    <h2 className="mt-3 text-4xl font-bold tracking-tight text-[#3a1a22]">
                         Education, experience, and a lifelong curiosity to keep learning.
                     </h2>
 
                     <div className="mt-12 grid gap-10 md:grid-cols-3">
                         <div>
 
-                            <h3 className="mt-4 text-2xl font-black text-[#2b0b14]">
+                            <h3 className="mt-4 text-2xl font-bold text-[#3a1a22]">
                                 Peterborough Roots
                             </h3>
 
-                            <p className="mt-3 text-base leading-7 text-[#6b4a53]">
+                            <p className="mt-3 text-base leading-7 text-[#7a6167]">
                                 Grew up primarily in Peterborough and attended RF Downey,
                                 Prince of Wales, and Adam Scott.
                             </p>
@@ -65,22 +65,22 @@ export default function ResumePage() {
 
                         <div>
 
-                            <h3 className="mt-4 text-2xl font-black text-[#2b0b14]">
+                            <h3 className="mt-4 text-2xl font-bold text-[#3a1a22]">
                                 Engineering Education
                             </h3>
 
-                            <p className="mt-3 text-base leading-7 text-[#6b4a53]">
+                            <p className="mt-3 text-base leading-7 text-[#7a6167]">
                                 Bachelor of Engineering with Distinction from Carleton University.
                             </p>
                         </div>
 
                         <div>
 
-                            <h3 className="mt-4 text-2xl font-black text-[#2b0b14]">
+                            <h3 className="mt-4 text-2xl font-bold text-[#3a1a22]">
                                 Lifelong Learning
                             </h3>
 
-                            <p className="mt-3 text-base leading-7 text-[#6b4a53]">
+                            <p className="mt-3 text-base leading-7 text-[#7a6167]">
                                 Entrepreneurship and business ownership have reinforced the importance
                                 of adaptability, curiosity, and continuous learning.
                             </p>
@@ -88,23 +88,23 @@ export default function ResumePage() {
                     </div>
                 </section>
 
-                <section className="mt-10 rounded-3xl bg-white p-8 shadow-sm ring-1 ring-[#ead7dd] md:p-10">
+                <section className="mt-10 rounded-3xl bg-white p-8 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
                     <div className="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
                         How I’ve earned a living
                     </div>
 
-                    <h2 className="mt-3 text-4xl font-black tracking-tight text-[#2b0b14]">
+                    <h2 className="mt-3 text-4xl font-bold tracking-tight text-[#3a1a22]">
                         Experience across technology, business, and real estate.
                     </h2>
 
                     <div className="mt-12 grid gap-10 md:grid-cols-2">
                         <div>
 
-                            <h3 className="mt-4 text-2xl font-black text-[#2b0b14]">
+                            <h3 className="mt-4 text-2xl font-bold text-[#3a1a22]">
                                 Systems & Technology
                             </h3>
 
-                            <p className="mt-3 text-base leading-7 text-[#6b4a53]">
+                            <p className="mt-3 text-base leading-7 text-[#7a6167]">
                                 Started in software testing and system integration before moving into
                                 healthcare consulting and data analytics.
                             </p>
@@ -112,11 +112,11 @@ export default function ResumePage() {
 
                         <div>
 
-                            <h3 className="mt-4 text-2xl font-black text-[#2b0b14]">
+                            <h3 className="mt-4 text-2xl font-bold text-[#3a1a22]">
                                 Entrepreneurship
                             </h3>
 
-                            <p className="mt-3 text-base leading-7 text-[#6b4a53]">
+                            <p className="mt-3 text-base leading-7 text-[#7a6167]">
                                 Co-founded and operated a business intelligence and system integration
                                 company focused on helping organizations make better use of their data.
                             </p>
@@ -124,11 +124,11 @@ export default function ResumePage() {
 
                         <div>
 
-                            <h3 className="mt-4 text-2xl font-black text-[#2b0b14]">
+                            <h3 className="mt-4 text-2xl font-bold text-[#3a1a22]">
                                 Real Estate
                             </h3>
 
-                            <p className="mt-3 text-base leading-7 text-[#6b4a53]">
+                            <p className="mt-3 text-base leading-7 text-[#7a6167]">
                                 Returned home to partner with family and help people move into and
                                 within our community as a Real Estate Broker.
                             </p>
@@ -136,11 +136,11 @@ export default function ResumePage() {
 
                         <div>
 
-                            <h3 className="mt-4 text-2xl font-black text-[#2b0b14]">
+                            <h3 className="mt-4 text-2xl font-bold text-[#3a1a22]">
                                 Problem Solving
                             </h3>
 
-                            <p className="mt-3 text-base leading-7 text-[#6b4a53]">
+                            <p className="mt-3 text-base leading-7 text-[#7a6167]">
                                 My career has consistently centered around analyzing problems,
                                 understanding systems, exploring solutions and helping people make informed decisions.
                             </p>
@@ -148,14 +148,14 @@ export default function ResumePage() {
                     </div>
                 </section>
 
-                <section className="mt-10 rounded-3xl bg-white p-8 shadow-sm ring-1 ring-[#ead7dd] md:p-10">
+                <section className="mt-10 rounded-3xl bg-white p-8 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
                     <div className="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
                         Community Involvement
                     </div>
 
                     <div className="mt-6 grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-start">
                         <div>
-                            <h2 className="text-4xl font-black tracking-tight text-[#2b0b14]">
+                            <h2 className="text-4xl font-bold tracking-tight text-[#3a1a22]">
                                 Supporting organizations and activities that strengthen our community.
                             </h2>
 
@@ -171,7 +171,7 @@ export default function ResumePage() {
                                 ].map((item) => (
                                     <div
                                         key={item}
-                                        className="rounded-full bg-[#f8f1f3] px-5 py-3 text-sm font-semibold text-[#651024] ring-1 ring-[#ead7dd]"
+                                        className="rounded-full bg-[#f8f1f3] px-5 py-3 text-sm font-semibold text-[#651024] ring-1 ring-[#efe4e7]"
                                     >
                                         {item}
                                     </div>
@@ -183,7 +183,7 @@ export default function ResumePage() {
                             <img
                                 src="/images/pagans-family.jpg"
                                 alt="AJ Shearer community involvement"
-                                className="w-full rounded-[2rem] shadow-xl ring-1 ring-[#ead7dd]"
+                                className="w-full rounded-[2rem] shadow-md ring-1 ring-[#efe4e7]"
                             />
                         </div>
                     </div>
