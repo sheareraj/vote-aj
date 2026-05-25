@@ -44,52 +44,65 @@ export default function App() {
           </a>
         </div>
       </header>
+      <section className="relative min-h-screen overflow-hidden bg-[#651024] text-white">
+        <img
+          src="/images/hero-main.jpg"
+          alt="AJ Shearer in Peterborough"
+          className="absolute inset-0 h-full w-full object-cover object-[85%_center]"
+        />
 
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#7a2337] to-[#651024] text-white">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-white blur-3xl" />
-          <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-white blur-3xl" />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#651024]/95 via-[#651024]/35 via-30% to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20" />
 
-        <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center md:py-28">
-          <div>
-            <div className="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
+        <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl items-center px-6 py-24">
+          <div className="max-w-2xl">
+            <div className="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/90 backdrop-blur">
               Running for City Council
             </div>
 
-            <h1 className="max-w-xl text-5xl font-bold leading-none tracking-tight md:text-7xl">
+            <h1 className="text-5xl font-black leading-none tracking-tight md:text-7xl">
               A practical voice for Monaghan Ward.
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[#f3dfe5]">
-              Focused on growth, livability, accountability, and common-sense
-              city building in Peterborough.
+            <p className="mt-6 max-w-xl text-lg leading-8 text-white/90">
+              Focused on growth, livability, accountability, and common-sense city
+              building in Peterborough.
             </p>
-          </div>
 
-          <div className="grid gap-4">
-            <div className="rounded-3xl bg-white/10 p-4 backdrop-blur">
-              <div className="aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 bg-[#2b0b14]">
-                <div className="flex h-full items-center justify-center bg-[linear-gradient(135deg,#651024,#2b0b14)]">
-                  <div className="text-center">
-                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white/20 text-2xl">
-                      ▶
-                    </div>
-                    <div className="text-sm font-semibold uppercase tracking-[0.25em] text-[#f3dfe5]">
-                      Campaign Video
-                    </div>
-                    <div className="mt-2 text-3xl font-bold">
-                      Meet AJ Shearer
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#about"
+                className="rounded-full bg-white px-6 py-3 font-semibold text-[#651024] shadow-lg transition hover:-translate-y-0.5"
+              >
+                Learn More
+              </a>
+
+              <a
+                href="#involved"
+                className="rounded-full border border-white/40 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
+              >
+                Get Involved
+              </a>
             </div>
-
-
           </div>
         </div>
       </section>
+      <section className="bg-[#651024] py-20">
+  <div className="mx-auto max-w-[600px] px-6">
+    <div className="overflow-hidden rounded-[2rem] shadow-2xl">
+      <div className="aspect-video">
+        <iframe
+          className="h-full w-full"
+          src="https://www.youtube.com/embed/BRqkrA3_uwY"
+          title="AJ Shearer Campaign Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
       <section id="about" className="bg-white py-20">
         <div className="mx-auto max-w-6xl px-6">
