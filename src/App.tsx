@@ -44,8 +44,52 @@ export default function App() {
           </a>
         </div>
       </header>
-      <section className="relative min-h-screen overflow-hidden bg-[#651024] text-white">
-        <img
+      <section className="relative overflow-hidden bg-[#651024] text-white">
+  {/* Mobile layout */}
+  <div className="md:hidden">
+    <div className="h-[52vh] overflow-hidden">
+      <img
+        src="/images/hero-main.jpg"
+        alt="AJ Shearer in Peterborough"
+        className="h-full w-full object-cover object-[58%_center]"
+      />
+    </div>
+
+    <div className="px-6 py-10">
+      <div className="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
+        Running for City Council
+      </div>
+
+      <h1 className="text-4xl font-black leading-[1.05] tracking-tight">
+        A practical voice for Monaghan Ward.
+      </h1>
+
+      <p className="mt-5 text-base leading-7 text-white/90">
+        Focused on growth, livability, accountability, and common-sense city
+        building in Peterborough.
+      </p>
+
+      <div className="mt-7 flex flex-wrap gap-3">
+        <a
+          href="#about"
+          className="rounded-full bg-white px-5 py-3 font-semibold text-[#651024] shadow-lg"
+        >
+          Learn More
+        </a>
+
+        <a
+          href="#involved"
+          className="rounded-full border border-white/40 px-5 py-3 font-semibold text-white"
+        >
+          Get Involved
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {/* Desktop layout */}
+  <div className="relative hidden min-h-screen md:block">
+    <img
           src="/images/hero-main.jpg"
           alt="AJ Shearer in Peterborough"
           className="absolute inset-0 h-full w-full object-cover object-[85%_center]"
@@ -86,7 +130,8 @@ export default function App() {
             </div>
           </div>
         </div>
-      </section>
+  </div>
+</section>
       <section className="bg-[#651024] py-20">
   <div className="mx-auto max-w-[600px] px-6">
     <div className="overflow-hidden rounded-[2rem] shadow-2xl">
