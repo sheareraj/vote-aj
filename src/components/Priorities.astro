@@ -1,0 +1,44 @@
+---
+const priorities = [
+  {
+    title: "Affordable, Sensible Growth",
+    body: "Support smart housing and development that respects existing neighbourhoods while helping Peterborough grow responsibly.",
+  },
+  {
+    title: "Infrastructure That Works",
+    body: "Push for roads, sidewalks, parks, and public assets that are maintained properly and planned with long-term value in mind.",
+  },
+  {
+    title: "Better Accountability",
+    body: "Advocate for plain-language communication, financial discipline, and decisions residents can actually follow.",
+  },
+];
+---
+
+<section id="priorities" class="bg-[#f8f1f3] py-20">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="max-w-3xl">
+      <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
+        Priorities
+      </div>
+
+      <h2 class="mt-3 text-4xl font-bold tracking-tight text-[#3a1a22] md:text-5xl">
+        A focused platform residents can understand quickly.
+      </h2>
+    </div>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      {priorities.map((priority) => (
+        <div class="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-[#efe4e7]">
+          <div class="mb-5 inline-flex rounded-full bg-gradient-to-br from-[#7a2337] to-[#651024] px-5 py-2 text-sm font-bold uppercase tracking-wide text-white">
+            {priority.title}
+          </div>
+
+          <p class="text-base leading-7 text-[#7a6167]">
+            {priority.body}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

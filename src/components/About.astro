@@ -1,0 +1,120 @@
+---
+const quickFacts = [
+  {
+    key: "Ward",
+    value: "Monaghan Ward",
+  },
+  {
+    key: "City",
+    value: "Peterborough",
+  },
+  {
+    key: "Focus",
+    value: "Practical growth, infrastructure, accountability",
+  },
+  {
+    key: "Approach",
+    value: "Responsive, transparent, data-driven decisions",
+  },
+];
+---
+
+<section id="about" class="bg-white py-20">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="text-center">
+      <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
+        About AJ
+      </div>
+
+      <h2 class="mt-3 text-4xl font-bold tracking-tight text-[#3a1a22] md:text-5xl">
+        Rooted in Peterborough. Focused on family and community.
+      </h2>
+
+      <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#7a6167]">
+        AJ Shearer is a husband, father, business professional, and long-time
+        member of the Peterborough community who is committed to helping build
+        a stronger, safer, and more affordable future for local families.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-12 max-w-md">
+      <img
+        src="/images/family-photo.jpg"
+        alt="AJ Shearer and family"
+        class="w-full rounded-3xl shadow-md"
+      />
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl">
+      <div class="mx-auto max-w-xl space-y-10 text-center">
+        <div>
+          <h3 class="text-2xl font-bold tracking-tight text-[#651024]">
+            Family First
+          </h3>
+
+          <p class="mt-4 text-lg leading-8 text-[#7a6167]">
+            AJ and his wife Seanna are raising their two boys in Peterborough
+            and care deeply about building a city where families can feel safe,
+            connected, and optimistic about the future.
+          </p>
+        </div>
+
+        <div class="border-t border-[#efe4e7] pt-10">
+          <h3 class="text-2xl font-bold tracking-tight text-[#651024]">
+            Professional Background
+          </h3>
+
+          <p class="mt-4 text-lg leading-8 text-[#7a6167]">
+            With a background in aerospace engineering, business intelligence,
+            data analytics, and real estate, AJ brings a practical,
+            data-driven perspective to solving problems and making decisions
+            that deliver long-term value for residents.
+          </p>
+        </div>
+
+        <div class="border-t border-[#efe4e7] pt-10">
+          <h3 class="text-2xl font-bold tracking-tight text-[#651024]">
+            Deep Local Roots
+          </h3>
+
+          <p class="mt-4 text-lg leading-8 text-[#7a6167]">
+            AJ's family has deep roots in the Peterborough area spanning seven
+            generations. Their connection to the region stretches back
+            generations through local businesses, families, neighbourhoods,
+            and community involvement.
+          </p>
+
+          <p class="mt-4 text-lg leading-8 text-[#7a6167]">
+            Peterborough is home - and AJ believes the city's future should be
+            built in a way that preserves what people love about the community
+            while creating new opportunities for the next generation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mx-auto max-w-6xl px-6 py-20">
+  <div class="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-start">
+    <div class="rounded-3xl border border-[#efe4e7] bg-[#f8f1f3] p-6 shadow-sm">
+      <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
+        At a glance
+      </div>
+
+      <div class="mt-6 space-y-5">
+        {quickFacts.map((fact) => (
+          <div class="border-b border-[#efe4e7] pb-4 last:border-0 last:pb-0">
+            <div class="text-xs font-semibold uppercase tracking-[0.22em] text-[#7a6167]">
+              {fact.key}
+            </div>
+
+            <div class="mt-1 text-lg font-semibold text-[#3a1a22]">
+              {fact.value}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
