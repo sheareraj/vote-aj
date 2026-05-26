@@ -1,0 +1,113 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <title>Sorry I Missed You | AJ Shearer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A quick message from AJ Shearer after missing you at the door while canvassing in Monaghan Ward."
+    />
+    <meta name="robots" content="noindex" />
+  </head>
+
+  <body>
+    <div class="min-h-screen bg-[#651024] px-6 py-10 text-white">
+      <div class="mx-auto max-w-3xl">
+        <a
+          href="/"
+          class="text-sm font-semibold text-[#f3dfe5] hover:underline"
+        >
+          &larr; Back to main site
+        </a>
+
+        <div class="mt-10 rounded-3xl bg-white p-6 text-slate-900 shadow-md">
+          <h1 class="mt-3 text-4xl font-bold tracking-tight text-[#651024] md:text-5xl">
+            Sorry I missed you at the door!
+          </h1>
+
+          <p class="mt-5 text-lg leading-8 text-[#7a6167]">
+            I'm AJ Shearer, and I'm running for City Councillor in Monaghan Ward.
+            I was hoping to introduce myself in person, but I wanted to leave you
+            a quick message.
+          </p>
+
+          <div class="mt-8 overflow-hidden rounded-2xl bg-slate-950">
+            <div class="mx-auto aspect-square max-w-md">
+              <iframe
+                class="h-full w-full"
+                src="https://www.youtube.com/embed/9QfezQ3jfTs"
+                title="Sorry I missed you at the door"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <form
+            action="https://formspree.io/f/xvzldnvz"
+            method="POST"
+            class="mt-8 grid gap-4"
+          >
+            <div class="grid gap-4 md:grid-cols-2">
+              <input
+                name="firstName"
+                required
+                class="rounded-2xl border border-[#d9b8c2] px-4 py-3 outline-none focus:border-[#651024]"
+                placeholder="First name"
+              />
+
+              <input
+                name="lastName"
+                required
+                class="rounded-2xl border border-[#d9b8c2] px-4 py-3 outline-none focus:border-[#651024]"
+                placeholder="Last name"
+              />
+            </div>
+
+            <input
+              type="email"
+              name="email"
+              required
+              class="rounded-2xl border border-[#d9b8c2] px-4 py-3 outline-none focus:border-[#651024]"
+              placeholder="Email address"
+            />
+
+            <input
+              name="postalCode"
+              class="rounded-2xl border border-[#d9b8c2] px-4 py-3 outline-none focus:border-[#651024]"
+              placeholder="Postal code"
+            />
+
+            <textarea
+              name="message"
+              rows="5"
+              class="rounded-2xl border border-[#d9b8c2] px-4 py-3 outline-none focus:border-[#651024]"
+              placeholder="What would you like to talk about?"
+            ></textarea>
+
+            <button
+              type="submit"
+              class="rounded-2xl bg-[#651024] px-5 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#7a2337]"
+            >
+              Send AJ a Message
+            </button>
+          </form>
+
+          <div class="mt-8 flex justify-center">
+            <a
+              href="/"
+              class="rounded-full bg-[#651024] px-6 py-3 font-semibold text-white transition hover:bg-[#7a2337]"
+            >
+              Visit Main Campaign Site
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
