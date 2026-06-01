@@ -1,16 +1,24 @@
 ---
 const priorities = [
   {
-    title: "Affordable, Sensible Growth",
-    body: "Support smart housing and development that respects existing neighbourhoods while helping Peterborough grow responsibly.",
+    title: "Affordability",
+    body: `Keeping future tax increases as low as possible through responsible budgeting, sustainable growth, and long-term infrastructure planning.`,
+    link: "/priorities#affordability",
   },
   {
-    title: "Infrastructure That Works",
-    body: "Push for roads, sidewalks, parks, and public assets that are maintained properly and planned with long-term value in mind.",
+    title: "Prosperity",
+    body: `Supporting investment, job creation, and economic opportunities that strengthen Peterborough's economy and tax base.`,
+    link: "/priorities#prosperity",
   },
+{
+  title: "Recreation, Arts & Quality of Life",
+  body: `Supporting recreation, arts, culture, and community activities that strengthen local identity, improve quality of life, and help make Peterborough a more vibrant place to live.`,
+  link: "/priorities#recreation",
+},
   {
-    title: "Better Accountability",
-    body: "Advocate for plain-language communication, financial discipline, and decisions residents can actually follow.",
+    title: "Accountability & City Hall",
+    body: `Promoting clear communication, financial stewardship, and accessible representation so residents remain informed and engaged.`,
+    link: "/priorities#accountability",
   },
 ];
 ---
@@ -19,24 +27,37 @@ const priorities = [
   <div class="mx-auto max-w-6xl px-6">
     <div class="max-w-3xl">
       <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
-        Priorities
+        A Vision for Peterborough
       </div>
 
       <h2 class="mt-3 text-4xl font-bold tracking-tight text-[#3a1a22] md:text-5xl">
-        A focused platform residents can understand quickly.
+        Building a stronger future for our community
       </h2>
+
+      <p class="mt-6 text-lg leading-8 text-[#7a6167]">
+        Peterborough faces real challenges, but it also has tremendous
+        opportunities. These are the areas where I believe council can help
+        create long-term success for residents and future generations.
+      </p>
     </div>
 
-    <div class="mt-12 grid gap-6 md:grid-cols-3">
+    <div class="mt-12 grid gap-6 md:grid-cols-2">
       {priorities.map((priority) => (
-        <div class="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-[#efe4e7]">
-          <div class="mb-5 inline-flex rounded-full bg-gradient-to-br from-[#7a2337] to-[#651024] px-5 py-2 text-sm font-bold uppercase tracking-wide text-white">
+        <div class="flex flex-col rounded-3xl bg-white p-8 shadow-sm ring-1 ring-[#efe4e7]">
+          <h3 class="text-2xl font-bold tracking-tight text-[#3a1a22]">
             {priority.title}
-          </div>
+          </h3>
 
-          <p class="text-base leading-7 text-[#7a6167]">
+          <p class="mt-4 flex-grow text-base leading-7 text-[#7a6167]">
             {priority.body}
           </p>
+
+          <a
+            href={priority.link}
+            class="mt-6 inline-flex w-fit rounded-full bg-[#651024] px-5 py-3 font-semibold text-white transition hover:bg-[#7a2337]"
+          >
+            View Vision
+          </a>
         </div>
       ))}
     </div>

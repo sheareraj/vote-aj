@@ -3,29 +3,21 @@
 
 <div class="min-h-screen bg-white text-[#3a1a22]">
   <header class="sticky top-0 z-30 border-b border-[#efe4e7] bg-white/95 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-      <div>
-        <div class="text-2xl font-bold tracking-tight text-[#651024]">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-6">
+      <a href="/" class="shrink-0">
+        <div class="text-xl font-bold tracking-tight text-[#651024] md:text-2xl">
           AJ Shearer
         </div>
 
-        <div class="text-xs font-semibold uppercase tracking-[0.25em] text-[#7a6167]">
+        <div class="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-[#7a6167] md:text-xs md:tracking-[0.25em]">
           Monaghan Ward &bull; Peterborough
         </div>
-      </div>
+      </a>
 
-      <nav class="hidden gap-6 text-sm font-medium text-[#7a6167] md:flex">
-        <a href="#about" class="hover:text-[#651024]">
-          About
-        </a>
-
-        <a href="#priorities" class="hover:text-[#651024]">
-          Priorities
-        </a>
-
-        <a href="#involved" class="hover:text-[#651024]">
-          Get Involved
-        </a>
+      <nav class="hidden gap-6 text-sm font-medium text-[#7a6167] lg:flex">
+        <a href="#about" class="hover:text-[#651024]">About</a>
+        <a href="#priorities" class="hover:text-[#651024]">Priorities</a>
+        <a href="#involved" class="hover:text-[#651024]">Get Involved</a>
       </nav>
 
       <div class="hidden gap-3 md:flex">
@@ -50,17 +42,24 @@
           View My Experience
         </a>
       </div>
+
+      <a
+        href="#involved"
+        class="rounded-full bg-[#651024] px-4 py-2.5 text-sm font-semibold text-white shadow-sm md:hidden"
+      >
+        Get in touch
+      </a>
     </div>
   </header>
 
   <section class="relative overflow-hidden bg-[#651024] text-white">
     <!-- Mobile layout -->
     <div class="md:hidden">
-      <div class="h-[52vh] overflow-hidden">
+      <div class="h-[48vh] overflow-hidden bg-[#651024]">
         <img
           src="/images/hero-main.jpg"
           alt="AJ Shearer in Peterborough"
-          class="h-full w-full object-cover object-[58%_center]"
+          class="h-full w-full object-cover object-[55%_center]"
         />
       </div>
 
@@ -69,11 +68,11 @@
           Running for City Council
         </div>
 
-        <h1 class="text-4xl font-black leading-[1.05] tracking-tight">
+        <h1 class="max-w-md text-4xl font-black leading-[1.05] tracking-tight">
           A practical voice for Monaghan Ward.
         </h1>
 
-        <p class="mt-5 text-base leading-7 text-white/90">
+        <p class="mt-5 max-w-md text-base leading-7 text-white/90">
           Focused on growth, livability, accountability, and common-sense city
           building in Peterborough.
         </p>
@@ -105,7 +104,6 @@
       />
 
       <div class="absolute inset-0 bg-gradient-to-r from-[#651024]/95 via-[#651024]/35 via-30% to-transparent"></div>
-
       <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
 
       <div class="relative z-10 mx-auto flex min-h-screen max-w-6xl items-center px-6 py-24">
