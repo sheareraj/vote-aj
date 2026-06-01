@@ -1,0 +1,219 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Donate | AJ Shearer">
+  <div class="min-h-screen bg-[#f8f1f3] text-[#3a1a22]">
+    <section class="bg-[#651024] px-6 py-16 text-white">
+      <div class="mx-auto max-w-6xl">
+        <a href="/" class="text-sm font-semibold text-[#f3dfe5] hover:underline">
+          ← Back to Main Site
+        </a>
+
+        <div class="mt-8 max-w-4xl">
+          <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#f3dfe5]">
+            Support the Campaign
+          </div>
+
+          <h1 class="mt-3 text-4xl font-bold tracking-tight text-[#fff7f9] md:text-5xl">
+            Help share the message across Monaghan Ward.
+          </h1>
+
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-[#f3dfe5]">
+            Local campaigns are powered by local residents. Contributions help
+            cover the costs of lawn signs, printed materials, online advertising,
+            and community outreach.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <main class="mx-auto max-w-5xl px-6 py-20">
+      <section class="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
+        <h2 class="text-4xl font-bold tracking-tight">
+          How to Contribute
+        </h2>
+
+        <div class="mt-8 rounded-2xl bg-[#f8f1f3] p-6">
+          <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
+            E-Transfer
+          </div>
+
+          <p class="mt-4 text-2xl font-bold text-[#3a1a22]">
+            VoteForAJ@ajshearer.com
+          </p>
+
+        </div>
+<form
+  action="https://formspree.io/f/xvzldnvz"
+  method="POST"
+  class="mt-8 grid gap-4 rounded-2xl bg-white p-6 ring-1 ring-[#efe4e7]"
+>
+  <h3 class="text-2xl font-bold text-[#3a1a22]">
+    Donation Information
+  </h3>
+
+  <p class="text-base leading-7 text-[#7a6167]">
+    Please submit your details so a proper campaign receipt can be issued.
+  </p>
+
+  <div class="grid gap-4 md:grid-cols-2">
+    <input
+      name="firstName"
+      required
+      class="rounded-2xl border border-[#d9b8c2] px-4 py-3 outline-none focus:border-[#651024]"
+      placeholder="First name"
+    />
+
+    <input
+      name="lastName"
+      required
+      class="rounded-2xl border border-[#d9b8c2] px-4 py-3 outline-none focus:border-[#651024]"
+      placeholder="Last name"
+    />
+  </div>
+
+  <input
+    type="email"
+    name="email"
+    required
+    class="rounded-2xl border border-[#d9b8c2] px-4 py-3 outline-none focus:border-[#651024]"
+    placeholder="Email address"
+  />
+
+  <input
+    name="phone"
+    class="rounded-2xl border border-[#d9b8c2] px-4 py-3 outline-none focus:border-[#651024]"
+    placeholder="Phone number"
+  />
+
+  <input
+    name="address"
+    required
+    class="rounded-2xl border border-[#d9b8c2] px-4 py-3 outline-none focus:border-[#651024]"
+    placeholder="Full residential address"
+  />
+
+  <input
+    name="amount"
+    required
+    class="rounded-2xl border border-[#d9b8c2] px-4 py-3 outline-none focus:border-[#651024]"
+    placeholder="Contribution amount"
+  />
+
+  <textarea
+    name="message"
+    rows="4"
+    class="rounded-2xl border border-[#d9b8c2] px-4 py-3 outline-none focus:border-[#651024]"
+    placeholder="Optional note"
+  ></textarea>
+
+  <label class="flex items-start gap-3 rounded-2xl border border-[#d9b8c2] px-4 py-3 text-[#3a1a22]">
+    <input
+      type="checkbox"
+      name="ontarioResidentConfirmation"
+      required
+      class="mt-1 h-5 w-5 accent-[#651024]"
+    />
+
+    <span class="text-sm leading-6">
+      I confirm that I am an Ontario resident and that this contribution is made
+      personally, not on behalf of a corporation, union, or another individual.
+    </span>
+  </label>
+
+  <button
+    type="submit"
+    class="rounded-2xl bg-[#651024] px-5 py-3 font-semibold text-white transition hover:bg-[#7a2337]"
+  >
+    Submit Donation Information
+  </button>
+</form>
+        <div class="mt-8 rounded-2xl bg-white p-6 ring-1 ring-[#efe4e7]">
+          <h3 class="text-2xl font-bold text-[#3a1a22]">
+            Contribution Rules
+          </h3>
+
+<ul class="mt-4 space-y-3 text-lg leading-8 text-[#7a6167]">
+  <li>• Only Ontario residents may contribute.</li>
+  <li>• Corporate and union donations are prohibited.</li>
+  <li>• Contributions are not tax deductible.</li>
+  <li>• Individual contributions are limited to $1,200 per candidate.</li>
+  <li>• A receipt will be provided for eligible campaign contributions.</li>
+</ul>
+        </div>
+      </section>
+
+      <section class="mt-10 rounded-3xl bg-white p-8 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
+        <h2 class="text-3xl font-bold tracking-tight">
+          Every contribution helps.
+        </h2>
+
+        <p class="mt-4 text-lg leading-8 text-[#7a6167]">
+          Whether it helps purchase signs, print literature, support outreach,
+          or keep residents informed, your support makes it easier to connect
+          with voters across Monaghan Ward.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            href="/"
+            class="rounded-full bg-[#651024] px-6 py-3 font-semibold text-white transition hover:bg-[#7a2337]"
+          >
+            Return to Main Site
+          </a>
+
+          <a
+            href="/#involved"
+            class="rounded-full border border-[#d9b8c2] px-6 py-3 font-semibold text-[#651024] transition hover:bg-[#f8f1f3]"
+          >
+            Contact the Campaign
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#651024] py-16 text-white">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#f3dfe5]">
+              AJ Shearer
+            </div>
+
+            <h2 class="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+              Let's build a stronger Peterborough together.
+            </h2>
+
+            <p class="mt-4 max-w-2xl text-lg leading-8 text-[#f3dfe5]">
+              Thank you for considering supporting the campaign.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-4 md:justify-end">
+            <a
+              href="/"
+              class="rounded-full bg-white px-6 py-3 font-semibold text-[#651024] shadow-lg transition hover:-translate-y-0.5"
+            >
+              Main Website
+            </a>
+
+            <a
+              href="https://www.facebook.com/profile.php?id=61589293620797"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full border border-white/40 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
+            >
+              Facebook
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-12 border-t border-white/15 pt-6 text-sm text-[#f3dfe5]">
+          © {new Date().getFullYear()} AJ Shearer • Candidate for Councillor,
+          Monaghan Ward • City of Peterborough
+        </div>
+      </div>
+    </footer>
+  </div>
+</BaseLayout>
