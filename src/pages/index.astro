@@ -362,3 +362,18 @@ const priorities = [
     </div>
   </footer>
 </div>
+
+<script>
+  window.addEventListener("load", () => {
+    const tooWide = [...document.querySelectorAll("*")].filter((el) => {
+      return el.scrollWidth > document.documentElement.clientWidth;
+    });
+
+    console.log("Viewport width:", document.documentElement.clientWidth);
+    console.log("Too-wide elements:", tooWide);
+
+    tooWide.forEach((el) => {
+      el.style.outline = "3px solid red";
+    });
+  });
+</script>
