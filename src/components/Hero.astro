@@ -52,92 +52,95 @@
     </div>
   </header>
 
-  <section class="relative overflow-hidden bg-[#651024] text-white">
-    <!-- Mobile layout -->
-    <div class="md:hidden">
-      <div class="h-[48vh] overflow-hidden bg-[#651024]">
-        <img
-          src="/images/hero-main.jpg"
-          alt="AJ Shearer in Peterborough"
-          class="h-full w-full object-cover object-[55%_center]"
-        />
+  <section class="bg-[#651024] text-white">
+
+  <!-- MOBILE HERO -->
+  <div class="md:hidden">
+    <div class="h-[42vh] overflow-hidden">
+      <img
+        src="/images/hero-main.jpg"
+        alt="AJ Shearer in Peterborough"
+        class="h-full w-full object-cover object-center"
+      />
+    </div>
+
+    <div class="px-6 py-10">
+      <div class="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
+        Running for City Council
       </div>
 
-      <div class="px-6 py-10">
-        <div class="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
+      <h1 class="max-w-md text-4xl font-black leading-[1.05] tracking-tight">
+        A practical voice for Monaghan Ward.
+      </h1>
+
+      <p class="mt-5 max-w-md text-lg leading-8 text-white/90">
+        Focused on growth, livability, accountability, and common-sense city
+        building in Peterborough.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a
+          href="#about"
+          class="rounded-full bg-white px-5 py-3 font-semibold text-[#651024] shadow-lg"
+        >
+          Learn More
+        </a>
+
+        <a
+          href="#involved"
+          class="rounded-full border border-white/40 px-5 py-3 font-semibold text-white"
+        >
+          Get Involved
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESKTOP HERO -->
+  <div class="relative hidden min-h-screen overflow-hidden md:block">
+    <img
+      src="/images/hero-main.jpg"
+      alt="AJ Shearer in Peterborough"
+      class="absolute inset-0 h-full w-full object-cover object-[85%_center]"
+    />
+
+    <div class="absolute inset-0 bg-gradient-to-r from-[#651024]/95 via-[#651024]/35 via-30% to-transparent"></div>
+
+    <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
+
+    <div class="relative z-10 mx-auto flex min-h-screen max-w-6xl items-center px-6 py-24">
+      <div class="max-w-2xl">
+        <div class="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/90 backdrop-blur">
           Running for City Council
         </div>
 
-        <h1 class="max-w-md text-4xl font-black leading-[1.05] tracking-tight">
+        <h1 class="text-5xl font-black leading-none tracking-tight lg:text-7xl">
           A practical voice for Monaghan Ward.
         </h1>
 
-        <p class="mt-5 max-w-md text-base leading-7 text-white/90">
+        <p class="mt-6 max-w-xl text-lg leading-8 text-white/90">
           Focused on growth, livability, accountability, and common-sense city
           building in Peterborough.
         </p>
 
-        <div class="mt-7 flex flex-wrap gap-3">
+        <div class="mt-8 flex flex-wrap gap-4">
           <a
             href="#about"
-            class="rounded-full bg-white px-5 py-3 font-semibold text-[#651024] shadow-lg"
+            class="rounded-full bg-white px-6 py-3 font-semibold text-[#651024] shadow-lg transition hover:-translate-y-0.5"
           >
             Learn More
           </a>
 
           <a
             href="#involved"
-            class="rounded-full border border-white/40 px-5 py-3 font-semibold text-white"
+            class="rounded-full border border-white/40 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
           >
             Get Involved
           </a>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Desktop layout -->
-    <div class="relative hidden min-h-screen md:block">
-      <img
-        src="/images/hero-main.jpg"
-        alt="AJ Shearer in Peterborough"
-        class="absolute inset-0 h-full w-full object-cover object-[85%_center]"
-      />
-
-      <div class="absolute inset-0 bg-gradient-to-r from-[#651024]/95 via-[#651024]/35 via-30% to-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
-
-      <div class="relative z-10 mx-auto flex min-h-screen max-w-6xl items-center px-6 py-24">
-        <div class="max-w-2xl">
-          <div class="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/90 backdrop-blur">
-            Running for City Council
-          </div>
-
-          <h1 class="text-5xl font-black leading-none tracking-tight md:text-7xl">
-            A practical voice for Monaghan Ward.
-          </h1>
-
-          <p class="mt-6 max-w-xl text-lg leading-8 text-white/90">
-            Focused on growth, livability, accountability, and common-sense city
-            building in Peterborough.
-          </p>
-
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#about"
-              class="rounded-full bg-white px-6 py-3 font-semibold text-[#651024] shadow-lg transition hover:-translate-y-0.5"
-            >
-              Learn More
-            </a>
-
-            <a
-              href="#involved"
-              class="rounded-full border border-white/40 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
-            >
-              Get Involved
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+</section>
 </div>
