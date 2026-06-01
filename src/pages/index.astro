@@ -1,5 +1,4 @@
 ---
-import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const priorities = [
@@ -25,345 +24,345 @@ const priorities = [
   },
 ];
 ---
-
-<div class="bg-[#f8f1f3] text-[#3a1a22]">
-  <header class="sticky top-0 z-30 border-b border-[#efe4e7] bg-white/95 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 md:px-6">
-      <a href="/" class="shrink-0">
-        <div class="text-xl font-bold tracking-tight text-[#651024] md:text-2xl">
-          AJ Shearer
-        </div>
-        <div class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[#7a6167] md:text-xs">
-          Monaghan Ward &bull; Peterborough
-        </div>
-      </a>
-
-      <nav class="hidden gap-6 text-sm font-medium text-[#7a6167] lg:flex">
-        <a href="#about" class="hover:text-[#651024]">About</a>
-        <a href="#priorities" class="hover:text-[#651024]">Vision</a>
-        <a href="#involved" class="hover:text-[#651024]">Get Involved</a>
-      </nav>
-
-      <div class="hidden gap-3 lg:flex">
-        <a href="#involved" class="rounded-full bg-[#651024] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#7a2337]">
-          Get in touch
+    <BaseLayout title="AJ Shearer for Monaghan Ward Councillor">
+    <div class="bg-[#f8f1f3] text-[#3a1a22]">
+    <header class="sticky top-0 z-30 border-b border-[#efe4e7] bg-white/95 backdrop-blur">
+        <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 md:px-6">
+        <a href="/" class="shrink-0">
+            <div class="text-xl font-bold tracking-tight text-[#651024] md:text-2xl">
+            AJ Shearer
+            </div>
+            <div class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[#7a6167] md:text-xs">
+            Monaghan Ward &bull; Peterborough
+            </div>
         </a>
-        <a href="#involved" class="rounded-full bg-[#651024] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#7a2337]">
-          Order a Sign
-        </a>
-        <a href="/donate" class="rounded-full bg-[#2b0b14] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#3f1320]">
-          Donate
-        </a>
-      </div>
 
-      <div class="flex gap-2 lg:hidden">
-        <a href="#involved" class="rounded-full bg-[#651024] px-4 py-2.5 text-sm font-semibold text-white lg:hidden">
-            Contact
-        </a>
-        <a href="/donate" class="rounded-full bg-[#2b0b14] px-4 py-2.5 text-sm font-semibold text-white lg:hidden">
+        <nav class="hidden gap-6 text-sm font-medium text-[#7a6167] lg:flex">
+            <a href="#about" class="hover:text-[#651024]">About</a>
+            <a href="#priorities" class="hover:text-[#651024]">Vision</a>
+            <a href="#involved" class="hover:text-[#651024]">Get Involved</a>
+        </nav>
+
+        <div class="hidden gap-3 lg:flex">
+            <a href="#involved" class="rounded-full bg-[#651024] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#7a2337]">
+            Get in touch
+            </a>
+            <a href="#involved" class="rounded-full bg-[#651024] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#7a2337]">
+            Order a Sign
+            </a>
+            <a href="/donate" class="rounded-full bg-[#2b0b14] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#3f1320]">
             Donate
-        </a>
-      </div>  
-    </div>
-  </header>
-
-  <section class="bg-[#651024] text-white lg:relative lg:min-h-screen lg:overflow-hidden">
-    <div class="lg:hidden">
-      <img
-        src="/images/hero-main.jpg"
-        alt="AJ Shearer in Peterborough"
-        class="h-auto w-full"
-      />
-
-      <div class="px-5 py-8">
-        <div class="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-white/90">
-          Running for City Council
+            </a>
         </div>
 
-        <h1 class="text-[clamp(3.6rem,10vw,5rem)] font-black leading-[0.9] tracking-tight">
-          A practical voice for Monaghan Ward.
-        </h1>
-
-        <p class="mt-5 text-[1.35rem] leading-8 text-white/90">
-          Focused on growth, livability, accountability, and common-sense city
-          building in Peterborough.
-        </p>
-
-        <div class="mt-7 flex flex-wrap gap-3">
-          <a href="#about" class="rounded-full bg-white px-5 py-3 font-semibold text-[#651024]">
-            Learn More
-          </a>
-          <a href="#involved" class="rounded-full border border-white/40 px-5 py-3 font-semibold text-white">
-            Get Involved
-          </a>
-          <a href="/donate" class="rounded-full bg-[#2b0b14] px-5 py-3 font-semibold text-white">
-            Donate
-          </a>
+        <div class="flex gap-2 lg:hidden">
+            <a href="#involved" class="rounded-full bg-[#651024] px-4 py-2.5 text-sm font-semibold text-white lg:hidden">
+                Contact
+            </a>
+            <a href="/donate" class="rounded-full bg-[#2b0b14] px-4 py-2.5 text-sm font-semibold text-white lg:hidden">
+                Donate
+            </a>
+        </div>  
         </div>
-      </div>
-    </div>
+    </header>
 
-    <div class="hidden lg:block">
-      <img
-        src="/images/hero-main.jpg"
-        alt="AJ Shearer in Peterborough"
-        class="absolute inset-0 h-full w-full object-cover object-[85%_center]"
-      />
-      <div class="absolute inset-0 bg-gradient-to-r from-[#651024]/95 via-[#651024]/35 via-30% to-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
+    <section class="bg-[#651024] text-white lg:relative lg:min-h-screen lg:overflow-hidden">
+        <div class="lg:hidden">
+        <img
+            src="/images/hero-main.jpg"
+            alt="AJ Shearer in Peterborough"
+            class="h-auto w-full"
+        />
 
-      <div class="relative z-10 mx-auto flex min-h-screen max-w-6xl items-center px-6 py-24">
-        <div class="max-w-2xl">
-          <div class="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/90 backdrop-blur">
+        <div class="px-5 py-8">
+            <div class="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-white/90">
             Running for City Council
-          </div>
+            </div>
 
-          <h1 class="text-5xl font-black leading-none tracking-tight xl:text-7xl">
+            <h1 class="text-[clamp(3.6rem,10vw,5rem)] font-black leading-[0.9] tracking-tight">
             A practical voice for Monaghan Ward.
-          </h1>
+            </h1>
 
-          <p class="mt-6 max-w-xl text-lg leading-8 text-white/90">
+            <p class="mt-5 text-[1.35rem] leading-8 text-white/90">
             Focused on growth, livability, accountability, and common-sense city
             building in Peterborough.
-          </p>
-
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#about" class="rounded-full bg-white px-6 py-3 font-semibold text-[#651024] shadow-lg">
-              Learn More
-            </a>
-            <a href="#involved" class="rounded-full border border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10">
-              Get Involved
-            </a>
-            <a href="/donate" class="rounded-full bg-[#2b0b14] px-6 py-3 font-semibold text-white shadow-lg hover:bg-[#3f1320]">
-              Donate
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="px-5 py-10 md:py-20">
-    <div class="mx-auto max-w-6xl">
-      <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
-        <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
-          About AJ
-        </div>
-
-        <h2 class="mt-3 text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
-          Rooted in Peterborough. Focused on family and community.
-        </h2>
-
-        <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
-          AJ Shearer is a husband, father, business professional, and long-time
-          member of the Peterborough community who is committed to helping build
-          a stronger, safer, and more affordable future for local families.
-        </p>
-
-        <div class="mt-8">
-          <img
-            src="/images/family-photo.jpg"
-            alt="AJ Shearer and family"
-            class="w-full rounded-3xl shadow-md md:mx-auto md:max-w-md"
-          />
-        </div>
-
-        <div class="mt-10 grid gap-6 md:grid-cols-3">
-          <div class="rounded-2xl bg-[#f8f1f3] p-5">
-            <h3 class="text-[2rem] font-bold text-[#651024]">Family First</h3>
-            <p class="mt-3 text-[1.2rem] leading-8 text-[#7a6167]">
-              AJ and his wife Seanna are raising their two boys in Peterborough
-              and care deeply about building a city where families can feel
-              safe, connected, and optimistic.
             </p>
-          </div>
 
-          <div class="rounded-2xl bg-[#f8f1f3] p-5">
-            <h3 class="text-[2rem] font-bold text-[#651024]">
-              Professional Background
-            </h3>
-            <p class="mt-3 text-[1.2rem] leading-8 text-[#7a6167]">
-              With experience in engineering, business intelligence, data
-              analytics, and real estate, AJ brings a practical, data-driven
-              approach to problem solving.
-            </p>
-            <a href="/resume" class="mt-5 inline-flex rounded-full bg-[#651024] px-5 py-3 font-semibold text-white">
-              View My Experience
+            <div class="mt-7 flex flex-wrap gap-3">
+            <a href="#about" class="rounded-full bg-white px-5 py-3 font-semibold text-[#651024]">
+                Learn More
             </a>
-          </div>
-
-          <div class="rounded-2xl bg-[#f8f1f3] p-5">
-            <h3 class="text-[2rem] font-bold text-[#651024]">Deep Local Roots</h3>
-            <p class="mt-3 text-[1.2rem] leading-8 text-[#7a6167]">
-              AJ's family has deep roots in the Peterborough area spanning seven
-              generations, through local businesses, families, neighbourhoods,
-              and community involvement.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="priorities" class="px-5 py-10 md:py-20">
-    <div class="mx-auto max-w-6xl">
-      <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
-        <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
-          A Vision for Peterborough
-        </div>
-
-        <h2 class="mt-3 text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
-          Building a stronger future for our community
-        </h2>
-
-        <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
-          Peterborough faces real challenges, but it also has tremendous
-          opportunities. These are the areas where I believe council can help
-          create long-term success for residents and future generations.
-        </p>
-
-        <div class="mt-8 grid gap-5 md:grid-cols-2">
-          {priorities.map((priority) => (
-            <div class="flex flex-col rounded-2xl bg-[#f8f1f3] p-5 ring-1 ring-[#efe4e7]">
-              <h3 class="text-[2rem] font-bold tracking-tight text-[#3a1a22]">
-                {priority.title}
-              </h3>
-
-              <p class="mt-3 flex-grow text-[1.2rem] leading-8 text-[#7a6167]">
-                {priority.body}
-              </p>
-
-              <a
-                href={priority.link}
-                class="mt-5 inline-flex w-fit rounded-full bg-[#651024] px-5 py-3 font-semibold text-white"
-              >
-                View Vision
-              </a>
+            <a href="#involved" class="rounded-full border border-white/40 px-5 py-3 font-semibold text-white">
+                Get Involved
+            </a>
+            <a href="/donate" class="rounded-full bg-[#2b0b14] px-5 py-3 font-semibold text-white">
+                Donate
+            </a>
             </div>
-          ))}
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="px-5 py-10 md:py-20">
-    <div class="mx-auto max-w-6xl">
-      <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
-        <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
-          Thank You
         </div>
 
-        <h2 class="mt-3 text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
-          Thanks for taking the time to learn more about me and the campaign.
-        </h2>
+        <div class="hidden lg:block">
+        <img
+            src="/images/hero-main.jpg"
+            alt="AJ Shearer in Peterborough"
+            class="absolute inset-0 h-full w-full object-cover object-[85%_center]"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#651024]/95 via-[#651024]/35 via-30% to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
 
-        <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
-          Peterborough is an incredible place to raise a family, build a career,
-          and put down roots. I'm running because I believe we can make smarter,
-          more practical decisions that help keep our city affordable, safe, and
-          moving in the right direction.
-        </p>
+        <div class="relative z-10 mx-auto flex min-h-screen max-w-6xl items-center px-6 py-24">
+            <div class="max-w-2xl">
+            <div class="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/90 backdrop-blur">
+                Running for City Council
+            </div>
 
-        <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
-          If you're looking for additional information, have questions about the
-          campaign, or simply want to connect, please don't hesitate to reach out.
-        </p>
-      </div>
-    </div>
-  </section>
+            <h1 class="text-5xl font-black leading-none tracking-tight xl:text-7xl">
+                A practical voice for Monaghan Ward.
+            </h1>
 
-  <section id="involved" class="bg-gradient-to-br from-[#7a2337] to-[#651024] px-5 py-12 text-white md:py-20">
-    <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1fr_0.95fr] md:items-start">
-      <div>
-        <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#f3dfe5]">
-          Get involved
+            <p class="mt-6 max-w-xl text-lg leading-8 text-white/90">
+                Focused on growth, livability, accountability, and common-sense city
+                building in Peterborough.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+                <a href="#about" class="rounded-full bg-white px-6 py-3 font-semibold text-[#651024] shadow-lg">
+                Learn More
+                </a>
+                <a href="#involved" class="rounded-full border border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10">
+                Get Involved
+                </a>
+                <a href="/donate" class="rounded-full bg-[#2b0b14] px-6 py-3 font-semibold text-white shadow-lg hover:bg-[#3f1320]">
+                Donate
+                </a>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="about" class="px-5 py-10 md:py-20">
+        <div class="mx-auto max-w-6xl">
+        <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
+            <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
+            About AJ
+            </div>
+
+            <h2 class="mt-3 text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
+            Rooted in Peterborough. Focused on family and community.
+            </h2>
+
+            <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
+            AJ Shearer is a husband, father, business professional, and long-time
+            member of the Peterborough community who is committed to helping build
+            a stronger, safer, and more affordable future for local families.
+            </p>
+
+            <div class="mt-8">
+            <img
+                src="/images/family-photo.jpg"
+                alt="AJ Shearer and family"
+                class="w-full rounded-3xl shadow-md md:mx-auto md:max-w-md"
+            />
+            </div>
+
+            <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <div class="rounded-2xl bg-[#f8f1f3] p-5">
+                <h3 class="text-[2rem] font-bold text-[#651024]">Family First</h3>
+                <p class="mt-3 text-[1.2rem] leading-8 text-[#7a6167]">
+                AJ and his wife Seanna are raising their two boys in Peterborough
+                and care deeply about building a city where families can feel
+                safe, connected, and optimistic.
+                </p>
+            </div>
+
+            <div class="rounded-2xl bg-[#f8f1f3] p-5">
+                <h3 class="text-[2rem] font-bold text-[#651024]">
+                Professional Background
+                </h3>
+                <p class="mt-3 text-[1.2rem] leading-8 text-[#7a6167]">
+                With experience in engineering, business intelligence, data
+                analytics, and real estate, AJ brings a practical, data-driven
+                approach to problem solving.
+                </p>
+                <a href="/resume" class="mt-5 inline-flex rounded-full bg-[#651024] px-5 py-3 font-semibold text-white">
+                View My Experience
+                </a>
+            </div>
+
+            <div class="rounded-2xl bg-[#f8f1f3] p-5">
+                <h3 class="text-[2rem] font-bold text-[#651024]">Deep Local Roots</h3>
+                <p class="mt-3 text-[1.2rem] leading-8 text-[#7a6167]">
+                AJ's family has deep roots in the Peterborough area spanning seven
+                generations, through local businesses, families, neighbourhoods,
+                and community involvement.
+                </p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="priorities" class="px-5 py-10 md:py-20">
+        <div class="mx-auto max-w-6xl">
+        <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
+            <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
+            A Vision for Peterborough
+            </div>
+
+            <h2 class="mt-3 text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
+            Building a stronger future for our community
+            </h2>
+
+            <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
+            Peterborough faces real challenges, but it also has tremendous
+            opportunities. These are the areas where I believe council can help
+            create long-term success for residents and future generations.
+            </p>
+
+            <div class="mt-8 grid gap-5 md:grid-cols-2">
+            {priorities.map((priority) => (
+                <div class="flex flex-col rounded-2xl bg-[#f8f1f3] p-5 ring-1 ring-[#efe4e7]">
+                <h3 class="text-[2rem] font-bold tracking-tight text-[#3a1a22]">
+                    {priority.title}
+                </h3>
+
+                <p class="mt-3 flex-grow text-[1.2rem] leading-8 text-[#7a6167]">
+                    {priority.body}
+                </p>
+
+                <a
+                    href={priority.link}
+                    class="mt-5 inline-flex w-fit rounded-full bg-[#651024] px-5 py-3 font-semibold text-white"
+                >
+                    View Vision
+                </a>
+                </div>
+            ))}
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="px-5 py-10 md:py-20">
+        <div class="mx-auto max-w-6xl">
+        <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
+            <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
+            Thank You
+            </div>
+
+            <h2 class="mt-3 text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
+            Thanks for taking the time to learn more about me and the campaign.
+            </h2>
+
+            <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
+            Peterborough is an incredible place to raise a family, build a career,
+            and put down roots. I'm running because I believe we can make smarter,
+            more practical decisions that help keep our city affordable, safe, and
+            moving in the right direction.
+            </p>
+
+            <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
+            If you're looking for additional information, have questions about the
+            campaign, or simply want to connect, please don't hesitate to reach out.
+            </p>
+        </div>
+        </div>
+    </section>
+
+    <section id="involved" class="bg-gradient-to-br from-[#7a2337] to-[#651024] px-5 py-12 text-white md:py-20">
+        <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1fr_0.95fr] md:items-start">
+        <div>
+            <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#f3dfe5]">
+            Get involved
+            </div>
+
+            <h2 class="mt-3 text-[3rem] font-bold leading-[1.05] tracking-tight md:text-5xl">
+            Help build momentum across Monaghan Ward.
+            </h2>
+
+            <p class="mt-5 text-xl leading-8 text-[#f3dfe5]">
+            Sign up for campaign updates, volunteer opportunities, lawn signs, and
+            event information.
+            </p>
+
+            <div class="mt-8">    
+                <a href="/donate" class="rounded-2xl bg-[#2b0b14] px-5 py-3 text-center font-semibold text-white">
+                    Donate to Support the Campaign
+                </a>
+            </div>
         </div>
 
-        <h2 class="mt-3 text-[3rem] font-bold leading-[1.05] tracking-tight md:text-5xl">
-          Help build momentum across Monaghan Ward.
-        </h2>
+        <div class="rounded-3xl bg-white p-6 text-[#3a1a22] shadow-md">
+            <div class="text-[2rem] font-bold tracking-tight">Get in touch</div>
+            <div class="mt-1 text-lg text-[#7a6167]">
+            I'm more excited to hear from you than you are to fill out this form!
+            </div>
 
-        <p class="mt-5 text-xl leading-8 text-[#f3dfe5]">
-          Sign up for campaign updates, volunteer opportunities, lawn signs, and
-          event information.
-        </p>
+            <form action="https://formspree.io/f/mzdojrpy" method="POST" class="mt-6 grid gap-4">
+            <input name="name" class="rounded-2xl border border-[#d9b8c2] px-4 py-3 text-base outline-none focus:border-[#651024]" placeholder="Full name" />
+            <input type="email" name="email" class="rounded-2xl border border-[#d9b8c2] px-4 py-3 text-base outline-none focus:border-[#651024]" placeholder="Email address" />
+            <input name="postalCode" class="rounded-2xl border border-[#d9b8c2] px-4 py-3 text-base outline-none focus:border-[#651024]" placeholder="Postal code" />
 
-        <div class="mt-8">    
-            <a href="/donate" class="rounded-2xl bg-[#2b0b14] px-5 py-3 text-center font-semibold text-white">
-                Donate to Support the Campaign
+            <label class="flex items-center gap-3 rounded-2xl border border-[#d9b8c2] px-4 py-3 text-[#3a1a22]">
+                <input type="checkbox" name="lawnSign" class="h-5 w-5 accent-[#651024]" />
+                <span class="font-medium">I want a lawn sign</span>
+            </label>
+
+            <textarea
+                name="mutual_help"
+                placeholder="How can I help?"
+                rows="4"
+                class="w-full rounded-xl border border-[#d9b8c2] px-4 py-3 text-base text-[#3a1a22] placeholder-[#6b4a53] outline-none focus:border-[#651024]"
+            ></textarea>
+
+            <button type="submit" class="rounded-2xl bg-[#651024] px-5 py-3 font-semibold text-white">
+                Sign Up
+            </button>
+
+            </form>
+        </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-[#efe4e7] bg-white">
+        <div class="mx-auto grid max-w-6xl gap-6 px-5 py-8 md:grid-cols-[1fr_auto] md:items-start md:px-6">
+        <div>
+            <div class="text-[2rem] font-bold tracking-tight text-[#651024]">
+            AJ Shearer
+            </div>
+
+            <div class="mt-1 text-sm font-semibold uppercase tracking-[0.22em] text-[#7a6167]">
+            Monaghan Ward &bull; Peterborough
+            </div>
+
+            <p class="mt-4 max-w-xl text-base leading-7 text-[#7a6167]">
+            Focused on affordability, responsible growth, accountability, and
+            building a stronger future for Peterborough families.
+            </p>
+        </div>
+
+        <div class="flex flex-col gap-3 text-lg text-[#7a6167] md:items-end">
+            <a href="mailto:voteforaj@ajshearer.com" class="hover:text-[#651024]">
+            voteforaj@ajshearer.com
             </a>
+            <a href="#about" class="hover:text-[#651024]">About AJ</a>
+            <a href="#priorities" class="hover:text-[#651024]">Vision</a>
+            <a href="#involved" class="hover:text-[#651024]">Get Involved</a>
+            <a href="/donate" class="hover:text-[#651024]">Donate</a>
         </div>
-      </div>
-
-      <div class="rounded-3xl bg-white p-6 text-[#3a1a22] shadow-md">
-        <div class="text-[2rem] font-bold tracking-tight">Get in touch</div>
-        <div class="mt-1 text-lg text-[#7a6167]">
-          I'm more excited to hear from you than you are to fill out this form!
         </div>
 
-        <form action="https://formspree.io/f/mzdojrpy" method="POST" class="mt-6 grid gap-4">
-          <input name="name" class="rounded-2xl border border-[#d9b8c2] px-4 py-3 text-base outline-none focus:border-[#651024]" placeholder="Full name" />
-          <input type="email" name="email" class="rounded-2xl border border-[#d9b8c2] px-4 py-3 text-base outline-none focus:border-[#651024]" placeholder="Email address" />
-          <input name="postalCode" class="rounded-2xl border border-[#d9b8c2] px-4 py-3 text-base outline-none focus:border-[#651024]" placeholder="Postal code" />
-
-          <label class="flex items-center gap-3 rounded-2xl border border-[#d9b8c2] px-4 py-3 text-[#3a1a22]">
-            <input type="checkbox" name="lawnSign" class="h-5 w-5 accent-[#651024]" />
-            <span class="font-medium">I want a lawn sign</span>
-          </label>
-
-          <textarea
-            name="mutual_help"
-            placeholder="How can I help?"
-            rows="4"
-            class="w-full rounded-xl border border-[#d9b8c2] px-4 py-3 text-base text-[#3a1a22] placeholder-[#6b4a53] outline-none focus:border-[#651024]"
-          ></textarea>
-
-          <button type="submit" class="rounded-2xl bg-[#651024] px-5 py-3 font-semibold text-white">
-            Sign Up
-          </button>
-
-        </form>
-      </div>
+        <div class="border-t border-[#efe4e7] bg-[#f8f1f3]">
+        <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-4 text-sm text-[#7a6167] md:flex-row md:items-center md:justify-between md:px-6">
+            <div>&copy; 2026 AJ Shearer Campaign. All rights reserved.</div>
+            <div>Authorized by the AJ Shearer Campaign for Monaghan Ward.</div>
+        </div>
+        </div>
+    </footer>
     </div>
-  </section>
-
-  <footer class="border-t border-[#efe4e7] bg-white">
-    <div class="mx-auto grid max-w-6xl gap-6 px-5 py-8 md:grid-cols-[1fr_auto] md:items-start md:px-6">
-      <div>
-        <div class="text-[2rem] font-bold tracking-tight text-[#651024]">
-          AJ Shearer
-        </div>
-
-        <div class="mt-1 text-sm font-semibold uppercase tracking-[0.22em] text-[#7a6167]">
-          Monaghan Ward &bull; Peterborough
-        </div>
-
-        <p class="mt-4 max-w-xl text-base leading-7 text-[#7a6167]">
-          Focused on affordability, responsible growth, accountability, and
-          building a stronger future for Peterborough families.
-        </p>
-      </div>
-
-      <div class="flex flex-col gap-3 text-lg text-[#7a6167] md:items-end">
-        <a href="mailto:voteforaj@ajshearer.com" class="hover:text-[#651024]">
-          voteforaj@ajshearer.com
-        </a>
-        <a href="#about" class="hover:text-[#651024]">About AJ</a>
-        <a href="#priorities" class="hover:text-[#651024]">Vision</a>
-        <a href="#involved" class="hover:text-[#651024]">Get Involved</a>
-        <a href="/donate" class="hover:text-[#651024]">Donate</a>
-      </div>
-    </div>
-
-    <div class="border-t border-[#efe4e7] bg-[#f8f1f3]">
-      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-4 text-sm text-[#7a6167] md:flex-row md:items-center md:justify-between md:px-6">
-        <div>&copy; 2026 AJ Shearer Campaign. All rights reserved.</div>
-        <div>Authorized by the AJ Shearer Campaign for Monaghan Ward.</div>
-      </div>
-    </div>
-  </footer>
-</div>
-
+</BaseLayout>
 <script>
   window.addEventListener("load", () => {
     alert(
