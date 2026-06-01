@@ -1,22 +1,4 @@
 ---
-const quickFacts = [
-  {
-    key: "Ward",
-    value: "Monaghan Ward",
-  },
-  {
-    key: "City",
-    value: "Peterborough",
-  },
-  {
-    key: "Focus",
-    value: "Practical growth, infrastructure, accountability",
-  },
-  {
-    key: "Approach",
-    value: "Responsive, transparent, data-driven decisions",
-  },
-];
 ---
 
 <section id="about" class="bg-white py-20">
@@ -99,30 +81,6 @@ const quickFacts = [
             while creating new opportunities for the next generation.
           </p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="mx-auto max-w-6xl px-6 py-20">
-  <div class="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-start">
-    <div class="rounded-3xl border border-[#efe4e7] bg-[#f8f1f3] p-6 shadow-sm">
-      <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
-        At a glance
-      </div>
-
-      <div class="mt-6 space-y-5">
-        {quickFacts.map((fact) => (
-          <div class="border-b border-[#efe4e7] pb-4 last:border-0 last:pb-0">
-            <div class="text-xs font-semibold uppercase tracking-[0.22em] text-[#7a6167]">
-              {fact.key}
-            </div>
-
-            <div class="mt-1 text-lg font-semibold text-[#3a1a22]">
-              {fact.value}
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   </div>
