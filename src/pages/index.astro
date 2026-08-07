@@ -394,9 +394,9 @@ if (!YOUTUBE_API_KEY) {
               Watch the latest episode on YouTube
             </div>
 
-            <p class="mt-3 text-lg leading-8 text-[#7a6167]">
-              The latest episode couldn't be loaded automatically.
-            </p>
+<p class="mt-3 text-lg leading-8 text-[#7a6167]">
+  {youtubeError || "The latest episode couldn't be loaded automatically."}
+</p>
 
             <a
               href={latestVideoUrl}
