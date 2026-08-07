@@ -23,6 +23,26 @@ const priorities = [
     link: "/priorities#accountability",
   },
 ];
+const YOUTUBE_API_KEY = import.meta.env.YOUTUBE_API_KEY;
+const PLAYLIST_ID = "PLfzsxh8e8t4A";
+
+let latestVideoId = "";
+let latestVideoTitle = "Latest episode";
+
+if (YOUTUBE_API_KEY) {
+  const response = await fetch(
+    `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${PLAYLIST_ID}&maxResults=1&key=${YOUTUBE_API_KEY}`
+  );
+
+  if (response.ok) {
+    const data = await response.json();
+
+    const item = data.items?.[0];
+
+    latestVideoId = item?.snippet?.resourceId?.videoId ?? "";
+    latestVideoTitle = item?.snippet?.title ?? "Latest episode";
+  }
+}
 ---
     <BaseLayout title="AJ Shearer for Monaghan Ward Councillor">
     <div class="bg-[#f8f1f3] text-[#3a1a22]">
@@ -280,14 +300,24 @@ const priorities = [
           </p>
 
           <div class="mt-8 flex flex-wrap gap-4">
-            <a
-              href="https://www.youtube.com/playlist?list=PLfzsxh8e8t4A"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="rounded-full bg-[#651024] px-6 py-3 font-semibold text-white transition hover:bg-[#7a2337]"
-            >
-              View All Episodes
-            </a>
+{latestVideoId ? (
+  <div class="overflow-hidden rounded-3xl bg-[#2b0b14] shadow-lg ring-1 ring-[#efe4e7]">
+    <div class="aspect-video">
+      <iframe
+        class="h-full w-full"
+        src={`https://www.youtube.com/embed/${latestVideoId}`}
+        title={latestVideoTitle}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+) : (
+  <div class="rounded-3xl bg-[#f8f1f3] p-8 text-[#7a6167]">
+    Latest episode unavailable.
+  </div>
+)}
 
             <a
               href="https://www.youtube.com/@ajshearer2307"
