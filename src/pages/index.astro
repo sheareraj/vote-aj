@@ -32,13 +32,19 @@ let latestVideoTitle = "Latest Episode";
 let latestVideoUrl =
   "https://www.youtube.com/playlist?list=PLfzsxh8e8t4A";
 
-if (YOUTUBE_API_KEY) {
+let youtubeError = "";
+
+if (!YOUTUBE_API_KEY) {
+  youtubeError = "YOUTUBE_API_KEY is missing";
+} else {
   try {
     const response = await fetch(
       `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${PLAYLIST_ID}&maxResults=50&key=${YOUTUBE_API_KEY}`
     );
 
-    if (response.ok) {
+    if (!response.ok) {
+      youtubeError = `YouTube API returned ${response.status}: ${await response.text()}`;
+    } else {
       const data = await response.json();
 
       const videos = (data.items ?? [])
@@ -71,16 +77,13 @@ if (YOUTUBE_API_KEY) {
         latestVideoId = latestVideo.contentDetails.videoId;
         latestVideoTitle = latestVideo.snippet.title;
         latestVideoUrl = `https://www.youtube.com/watch?v=${latestVideoId}`;
+      } else {
+        youtubeError = "The playlist returned no usable videos";
       }
-    } else {
-      console.error(
-        "YouTube API error:",
-        response.status,
-        await response.text()
-      );
     }
   } catch (error) {
-    console.error("Unable to load latest YouTube episode:", error);
+    youtubeError =
+      error instanceof Error ? error.message : "Unknown YouTube API error";
   }
 }
 ---
