@@ -3,24 +3,38 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 const priorities = [
   {
-    title: "Affordability",
-    body: `Keeping future tax increases as low as possible through responsible budgeting, sustainable growth, and long-term infrastructure planning.`,
+    title: "Affordability & Responsible Government",
+    body: `Keeping future tax increases as low as reasonably possible by controlling the growth of municipal costs, planning infrastructure for the long term, measuring the value taxpayers receive, and growing Peterborough's commercial and industrial tax base.`,
     link: "/priorities#affordability",
   },
   {
-    title: "Prosperity",
-    body: `Supporting investment, job creation, and economic opportunities that strengthen Peterborough's economy and tax base.`,
+    title: "Economic Growth & Employment Lands",
+    body: `Expanding Peterborough's economic base by supporting investment, creating better conditions for job growth, and working collaboratively with Cavan Monaghan and the Province to move employment lands forward.`,
     link: "/priorities#prosperity",
   },
   {
-    title: "Recreation, Arts & Quality of Life",
-    body: `Supporting recreation, arts, culture, and community activities that strengthen local identity, improve quality of life, and help make Peterborough a more vibrant place to live.`,
-    link: "/priorities#recreation",
+    title: "Safer Streets & Better Outcomes",
+    body: `Taking a practical approach to homelessness and public safety by measuring whether services are producing better outcomes, supporting evidence-based policing, and protecting residents, businesses, and public spaces.`,
+    link: "/priorities",
+  },
+];
+
+const decisionPrinciples = [
+  {
+    title: "Understand the System",
+    body: `Look beyond individual symptoms and understand how decisions in one part of the City affect everything around them.`,
   },
   {
-    title: "Accountability & City Hall",
-    body: `Promoting clear communication, financial stewardship, and accessible representation so residents remain informed and engaged.`,
-    link: "/priorities#accountability",
+    title: "Measure Outcomes",
+    body: `Judge programs and spending by the results they produce, not simply by how much money is spent or how much activity takes place.`,
+  },
+  {
+    title: "Understand Incentives",
+    body: `Policies influence behaviour. Good decisions require understanding the incentives we are creating for residents, businesses, organizations, and government.`,
+  },
+  {
+    title: "Explain the Trade-offs",
+    body: `There are rarely cost-free solutions. Council should be clear about what residents are gaining, what they are giving up, and why a decision makes sense.`,
   },
 ];
 
@@ -32,19 +46,13 @@ let latestVideoTitle = "Latest Episode";
 let latestVideoUrl =
   "https://www.youtube.com/playlist?list=PLfzsxh8e8t4A";
 
-let youtubeError = "";
-
-if (!YOUTUBE_API_KEY) {
-  youtubeError = "YOUTUBE_API_KEY is missing";
-} else {
+if (YOUTUBE_API_KEY) {
   try {
     const response = await fetch(
       `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${PLAYLIST_ID}&maxResults=50&key=${YOUTUBE_API_KEY}`
     );
 
-    if (!response.ok) {
-      youtubeError = `YouTube API returned ${response.status}: ${await response.text()}`;
-    } else {
+    if (response.ok) {
       const data = await response.json();
 
       const videos = (data.items ?? [])
@@ -77,547 +85,841 @@ if (!YOUTUBE_API_KEY) {
         latestVideoId = latestVideo.contentDetails.videoId;
         latestVideoTitle = latestVideo.snippet.title;
         latestVideoUrl = `https://www.youtube.com/watch?v=${latestVideoId}`;
-      } else {
-        youtubeError = "The playlist returned no usable videos";
       }
+    } else {
+      console.error(
+        "YouTube API error:",
+        response.status,
+        await response.text()
+      );
     }
   } catch (error) {
-    youtubeError =
-      error instanceof Error ? error.message : "Unknown YouTube API error";
+    console.error("Unable to load latest YouTube episode:", error);
   }
 }
 ---
-    <BaseLayout title="AJ Shearer for Monaghan Ward Councillor">
-    <div class="bg-[#f8f1f3] text-[#3a1a22]">
+
+<BaseLayout title="AJ Shearer for Monaghan Ward Councillor">
+  <div class="bg-[#f8f1f3] text-[#3a1a22]">
+
+    <!-- HEADER -->
     <header class="sticky top-0 z-30 border-b border-[#efe4e7] bg-white/95 backdrop-blur">
-        <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 md:px-6">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 md:px-6">
         <a href="/" class="shrink-0">
-            <div class="text-xl font-bold tracking-tight text-[#651024] md:text-2xl">
+          <div class="text-xl font-bold tracking-tight text-[#651024] md:text-2xl">
             AJ Shearer
-            </div>
-            <div class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[#7a6167] md:text-xs">
+          </div>
+          <div class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[#7a6167] md:text-xs">
             Monaghan Ward
-            </div>
-            <div class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[#7a6167] md:text-xs">
+          </div>
+          <div class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[#7a6167] md:text-xs">
             Peterborough
-            </div>
+          </div>
         </a>
 
         <nav class="hidden gap-6 text-sm font-medium text-[#7a6167] lg:flex">
-            <a href="#about" class="hover:text-[#651024]">About</a>
-            <a href="#priorities" class="hover:text-[#651024]">Vision</a>
-            <a href="#involved" class="hover:text-[#651024]">Get Involved</a>
-            <a href="#vote" class="hover:text-[#651024]">How To Vote</a>
+          <a href="#about" class="hover:text-[#651024]">About</a>
+          <a href="#priorities" class="hover:text-[#651024]">Vision</a>
+          <a href="#diary" class="hover:text-[#651024]">Diary</a>
+          <a href="#vote" class="hover:text-[#651024]">How To Vote</a>
+          <a href="#involved" class="hover:text-[#651024]">Get Involved</a>
         </nav>
 
         <div class="hidden gap-3 lg:flex">
-            <a href="#involved" class="rounded-full bg-[#651024] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#7a2337]">
+          <a
+            href="#involved"
+            class="rounded-full bg-[#651024] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#7a2337]"
+          >
             Get in touch
-            </a>
-            <a href="#involved" class="rounded-full bg-[#651024] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#7a2337]">
+          </a>
+
+          <a
+            href="#involved"
+            class="rounded-full bg-[#651024] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#7a2337]"
+          >
             Order a Sign
-            </a>
-            <a href="/donate" class="rounded-full bg-[#2b0b14] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#3f1320]">
+          </a>
+
+          <a
+            href="/donate"
+            class="rounded-full bg-[#2b0b14] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#3f1320]"
+          >
             Donate
-            </a>
+          </a>
         </div>
 
         <div class="flex gap-2 lg:hidden">
-            <a href="#vote" class="rounded-full bg-[#651024] px-4 py-2.5 text-sm font-semibold text-white lg:hidden">
-                Vote
-            </a>
-            <a href="#involved" class="rounded-full bg-[#651024] px-4 py-2.5 text-sm font-semibold text-white lg:hidden">
-                Contact
-            </a>
-            <a href="/donate" class="rounded-full bg-[#2b0b14] px-4 py-2.5 text-sm font-semibold text-white lg:hidden">
-                Donate
-            </a>
-        </div>  
+          <a
+            href="#vote"
+            class="rounded-full bg-[#651024] px-4 py-2.5 text-sm font-semibold text-white"
+          >
+            Vote
+          </a>
+
+          <a
+            href="#involved"
+            class="rounded-full bg-[#651024] px-4 py-2.5 text-sm font-semibold text-white"
+          >
+            Contact
+          </a>
+
+          <a
+            href="/donate"
+            class="rounded-full bg-[#2b0b14] px-4 py-2.5 text-sm font-semibold text-white"
+          >
+            Donate
+          </a>
         </div>
+      </div>
     </header>
 
+    <!-- HERO -->
     <section class="bg-[#651024] text-white lg:relative lg:min-h-screen lg:overflow-hidden">
-        <div class="lg:hidden">
+      <div class="lg:hidden">
         <img
-            src="/images/hero-main.jpg"
-            alt="AJ Shearer in Peterborough"
-            class="h-auto w-full"
+          src="/images/hero-main.jpg"
+          alt="AJ Shearer in Peterborough"
+          class="h-auto w-full"
         />
 
         <div class="px-5 py-8">
-            <div class="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-white/90">
+          <div class="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-white/90">
             Running for City Council
-            </div>
+          </div>
 
-            <h1 class="text-[clamp(3.6rem,10vw,5rem)] font-black leading-[0.9] tracking-tight">
+          <h1 class="text-[clamp(3.6rem,10vw,5rem)] font-black leading-[0.9] tracking-tight">
             A practical voice for Monaghan Ward.
-            </h1>
+          </h1>
 
-            <p class="mt-5 text-[1.35rem] leading-8 text-white/90">
-            Focused on growth, livability, accountability, and common-sense city
-            building in Peterborough.
-            </p>
+          <p class="mt-5 text-[1.35rem] leading-8 text-white/90">
+            Focused on affordability, economic growth, safer communities, and
+            better outcomes through practical, evidence-based decision making.
+          </p>
 
-            <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#about" class="rounded-full bg-white px-5 py-3 font-semibold text-[#651024]">
-                Learn More
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a
+              href="#priorities"
+              class="rounded-full bg-white px-5 py-3 font-semibold text-[#651024]"
+            >
+              My Vision
             </a>
-            <a href="#involved" class="rounded-full border border-white/40 px-5 py-3 font-semibold text-white">
-                Get Involved
+
+            <a
+              href="#involved"
+              class="rounded-full border border-white/40 px-5 py-3 font-semibold text-white"
+            >
+              Get Involved
             </a>
-            <a href="/donate" class="rounded-full bg-[#2b0b14] px-5 py-3 font-semibold text-white">
-                Donate
+
+            <a
+              href="/donate"
+              class="rounded-full bg-[#2b0b14] px-5 py-3 font-semibold text-white"
+            >
+              Donate
             </a>
-            </div>
+          </div>
         </div>
-        </div>
+      </div>
 
-        <div class="hidden lg:block">
+      <div class="hidden lg:block">
         <img
-            src="/images/hero-main.jpg"
-            alt="AJ Shearer in Peterborough"
-            class="absolute inset-0 h-full w-full object-cover object-[85%_center]"
+          src="/images/hero-main.jpg"
+          alt="AJ Shearer in Peterborough"
+          class="absolute inset-0 h-full w-full object-cover object-[85%_center]"
         />
+
         <div class="absolute inset-0 bg-gradient-to-r from-[#651024]/95 via-[#651024]/35 via-30% to-transparent"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
 
         <div class="relative z-10 mx-auto flex min-h-screen max-w-6xl items-center px-6 py-24">
-            <div class="max-w-2xl">
+          <div class="max-w-2xl">
             <div class="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/90 backdrop-blur">
-                Running for City Council
+              Running for City Council
             </div>
 
             <h1 class="text-5xl font-black leading-none tracking-tight xl:text-7xl">
-                A practical voice for Monaghan Ward.
+              A practical voice for Monaghan Ward.
             </h1>
 
-            <p class="mt-6 max-w-xl text-lg leading-8 text-white/90">
-                Focused on growth, livability, accountability, and common-sense city
-                building in Peterborough.
+            <p class="mt-6 max-w-xl text-xl leading-8 text-white/90">
+              Focused on affordability, economic growth, safer communities, and
+              better outcomes through practical, evidence-based decision making.
             </p>
 
             <div class="mt-8 flex flex-wrap gap-4">
-                <a href="#about" class="rounded-full bg-white px-6 py-3 font-semibold text-[#651024] shadow-lg">
-                Learn More
-                </a>
-                <a href="#involved" class="rounded-full border border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10">
+              <a
+                href="#priorities"
+                class="rounded-full bg-white px-6 py-3 font-semibold text-[#651024] shadow-lg"
+              >
+                My Vision
+              </a>
+
+              <a
+                href="#involved"
+                class="rounded-full border border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10"
+              >
                 Get Involved
-                </a>
-                <a href="/donate" class="rounded-full bg-[#2b0b14] px-6 py-3 font-semibold text-white shadow-lg hover:bg-[#3f1320]">
+              </a>
+
+              <a
+                href="/donate"
+                class="rounded-full bg-[#2b0b14] px-6 py-3 font-semibold text-white shadow-lg hover:bg-[#3f1320]"
+              >
                 Donate
-                </a>
+              </a>
             </div>
-            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="px-5 py-10 md:py-20">
-        <div class="mx-auto max-w-6xl">
+      <div class="mx-auto max-w-6xl">
         <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
-            <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
+          <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
             About AJ
-            </div>
+          </div>
 
-            <h2 class="mt-3 text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
+          <h2 class="mt-3 text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
             Rooted in Peterborough. Focused on family and community.
-            </h2>
+          </h2>
 
-            <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
+          <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
             AJ Shearer is a husband, father, business professional, and long-time
             member of the Peterborough community who is committed to helping build
             a stronger, safer, and more affordable future for local families.
-            </p>
+          </p>
 
-            <div class="mt-8">
+          <div class="mt-8">
             <img
-                src="/images/family-photo.jpg"
-                alt="AJ Shearer and family"
-                class="w-full rounded-3xl shadow-md md:mx-auto md:max-w-md"
+              src="/images/family-photo.jpg"
+              alt="AJ Shearer and family"
+              class="w-full rounded-3xl shadow-md md:mx-auto md:max-w-md"
             />
-            </div>
+          </div>
 
-            <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
             <div class="rounded-2xl bg-[#f8f1f3] p-5">
-                <h3 class="text-[2rem] font-bold text-[#651024]">Family First</h3>
-                <p class="mt-3 text-[1.2rem] leading-8 text-[#7a6167]">
+              <h3 class="text-[2rem] font-bold text-[#651024]">
+                Family First
+              </h3>
+
+              <p class="mt-3 text-[1.2rem] leading-8 text-[#7a6167]">
                 AJ and his wife Seanna are raising their two boys in Peterborough
                 and care deeply about building a city where families can feel
                 safe, connected, and optimistic.
-                </p>
+              </p>
             </div>
 
             <div class="rounded-2xl bg-[#f8f1f3] p-5">
-                <h3 class="text-[2rem] font-bold text-[#651024]">
+              <h3 class="text-[2rem] font-bold text-[#651024]">
                 Professional Background
-                </h3>
-                <p class="mt-3 text-[1.2rem] leading-8 text-[#7a6167]">
+              </h3>
+
+              <p class="mt-3 text-[1.2rem] leading-8 text-[#7a6167]">
                 With experience in engineering, business intelligence, data
-                analytics, and real estate, AJ brings a practical, data-driven
-                approach to problem solving.
-                </p>
-                <a href="/resume" class="mt-5 inline-flex rounded-full bg-[#651024] px-5 py-3 font-semibold text-white">
+                analytics, change management, and real estate, AJ brings a
+                practical approach built around understanding complex systems,
+                asking the right questions, and measuring results.
+              </p>
+
+              <a
+                href="/resume"
+                class="mt-5 inline-flex rounded-full bg-[#651024] px-5 py-3 font-semibold text-white"
+              >
                 View My Experience
-                </a>
+              </a>
             </div>
 
             <div class="rounded-2xl bg-[#f8f1f3] p-5">
-                <h3 class="text-[2rem] font-bold text-[#651024]">Deep Local Roots</h3>
-                <p class="mt-3 text-[1.2rem] leading-8 text-[#7a6167]">
+              <h3 class="text-[2rem] font-bold text-[#651024]">
+                Deep Local Roots
+              </h3>
+
+              <p class="mt-3 text-[1.2rem] leading-8 text-[#7a6167]">
                 AJ's family has deep roots in the Peterborough area spanning seven
                 generations, through local businesses, families, neighbourhoods,
                 and community involvement.
-                </p>
+              </p>
             </div>
-            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </section>
 
+    <!-- CORE PRIORITIES -->
     <section id="priorities" class="px-5 py-10 md:py-20">
-        <div class="mx-auto max-w-6xl">
+      <div class="mx-auto max-w-6xl">
         <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
-            <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
+          <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
             A Vision for Peterborough
-            </div>
+          </div>
 
-            <h2 class="mt-3 text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
-            Building a stronger future for our community
-            </h2>
+          <h2 class="mt-3 text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
+            Focus on the outcomes that matter.
+          </h2>
 
-            <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
-            Peterborough faces real challenges, but it also has tremendous
-            opportunities. These are the areas where I believe council can help
-            create long-term success for residents and future generations.
-            </p>
+          <p class="mt-5 max-w-4xl text-[1.3rem] leading-9 text-[#7a6167]">
+            Peterborough's challenges do not exist in isolation. Affordability,
+            homelessness, public safety, infrastructure, housing, and economic
+            development are all connected. Good decisions require understanding
+            those relationships and focusing on the outcomes we actually want to
+            achieve.
+          </p>
 
-            <div class="mt-8 grid gap-5 md:grid-cols-2">
+          <p class="mt-5 max-w-4xl text-[1.3rem] leading-9 text-[#7a6167]">
+            Through conversations at the door and the research behind my
+            Diary of a Transparent Candidate series, three areas have continued
+            to stand out as particularly important.
+          </p>
+
+          <div class="mt-8 grid gap-5 lg:grid-cols-3">
             {priorities.map((priority) => (
-                <div class="flex flex-col rounded-2xl bg-[#f8f1f3] p-5 ring-1 ring-[#efe4e7]">
-                <h3 class="text-[2rem] font-bold tracking-tight text-[#3a1a22]">
-                    {priority.title}
+              <div class="flex flex-col rounded-2xl bg-[#f8f1f3] p-6 ring-1 ring-[#efe4e7]">
+                <h3 class="text-[2rem] font-bold leading-tight tracking-tight text-[#3a1a22]">
+                  {priority.title}
                 </h3>
 
-                <p class="mt-3 flex-grow text-[1.2rem] leading-8 text-[#7a6167]">
-                    {priority.body}
+                <p class="mt-4 flex-grow text-[1.2rem] leading-8 text-[#7a6167]">
+                  {priority.body}
                 </p>
 
                 <a
-                    href={priority.link}
-                    class="mt-5 inline-flex w-fit rounded-full bg-[#651024] px-5 py-3 font-semibold text-white"
+                  href={priority.link}
+                  class="mt-6 inline-flex w-fit rounded-full bg-[#651024] px-5 py-3 font-semibold text-white transition hover:bg-[#7a2337]"
                 >
-                    View Vision
+                  View My Vision
                 </a>
-                </div>
+              </div>
             ))}
+          </div>
+
+          <!-- HOW AJ MAKES DECISIONS -->
+          <div class="mt-12 rounded-3xl bg-[#651024] p-6 text-white md:p-8">
+            <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#f3dfe5]">
+              How I'll Make Decisions
             </div>
+
+            <h3 class="mt-3 text-[2.5rem] font-bold leading-tight tracking-tight md:text-4xl">
+              Understand the system. Measure the outcome.
+            </h3>
+
+            <p class="mt-5 max-w-4xl text-[1.2rem] leading-8 text-[#f3dfe5]">
+              Municipal decisions rarely come with perfect solutions. They come
+              with trade-offs. My approach is to understand the system we're
+              trying to change, identify the incentives shaping behaviour, define
+              the outcome we want, and use the best available evidence to
+              determine whether we're actually getting there.
+            </p>
+
+            <div class="mt-8 grid gap-4 md:grid-cols-2">
+              {decisionPrinciples.map((principle) => (
+                <div class="rounded-2xl bg-white/10 p-5 ring-1 ring-white/15">
+                  <h4 class="text-2xl font-bold text-white">
+                    {principle.title}
+                  </h4>
+
+                  <p class="mt-3 text-lg leading-8 text-[#f3dfe5]">
+                    {principle.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <a
+              href="/priorities#accountability"
+              class="mt-8 inline-flex rounded-full bg-white px-6 py-3 font-semibold text-[#651024]"
+            >
+              Read More About My Approach
+            </a>
+          </div>
+
+          <!-- QUALITY OF LIFE -->
+          <div class="mt-8 rounded-3xl border border-[#efe4e7] bg-white p-6 md:p-8">
+            <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
+              A City People Want to Live In
+            </div>
+
+            <div class="mt-4 grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
+              <div>
+                <h3 class="text-[2.25rem] font-bold leading-tight tracking-tight text-[#3a1a22]">
+                  Recreation, Arts & Quality of Life
+                </h3>
+
+                <p class="mt-4 max-w-4xl text-[1.2rem] leading-8 text-[#7a6167]">
+                  A strong city is more than its balance sheet. Recreation,
+                  sports, arts, culture, parks, and community organizations help
+                  make Peterborough a place where people want to live, raise a
+                  family, and put down roots. I support practical partnerships
+                  that expand opportunities while respecting taxpayers and
+                  planning responsibly for long-term costs.
+                </p>
+              </div>
+
+              <a
+                href="/priorities#recreation"
+                class="inline-flex w-fit rounded-full bg-[#651024] px-6 py-3 font-semibold text-white transition hover:bg-[#7a2337]"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </section>
 
-<section id="diary" class="bg-[#f8f1f3] px-5 py-10 md:py-20">
-  <div class="mx-auto max-w-6xl">
-    <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
-      <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
-        Diary of a Transparent Candidate
-      </div>
+    <!-- DIARY OF A TRANSPARENT CANDIDATE -->
+    <section id="diary" class="bg-[#f8f1f3] px-5 py-10 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
+          <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
+            Diary of a Transparent Candidate
+          </div>
 
-      <div class="mt-3 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-        <div>
-          <h2 class="text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
-            Follow the campaign as it unfolds.
-          </h2>
+          <div class="mt-3 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
+              <h2 class="text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
+                See how I'm arriving at these positions.
+              </h2>
 
-          <p class="mt-6 text-[1.3rem] leading-9 text-[#7a6167]">
-            Running for public office is a learning experience, and I believe
-            residents deserve to see more than polished campaign announcements.
-            This series offers a candid look behind the scenes at the
-            conversations I'm having, the issues I'm researching, and the
-            lessons I'm learning throughout the campaign.
-          </p>
+              <p class="mt-6 text-[1.3rem] leading-9 text-[#7a6167]">
+                Running for public office is a learning experience, and I believe
+                residents deserve to see more than polished campaign announcements.
+                This series offers a candid look at the conversations I'm having,
+                the issues I'm researching, and how that information is shaping
+                my approach to City Hall.
+              </p>
 
-          <p class="mt-6 text-[1.3rem] leading-9 text-[#7a6167]">
-            Whether I'm meeting with community leaders, exploring city issues,
-            or reflecting on a day of door knocking, you'll find the latest
-            episode here.
-          </p>
+              <p class="mt-6 text-[1.3rem] leading-9 text-[#7a6167]">
+                From housing and homelessness to public safety, economic
+                development, infrastructure, and the use of better data, the
+                series shows the thinking behind the priorities I'm bringing to
+                this campaign.
+              </p>
 
-          {latestVideoId && (
-            <div class="mt-6">
-              <div class="text-sm font-bold uppercase tracking-[0.2em] text-[#651024]">
-                Latest Episode
-              </div>
+              {latestVideoId && (
+                <div class="mt-6">
+                  <div class="text-sm font-bold uppercase tracking-[0.2em] text-[#651024]">
+                    Latest Episode
+                  </div>
 
-              <div class="mt-2 text-2xl font-bold leading-tight text-[#3a1a22]">
-                {latestVideoTitle}
+                  <div class="mt-2 text-2xl font-bold leading-tight text-[#3a1a22]">
+                    {latestVideoTitle}
+                  </div>
+                </div>
+              )}
+
+              <div class="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="https://www.youtube.com/playlist?list=PLfzsxh8e8t4A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full bg-[#651024] px-6 py-3 font-semibold text-white transition hover:bg-[#7a2337]"
+                >
+                  View All Episodes
+                </a>
+
+                <a
+                  href="https://www.youtube.com/@ajshearer2307"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full border border-[#651024] px-6 py-3 font-semibold text-[#651024] transition hover:bg-[#f8f1f3]"
+                >
+                  Subscribe on YouTube
+                </a>
               </div>
             </div>
-          )}
+
+            {latestVideoId ? (
+              <div class="overflow-hidden rounded-3xl bg-[#2b0b14] shadow-lg ring-1 ring-[#efe4e7]">
+                <div class="aspect-video">
+                  <iframe
+                    class="h-full w-full"
+                    src={`https://www.youtube.com/embed/${latestVideoId}`}
+                    title={latestVideoTitle}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            ) : (
+              <div class="rounded-3xl bg-[#f8f1f3] p-8 text-center ring-1 ring-[#efe4e7]">
+                <div class="text-2xl font-bold text-[#3a1a22]">
+                  Watch the latest episode on YouTube
+                </div>
+
+                <p class="mt-3 text-lg leading-8 text-[#7a6167]">
+                  The latest episode couldn't be loaded automatically.
+                </p>
+
+                <a
+                  href={latestVideoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-6 inline-flex rounded-full bg-[#651024] px-6 py-3 font-semibold text-white"
+                >
+                  Visit the Podcast
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THANK YOU -->
+    <section class="px-5 py-10 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
+          <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
+            Thank You
+          </div>
+
+          <h2 class="mt-3 text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
+            Thanks for taking the time to learn more about me and the campaign.
+          </h2>
+
+          <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
+            Peterborough is an incredible place to raise a family, build a
+            career, and put down roots. I'm running because I believe we can
+            make smarter, more practical decisions that keep our city
+            affordable, improve safety, strengthen our economy, and produce
+            better results from the resources we already have.
+          </p>
+
+          <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
+            If you're looking for additional information, have questions about
+            the campaign, or simply want to connect, please don't hesitate to
+            reach out.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOTING INFORMATION -->
+    <section id="vote" class="bg-[#f8f1f3] px-5 py-10 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
+          <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
+            Election Information
+          </div>
+
+          <h2 class="mt-3 text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
+            How and Where to Vote
+          </h2>
+
+          <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
+            Peterborough's 2026 Municipal and School Board Election takes place
+            on <strong>Monday, October 26, 2026</strong>. Residents can vote
+            online, vote early in person, or cast a ballot at their ward's
+            Election Day voting location.
+          </p>
+
+          <div class="mt-8 grid gap-6 lg:grid-cols-3">
+
+            <!-- REGISTRATION -->
+            <div class="flex flex-col rounded-2xl bg-[#f8f1f3] p-6">
+              <h3 class="text-2xl font-bold text-[#651024]">
+                Check Your Registration
+              </h3>
+
+              <p class="mt-3 flex-grow text-lg leading-8 text-[#7a6167]">
+                The City's online voter services are now available. You can
+                confirm that you're on the voters' list, add or update your
+                information, view your voting location, and see the candidates
+                who will appear on your ballot.
+              </p>
+
+              <a
+                href="https://www.peterborough.ca/council-city-hall/elections/voters/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-5 inline-flex w-fit rounded-full bg-[#651024] px-5 py-3 font-semibold text-white transition hover:bg-[#7a2337]"
+              >
+                Check Your Voter Information
+              </a>
+            </div>
+
+            <!-- ONLINE / ADVANCE -->
+            <div class="rounded-2xl bg-[#f8f1f3] p-6">
+              <h3 class="text-2xl font-bold text-[#651024]">
+                Vote Online or Vote Early
+              </h3>
+
+              <p class="mt-3 text-lg leading-8 text-[#7a6167]">
+                <strong>Online voting opens Monday, October 5 at 10 a.m.</strong>
+                and remains available until
+                <strong>8 p.m. on Election Day, October 26.</strong>
+              </p>
+
+              <div class="mt-5 border-t border-[#d9b8c2] pt-5">
+                <div class="font-bold text-[#3a1a22]">
+                  Advance In-Person Voting
+                </div>
+
+                <p class="mt-2 text-lg leading-8 text-[#7a6167]">
+                  <strong>Wednesday, October 14</strong><br />
+                  10 a.m. to 8 p.m.<br />
+                  Healthy Planet Arena<br />
+                  911 Monaghan Rd.
+                </p>
+              </div>
+            </div>
+
+            <!-- ELECTION DAY -->
+            <div class="rounded-2xl bg-[#651024] p-6 text-white">
+              <div class="text-sm font-bold uppercase tracking-[0.2em] text-[#f3dfe5]">
+                Monaghan Ward
+              </div>
+
+              <h3 class="mt-2 text-2xl font-bold">
+                Election Day
+              </h3>
+
+              <div class="mt-4 text-3xl font-bold">
+                October 26, 2026
+              </div>
+
+              <p class="mt-3 text-lg leading-8 text-[#f3dfe5]">
+                <strong>10 a.m. to 8 p.m.</strong>
+              </p>
+
+              <div class="mt-5 rounded-2xl bg-white p-5 text-[#3a1a22]">
+                <div class="text-xl font-bold text-[#651024]">
+                  Westdale United Church
+                </div>
+
+                <div class="mt-1 text-lg text-[#7a6167]">
+                  1509 Sherbrooke St.
+                </div>
+              </div>
+
+              <p class="mt-5 text-base leading-7 text-[#f3dfe5]">
+                Election Day voting is ward-specific, so Monaghan Ward residents
+                voting in person on October 26 will cast their ballot here.
+              </p>
+            </div>
+          </div>
+
+          <!-- ACCESSIBILITY / VOTER CARDS -->
+          <div class="mt-6 grid gap-6 md:grid-cols-2">
+            <div class="rounded-2xl border border-[#efe4e7] bg-white p-6">
+              <h3 class="text-2xl font-bold text-[#651024]">
+                Accessible Voting
+              </h3>
+
+              <p class="mt-3 text-lg leading-8 text-[#7a6167]">
+                Accessible voting equipment and an internet voting kiosk will
+                be available at <strong>City Hall, 500 George St. N.</strong>
+                from <strong>October 19 to October 23, 9 a.m. to 4 p.m.</strong>
+              </p>
+
+              <p class="mt-4 text-lg leading-8 text-[#7a6167]">
+                Accessible voting equipment will also be available at City Hall
+                on Election Day from <strong>10 a.m. to 8 p.m.</strong> for
+                residents from any ward.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border border-[#efe4e7] bg-white p-6">
+              <h3 class="text-2xl font-bold text-[#651024]">
+                Watch for Your Voter Card
+              </h3>
+
+              <p class="mt-3 text-lg leading-8 text-[#7a6167]">
+                Voter notification cards will be mailed in late September or
+                early October and will include information about online and
+                in-person voting.
+              </p>
+
+              <p class="mt-4 text-lg leading-8 text-[#7a6167]">
+                Your voter notification card can also be used to receive
+                <strong>free Peterborough Transit</strong> when travelling to
+                an in-person voting option.
+              </p>
+            </div>
+          </div>
 
           <div class="mt-8 flex flex-wrap gap-4">
             <a
-              href="https://www.youtube.com/playlist?list=PLfzsxh8e8t4A"
+              href="https://www.peterborough.ca/council-city-hall/elections/voters/"
               target="_blank"
               rel="noopener noreferrer"
               class="rounded-full bg-[#651024] px-6 py-3 font-semibold text-white transition hover:bg-[#7a2337]"
             >
-              View All Episodes
-            </a>
-
-            <a
-              href="https://www.youtube.com/@ajshearer2307"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="rounded-full border border-[#651024] px-6 py-3 font-semibold text-[#651024] transition hover:bg-[#f8f1f3]"
-            >
-              Subscribe on YouTube
+              Official City Voting Information
             </a>
           </div>
         </div>
-
-        {latestVideoId ? (
-          <div class="overflow-hidden rounded-3xl bg-[#2b0b14] shadow-lg ring-1 ring-[#efe4e7]">
-            <div class="aspect-video">
-              <iframe
-                class="h-full w-full"
-                src={`https://www.youtube.com/embed/${latestVideoId}`}
-                title={latestVideoTitle}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        ) : (
-          <div class="rounded-3xl bg-[#f8f1f3] p-8 text-center ring-1 ring-[#efe4e7]">
-            <div class="text-2xl font-bold text-[#3a1a22]">
-              Watch the latest episode on YouTube
-            </div>
-
-            <p class="mt-3 text-lg leading-8 text-[#7a6167]">
-              The latest episode couldn't be loaded automatically.
-            </p>
-
-            <a
-              href={latestVideoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="mt-6 inline-flex rounded-full bg-[#651024] px-6 py-3 font-semibold text-white"
-            >
-              Visit the Podcast
-            </a>
-          </div>
-        )}
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="px-5 py-10 md:py-20">
-  <div class="mx-auto max-w-6xl">
-    <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
-      <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
-        Thank You
-      </div>
-
-      <h2 class="mt-3 text-[clamp(2.75rem,8vw,4rem)] font-bold leading-[1.02] tracking-tight text-[#3a1a22] md:text-5xl">
-        Thanks for taking the time to learn more about me and the campaign.
-      </h2>
-
-      <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
-        Peterborough is an incredible place to raise a family, build a career,
-        and put down roots. I'm running because I believe we can make smarter,
-        more practical decisions that help keep our city affordable, safe, and
-        moving in the right direction.
-      </p>
-
-      <p class="mt-5 text-[1.3rem] leading-9 text-[#7a6167]">
-        If you're looking for additional information, have questions about the
-        campaign, or simply want to connect, please don't hesitate to reach out.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="vote" class="bg-[#f8f1f3] px-5 py-10 md:py-20">
-  <div class="mx-auto max-w-6xl">
-    <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#efe4e7] md:p-10">
-      <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#651024]">
-        Election Information
-      </div>
-
-      <h2 class="mt-3 text-4xl font-bold leading-tight tracking-tight text-[#3a1a22] md:text-5xl">
-        How and Where to Vote
-      </h2>
-
-      <p class="mt-5 text-[1.25rem] leading-8 text-[#7a6167]">
-        Peterborough residents will elect their Mayor, City Councillor, and
-        School Board Trustees on <strong>Monday, October 26, 2026</strong>.
-      </p>
-
-      <div class="mt-8 grid gap-6 md:grid-cols-3">
-        <div class="rounded-2xl bg-[#f8f1f3] p-6">
-          <h3 class="text-2xl font-bold text-[#651024]">
-            Check Your Registration
-          </h3>
-
-          <p class="mt-3 text-lg leading-8 text-[#7a6167]">
-            Make sure you're on the voters list and that your information is up
-            to date before election day.
-          </p>
-
-          <a
-            href="https://www.peterborough.ca/council-city-hall/elections/voters/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mt-5 inline-flex rounded-full bg-[#651024] px-5 py-3 font-semibold text-white"
-          >
-            Check Registration
-          </a>
-        </div>
-
-        <div class="rounded-2xl bg-[#f8f1f3] p-6">
-          <h3 class="text-2xl font-bold text-[#651024]">
-            Voting Options
-          </h3>
-
-          <p class="mt-3 text-lg leading-8 text-[#7a6167]">
-            Peterborough offered both in-person and online voting in the 2022
-            election. The City is currently finalizing voting methods for the
-            2026 election.
-          </p>
-
-          <p class="mt-4 text-lg leading-8 text-[#7a6167]">
-            Voting details, advance voting opportunities, and locations will be
-            announced by the City closer to election day.
-          </p>
-        </div>
-
-        <div class="rounded-2xl bg-[#f8f1f3] p-6">
-          <h3 class="text-2xl font-bold text-[#651024]">
-            Election Day
-          </h3>
-
-          <p class="mt-3 text-lg leading-8 text-[#7a6167]">
-            Municipal Election Day is:
-          </p>
-
-          <div class="mt-4 text-3xl font-bold text-[#651024]">
-            October 26, 2026
-          </div>
-
-          <p class="mt-4 text-lg leading-8 text-[#7a6167]">
-            Additional voting locations and instructions will be published by
-            the City of Peterborough as they become available.
-          </p>
-        </div>
-      </div>
-
-      <div class="mt-8 rounded-2xl bg-[#651024] p-6 text-white">
-        <h3 class="text-2xl font-bold">
-          Stay Informed
-        </h3>
-
-        <p class="mt-3 text-lg leading-8 text-[#f3dfe5]">
-          As additional information becomes available regarding voting methods,
-          advance voting opportunities, and polling locations, I will continue
-          to share updates with residents through this website and social media.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <section id="involved" class="bg-gradient-to-br from-[#7a2337] to-[#651024] px-5 py-12 text-white md:py-20">
-        <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1fr_0.95fr] md:items-start">
+    <!-- GET INVOLVED -->
+    <section
+      id="involved"
+      class="bg-gradient-to-br from-[#7a2337] to-[#651024] px-5 py-12 text-white md:py-20"
+    >
+      <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1fr_0.95fr] md:items-start">
         <div>
-            <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#f3dfe5]">
+          <div class="text-sm font-bold uppercase tracking-[0.25em] text-[#f3dfe5]">
             Get involved
-            </div>
+          </div>
 
-            <h2 class="mt-3 text-[3rem] font-bold leading-[1.05] tracking-tight md:text-5xl">
+          <h2 class="mt-3 text-[3rem] font-bold leading-[1.05] tracking-tight md:text-5xl">
             Help build momentum across Monaghan Ward.
-            </h2>
+          </h2>
 
-            <p class="mt-5 text-xl leading-8 text-[#f3dfe5]">
-            Sign up for campaign updates, volunteer opportunities, lawn signs, and
-            event information.
-            </p>
+          <p class="mt-5 text-xl leading-8 text-[#f3dfe5]">
+            Sign up for campaign updates, volunteer opportunities, lawn signs,
+            and event information.
+          </p>
 
-            <div class="mt-8">    
-                <a href="/donate" class="rounded-2xl bg-[#2b0b14] px-5 py-3 text-center font-semibold text-white">
-                    Donate to Support the Campaign
-                </a>
-            </div>
+          <div class="mt-8">
+            <a
+              href="/donate"
+              class="rounded-2xl bg-[#2b0b14] px-5 py-3 text-center font-semibold text-white"
+            >
+              Donate to Support the Campaign
+            </a>
+          </div>
         </div>
 
         <div class="rounded-3xl bg-white p-6 text-[#3a1a22] shadow-md">
-            <div class="text-[2rem] font-bold tracking-tight">Get in touch</div>
-            <div class="mt-1 text-lg text-[#7a6167]">
-            I'm more excited to hear from you than you are to fill out this form!
-            </div>
+          <div class="text-[2rem] font-bold tracking-tight">
+            Get in touch
+          </div>
 
-            <form action="https://formspree.io/f/mzdojrpy" method="POST" class="mt-6 grid gap-4">
-            <input name="name" class="rounded-2xl border border-[#d9b8c2] px-4 py-3 text-base outline-none focus:border-[#651024]" placeholder="Full name" />
-            <input type="email" name="email" class="rounded-2xl border border-[#d9b8c2] px-4 py-3 text-base outline-none focus:border-[#651024]" placeholder="Email address" />
-            <input name="postalCode" class="rounded-2xl border border-[#d9b8c2] px-4 py-3 text-base outline-none focus:border-[#651024]" placeholder="Postal code" />
+          <div class="mt-1 text-lg text-[#7a6167]">
+            I'm more excited to hear from you than you are to fill out this form!
+          </div>
+
+          <form
+            action="https://formspree.io/f/mzdojrpy"
+            method="POST"
+            class="mt-6 grid gap-4"
+          >
+            <input
+              name="name"
+              class="rounded-2xl border border-[#d9b8c2] px-4 py-3 text-base outline-none focus:border-[#651024]"
+              placeholder="Full name"
+            />
+
+            <input
+              type="email"
+              name="email"
+              class="rounded-2xl border border-[#d9b8c2] px-4 py-3 text-base outline-none focus:border-[#651024]"
+              placeholder="Email address"
+            />
+
+            <input
+              name="postalCode"
+              class="rounded-2xl border border-[#d9b8c2] px-4 py-3 text-base outline-none focus:border-[#651024]"
+              placeholder="Postal code"
+            />
 
             <label class="flex items-center gap-3 rounded-2xl border border-[#d9b8c2] px-4 py-3 text-[#3a1a22]">
-                <input type="checkbox" name="lawnSign" class="h-5 w-5 accent-[#651024]" />
-                <span class="font-medium">I want a lawn sign</span>
+              <input
+                type="checkbox"
+                name="lawnSign"
+                class="h-5 w-5 accent-[#651024]"
+              />
+
+              <span class="font-medium">
+                I want a lawn sign
+              </span>
             </label>
 
             <textarea
-                name="mutual_help"
-                placeholder="How can I help?"
-                rows="4"
-                class="w-full rounded-xl border border-[#d9b8c2] px-4 py-3 text-base text-[#3a1a22] placeholder-[#6b4a53] outline-none focus:border-[#651024]"
+              name="mutual_help"
+              placeholder="How can I help?"
+              rows="4"
+              class="w-full rounded-xl border border-[#d9b8c2] px-4 py-3 text-base text-[#3a1a22] placeholder-[#6b4a53] outline-none focus:border-[#651024]"
             ></textarea>
 
-            <button type="submit" class="rounded-2xl bg-[#651024] px-5 py-3 font-semibold text-white">
-                Sign Up
+            <button
+              type="submit"
+              class="rounded-2xl bg-[#651024] px-5 py-3 font-semibold text-white"
+            >
+              Sign Up
             </button>
-
-            </form>
+          </form>
         </div>
-        </div>
+      </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="border-t border-[#efe4e7] bg-white">
-        <div class="mx-auto grid max-w-6xl gap-6 px-5 py-8 md:grid-cols-[1fr_auto] md:items-start md:px-6">
+      <div class="mx-auto grid max-w-6xl gap-6 px-5 py-8 md:grid-cols-[1fr_auto] md:items-start md:px-6">
         <div>
-            <div class="text-[2rem] font-bold tracking-tight text-[#651024]">
+          <div class="text-[2rem] font-bold tracking-tight text-[#651024]">
             AJ Shearer
-            </div>
+          </div>
 
-            <div class="mt-1 text-sm font-semibold uppercase tracking-[0.22em] text-[#7a6167]">
+          <div class="mt-1 text-sm font-semibold uppercase tracking-[0.22em] text-[#7a6167]">
             Monaghan Ward &bull; Peterborough
-            </div>
+          </div>
 
-            <p class="mt-4 max-w-xl text-base leading-7 text-[#7a6167]">
-            Focused on affordability, responsible growth, accountability, and
-            building a stronger future for Peterborough families.
-            </p>
+          <p class="mt-4 max-w-xl text-base leading-7 text-[#7a6167]">
+            Focused on affordability, economic growth, safer communities, and
+            better outcomes through practical, evidence-based decision making.
+          </p>
         </div>
 
         <div class="flex flex-col gap-3 text-lg text-[#7a6167] md:items-end">
-            <a href="mailto:voteforaj@ajshearer.com" class="hover:text-[#651024]">
+          <a
+            href="mailto:voteforaj@ajshearer.com"
+            class="hover:text-[#651024]"
+          >
             voteforaj@ajshearer.com
-            </a>
-            <a href="#about" class="hover:text-[#651024]">About AJ</a>
-            <a href="#priorities" class="hover:text-[#651024]">Vision</a>
-            <a href="#involved" class="hover:text-[#651024]">Get Involved</a>
-            <a href="/donate" class="hover:text-[#651024]">Donate</a>
-            <a href="https://www.facebook.com/VoteAJShearer" class="hover:text-[#651024]">Visit me on Facebook</a>
-        </div>
-        </div>
+          </a>
 
-        <div class="border-t border-[#efe4e7] bg-[#f8f1f3]">
+          <a href="#about" class="hover:text-[#651024]">
+            About AJ
+          </a>
+
+          <a href="#priorities" class="hover:text-[#651024]">
+            Vision
+          </a>
+
+          <a href="#diary" class="hover:text-[#651024]">
+            Diary of a Transparent Candidate
+          </a>
+
+          <a href="#vote" class="hover:text-[#651024]">
+            How To Vote
+          </a>
+
+          <a href="#involved" class="hover:text-[#651024]">
+            Get Involved
+          </a>
+
+          <a href="/donate" class="hover:text-[#651024]">
+            Donate
+          </a>
+
+          <a
+            href="https://www.facebook.com/VoteAJShearer"
+            class="hover:text-[#651024]"
+          >
+            Visit me on Facebook
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-[#efe4e7] bg-[#f8f1f3]">
         <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-4 text-sm text-[#7a6167] md:flex-row md:items-center md:justify-between md:px-6">
-            <div>&copy; 2026 AJ Shearer Campaign. All rights reserved.</div>
-            <div>Authorized by the AJ Shearer Campaign for Monaghan Ward.</div>
+          <div>
+            &copy; 2026 AJ Shearer Campaign. All rights reserved.
+          </div>
+
+          <div>
+            Authorized by the AJ Shearer Campaign for Monaghan Ward.
+          </div>
         </div>
-        </div>
+      </div>
     </footer>
-    </div>
+
+  </div>
 </BaseLayout>
