@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DataHeader from "../../components/data/DataHeader.astro";
+import VoteExplorer from "../../components/data/VoteExplorer.jsx";
+import councillors from "../../data/councillors.json";
+import topics from "../../data/topics.json";
+import votes from "../../data/votes.json";
+const activeCouncillors = councillors.filter((c) => c.current_member);
+---
+<BaseLayout
+  title="Peterborough Council Vote Explorer | AJ Shearer"
+  description="Explore recorded Peterborough City Council votes with topic, financial-impact and source context."
+  canonical="https://vote.ajshearer.com/data/votes"
+>
+  <div class="min-h-screen bg-[#f8f1f3] text-[#3a1a22]">
+    <DataHeader />
+    <section class="border-b border-[#eadde1] bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+        <a href="/data" class="text-sm font-bold text-[#651024]">← Peterborough By The Numbers</a>
+        <div class="mt-6 max-w-4xl">
+          <div class="text-xs font-black uppercase tracking-[0.24em] text-[#651024]">Council vote explorer</div>
+          <h1 class="mt-3 text-4xl font-black tracking-tight md:text-6xl">See the decision. See the vote.</h1>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">The public version will prioritize meaningful split votes, budget amendments and major financial or policy decisions rather than burying people in routine procedure.</p>
+        </div>
+      </div>
+    </section>
+    <main class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#eadde1] md:p-9">
+        <VoteExplorer client:load councillors={activeCouncillors} topics={topics} votes={votes} />
+      </section>
+    </main>
+  </div>
+</BaseLayout>

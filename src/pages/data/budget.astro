@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DataHeader from "../../components/data/DataHeader.astro";
+import BudgetExplorer from "../../components/data/BudgetExplorer.jsx";
+import rows from "../../data/budget-seed.json";
+---
+<BaseLayout
+  title="Peterborough Budget Explorer | AJ Shearer"
+  description="Explore Peterborough municipal budget figures by year and organizational area, with budget versions kept explicit."
+  canonical="https://vote.ajshearer.com/data/budget"
+>
+  <div class="min-h-screen bg-[#f8f1f3] text-[#3a1a22]">
+    <DataHeader />
+    <section class="border-b border-[#eadde1] bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+        <a href="/data" class="text-sm font-bold text-[#651024]">← Peterborough By The Numbers</a>
+        <div class="mt-6 max-w-4xl">
+          <div class="text-xs font-black uppercase tracking-[0.24em] text-[#651024]">Budget explorer</div>
+          <h1 class="mt-3 text-4xl font-black tracking-tight md:text-6xl">Where does the money go?</h1>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">The first rule of this project is that a recommended budget will never quietly become an “actual” or “adopted” number. Use the version controls below to see exactly what source you are looking at.</p>
+        </div>
+      </div>
+    </section>
+    <main class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#eadde1] md:p-9">
+        <BudgetExplorer client:load rows={rows} />
+      </section>
+      <section class="mt-8 grid gap-5 md:grid-cols-3">
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Next</div><div class="mt-2 text-xl font-black">Normalize 2024–2026</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Map reorganized departments/services into consistent analytical categories.</p></div>
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Then</div><div class="mt-2 text-xl font-black">Tax-driver waterfall</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Attribute levy growth to the major recurring and one-time drivers.</p></div>
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Always</div><div class="mt-2 text-xl font-black">Link the source</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Every public number will retain source document/page metadata in the warehouse.</p></div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>

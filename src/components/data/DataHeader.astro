@@ -1,0 +1,16 @@
+---
+const { compact = false } = Astro.props;
+---
+<header class="border-b border-[#efe4e7] bg-white/95 backdrop-blur">
+  <div class={`mx-auto flex ${compact ? 'max-w-7xl' : 'max-w-6xl'} items-center justify-between gap-4 px-4 py-4 md:px-6`}>
+    <a href="/data" class="min-w-0">
+      <div class="text-lg font-black tracking-tight text-[#651024] md:text-xl">Peterborough By The Numbers</div>
+      <div class="mt-0.5 text-[0.62rem] font-bold uppercase tracking-[0.2em] text-[#7a6167]">AJ Shearer · Data & Accountability</div>
+    </a>
+    <nav class="flex shrink-0 items-center gap-2 text-sm font-semibold">
+      <a href="/data/budget" class="hidden rounded-full px-3 py-2 text-[#651024] hover:bg-[#f8f1f3] sm:inline-flex">Budget</a>
+      <a href="/data/votes" class="hidden rounded-full px-3 py-2 text-[#651024] hover:bg-[#f8f1f3] sm:inline-flex">Votes</a>
+      <a href="/" class="rounded-full border border-[#dcc7cd] px-3 py-2 text-[#651024] hover:bg-[#f8f1f3]">Campaign site</a>
+    </nav>
+  </div>
+</header>

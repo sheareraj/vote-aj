@@ -1,0 +1,156 @@
+[
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "Property taxation",
+    "measure_type": "revenue",
+    "budget_amount_cad": 172309134,
+    "actual_amount_cad": 169402886,
+    "prior_actual_amount_cad": 157003028,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "User fees and service charges",
+    "measure_type": "revenue",
+    "budget_amount_cad": 74707450,
+    "actual_amount_cad": 74856704,
+    "prior_actual_amount_cad": 71443851,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "Government grants and other municipalities",
+    "measure_type": "revenue",
+    "budget_amount_cad": 152307846,
+    "actual_amount_cad": 155249951,
+    "prior_actual_amount_cad": 146776328,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "Total revenues",
+    "measure_type": "revenue",
+    "budget_amount_cad": 447775408,
+    "actual_amount_cad": 460741072,
+    "prior_actual_amount_cad": 441188915,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "General government",
+    "measure_type": "expense",
+    "budget_amount_cad": 44045878,
+    "actual_amount_cad": 45915791,
+    "prior_actual_amount_cad": 34051395,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "Protection services",
+    "measure_type": "expense",
+    "budget_amount_cad": 70852916,
+    "actual_amount_cad": 69698767,
+    "prior_actual_amount_cad": 62834900,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "Transportation services",
+    "measure_type": "expense",
+    "budget_amount_cad": 58587025,
+    "actual_amount_cad": 58052449,
+    "prior_actual_amount_cad": 53096456,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "Environmental services",
+    "measure_type": "expense",
+    "budget_amount_cad": 52484856,
+    "actual_amount_cad": 45329613,
+    "prior_actual_amount_cad": 50145674,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "Health services",
+    "measure_type": "expense",
+    "budget_amount_cad": 17048550,
+    "actual_amount_cad": 17376676,
+    "prior_actual_amount_cad": 17220427,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "Social and family services",
+    "measure_type": "expense",
+    "budget_amount_cad": 109196485,
+    "actual_amount_cad": 103396377,
+    "prior_actual_amount_cad": 94345063,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "Social housing",
+    "measure_type": "expense",
+    "budget_amount_cad": 38215885,
+    "actual_amount_cad": 40531203,
+    "prior_actual_amount_cad": 35832811,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "Recreation and cultural services",
+    "measure_type": "expense",
+    "budget_amount_cad": 32735141,
+    "actual_amount_cad": 34682927,
+    "prior_actual_amount_cad": 33731568,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "Planning and development",
+    "measure_type": "expense",
+    "budget_amount_cad": 9487397,
+    "actual_amount_cad": 6936809,
+    "prior_actual_amount_cad": 8194144,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "financial-2024",
+    "fiscal_year": 2024,
+    "statement_category": "Total expenses",
+    "measure_type": "expense",
+    "budget_amount_cad": 432654133,
+    "actual_amount_cad": 421920612,
+    "prior_actual_amount_cad": 394109619,
+    "source_page": 7,
+    "review_status": "machine_checked"
+  }
+]

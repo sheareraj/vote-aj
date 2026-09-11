@@ -1,0 +1,15 @@
+source_id,fiscal_year,statement_category,measure_type,budget_amount_cad,actual_amount_cad,prior_actual_amount_cad,source_page,review_status
+financial-2024,2024,Property taxation,revenue,172309134,169402886,157003028,7,machine_checked
+financial-2024,2024,User fees and service charges,revenue,74707450,74856704,71443851,7,machine_checked
+financial-2024,2024,Government grants and other municipalities,revenue,152307846,155249951,146776328,7,machine_checked
+financial-2024,2024,Total revenues,revenue,447775408,460741072,441188915,7,machine_checked
+financial-2024,2024,General government,expense,44045878,45915791,34051395,7,machine_checked
+financial-2024,2024,Protection services,expense,70852916,69698767,62834900,7,machine_checked
+financial-2024,2024,Transportation services,expense,58587025,58052449,53096456,7,machine_checked
+financial-2024,2024,Environmental services,expense,52484856,45329613,50145674,7,machine_checked
+financial-2024,2024,Health services,expense,17048550,17376676,17220427,7,machine_checked
+financial-2024,2024,Social and family services,expense,109196485,103396377,94345063,7,machine_checked
+financial-2024,2024,Social housing,expense,38215885,40531203,35832811,7,machine_checked
+financial-2024,2024,Recreation and cultural services,expense,32735141,34682927,33731568,7,machine_checked
+financial-2024,2024,Planning and development,expense,9487397,6936809,8194144,7,machine_checked
+financial-2024,2024,Total expenses,expense,432654133,421920612,394109619,7,machine_checked

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "default_financial_threshold_cad": 250000,
+  "rules": [
+    {"id": "split_vote", "label": "Recorded vote was not unanimous", "enabled": true},
+    {"id": "financial_threshold", "label": "Known or derived financial impact is at least the threshold", "enabled": true},
+    {"id": "recurring_impact", "label": "Decision creates a recurring financial impact", "enabled": true},
+    {"id": "tax_change", "label": "Decision materially changes tax levy, tax policy or user fees", "enabled": true},
+    {"id": "major_capital", "label": "Decision concerns a major capital project or financing commitment", "enabled": true},
+    {"id": "major_policy", "label": "Decision materially changes City policy or service level", "enabled": true},
+    {"id": "manual", "label": "Human reviewer marks the item significant", "enabled": true}
+  ]
+}

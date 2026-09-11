@@ -1,7 +1,12 @@
 ---
 import "../styles/global.css";
 
-const { title = "AJ Shearer for Monaghan Ward Councillor" } = Astro.props;
+const {
+  title = "AJ Shearer for Monaghan Ward Councillor",
+  description = "AJ Shearer is running for City Councillor in Monaghan Ward, Peterborough. Focused on affordability, accountability, responsible growth, and a stronger future for local families.",
+  canonical = "https://vote.ajshearer.com/",
+  ogImage = "https://vote.ajshearer.com/images/og-image.jpg",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -15,35 +20,20 @@ const { title = "AJ Shearer for Monaghan Ward Councillor" } = Astro.props;
 
   <title>{title}</title>
 
-  <meta
-    name="description"
-    content="AJ Shearer is running for City Councillor in Monaghan Ward, Peterborough. Focused on affordability, accountability, responsible growth, and a stronger future for local families."
-  />
+  <meta name="description" content={description} />
 
-  <link rel="canonical" href="https://vote.ajshearer.com/" />
+  <link rel="canonical" href={canonical} />
 
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vote.ajshearer.com/" />
-  <meta property="og:title" content="AJ Shearer for Monaghan Ward Councillor" />
-  <meta
-    property="og:description"
-    content="A practical voice for Monaghan Ward. Focused on affordability, accountability, responsible growth, and a stronger future for Peterborough families."
-  />
-  <meta
-    property="og:image"
-    content="https://vote.ajshearer.com/images/og-image.jpg"
-  />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AJ Shearer for Monaghan Ward Councillor" />
-  <meta
-    name="twitter:description"
-    content="A practical voice for Monaghan Ward. Focused on affordability, accountability, responsible growth, and a stronger future for Peterborough families."
-  />
-  <meta
-    name="twitter:image"
-    content="https://vote.ajshearer.com/images/og-image.jpg"
-  />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
 </head>
 
   <body class="bg-white text-slate-900">

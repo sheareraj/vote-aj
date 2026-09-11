@@ -1,0 +1,21 @@
+topic_id,topic_name,parent_topic_id,public_label,description
+finance,Taxes & Finance,,Taxes & Finance,Tax levy budgets reserves debt and fees
+finance_tax,Taxation,finance,Taxes,Tax rates tax levy assessment and tax policy
+finance_budget,Budget & Spending,finance,Budget & Spending,Operating budgets spending reductions and additions
+finance_debt,Debt & Capital Financing,finance,Debt & Financing,Borrowing debt charges reserves and capital financing
+housing,Housing,,Housing,Housing supply affordability and housing programs
+homelessness,Homelessness,,Homelessness,Shelters outreach encampments supportive housing and homelessness services
+public_safety,Public Safety,,Public Safety,Police fire emergency management by-law and community safety
+public_safety_police,Police,public_safety,Police,Police funding policy and operations
+public_safety_fire,Fire,public_safety,Fire,Fire service funding policy and capital
+econ,Economic Development,,Economic Development,Investment jobs business attraction and employment lands
+econ_airport,Airport & Aerospace,econ,Airport & Aerospace,Airport economic development and aerospace cluster
+development,Development & Planning,,Development & Planning,Zoning approvals planning policy growth management and building services
+infrastructure,Infrastructure,,Infrastructure,Roads bridges sewer water facilities and asset management
+transit,Transit,,Transit,Transit routes operating service and fleet
+recreation,Recreation Parks & Culture,,Recreation & Quality of Life,Parks arenas recreation culture library and community facilities
+environment,Environment & Waste,,Environment,Waste landfill climate trees and environmental services
+governance,Governance & Accountability,,Governance,Procedure transparency compensation appointments and administration
+external,External Agencies & Grants,,Outside Organizations,Transfers grants boards agencies and service partners
+social,Social Services,,Social Services,Ontario Works childcare social assistance and related services
+health,Health & Paramedics,,Health & Paramedics,Public health paramedics physician recruitment and health-related transfers

@@ -1,0 +1,7 @@
+budget_version_id,version_name,is_final,sort_order,description
+actual,Actual,true,50,Audited or otherwise official actual result
+adopted,Adopted,true,40,Final budget as adopted by Council/Mayor process
+approved,Approved,true,40,Official approved budget wording used in source
+recommended,Recommended,false,30,Staff or draft recommended amount prior to final adoption
+draft,Draft,false,20,Draft budget amount
+comparative,Comparative,false,10,Prior-year comparator shown inside another source; retain source's own label
