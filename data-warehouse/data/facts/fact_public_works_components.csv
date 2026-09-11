@@ -1,0 +1,21 @@
+fiscal_year,budget_version,component,amount_cad,total_net_requirement_cad,comparability,source_id,notes
+2023,approved,Yard,0,9339586,medium-high,budget-2024,Yard was fully recovered in the source presentation; Parks/Forestry scope was still changing.
+2023,approved,Winter Control,4565773,9339586,medium-high,budget-2024,Yard was fully recovered in the source presentation; Parks/Forestry scope was still changing.
+2023,approved,Surface Services,2625435,9339586,medium-high,budget-2024,Yard was fully recovered in the source presentation; Parks/Forestry scope was still changing.
+2023,approved,Forestry / Parks & Forestry,1854422,9339586,medium-high,budget-2024,Yard was fully recovered in the source presentation; Parks/Forestry scope was still changing.
+2023,approved,Urban Forest,293955,9339586,medium-high,budget-2024,Yard was fully recovered in the source presentation; Parks/Forestry scope was still changing.
+2024,approved,Yard,0,9718320,medium-high,budget-2025,Yard administration remained fully recovered in the approved 2024 presentation.
+2024,approved,Winter Control,4843114,9718320,medium-high,budget-2025,Yard administration remained fully recovered in the approved 2024 presentation.
+2024,approved,Surface Services,2711831,9718320,medium-high,budget-2025,Yard administration remained fully recovered in the approved 2024 presentation.
+2024,approved,Forestry / Parks & Forestry,2026973,9718320,medium-high,budget-2025,Yard administration remained fully recovered in the approved 2024 presentation.
+2024,approved,Urban Forest,136403,9718320,medium-high,budget-2025,Yard administration remained fully recovered in the approved 2024 presentation.
+2025,approved,Yard,2591303,13040487,qualified,budget-2026,Structural break: Yard becomes a material net requirement and Winter/Surface allocations shift. Do not interpret the full 2024-2025 increase as organic service growth.
+2025,approved,Winter Control,3649489,13040487,qualified,budget-2026,Structural break: Yard becomes a material net requirement and Winter/Surface allocations shift. Do not interpret the full 2024-2025 increase as organic service growth.
+2025,approved,Surface Services,4816011,13040487,qualified,budget-2026,Structural break: Yard becomes a material net requirement and Winter/Surface allocations shift. Do not interpret the full 2024-2025 increase as organic service growth.
+2025,approved,Forestry / Parks & Forestry,1978725,13040487,qualified,budget-2026,Structural break: Yard becomes a material net requirement and Winter/Surface allocations shift. Do not interpret the full 2024-2025 increase as organic service growth.
+2025,approved,Urban Forest,4959,13040487,qualified,budget-2026,Structural break: Yard becomes a material net requirement and Winter/Surface allocations shift. Do not interpret the full 2024-2025 increase as organic service growth.
+2026,final,Yard,2911689,13661707,high,budget-2026,Same Public Works reporting structure as 2025 approved; 2025-2026 is the cleanest recent year-over-year comparison.
+2026,final,Winter Control,3921666,13661707,high,budget-2026,Same Public Works reporting structure as 2025 approved; 2025-2026 is the cleanest recent year-over-year comparison.
+2026,final,Surface Services,4741145,13661707,high,budget-2026,Same Public Works reporting structure as 2025 approved; 2025-2026 is the cleanest recent year-over-year comparison.
+2026,final,Forestry / Parks & Forestry,2069483,13661707,high,budget-2026,Same Public Works reporting structure as 2025 approved; 2025-2026 is the cleanest recent year-over-year comparison.
+2026,final,Urban Forest,17724,13661707,high,budget-2026,Same Public Works reporting structure as 2025 approved; 2025-2026 is the cleanest recent year-over-year comparison.

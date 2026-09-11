@@ -3,10 +3,13 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import DataHeader from "../../components/data/DataHeader.astro";
 import BudgetExplorer from "../../components/data/BudgetExplorer.jsx";
 import ServiceTrendExplorer from "../../components/data/ServiceTrendExplorer.jsx";
+import PublicWorksBreakdown from "../../components/data/PublicWorksBreakdown.jsx";
 import overview from "../../data/budget-overview.json";
 import departments from "../../data/budget-departments-reported.json";
 import reconciliation from "../../data/budget-reconciliation.json";
 import serviceData from "../../data/service-net-requirements.json";
+import publicWorksComponents from "../../data/public-works-components.json";
+import publicWorksAnnotations from "../../data/public-works-annotations.json";
 ---
 <BaseLayout
   title="Peterborough Budget Explorer | AJ Shearer"
@@ -41,10 +44,25 @@ import serviceData from "../../data/service-net-requirements.json";
         </div>
       </section>
 
+      <section class="mt-10 rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#eadde1] md:p-9">
+        <div class="max-w-4xl">
+          <div class="text-xs font-black uppercase tracking-[0.2em] text-[#651024]">Public Works deep dive</div>
+          <h2 class="mt-2 text-3xl font-black tracking-tight md:text-4xl">A reported jump that needs decomposition, not a headline.</h2>
+          <p class="mt-4 max-w-3xl leading-7 text-[#7a6167]">The Public Works total rises sharply in the 2025 approved presentation, but the component structure changes at the same time. This view separates the clean year-over-year comparisons from the structural break and identifies the snow-plowing change that can be sourced directly.</p>
+        </div>
+        <div class="mt-8">
+          <PublicWorksBreakdown client:load components={publicWorksComponents} annotations={publicWorksAnnotations} />
+        </div>
+        <div class="mt-7 flex flex-wrap gap-3 text-sm">
+          <a href="https://www.peterborough.ca/media/21lhmi5p/budget-book-2026-final.pdf" target="_blank" rel="noreferrer" class="rounded-full bg-[#651024] px-4 py-2 font-bold text-white">2026 final budget source ↗</a>
+          <a href="https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=37183" target="_blank" rel="noreferrer" class="rounded-full border border-[#c9aab3] bg-white px-4 py-2 font-bold text-[#651024]">Snow-plowing service report ↗</a>
+        </div>
+      </section>
+
       <section class="mt-8 grid gap-5 md:grid-cols-3">
         <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Loaded</div><div class="mt-2 text-xl font-black">2022–2026 backbone</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Gross operating totals, taxation revenue and source-reported department structures are in the warehouse.</p></div>
         <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Live now</div><div class="mt-2 text-xl font-black">13 normalized service series</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Eleven five-year series plus qualified 2023–2026 series for Public Works and Recreation/Parks/Culture.</p></div>
-        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Crosswalk queue</div><div class="mt-2 text-xl font-black">Remaining scope breaks</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Infrastructure/Planning/Growth and Corporate/Legislative/Administration remain held back until their component crosswalks reconcile.</p></div>
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Crosswalk queue</div><div class="mt-2 text-xl font-black">Remaining crosswalk work</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Infrastructure/Planning/Growth and Corporate/Legislative/Administration remain held back until their component crosswalks reconcile; Public Works now has a component-level structural-break analysis.</p></div>
       </section>
     </main>
   </div>

@@ -90,3 +90,19 @@ The public data section now includes:
 - A preliminary 2027 base-budget correction flag tied to the one-time 2026 reserve use.
 
 Service trends that cross material organizational boundaries are intentionally withheld until their crosswalks can be defended.
+
+## Data population pass 3 — 2026-09-11
+
+- Published qualified 2023–2026 Public Works and Recreation/Parks/Culture series instead of forcing a false 2022 bridge.
+- Added the first verified Council Vote Explorer dataset with individual member votes, topic tags, funding context and official-minute links.
+- Preserved committee-stage vs final-Council decision labels.
+
+## Data population pass 4 — 2026-09-11
+
+- Corrected the Legacy Fund levy-offset history: the final 2024 budget used $1.31M of accumulated Legacy Fund income for tax-rate relief ($800K during Finance Committee plus $510K at final Council), the 2025 budget did not carry that support forward, and the 2026 budget used a larger $3M one-time offset.
+- Added `legacy-levy-offset-history.json` and a multi-year Legacy timeline to `/data/tax-drivers`.
+- Decomposed Public Works into Yard, Winter Control, Surface Services, Forestry/Parks and Urban Forest components for 2023–2026.
+- Flagged the 2024→2025 Public Works jump as a structural/accounting break rather than presenting the full increase as organic service-cost growth.
+- Added sourced Public Works annotations for the municipal-lot snow-plowing transition: $473,309 of existing budget transferred into Public Works, $431,501 of additional 2025 operating cost, plus $68,000 initiated in 2024.
+- Expanded the verified vote archive to 29 motions / 319 individual member-vote records, including 2024 heritage/asset-management and 2025 governance decisions in addition to the existing budget, tax, transit, policing, homelessness and reserve records.
+- Improved the vote UI so multi-component financial decisions are not mislabeled as “not quantified,” and surfaced contextual notes directly on vote cards.

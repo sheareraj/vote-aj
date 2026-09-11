@@ -39,13 +39,15 @@ export default function VoteExplorer({ councillors, topics, votes }) {
       const memberVote = (v.votes || []).find((x) => x.member === councillor);
       const matchesCouncillor = councillor === "all" || (memberVote && !["Absent", "Not recorded"].includes(memberVote.vote));
       const matchesResult = result === "all" || v.result === result;
-      const matchesFinancial = financial === "all" || (financial === "known" ? v.financial_impact?.status === "known" : v.financial_impact?.status !== "known");
+      const status = v.financial_impact?.status || "not_stated";
+      const matchesFinancial = financial === "all" || status === financial;
       return matchesText && matchesTopic && matchesCouncillor && matchesResult && matchesFinancial;
     });
   }, [votes, query, topic, councillor, result, financial, topicById]);
 
   const primaryTopics = topics.filter((t) => !t.parent_topic_id);
   const knownFinancial = votes.filter((v) => v.financial_impact?.status === "known").length;
+  const multiFinancial = votes.filter((v) => v.financial_impact?.status === "multi_component").length;
   const splitVotes = votes.filter((v) => v.yes_count > 0 && v.no_count > 0).length;
 
   return (
@@ -83,14 +85,16 @@ export default function VoteExplorer({ councillors, topics, votes }) {
         <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-[0.12em]">
           <span className="rounded-full bg-[#f8f1f3] px-3 py-2 text-[#651024]">{votes.length} verified motions</span>
           <span className="rounded-full bg-[#f8f1f3] px-3 py-2 text-[#651024]">{splitVotes} split votes</span>
-          <span className="rounded-full bg-[#f8f1f3] px-3 py-2 text-[#651024]">{knownFinancial} known $ impacts</span>
+          <span className="rounded-full bg-[#f8f1f3] px-3 py-2 text-[#651024]">{knownFinancial} single $ impacts</span>
+          {multiFinancial > 0 && <span className="rounded-full bg-[#f8f1f3] px-3 py-2 text-[#651024]">{multiFinancial} multi-part $ decision{multiFinancial === 1 ? "" : "s"}</span>}
         </div>
         <label className="flex items-center gap-2 text-sm font-bold text-[#5f4149]">
           <span>Financial impact</span>
           <select value={financial} onChange={(e) => setFinancial(e.target.value)} className="rounded-full border border-[#dcc7cd] bg-white px-3 py-2 text-[#3a1a22]">
             <option value="all">All</option>
-            <option value="known">Known amount</option>
-            <option value="unknown">Not quantified</option>
+            <option value="known">Single known amount</option>
+            <option value="multi_component">Multiple stated amounts</option>
+            <option value="not_stated">Not quantified</option>
           </select>
         </label>
       </div>
@@ -108,7 +112,13 @@ export default function VoteExplorer({ councillors, topics, votes }) {
             const againstVotes = (v.votes || []).filter((x) => x.vote === "Against");
             const otherVotes = (v.votes || []).filter((x) => !["For", "Against", "Not recorded"].includes(x.vote));
             const selectedMemberVote = councillor === "all" ? null : (v.votes || []).find((x) => x.member === councillor);
-            const amount = v.financial_impact?.status === "known" ? compactMoney(v.financial_impact.amount_cad) : null;
+            const financialStatus = v.financial_impact?.status || "not_stated";
+            const amount = financialStatus === "known" ? compactMoney(v.financial_impact.amount_cad) : null;
+            const financialLabel = amount
+              ? amount
+              : financialStatus === "multi_component"
+                ? "Multiple stated amounts"
+                : "$ impact not quantified";
             return (
               <article key={v.id} className="overflow-hidden rounded-3xl border border-[#eadde1] bg-white">
                 <div className="grid gap-5 p-5 md:p-7 lg:grid-cols-[1fr_auto] lg:items-start">
@@ -128,10 +138,16 @@ export default function VoteExplorer({ councillors, topics, votes }) {
                   </div>
                   <div className="flex min-w-[170px] flex-col gap-2 lg:text-right">
                     <span className={`inline-flex self-start rounded-full px-3 py-1.5 text-xs font-black uppercase tracking-[0.12em] lg:self-end ${v.result === "Carried" ? "bg-emerald-100 text-emerald-800" : "bg-rose-100 text-rose-800"}`}>{v.result} {v.yes_count}–{v.no_count}</span>
-                    {amount ? <div className="text-2xl font-black text-[#651024]">{amount}</div> : <div className="text-sm font-bold text-[#8e747a]">$ impact not quantified</div>}
+                    {amount ? <div className="text-2xl font-black text-[#651024]">{financialLabel}</div> : <div className={`text-sm font-bold ${financialStatus === "multi_component" ? "text-amber-800" : "text-[#8e747a]"}`}>{financialLabel}</div>}
                     {v.financial_impact?.timing && <div className="text-xs font-semibold uppercase tracking-wide text-[#9a7f86]">{String(v.financial_impact.timing).replaceAll("_", " ")}</div>}
                   </div>
                 </div>
+
+                {v.notes && (
+                  <div className="mx-5 mb-5 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-950 md:mx-7">
+                    <strong>Context:</strong> {v.notes}
+                  </div>
+                )}
 
                 {selectedMemberVote && (
                   <div className="mx-5 mb-5 rounded-2xl bg-[#f8f1f3] px-4 py-3 text-sm font-bold text-[#5f4149] md:mx-7">

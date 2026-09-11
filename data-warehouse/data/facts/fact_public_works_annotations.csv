@@ -1,0 +1,5 @@
+effective_year,annotation_type,amount_cad,label,citywide_cost_effect,source_id,notes
+2025,budget_transfer,473309,Municipal-lot snow-plowing budget transferred into Public Works,reclassification_not_new_cost,report-public-works-snow-2023,Existing municipal-lot budget moved to Public Works operating account as the service moved in-house.
+2025,incremental_operating,431501,"Additional 2025 staff, operating costs and materials for in-house snow plowing",new_operating_cost,report-public-works-snow-2023,"Report states $499,501 annualized net increase including the $68,000 introduced in the 2024 budget."
+2024,incremental_operating,68000,Initial 2024 operating increase for in-house snow-plowing transition,new_operating_cost,report-public-works-snow-2023,Initial November/December 2024 operating cost before annualization in 2025.
+2025,capital_precommitment,302000,Snow-plowing equipment capital pre-commitment,capital_not_operating,report-public-works-snow-2023,Capital item; shown for context and excluded from the operating net-requirement trend.

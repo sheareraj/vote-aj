@@ -7,7 +7,7 @@
     "dev": "astro dev --host 0.0.0.0",
     "build": "astro build",
     "preview": "astro preview --host 0.0.0.0",
-    "data:build": "python data-warehouse/scripts/export_site_data.py"
+    "data:build": "node data-warehouse/scripts/export_site_data.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.5",

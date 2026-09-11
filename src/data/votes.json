@@ -166,91 +166,6 @@
     "notes": "Direction to reconsider; the motion itself did not set a dollar reduction."
   },
   {
-    "id": "2025-11-legacy-three-million",
-    "meeting_date": "2025-11-17",
-    "meeting_date_display": "Nov. 17–18, 2025",
-    "meeting_type": "General Committee",
-    "decision_stage": "Committee recommendation",
-    "title": "Use $3M of Legacy income reserve to reduce the levy",
-    "summary": "Council directed staff to use an additional $3 million from the Legacy reserve to reduce the 2026 net tax levy.",
-    "motion_text": "That Council direct staff to move $3,000,000 from the Legacy Fund Reserve (page 275) to reduce the net tax levy.",
-    "mover": "Dave Haacke",
-    "result": "Carried",
-    "yes_count": 11,
-    "no_count": 0,
-    "conflict_count": 0,
-    "absent_count": 0,
-    "topic_ids": [
-      "finance_budget",
-      "finance_tax",
-      "finance_debt"
-    ],
-    "primary_topic_id": "finance_budget",
-    "financial_impact": {
-      "status": "known",
-      "amount_cad": 3000000,
-      "direction": "reduces_net_tax_levy",
-      "timing": "one_time",
-      "funding_source": "Legacy Fund Income Retention reserve"
-    },
-    "votes": [
-      {
-        "member": "Gary Baldwin",
-        "vote": "For"
-      },
-      {
-        "member": "Andrew Beamer",
-        "vote": "For"
-      },
-      {
-        "member": "Alex Bierk",
-        "vote": "For"
-      },
-      {
-        "member": "Matt Crowley",
-        "vote": "For"
-      },
-      {
-        "member": "Kevin Duguay",
-        "vote": "For"
-      },
-      {
-        "member": "Dave Haacke",
-        "vote": "For"
-      },
-      {
-        "member": "Joy Lachica",
-        "vote": "For"
-      },
-      {
-        "member": "Jeff Leal",
-        "vote": "For"
-      },
-      {
-        "member": "Lesley Parnell",
-        "vote": "For"
-      },
-      {
-        "member": "Keith Riel",
-        "vote": "For"
-      },
-      {
-        "member": "Don Vassiliadis",
-        "vote": "For"
-      }
-    ],
-    "source_id": "minutes-2025-budget-general",
-    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=41238",
-    "source_label": "Official City of Peterborough minutes",
-    "review_status": "verified_official_minutes",
-    "significance": [
-      "financial_impact",
-      "budget_amendment",
-      "reserve_use"
-    ],
-    "notes": "This is the additional one-time 2026 levy offset, distinct from the regular use of Legacy investment income for capital."
-  },
-  {
     "id": "2025-11-library-operating-32k",
     "meeting_date": "2025-11-17",
     "meeting_date_display": "Nov. 17–18, 2025",
@@ -421,6 +336,91 @@
     "notes": ""
   },
   {
+    "id": "2025-11-legacy-three-million",
+    "meeting_date": "2025-11-17",
+    "meeting_date_display": "Nov. 17–18, 2025",
+    "meeting_type": "General Committee",
+    "decision_stage": "Committee recommendation",
+    "title": "Use $3M of Legacy income reserve to reduce the levy",
+    "summary": "Council directed staff to use an additional $3 million from the Legacy reserve to reduce the 2026 net tax levy.",
+    "motion_text": "That Council direct staff to move $3,000,000 from the Legacy Fund Reserve (page 275) to reduce the net tax levy.",
+    "mover": "Dave Haacke",
+    "result": "Carried",
+    "yes_count": 11,
+    "no_count": 0,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "finance_budget",
+      "finance_tax",
+      "finance_debt"
+    ],
+    "primary_topic_id": "finance_budget",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 3000000,
+      "direction": "reduces_net_tax_levy",
+      "timing": "one_time",
+      "funding_source": "Legacy Fund Income Retention reserve"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "For"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "For"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "For"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "For"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "For"
+      }
+    ],
+    "source_id": "minutes-2025-budget-general",
+    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=41238",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "financial_impact",
+      "budget_amendment",
+      "reserve_use"
+    ],
+    "notes": "This is the additional one-time 2026 levy offset, distinct from the regular use of Legacy investment income for capital."
+  },
+  {
     "id": "2025-11-contingency-cap-one-million",
     "meeting_date": "2025-11-17",
     "meeting_date_display": "Nov. 17–18, 2025",
@@ -526,6 +526,90 @@
     "financial_impact": {
       "status": "known",
       "amount_cad": 269280,
+      "direction": "adds_program_funding",
+      "timing": "2026_operating_precommitment",
+      "funding_source": "2026 operating budget"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "For"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "Against"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "Against"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "Absent"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "Against"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "Against"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "Against"
+      }
+    ],
+    "source_id": "minutes-2025-homelessness-general",
+    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=40278",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "financial_impact",
+      "split_vote"
+    ],
+    "notes": "Committee-stage vote. Subsequent Council consideration can be shown separately where the final disposition differs."
+  },
+  {
+    "id": "2025-06-trinity-daytime-244800",
+    "meeting_date": "2025-06-23",
+    "meeting_date_display": "June 23, 2025",
+    "meeting_type": "General Committee",
+    "decision_stage": "Committee recommendation",
+    "title": "Trinity daytime hours: $244,800",
+    "summary": "Funding to expand Trinity daytime operating hours failed on a 5–5 tie.",
+    "motion_text": "Trinity daytime hours: $244,800",
+    "mover": "Keith Riel",
+    "result": "Lost",
+    "yes_count": 5,
+    "no_count": 5,
+    "conflict_count": 0,
+    "absent_count": 1,
+    "topic_ids": [
+      "homelessness",
+      "finance_budget",
+      "social"
+    ],
+    "primary_topic_id": "homelessness",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 244800,
       "direction": "adds_program_funding",
       "timing": "2026_operating_precommitment",
       "funding_source": "2026 operating budget"
@@ -753,32 +837,115 @@
     "notes": "Committee-stage vote. Subsequent Council consideration can be shown separately where the final disposition differs."
   },
   {
-    "id": "2025-06-trinity-daytime-244800",
-    "meeting_date": "2025-06-23",
-    "meeting_date_display": "June 23, 2025",
+    "id": "2025-04-council-comp-deferral",
+    "meeting_date": "2025-04-22",
+    "meeting_date_display": "Apr. 22, 2025",
     "meeting_type": "General Committee",
     "decision_stage": "Committee recommendation",
-    "title": "Trinity daytime hours: $244,800",
-    "summary": "Funding to expand Trinity daytime operating hours failed on a 5–5 tie.",
-    "motion_text": "Trinity daytime hours: $244,800",
-    "mover": "Keith Riel",
+    "title": "Proposed deferral of Council Compensation Review",
+    "summary": "A motion to defer the Council Compensation Review for additional comparator information was defeated 2–9.",
+    "motion_text": "That Report FCSFS25-008 be deferred for additional comparables.",
+    "mover": "Gary Baldwin",
     "result": "Lost",
-    "yes_count": 5,
-    "no_count": 5,
+    "yes_count": 2,
+    "no_count": 9,
     "conflict_count": 0,
-    "absent_count": 1,
+    "absent_count": 0,
     "topic_ids": [
-      "homelessness",
-      "finance_budget",
-      "social"
+      "governance",
+      "finance_budget"
     ],
-    "primary_topic_id": "homelessness",
+    "primary_topic_id": "governance",
+    "financial_impact": {
+      "status": "not_stated",
+      "amount_cad": null,
+      "direction": "deferral",
+      "timing": "2026_2030_term",
+      "funding_source": null
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "For"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "Against"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "Against"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "Against"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "Against"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "Against"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "Against"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "Against"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "Against"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "Against"
+      }
+    ],
+    "source_id": "minutes-2025-apr22-general",
+    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=39905",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "compensation_policy"
+    ],
+    "notes": "This record captures the deferral motion, not the later substantive compensation recommendation."
+  },
+  {
+    "id": "2025-02-free-transit-youth-33400",
+    "meeting_date": "2025-02-03",
+    "meeting_date_display": "Feb. 3, 2025",
+    "meeting_type": "City Council",
+    "decision_stage": "Final Council",
+    "title": "Fund free transit for youth at $33,400",
+    "summary": "Council approved implementing free transit for youth and high-school students by September 2025 with $33,400 from the 2025 tax levy.",
+    "motion_text": "That the free transit program for youth and high school students be implemented by September 2025 and that a budget of $33,400 be assigned to this program, with the funds drawn from the Tax Levy for 2025.",
+    "mover": "Gary Baldwin",
+    "result": "Carried",
+    "yes_count": 10,
+    "no_count": 1,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "transit",
+      "finance_budget",
+      "finance_tax"
+    ],
+    "primary_topic_id": "transit",
     "financial_impact": {
       "status": "known",
-      "amount_cad": 244800,
-      "direction": "adds_program_funding",
-      "timing": "2026_operating_precommitment",
-      "funding_source": "2026 operating budget"
+      "amount_cad": 33400,
+      "direction": "increases_net_tax_levy",
+      "timing": "2025_operating",
+      "funding_source": "2025 tax levy"
     },
     "votes": [
       {
@@ -799,11 +966,11 @@
       },
       {
         "member": "Kevin Duguay",
-        "vote": "Against"
+        "vote": "For"
       },
       {
         "member": "Dave Haacke",
-        "vote": "Absent"
+        "vote": "For"
       },
       {
         "member": "Joy Lachica",
@@ -811,11 +978,11 @@
       },
       {
         "member": "Jeff Leal",
-        "vote": "Against"
+        "vote": "For"
       },
       {
         "member": "Lesley Parnell",
-        "vote": "Against"
+        "vote": "For"
       },
       {
         "member": "Keith Riel",
@@ -823,18 +990,102 @@
       },
       {
         "member": "Don Vassiliadis",
-        "vote": "Against"
+        "vote": "For"
       }
     ],
-    "source_id": "minutes-2025-homelessness-general",
-    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=40278",
+    "source_id": "minutes-2025-final-budget-council",
+    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=39500",
     "source_label": "Official City of Peterborough minutes",
     "review_status": "verified_official_minutes",
     "significance": [
+      "split_vote",
       "financial_impact",
-      "split_vote"
+      "budget_amendment"
     ],
-    "notes": "Committee-stage vote. Subsequent Council consideration can be shown separately where the final disposition differs."
+    "notes": ""
+  },
+  {
+    "id": "2025-02-climate-coordinator-eliminate",
+    "meeting_date": "2025-02-03",
+    "meeting_date_display": "Feb. 3, 2025",
+    "meeting_type": "City Council",
+    "decision_stage": "Final Council",
+    "title": "Eliminate vacant Climate Change Coordinator position",
+    "summary": "Council voted to eliminate the vacant Climate Change Coordinator position during final 2025 budget deliberations.",
+    "motion_text": "That the Climate Change Coordinator position, currently vacant, be eliminated.",
+    "mover": "Matt Crowley",
+    "result": "Carried",
+    "yes_count": 9,
+    "no_count": 2,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "environment",
+      "finance_budget"
+    ],
+    "primary_topic_id": "environment",
+    "financial_impact": {
+      "status": "not_stated",
+      "amount_cad": null,
+      "direction": "eliminates_position",
+      "timing": "2025_operating",
+      "funding_source": null
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "For"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "For"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "Against"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "For"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "Against"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "For"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "For"
+      }
+    ],
+    "source_id": "minutes-2025-final-budget-council",
+    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=39500",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "budget_amendment"
+    ],
+    "notes": "The official motion does not state the exact dollar saving, so no amount is inferred."
   },
   {
     "id": "2024-11-trinity-overnight-264000",
@@ -884,6 +1135,91 @@
       {
         "member": "Kevin Duguay",
         "vote": "Against"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "For"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "For"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "Against"
+      }
+    ],
+    "source_id": "minutes-2024-budget-general",
+    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=38914",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "financial_impact",
+      "reserve_use"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "2024-11-trinity-daytime-240000",
+    "meeting_date": "2024-11-18",
+    "meeting_date_display": "Nov. 18–19, 2024",
+    "meeting_type": "General Committee",
+    "decision_stage": "Committee recommendation",
+    "title": "Trinity daytime drop-in hours: $240,000",
+    "summary": "Council supported $240,000 from the Social Services Reserve to extend daytime drop-in operating hours in 2025.",
+    "motion_text": "$240,000 from the Social Services Reserve to extend operating hours at the Trinity daytime drop-in program for 2025.",
+    "mover": "Jeff Leal",
+    "result": "Carried",
+    "yes_count": 8,
+    "no_count": 3,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "homelessness",
+      "finance_budget",
+      "social"
+    ],
+    "primary_topic_id": "homelessness",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 240000,
+      "direction": "adds_program_funding",
+      "timing": "one_time_2025",
+      "funding_source": "Social Services Reserve"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "For"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "Against"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "Against"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
       },
       {
         "member": "Dave Haacke",
@@ -1090,32 +1426,31 @@
     "notes": ""
   },
   {
-    "id": "2024-11-trinity-daytime-240000",
-    "meeting_date": "2024-11-18",
-    "meeting_date_display": "Nov. 18–19, 2024",
+    "id": "2024-06-asset-management-plan",
+    "meeting_date": "2024-06-03",
+    "meeting_date_display": "June 3, 2024",
     "meeting_type": "General Committee",
     "decision_stage": "Committee recommendation",
-    "title": "Trinity daytime drop-in hours: $240,000",
-    "summary": "Council supported $240,000 from the Social Services Reserve to extend daytime drop-in operating hours in 2025.",
-    "motion_text": "$240,000 from the Social Services Reserve to extend operating hours at the Trinity daytime drop-in program for 2025.",
-    "mover": "Jeff Leal",
+    "title": "Approve the 2024 City Asset Management Plan",
+    "summary": "General Committee unanimously approved the 2024 Asset Management Plan, which documents the condition, lifecycle needs and long-term management framework for municipal infrastructure.",
+    "motion_text": "That the 2024 City of Peterborough Asset Management Plan be approved.",
+    "mover": "Joy Lachica",
     "result": "Carried",
-    "yes_count": 8,
-    "no_count": 3,
+    "yes_count": 11,
+    "no_count": 0,
     "conflict_count": 0,
     "absent_count": 0,
     "topic_ids": [
-      "homelessness",
-      "finance_budget",
-      "social"
+      "infrastructure",
+      "finance_debt"
     ],
-    "primary_topic_id": "homelessness",
+    "primary_topic_id": "infrastructure",
     "financial_impact": {
-      "status": "known",
-      "amount_cad": 240000,
-      "direction": "adds_program_funding",
-      "timing": "one_time_2025",
-      "funding_source": "Social Services Reserve"
+      "status": "not_stated",
+      "amount_cad": null,
+      "direction": "planning_framework",
+      "timing": "long_term",
+      "funding_source": null
     },
     "votes": [
       {
@@ -1124,7 +1459,258 @@
       },
       {
         "member": "Andrew Beamer",
+        "vote": "For"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "For"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "For"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "For"
+      }
+    ],
+    "source_id": "minutes-2024-june3-general",
+    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=38164",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "major_policy",
+      "asset_management"
+    ],
+    "notes": "The plan has major long-term financial relevance, but this approval motion itself did not state a single incremental dollar impact."
+  },
+  {
+    "id": "2024-05-heritage-deadline-extension",
+    "meeting_date": "2024-05-13",
+    "meeting_date_display": "May 13, 2024",
+    "meeting_type": "General Committee",
+    "decision_stage": "Committee recommendation",
+    "title": "Request 2030 extension for Ontario Heritage Act listed-property deadline",
+    "summary": "General Committee supported asking Ontario to extend the statutory deadline for processing listed heritage properties from January 1, 2025 to January 1, 2030.",
+    "motion_text": "That the City of Peterborough formally request the Province of Ontario to extend the deadline to process listed properties under the Ontario Heritage Act from January 1, 2025 to January 1, 2030, with the resolution circulated to relevant provincial officials.",
+    "mover": "Alex Bierk",
+    "result": "Carried",
+    "yes_count": 10,
+    "no_count": 1,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "development",
+      "governance"
+    ],
+    "primary_topic_id": "development",
+    "financial_impact": {
+      "status": "not_stated",
+      "amount_cad": null,
+      "direction": "policy_direction",
+      "timing": "policy",
+      "funding_source": null
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "For"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "For"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
+      },
+      {
+        "member": "Dave Haacke",
         "vote": "Against"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "For"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "For"
+      }
+    ],
+    "source_id": "minutes-2024-may13-general",
+    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=37934",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "planning_policy"
+    ],
+    "notes": "The motion concerned provincial heritage-processing timelines; no direct dollar impact was stated in the recorded motion."
+  },
+  {
+    "id": "2023-12-transit-fares-100k",
+    "meeting_date": "2023-12-11",
+    "meeting_date_display": "Dec. 11, 2023",
+    "meeting_type": "City Council",
+    "decision_stage": "Final Council",
+    "title": "Increase 2024 transit fares to add $100K revenue",
+    "summary": "Council increased several Peterborough Transit fares and budgeted an additional $100,000 in public-transit fare revenue.",
+    "motion_text": "That Public Transit Fare Revenues in the 2024 Budget be increased by $100,000 and proposed Transit Rates be amended, including increasing the single ride from $2.75 to $3.00.",
+    "mover": "Keith Riel",
+    "result": "Carried",
+    "yes_count": 10,
+    "no_count": 0,
+    "conflict_count": 0,
+    "absent_count": 1,
+    "topic_ids": [
+      "transit",
+      "finance_budget",
+      "finance_tax"
+    ],
+    "primary_topic_id": "transit",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 100000,
+      "direction": "increases_service_revenue",
+      "timing": "2024_operating",
+      "funding_source": "Transit fares"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "Absent"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "For"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "For"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "For"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "For"
+      }
+    ],
+    "source_id": "minutes-2023-budget-council",
+    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=37311",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "financial_impact",
+      "user_fee_change"
+    ],
+    "notes": "The $100K is additional budgeted service revenue, not an expenditure."
+  },
+  {
+    "id": "2023-12-sherbrooke-ea-150k",
+    "meeting_date": "2023-12-11",
+    "meeting_date_display": "Dec. 11, 2023",
+    "meeting_type": "City Council",
+    "decision_stage": "Final Council",
+    "title": "Defer $150K Sherbrooke Street EA to reduce 2024 levy",
+    "summary": "Council deferred the $150,000 Sherbrooke Street Reconstruction Class EA amendment and used the resulting Capital Levy financing reduction to reduce the 2024 net tax levy requirement.",
+    "motion_text": "That the Amendment to the Sherbrooke Street Reconstruction Class EA in the amount of $150,000 be deferred and the resulting reduction in Capital Levy financing be used to reduce the 2024 Net Tax Levy Requirement.",
+    "mover": "Keith Riel",
+    "result": "Carried",
+    "yes_count": 8,
+    "no_count": 2,
+    "conflict_count": 0,
+    "absent_count": 1,
+    "topic_ids": [
+      "infrastructure",
+      "finance_tax",
+      "finance_debt"
+    ],
+    "primary_topic_id": "infrastructure",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 150000,
+      "direction": "reduces_net_tax_levy",
+      "timing": "one_time_2024",
+      "funding_source": "Capital Levy"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "Absent"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "For"
       },
       {
         "member": "Alex Bierk",
@@ -1163,15 +1749,692 @@
         "vote": "Against"
       }
     ],
-    "source_id": "minutes-2024-budget-general",
-    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=38914",
+    "source_id": "minutes-2023-budget-council",
+    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=37311",
     "source_label": "Official City of Peterborough minutes",
     "review_status": "verified_official_minutes",
     "significance": [
       "split_vote",
       "financial_impact",
-      "reserve_use"
+      "budget_amendment"
     ],
     "notes": ""
+  },
+  {
+    "id": "2023-12-physician-recruitment-226021",
+    "meeting_date": "2023-12-11",
+    "meeting_date_display": "Dec. 11, 2023",
+    "meeting_type": "City Council",
+    "decision_stage": "Final Council",
+    "title": "Transfer $226,021 physician-recruitment budget to reserve",
+    "summary": "Council unanimously supported temporarily transferring $226,021 for physician recruitment to the Doctor Recruitment Incentive Reserve, with one member absent.",
+    "motion_text": "That the amount for Physician Recruitment of $226,021 be transferred temporarily to the Doctor Recruitment Incentive Reserve; and that staff report back in Q1 2024 about hiring a physician recruiter.",
+    "mover": "Keith Riel",
+    "result": "Carried",
+    "yes_count": 10,
+    "no_count": 0,
+    "conflict_count": 0,
+    "absent_count": 1,
+    "topic_ids": [
+      "health",
+      "finance_budget",
+      "finance_debt"
+    ],
+    "primary_topic_id": "health",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 226021,
+      "direction": "reserve_transfer",
+      "timing": "one_time_reserve_transfer",
+      "funding_source": "Doctor Recruitment Incentive Reserve"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "Absent"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "For"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "For"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "For"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "For"
+      }
+    ],
+    "source_id": "minutes-2023-budget-council",
+    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=37311",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "financial_impact",
+      "reserve_use"
+    ],
+    "notes": "This moves approved funding to a reserve rather than creating a new $226,021 levy impact."
+  },
+  {
+    "id": "2023-12-parkhill-reallocation-125k",
+    "meeting_date": "2023-12-11",
+    "meeting_date_display": "Dec. 11, 2023",
+    "meeting_type": "City Council",
+    "decision_stage": "Final Council",
+    "title": "Proposed Parkhill resurfacing deferral and $125K reallocation",
+    "summary": "A motion to postpone resurfacing on part of Parkhill Road and transfer $125,000 to a new capital project for short-term improvements was defeated.",
+    "motion_text": "Postpone resurfacing of Parkhill Road from Medical Drive to Wallis Drive and transfer $125,000 from Capital Project #22-020 to a new capital project to initiate short-term improvement work.",
+    "mover": "Joy Lachica",
+    "result": "Lost",
+    "yes_count": 2,
+    "no_count": 8,
+    "conflict_count": 0,
+    "absent_count": 1,
+    "topic_ids": [
+      "infrastructure",
+      "finance_debt"
+    ],
+    "primary_topic_id": "infrastructure",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 125000,
+      "direction": "capital_reallocation",
+      "timing": "capital_project",
+      "funding_source": "Capital Project #22-020"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "Absent"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "Against"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "Against"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "Against"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "Against"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "Against"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "Against"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "Against"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "Against"
+      }
+    ],
+    "source_id": "minutes-2023-budget-council",
+    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=37311",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "financial_impact",
+      "capital_reallocation"
+    ],
+    "notes": "The motion would have reallocated existing capital funding; $125K is not treated as a new City-wide expenditure."
+  },
+  {
+    "id": "2023-11-tax-ratio-shift-3m",
+    "meeting_date": "2023-11-23",
+    "meeting_date_display": "Nov. 20–23, 2023",
+    "meeting_type": "Finance Committee",
+    "decision_stage": "Committee recommendation",
+    "title": "Shift about $3M of 2024 tax burden to commercial/industrial classes",
+    "summary": "Finance Committee supported increasing the commercial and industrial tax ratios from 1.5 to 1.65 to shift approximately $3 million of the 2024 net tax requirement away from the residential class.",
+    "motion_text": "That the 2024 tax ratios for the commercial and industrial subclasses be increased from 1.5% of the residential rate to 1.65%, to shift approximately $3,000,000 of the net tax requirement burden in 2024 from the residential tax class to the Commercial and Industrial tax classes.",
+    "mover": "Jeff Leal",
+    "result": "Carried",
+    "yes_count": 10,
+    "no_count": 1,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "finance_tax",
+      "finance_budget"
+    ],
+    "primary_topic_id": "finance_tax",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 3000000,
+      "direction": "shifts_tax_burden",
+      "timing": "2024_tax_policy",
+      "funding_source": "Commercial and industrial tax classes"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "For"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "For"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "Against"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "For"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "For"
+      }
+    ],
+    "source_id": "minutes-2023-budget-finance",
+    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=37518",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "tax_policy",
+      "financial_impact"
+    ],
+    "notes": "This changes how the levy is distributed among tax classes; it does not reduce the City-wide tax requirement."
+  },
+  {
+    "id": "2023-11-service-grants-43800",
+    "meeting_date": "2023-11-23",
+    "meeting_date_display": "Nov. 20–23, 2023",
+    "meeting_type": "Finance Committee",
+    "decision_stage": "Committee recommendation",
+    "title": "Increase selected Service Grants by $43,800",
+    "summary": "Finance Committee approved a 1.5% adjustment for selected service-grant recipients, funded with $43,800 from the 2024 General Contingency provision.",
+    "motion_text": "Adjust funding of Service Grants to selected organizations to a 1.5% increase in 2024; the $43,800 increase shall be funded from the 2024 General Contingency provision.",
+    "mover": "Alex Bierk",
+    "result": "Carried",
+    "yes_count": 6,
+    "no_count": 5,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "external",
+      "finance_budget"
+    ],
+    "primary_topic_id": "external",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 43800,
+      "direction": "adds_grant_funding",
+      "timing": "one_time_2024",
+      "funding_source": "2024 General Contingency provision"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "For"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "Against"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "Against"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "Against"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "Against"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "Against"
+      }
+    ],
+    "source_id": "minutes-2023-budget-finance",
+    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=37518",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "financial_impact",
+      "budget_amendment"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "2023-11-legacy-800k",
+    "meeting_date": "2023-11-23",
+    "meeting_date_display": "Nov. 20–23, 2023",
+    "meeting_type": "Finance Committee",
+    "decision_stage": "Committee recommendation",
+    "title": "Use $800K of Legacy income reserve to reduce the 2024 tax rate",
+    "summary": "Finance Committee supported drawing $800,000 from the Legacy Fund Income Reserve to reduce the proposed 2024 all-inclusive tax-rate increase by 0.40 percentage points.",
+    "motion_text": "That funds be drawn from the Legacy Fund Income Reserve in the amount of $800,000 to reduce the proposed all-inclusive tax rate increase by 0.40%.",
+    "mover": "Jeff Leal",
+    "result": "Carried",
+    "yes_count": 10,
+    "no_count": 1,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "finance_budget",
+      "finance_tax",
+      "finance_debt"
+    ],
+    "primary_topic_id": "finance_budget",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 800000,
+      "direction": "reduces_tax_rate",
+      "timing": "one_time_2024",
+      "funding_source": "Legacy Fund Income Retention Reserve"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "For"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "For"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "For"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "Against"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "For"
+      }
+    ],
+    "source_id": "minutes-2023-budget-finance",
+    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=37518",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "reserve_use",
+      "financial_impact",
+      "budget_amendment"
+    ],
+    "notes": "This was the first of two one-time Legacy-income-reserve draws incorporated into the final 2024 budget; final Council later added another $510,000."
+  },
+  {
+    "id": "2023-11-casino-200k",
+    "meeting_date": "2023-11-23",
+    "meeting_date_display": "Nov. 20–23, 2023",
+    "meeting_type": "Finance Committee",
+    "decision_stage": "Committee recommendation",
+    "title": "Use $200K of Casino reserve to reduce the 2024 tax rate",
+    "summary": "Finance Committee supported drawing $200,000 from the Casino Gaming Reserve to reduce the proposed all-inclusive tax-rate increase by 0.10 percentage points.",
+    "motion_text": "That funds be drawn from the Casino Gaming Reserve in the amount of $200,000 to reduce the proposed all-inclusive tax rate increase by 0.10%.",
+    "mover": "Jeff Leal",
+    "result": "Carried",
+    "yes_count": 9,
+    "no_count": 2,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "finance_budget",
+      "finance_tax",
+      "finance_debt"
+    ],
+    "primary_topic_id": "finance_budget",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 200000,
+      "direction": "reduces_tax_rate",
+      "timing": "one_time_2024",
+      "funding_source": "Casino Gaming Reserve"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "For"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "For"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "Against"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "Against"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "For"
+      }
+    ],
+    "source_id": "minutes-2023-budget-finance",
+    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=37518",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "reserve_use",
+      "financial_impact",
+      "budget_amendment"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "2023-11-bonnerworth-design-250k",
+    "meeting_date": "2023-11-23",
+    "meeting_date_display": "Nov. 20–23, 2023",
+    "meeting_type": "Finance Committee",
+    "decision_stage": "Committee recommendation",
+    "title": "Pre-approve $250K for Bonnerworth-related design",
+    "summary": "Finance Committee unanimously pre-approved $250,000 in the 2025 budget for initial active-transportation and road design associated with the Bonnerworth Park redevelopment.",
+    "motion_text": "That Council pre-approve $250,000 for the 2025 budget, funded from the capital levy, to support the initial design of active transportation and related road improvements to support the Bonnerworth Park redevelopment.",
+    "mover": "Lesley Parnell",
+    "result": "Carried",
+    "yes_count": 11,
+    "no_count": 0,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "recreation",
+      "infrastructure",
+      "finance_debt"
+    ],
+    "primary_topic_id": "recreation",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 250000,
+      "direction": "capital_precommitment",
+      "timing": "2025_capital_precommitment",
+      "funding_source": "Capital levy"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "For"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "For"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "For"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "For"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "For"
+      }
+    ],
+    "source_id": "minutes-2023-budget-finance",
+    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=37518",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "financial_impact",
+      "capital_precommitment"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "2023-11-traffic-calming-reallocation",
+    "meeting_date": "2023-11-21",
+    "meeting_date_display": "Nov. 20–23, 2023",
+    "meeting_type": "Finance Committee",
+    "decision_stage": "Committee recommendation",
+    "title": "Rework 2024 traffic-calming capital funding",
+    "summary": "Finance Committee reduced the Traffic Calming Program by $600,000 and added $200,000 to the Transportation Safety Program from the Capital Levy Reserve.",
+    "motion_text": "Reduce Capital Project 21-093 Traffic Calming Program by $600,000, from $700,000 to $100,000; and increase Capital Project 24-110 Transportation Safety Program by $200,000, funded from the Capital Levy Reserve.",
+    "mover": "Kevin Duguay",
+    "result": "Carried",
+    "yes_count": 6,
+    "no_count": 5,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "infrastructure",
+      "finance_budget",
+      "finance_debt"
+    ],
+    "primary_topic_id": "infrastructure",
+    "financial_impact": {
+      "status": "multi_component",
+      "amount_cad": null,
+      "direction": "capital_reallocation",
+      "timing": "2024_capital",
+      "funding_source": "Capital Levy Reserve"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "Against"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "Against"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "Against"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "For"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "Against"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "For"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "Against"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "For"
+      }
+    ],
+    "source_id": "minutes-2023-budget-finance",
+    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=37518",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "capital_reallocation",
+      "budget_amendment"
+    ],
+    "notes": "Two explicit amounts are involved ($600K reduction and $200K increase); the explorer does not collapse them into a single inferred fiscal impact."
   }
 ]

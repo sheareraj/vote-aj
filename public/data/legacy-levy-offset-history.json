@@ -1,0 +1,38 @@
+[
+  {
+    "fiscal_year": 2024,
+    "amount_cad": 1310000,
+    "component_count": 2,
+    "known_tax_rate_effect_pct_points": null,
+    "classification": "one_time_levy_offset",
+    "source_id": "minutes-2023-budget-council",
+    "follow_on_year": 2025,
+    "follow_on_note": "The 2025 budget shows the $1.31M Legacy reserve revenue from 2024 falling to $0, creating year-over-year pressure rather than a recurring saving.",
+    "follow_on_source_id": "budget-2025",
+    "notes": "$800,000 was approved during Finance Committee to reduce the all-inclusive rate by 0.40 percentage points; final Council added a further one-time $510,000 draw. Total one-time Legacy Income Reserve support in the 2024 budget: $1.31M."
+  },
+  {
+    "fiscal_year": 2025,
+    "amount_cad": 0,
+    "component_count": 0,
+    "known_tax_rate_effect_pct_points": null,
+    "classification": "no_levy_offset_identified",
+    "source_id": "budget-2025",
+    "follow_on_year": null,
+    "follow_on_note": "",
+    "follow_on_source_id": "",
+    "notes": "The 2025 budget shows Legacy Fund Reserve revenue of $0 versus $1.31M approved in 2024."
+  },
+  {
+    "fiscal_year": 2026,
+    "amount_cad": 3000000,
+    "component_count": 1,
+    "known_tax_rate_effect_pct_points": 1.32,
+    "classification": "one_time_levy_offset",
+    "source_id": "budget-2026-adopted",
+    "follow_on_year": 2027,
+    "follow_on_note": "Preliminary 2027 budget work identifies a $3M base-budget correction tied to the one-time 2026 Legacy reserve draw.",
+    "follow_on_source_id": "council-june-22-2026",
+    "notes": "Additional one-time draw from accumulated Legacy Fund Income Retention reserve; separate from the regular $1.5M Legacy investment-income contribution to capital."
+  }
+]

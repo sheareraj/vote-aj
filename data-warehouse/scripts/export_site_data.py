@@ -88,6 +88,28 @@ for row in legacy_reserve:
         row[key] = int(row[key])
 write_json("legacy-reserve-history.json", legacy_reserve)
 
+legacy_offsets = read_csv(WAREHOUSE / "data" / "facts" / "fact_legacy_levy_offsets.csv")
+for row in legacy_offsets:
+    row["fiscal_year"] = int(row["fiscal_year"])
+    row["amount_cad"] = int(row["amount_cad"])
+    row["component_count"] = int(row["component_count"])
+    row["known_tax_rate_effect_pct_points"] = float(row["known_tax_rate_effect_pct_points"]) if row["known_tax_rate_effect_pct_points"] else None
+    row["follow_on_year"] = int(row["follow_on_year"]) if row["follow_on_year"] else None
+write_json("legacy-levy-offset-history.json", legacy_offsets)
+
+public_works = read_csv(WAREHOUSE / "data" / "facts" / "fact_public_works_components.csv")
+for row in public_works:
+    row["fiscal_year"] = int(row["fiscal_year"])
+    row["amount_cad"] = int(row["amount_cad"])
+    row["total_net_requirement_cad"] = int(row["total_net_requirement_cad"])
+write_json("public-works-components.json", public_works)
+
+public_works_annotations = read_csv(WAREHOUSE / "data" / "facts" / "fact_public_works_annotations.csv")
+for row in public_works_annotations:
+    row["effective_year"] = int(row["effective_year"])
+    row["amount_cad"] = int(row["amount_cad"])
+write_json("public-works-annotations.json", public_works_annotations)
+
 budget = read_csv(WAREHOUSE / "data" / "seed" / "stg_budget_seed.csv")
 for row in budget:
     row["fiscal_year"] = int(row["fiscal_year"])
@@ -103,6 +125,10 @@ for row in actuals:
     row["source_page"] = int(row["source_page"]) if row["source_page"] else None
 write_json("actuals-2024-seed.json", actuals)
 
+# Rebuild the public vote payload from the normalized motion + member-vote facts.
+import subprocess, sys
+subprocess.run([sys.executable, str(WAREHOUSE / "scripts" / "build_published_votes.py")], check=True)
+
 votes_file = WAREHOUSE / "data" / "published_votes.json"
 if votes_file.exists():
     votes = json.loads(votes_file.read_text(encoding="utf-8"))
@@ -114,10 +140,10 @@ write_json(
     "metadata.json",
     {
         "product": "Peterborough By The Numbers",
-        "status": "normalization-and-votes-pass-3",
+        "status": "normalization-and-votes-pass-4",
         "scope": "2022-2026",
-        "budgetDataStatus": "Approved/final 2022-2026 backbone loaded; 13 normalized service net-requirement series now published, including qualified 2023-2026 Public Works and Recreation/Parks/Culture series; Legacy Fund one-time-vs-recurring treatment documented",
-        "voteDataStatus": "first verified recorded-vote batch loaded from official City minutes, with budget, policing, reserve, library and homelessness decisions; ingestion continues",
+        "budgetDataStatus": "Approved/final 2022-2026 backbone loaded; 13 normalized service net-requirement series now published; Public Works component-level structural-break analysis added; Legacy levy-offset history corrected to include 2024 and 2026",
+        "voteDataStatus": "29 verified recorded motions loaded from official City minutes, spanning tax policy, reserves, infrastructure, planning, governance, transit, recreation, health, environment, policing, library and homelessness decisions; ingestion continues",
         "authoritativeSourcePolicy": "City of Peterborough official documents and minutes are authoritative.",
         "lastBuilt": "2026-09-11",
     },

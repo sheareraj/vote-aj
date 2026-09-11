@@ -1,0 +1,202 @@
+[
+  {
+    "fiscal_year": 2023,
+    "budget_version": "approved",
+    "component": "Yard",
+    "amount_cad": 0,
+    "total_net_requirement_cad": 9339586,
+    "comparability": "medium-high",
+    "source_id": "budget-2024",
+    "notes": "Yard was fully recovered in the source presentation; Parks/Forestry scope was still changing."
+  },
+  {
+    "fiscal_year": 2023,
+    "budget_version": "approved",
+    "component": "Winter Control",
+    "amount_cad": 4565773,
+    "total_net_requirement_cad": 9339586,
+    "comparability": "medium-high",
+    "source_id": "budget-2024",
+    "notes": "Yard was fully recovered in the source presentation; Parks/Forestry scope was still changing."
+  },
+  {
+    "fiscal_year": 2023,
+    "budget_version": "approved",
+    "component": "Surface Services",
+    "amount_cad": 2625435,
+    "total_net_requirement_cad": 9339586,
+    "comparability": "medium-high",
+    "source_id": "budget-2024",
+    "notes": "Yard was fully recovered in the source presentation; Parks/Forestry scope was still changing."
+  },
+  {
+    "fiscal_year": 2023,
+    "budget_version": "approved",
+    "component": "Forestry / Parks & Forestry",
+    "amount_cad": 1854422,
+    "total_net_requirement_cad": 9339586,
+    "comparability": "medium-high",
+    "source_id": "budget-2024",
+    "notes": "Yard was fully recovered in the source presentation; Parks/Forestry scope was still changing."
+  },
+  {
+    "fiscal_year": 2023,
+    "budget_version": "approved",
+    "component": "Urban Forest",
+    "amount_cad": 293955,
+    "total_net_requirement_cad": 9339586,
+    "comparability": "medium-high",
+    "source_id": "budget-2024",
+    "notes": "Yard was fully recovered in the source presentation; Parks/Forestry scope was still changing."
+  },
+  {
+    "fiscal_year": 2024,
+    "budget_version": "approved",
+    "component": "Yard",
+    "amount_cad": 0,
+    "total_net_requirement_cad": 9718320,
+    "comparability": "medium-high",
+    "source_id": "budget-2025",
+    "notes": "Yard administration remained fully recovered in the approved 2024 presentation."
+  },
+  {
+    "fiscal_year": 2024,
+    "budget_version": "approved",
+    "component": "Winter Control",
+    "amount_cad": 4843114,
+    "total_net_requirement_cad": 9718320,
+    "comparability": "medium-high",
+    "source_id": "budget-2025",
+    "notes": "Yard administration remained fully recovered in the approved 2024 presentation."
+  },
+  {
+    "fiscal_year": 2024,
+    "budget_version": "approved",
+    "component": "Surface Services",
+    "amount_cad": 2711831,
+    "total_net_requirement_cad": 9718320,
+    "comparability": "medium-high",
+    "source_id": "budget-2025",
+    "notes": "Yard administration remained fully recovered in the approved 2024 presentation."
+  },
+  {
+    "fiscal_year": 2024,
+    "budget_version": "approved",
+    "component": "Forestry / Parks & Forestry",
+    "amount_cad": 2026973,
+    "total_net_requirement_cad": 9718320,
+    "comparability": "medium-high",
+    "source_id": "budget-2025",
+    "notes": "Yard administration remained fully recovered in the approved 2024 presentation."
+  },
+  {
+    "fiscal_year": 2024,
+    "budget_version": "approved",
+    "component": "Urban Forest",
+    "amount_cad": 136403,
+    "total_net_requirement_cad": 9718320,
+    "comparability": "medium-high",
+    "source_id": "budget-2025",
+    "notes": "Yard administration remained fully recovered in the approved 2024 presentation."
+  },
+  {
+    "fiscal_year": 2025,
+    "budget_version": "approved",
+    "component": "Yard",
+    "amount_cad": 2591303,
+    "total_net_requirement_cad": 13040487,
+    "comparability": "qualified",
+    "source_id": "budget-2026",
+    "notes": "Structural break: Yard becomes a material net requirement and Winter/Surface allocations shift. Do not interpret the full 2024-2025 increase as organic service growth."
+  },
+  {
+    "fiscal_year": 2025,
+    "budget_version": "approved",
+    "component": "Winter Control",
+    "amount_cad": 3649489,
+    "total_net_requirement_cad": 13040487,
+    "comparability": "qualified",
+    "source_id": "budget-2026",
+    "notes": "Structural break: Yard becomes a material net requirement and Winter/Surface allocations shift. Do not interpret the full 2024-2025 increase as organic service growth."
+  },
+  {
+    "fiscal_year": 2025,
+    "budget_version": "approved",
+    "component": "Surface Services",
+    "amount_cad": 4816011,
+    "total_net_requirement_cad": 13040487,
+    "comparability": "qualified",
+    "source_id": "budget-2026",
+    "notes": "Structural break: Yard becomes a material net requirement and Winter/Surface allocations shift. Do not interpret the full 2024-2025 increase as organic service growth."
+  },
+  {
+    "fiscal_year": 2025,
+    "budget_version": "approved",
+    "component": "Forestry / Parks & Forestry",
+    "amount_cad": 1978725,
+    "total_net_requirement_cad": 13040487,
+    "comparability": "qualified",
+    "source_id": "budget-2026",
+    "notes": "Structural break: Yard becomes a material net requirement and Winter/Surface allocations shift. Do not interpret the full 2024-2025 increase as organic service growth."
+  },
+  {
+    "fiscal_year": 2025,
+    "budget_version": "approved",
+    "component": "Urban Forest",
+    "amount_cad": 4959,
+    "total_net_requirement_cad": 13040487,
+    "comparability": "qualified",
+    "source_id": "budget-2026",
+    "notes": "Structural break: Yard becomes a material net requirement and Winter/Surface allocations shift. Do not interpret the full 2024-2025 increase as organic service growth."
+  },
+  {
+    "fiscal_year": 2026,
+    "budget_version": "final",
+    "component": "Yard",
+    "amount_cad": 2911689,
+    "total_net_requirement_cad": 13661707,
+    "comparability": "high",
+    "source_id": "budget-2026",
+    "notes": "Same Public Works reporting structure as 2025 approved; 2025-2026 is the cleanest recent year-over-year comparison."
+  },
+  {
+    "fiscal_year": 2026,
+    "budget_version": "final",
+    "component": "Winter Control",
+    "amount_cad": 3921666,
+    "total_net_requirement_cad": 13661707,
+    "comparability": "high",
+    "source_id": "budget-2026",
+    "notes": "Same Public Works reporting structure as 2025 approved; 2025-2026 is the cleanest recent year-over-year comparison."
+  },
+  {
+    "fiscal_year": 2026,
+    "budget_version": "final",
+    "component": "Surface Services",
+    "amount_cad": 4741145,
+    "total_net_requirement_cad": 13661707,
+    "comparability": "high",
+    "source_id": "budget-2026",
+    "notes": "Same Public Works reporting structure as 2025 approved; 2025-2026 is the cleanest recent year-over-year comparison."
+  },
+  {
+    "fiscal_year": 2026,
+    "budget_version": "final",
+    "component": "Forestry / Parks & Forestry",
+    "amount_cad": 2069483,
+    "total_net_requirement_cad": 13661707,
+    "comparability": "high",
+    "source_id": "budget-2026",
+    "notes": "Same Public Works reporting structure as 2025 approved; 2025-2026 is the cleanest recent year-over-year comparison."
+  },
+  {
+    "fiscal_year": 2026,
+    "budget_version": "final",
+    "component": "Urban Forest",
+    "amount_cad": 17724,
+    "total_net_requirement_cad": 13661707,
+    "comparability": "high",
+    "source_id": "budget-2026",
+    "notes": "Same Public Works reporting structure as 2025 approved; 2025-2026 is the cleanest recent year-over-year comparison."
+  }
+]
