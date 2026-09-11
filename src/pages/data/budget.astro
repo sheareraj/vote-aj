@@ -2,11 +2,13 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import DataHeader from "../../components/data/DataHeader.astro";
 import BudgetExplorer from "../../components/data/BudgetExplorer.jsx";
-import rows from "../../data/budget-seed.json";
+import overview from "../../data/budget-overview.json";
+import departments from "../../data/budget-departments-reported.json";
+import reconciliation from "../../data/budget-reconciliation.json";
 ---
 <BaseLayout
   title="Peterborough Budget Explorer | AJ Shearer"
-  description="Explore Peterborough municipal budget figures by year and organizational area, with budget versions kept explicit."
+  description="Explore Peterborough municipal budget figures from 2022 to 2026 with approved/final totals, source links and explicit reconciliation status."
   canonical="https://vote.ajshearer.com/data/budget"
 >
   <div class="min-h-screen bg-[#f8f1f3] text-[#3a1a22]">
@@ -17,18 +19,18 @@ import rows from "../../data/budget-seed.json";
         <div class="mt-6 max-w-4xl">
           <div class="text-xs font-black uppercase tracking-[0.24em] text-[#651024]">Budget explorer</div>
           <h1 class="mt-3 text-4xl font-black tracking-tight md:text-6xl">Where does the money go?</h1>
-          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">The first rule of this project is that a recommended budget will never quietly become an “actual” or “adopted” number. Use the version controls below to see exactly what source you are looking at.</p>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">The operating-budget backbone now covers 2022–2026. Approved prior-year numbers are taken from later City budget books wherever possible so draft and recommended figures do not quietly become final figures.</p>
         </div>
       </div>
     </section>
     <main class="mx-auto max-w-6xl px-6 py-12 md:py-16">
       <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#eadde1] md:p-9">
-        <BudgetExplorer client:load rows={rows} />
+        <BudgetExplorer client:load overview={overview} departments={departments} reconciliation={reconciliation} />
       </section>
       <section class="mt-8 grid gap-5 md:grid-cols-3">
-        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Next</div><div class="mt-2 text-xl font-black">Normalize 2024–2026</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Map reorganized departments/services into consistent analytical categories.</p></div>
-        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Then</div><div class="mt-2 text-xl font-black">Tax-driver waterfall</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Attribute levy growth to the major recurring and one-time drivers.</p></div>
-        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Always</div><div class="mt-2 text-xl font-black">Link the source</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Every public number will retain source document/page metadata in the warehouse.</p></div>
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Loaded</div><div class="mt-2 text-xl font-black">2022–2026 backbone</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Gross operating totals, taxation revenue and reported department structures are now in the warehouse.</p></div>
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">In progress</div><div class="mt-2 text-xl font-black">Service normalization</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Split the 2022 organization into stable services such as Fire, Transit, Police, Roads, Social Services and Airport.</p></div>
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Next analytical layer</div><div class="mt-2 text-xl font-black">Tax drivers</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Separate recurring spending growth, grants, fees, reserve draws, capital financing and other levy drivers.</p></div>
       </section>
     </main>
   </div>

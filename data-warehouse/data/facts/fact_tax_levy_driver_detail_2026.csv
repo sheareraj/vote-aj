@@ -1,0 +1,25 @@
+source_ref,category,description,amount_cad,impact_pct_of_2025_levy,department,division,source_id,review_status
+2.01,Personnel costs,Employee groups step & inflation,4980859,2.71,,,budget-2026,machine_checked
+3.01,Capital financing and other capital requirements,Capital Financing - Increase in Capital Financing,4544600,2.47,Corp,Fin,budget-2026,machine_checked
+3.02,Capital financing and other capital requirements,Other Capital requirements,214100,0.12,Corp,Fin,budget-2026,machine_checked
+4.01,Inflationary factors and other increased costs,Shelter Services,1120000,0.61,CS,SS,budget-2026,machine_checked
+4.02,Inflationary factors and other increased costs,Insurance Costs,439093,0.24,Corp,All,budget-2026,machine_checked
+4.03,Inflationary factors and other increased costs,Tax Writeoffs and Assistance,279134,0.15,FS,PT,budget-2026,machine_checked
+4.04,Inflationary factors and other increased costs,Contingency,250000,0.14,Corp,Fin,budget-2026,machine_checked
+4.05,Inflationary factors and other increased costs,Physician Recruitment,206653,0.11,IPGM,ED,budget-2026,machine_checked
+5.01,Decreased revenues,Social Services reserve,1094000,0.60,CS,SS,budget-2026,needs_row_recheck
+5.02,Decreased revenues,Contribution from Reserve,736686,0.40,various,,budget-2026,needs_row_recheck
+5.03,Decreased revenues,Interest Income,500000,0.27,Corp,Fin,budget-2026,machine_checked
+5.04,Decreased revenues,Rezoning Applications,464337,0.25,IPGM,Plan,budget-2026,machine_checked
+5.05,Decreased revenues,Landfill Tipping Fees,401424,0.22,MO,ES,budget-2026,machine_checked
+5.06,Decreased revenues,Supplemental Taxation,300000,0.16,Corp,Fin,budget-2026,machine_checked
+6.01,Increased revenues / decreased expenditures,Transfer from Legacy Income Reserve,-3000000,-1.63,Corp,Fin,budget-2026,machine_checked
+6.02,Increased revenues / decreased expenditures,Transit revenues,-1013373,-0.55,MO,TR,budget-2026,machine_checked
+6.03,Increased revenues / decreased expenditures,Transit Fleet materials,-800000,-0.44,MO,TR,budget-2026,machine_checked
+6.04,Increased revenues / decreased expenditures,Recreation revenues,-435584,-0.24,CS,Rec,budget-2026,machine_checked
+6.05,Increased revenues / decreased expenditures,Penalties and Interest,-425000,-0.23,Corp,Fin,budget-2026,machine_checked
+6.06,Increased revenues / decreased expenditures,Payment in Lieu of Taxes,-425000,-0.23,Corp,Fin,budget-2026,machine_checked
+6.07,Increased revenues / decreased expenditures,Increased OMPF Funding,-268000,-0.15,Corp,Fin,budget-2026,machine_checked
+6.08,Increased revenues / decreased expenditures,Sponsorship,-113762,-0.06,FCSS,FS,budget-2026,machine_checked
+7.01,Outside agencies,Police,3484125,1.90,,OSA,budget-2026,machine_checked
+7.02,Outside agencies,Outside agencies excluding Police,750385,0.41,,OSA,budget-2026,machine_checked

@@ -1,0 +1,42 @@
+[
+  {
+    "fiscal_year": 2022,
+    "published_total_cad": 297946795,
+    "extracted_department_sum_cad": 297946796,
+    "difference_cad": 1,
+    "status": "review",
+    "notes": "One-dollar extraction/reconciliation difference; published total remains authoritative"
+  },
+  {
+    "fiscal_year": 2023,
+    "published_total_cad": 326812141,
+    "extracted_department_sum_cad": 326812140,
+    "difference_cad": -1,
+    "status": "review",
+    "notes": "One-dollar extraction/reconciliation difference; published total remains authoritative"
+  },
+  {
+    "fiscal_year": 2024,
+    "published_total_cad": 363108377,
+    "extracted_department_sum_cad": 363108580,
+    "difference_cad": 203,
+    "status": "review",
+    "notes": "Small source-table extraction discrepancy requires page-level verification before normalized department trend is published"
+  },
+  {
+    "fiscal_year": 2025,
+    "published_total_cad": 432730055,
+    "extracted_department_sum_cad": 432730055,
+    "difference_cad": 0,
+    "status": "passed",
+    "notes": "Department rows reconcile exactly to published gross total"
+  },
+  {
+    "fiscal_year": 2026,
+    "published_total_cad": 454163028,
+    "extracted_department_sum_cad": 454163026,
+    "difference_cad": -2,
+    "status": "review",
+    "notes": "Two-dollar extraction/reconciliation difference; published total remains authoritative"
+  }
+]

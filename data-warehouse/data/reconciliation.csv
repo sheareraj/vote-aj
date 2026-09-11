@@ -1,0 +1,6 @@
+fiscal_year,published_total_cad,extracted_department_sum_cad,difference_cad,status,notes
+2022,297946795,297946796,1,review,One-dollar extraction/reconciliation difference; published total remains authoritative
+2023,326812141,326812140,-1,review,One-dollar extraction/reconciliation difference; published total remains authoritative
+2024,363108377,363108580,203,review,Small source-table extraction discrepancy requires page-level verification before normalized department trend is published
+2025,432730055,432730055,0,passed,Department rows reconcile exactly to published gross total
+2026,454163028,454163026,-2,review,Two-dollar extraction/reconciliation difference; published total remains authoritative

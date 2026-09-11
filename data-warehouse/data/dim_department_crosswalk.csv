@@ -1,0 +1,44 @@
+fiscal_year,source_org_label,canonical_group,confidence,status,notes
+2022,City Council,Council,1.00,approved,Direct match
+2022,Chief Administrative Officer,,0.40,needs_service_split,2022 CAO grouping contains services later redistributed; do not compare as one department across the reorganization
+2022,Corporate and Legislative Services,,0.45,needs_service_split,Functions split across Finance and Corporate Support Services and Legislative Services in later structure
+2022,Infrastructure and Planning Services,,0.40,needs_service_split,Functions split across IPGM and Municipal Operations in later structure
+2022,Community Services,,0.45,needs_service_split,Service composition changes materially in later structure
+2022,Financial Services - Other Financial,Financial Services Other,0.95,provisional,Concept is substantially stable but detail crosswalk still required
+2022,Transfers to Organizations For Provision of Services,Outside Organizations,0.95,provisional,Concept is substantially stable; individual agencies will be normalized separately
+2023,Council,Council,1.00,approved,Stable 2023+ structure
+2023,Chief Administrative Officer,Chief Administrative Officer,1.00,approved,Stable 2023+ structure
+2023,Finance and Corporate Support Services,Finance and Corporate Support Services,1.00,approved,Stable 2023+ structure
+2023,Legislative Services,Legislative Services,1.00,approved,Stable 2023+ structure
+2023,"Infrastructure, Planning and Growth Management","Infrastructure, Planning and Growth Management",1.00,approved,Stable 2023+ structure
+2023,Municipal Operations,Municipal Operations,1.00,approved,Stable 2023+ structure
+2023,Community Services,Community Services,1.00,approved,Stable 2023+ structure
+2023,Financial Services Other,Financial Services Other,1.00,approved,Stable 2023+ structure
+2023,Outside Organizations,Outside Organizations,1.00,approved,Stable 2023+ structure
+2024,Council,Council,1.00,approved,Stable 2023+ structure
+2024,Chief Administrative Officer,Chief Administrative Officer,1.00,approved,Stable 2023+ structure
+2024,Finance and Corporate Support Services,Finance and Corporate Support Services,1.00,approved,Stable 2023+ structure
+2024,Legislative Services,Legislative Services,1.00,approved,Stable 2023+ structure
+2024,"Infrastructure, Planning and Growth Management","Infrastructure, Planning and Growth Management",1.00,approved,Stable 2023+ structure
+2024,Municipal Operations,Municipal Operations,1.00,approved,Stable 2023+ structure
+2024,Community Services,Community Services,1.00,approved,Stable 2023+ structure
+2024,Financial Services Other,Financial Services Other,1.00,approved,Stable 2023+ structure
+2024,Outside Organizations,Outside Organizations,1.00,approved,Stable 2023+ structure
+2025,Council,Council,1.00,approved,Stable 2023+ structure
+2025,Chief Administrative Officer,Chief Administrative Officer,1.00,approved,Stable 2023+ structure
+2025,Finance and Corporate Support Services,Finance and Corporate Support Services,1.00,approved,Stable 2023+ structure
+2025,Legislative Services,Legislative Services,1.00,approved,Stable 2023+ structure
+2025,"Infrastructure, Planning and Growth Management","Infrastructure, Planning and Growth Management",1.00,approved,Stable 2023+ structure
+2025,Municipal Operations,Municipal Operations,1.00,approved,Stable 2023+ structure
+2025,Community Services,Community Services,1.00,approved,Stable 2023+ structure
+2025,Financial Services Other,Financial Services Other,1.00,approved,Stable 2023+ structure
+2025,Outside Organizations,Outside Organizations,1.00,approved,Stable 2023+ structure
+2026,Council,Council,1.00,approved,Stable 2023+ structure
+2026,Chief Administrative Officer,Chief Administrative Officer,1.00,approved,Stable 2023+ structure
+2026,Finance and Corporate Support Services,Finance and Corporate Support Services,1.00,approved,Stable 2023+ structure
+2026,Legislative Services,Legislative Services,1.00,approved,Stable 2023+ structure
+2026,"Infrastructure, Planning and Growth Management","Infrastructure, Planning and Growth Management",1.00,approved,Stable 2023+ structure
+2026,Municipal Operations,Municipal Operations,1.00,approved,Stable 2023+ structure
+2026,Community Services,Community Services,1.00,approved,Stable 2023+ structure
+2026,Financial Services Other,Financial Services Other,1.00,approved,Stable 2023+ structure
+2026,Outside Organizations,Outside Organizations,1.00,approved,Stable 2023+ structure

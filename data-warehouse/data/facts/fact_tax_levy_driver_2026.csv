@@ -1,0 +1,8 @@
+order_key,category,amount_cad,impact_pct_of_2025_levy,source_ref,source_id,review_status
+1,Personnel costs,4980859,2.71,2.00,budget-2026,machine_checked
+2,Capital financing and other capital requirements,4758700,2.59,3.00,budget-2026,machine_checked
+3,Inflationary factors and other increased costs,2294880,1.25,4.00,budget-2026,machine_checked
+4,Decreased revenues,3496427,1.90,5.00,budget-2026,machine_checked
+5,Increased revenues / decreased expenditures,-6481619,-3.53,6.00,budget-2026,machine_checked
+6,Outside agencies,4234510,2.30,7.00,budget-2026,machine_checked
+7,General inflation and other factors,1262938,0.69,9.00,budget-2026,machine_checked

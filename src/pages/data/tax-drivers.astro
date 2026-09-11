@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DataHeader from "../../components/data/DataHeader.astro";
+import drivers from "../../data/tax-drivers-2026.json";
+import detail from "../../data/tax-driver-detail-2026.json";
+
+const money = new Intl.NumberFormat("en-CA", { style: "currency", currency: "CAD", maximumFractionDigits: 0 });
+const compact = (v) => `${v < 0 ? "-" : ""}$${(Math.abs(v) / 1_000_000).toFixed(2)}M`;
+const maxAbs = Math.max(...drivers.map((d) => Math.abs(d.amount_cad)));
+const highlights = detail
+  .filter((d) => d.review_status === "machine_checked")
+  .sort((a, b) => Math.abs(b.amount_cad) - Math.abs(a.amount_cad))
+  .slice(0, 10);
+const startLevy = 183_833_050;
+const endLevy = 198_379_745;
+const increase = endLevy - startLevy;
+---
+<BaseLayout
+  title="What Drove Peterborough's 2026 Tax Levy? | AJ Shearer"
+  description="Explore the City of Peterborough's published 2026 tax-levy change factors, including capital financing, personnel, outside agencies, reserve use and revenue offsets."
+  canonical="https://vote.ajshearer.com/data/tax-drivers"
+>
+  <div class="min-h-screen bg-[#f8f1f3] text-[#3a1a22]">
+    <DataHeader />
+    <section class="border-b border-[#eadde1] bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+        <a href="/data" class="text-sm font-bold text-[#651024]">← Peterborough By The Numbers</a>
+        <div class="mt-6 max-w-4xl">
+          <div class="text-xs font-black uppercase tracking-[0.24em] text-[#651024]">2026 tax drivers</div>
+          <h1 class="mt-3 text-4xl font-black tracking-tight md:text-6xl">What actually drove the tax levy?</h1>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">Rather than treating the tax increase as one number, this view uses the City's own final-budget change-factor table to separate the major pressures from the offsets.</p>
+        </div>
+      </div>
+    </section>
+
+    <main class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <section class="grid gap-4 md:grid-cols-3">
+        <div class="rounded-3xl bg-white p-6 ring-1 ring-[#eadde1]">
+          <div class="text-xs font-black uppercase tracking-[0.18em] text-[#7a6167]">2025 net tax levy</div>
+          <div class="mt-2 text-3xl font-black text-[#3a1a22]">{compact(startLevy)}</div>
+        </div>
+        <div class="rounded-3xl bg-[#651024] p-6 text-white">
+          <div class="text-xs font-black uppercase tracking-[0.18em] text-white/65">2026 increase</div>
+          <div class="mt-2 text-3xl font-black">+{compact(increase)}</div>
+          <div class="mt-2 text-sm font-semibold text-white/75">+7.91% net tax levy requirement</div>
+        </div>
+        <div class="rounded-3xl bg-white p-6 ring-1 ring-[#eadde1]">
+          <div class="text-xs font-black uppercase tracking-[0.18em] text-[#7a6167]">2026 net tax levy</div>
+          <div class="mt-2 text-3xl font-black text-[#3a1a22]">{compact(endLevy)}</div>
+        </div>
+      </section>
+
+      <section class="mt-8 rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#eadde1] md:p-9">
+        <div class="max-w-3xl">
+          <div class="text-xs font-black uppercase tracking-[0.2em] text-[#651024]">City-published change factors</div>
+          <h2 class="mt-2 text-3xl font-black tracking-tight">Pressures and offsets</h2>
+          <p class="mt-3 leading-7 text-[#7a6167]">Positive amounts increased the levy requirement. Negative amounts offset other pressures. Category totals reconcile exactly to the City's published 2026 levy change.</p>
+        </div>
+
+        <div class="mt-8 space-y-6">
+          {drivers.map((d) => (
+            <div>
+              <div class="mb-2 flex items-end justify-between gap-5">
+                <div>
+                  <div class="font-bold leading-5 text-[#3a1a22]">{d.category}</div>
+                  <div class="mt-1 text-xs font-semibold text-[#7a6167]">{d.impact_pct_of_2025_levy > 0 ? "+" : ""}{d.impact_pct_of_2025_levy.toFixed(2)}% of the 2025 levy</div>
+                </div>
+                <div class={`shrink-0 text-lg font-black ${d.amount_cad < 0 ? "text-emerald-700" : "text-[#651024]"}`}>{d.amount_cad > 0 ? "+" : ""}{compact(d.amount_cad)}</div>
+              </div>
+              <div class="h-3 overflow-hidden rounded-full bg-[#f0e4e7]">
+                <div class={`h-full rounded-full ${d.amount_cad < 0 ? "bg-emerald-600" : "bg-[#7a2337]"}`} style={`width:${Math.max((Math.abs(d.amount_cad) / maxAbs) * 100, 3)}%`}></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="mt-8 rounded-3xl bg-[#fffafb] p-6 ring-1 ring-[#decbd1] md:p-9">
+        <div class="text-xs font-black uppercase tracking-[0.2em] text-[#651024]">Largest individual factors</div>
+        <div class="mt-5 grid gap-3 md:grid-cols-2">
+          {highlights.map((d) => (
+            <div class="flex items-start justify-between gap-4 rounded-2xl bg-white p-4 ring-1 ring-[#eadde1]">
+              <div>
+                <div class="font-bold leading-5">{d.description}</div>
+                <div class="mt-1 text-xs font-semibold text-[#7a6167]">Ref. {d.source_ref}</div>
+              </div>
+              <div class={`shrink-0 font-black ${d.amount_cad < 0 ? "text-emerald-700" : "text-[#651024]"}`}>{d.amount_cad > 0 ? "+" : ""}{compact(d.amount_cad)}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="mt-8 grid gap-5 md:grid-cols-2">
+        <div class="rounded-3xl border border-amber-200 bg-amber-50 p-6 text-amber-950">
+          <div class="font-black">Why reserves are shown separately</div>
+          <p class="mt-2 text-sm leading-6">The final budget uses a $3.0 million transfer from the Legacy Income Reserve as an offset. That lowers the 2026 tax requirement, but it is a funding source rather than a reduction in the underlying cost of providing services.</p>
+        </div>
+        <div class="rounded-3xl bg-white p-6 ring-1 ring-[#eadde1]">
+          <div class="font-black">Source and audit trail</div>
+          <p class="mt-2 text-sm leading-6 text-[#7a6167]">The category totals above come from Chart 2, “2026 Budget: Tax Levy Requirement Change Factors,” in the City's final 2026 Budget Book.</p>
+          <a href="https://media-002-ca.cdn.govstack.com/memorialcentre-011-ca/media/21lhmi5p/budget-book-2026-final.pdf" target="_blank" rel="noreferrer" class="mt-4 inline-flex rounded-full bg-[#651024] px-4 py-2 text-sm font-bold text-white">Open official budget book ↗</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>

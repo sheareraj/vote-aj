@@ -30,6 +30,47 @@ write_json("councillors.json", councillors)
 
 write_json("topics.json", read_csv(WAREHOUSE / "config" / "topic_taxonomy.csv"))
 
+# Five-year operating budget backbone (approved/final figures)
+overview = read_csv(WAREHOUSE / "data" / "facts" / "fact_budget_overview.csv")
+for row in overview:
+    row["fiscal_year"] = int(row["fiscal_year"])
+    row["gross_operating_expenditure_cad"] = int(row["gross_operating_expenditure_cad"])
+    row["taxation_revenue_cad"] = int(row["taxation_revenue_cad"])
+write_json("budget-overview.json", overview)
+
+departments = read_csv(WAREHOUSE / "data" / "facts" / "fact_department_reported.csv")
+for row in departments:
+    row["fiscal_year"] = int(row["fiscal_year"])
+    row["amount_cad"] = int(row["amount_cad"])
+write_json("budget-departments-reported.json", departments)
+
+reconciliation = read_csv(WAREHOUSE / "data" / "reconciliation.csv")
+for row in reconciliation:
+    row["fiscal_year"] = int(row["fiscal_year"])
+    for key in ["published_total_cad", "extracted_department_sum_cad", "difference_cad"]:
+        row[key] = int(row[key])
+write_json("budget-reconciliation.json", reconciliation)
+
+crosswalk = read_csv(WAREHOUSE / "data" / "dim_department_crosswalk.csv")
+for row in crosswalk:
+    row["fiscal_year"] = int(row["fiscal_year"])
+    row["confidence"] = float(row["confidence"])
+write_json("department-crosswalk.json", crosswalk)
+
+
+tax_drivers = read_csv(WAREHOUSE / "data" / "facts" / "fact_tax_levy_driver_2026.csv")
+for row in tax_drivers:
+    row["order_key"] = int(row["order_key"])
+    row["amount_cad"] = int(row["amount_cad"])
+    row["impact_pct_of_2025_levy"] = float(row["impact_pct_of_2025_levy"])
+write_json("tax-drivers-2026.json", tax_drivers)
+
+tax_driver_detail = read_csv(WAREHOUSE / "data" / "facts" / "fact_tax_levy_driver_detail_2026.csv")
+for row in tax_driver_detail:
+    row["amount_cad"] = int(row["amount_cad"])
+    row["impact_pct_of_2025_levy"] = float(row["impact_pct_of_2025_levy"])
+write_json("tax-driver-detail-2026.json", tax_driver_detail)
+
 budget = read_csv(WAREHOUSE / "data" / "seed" / "stg_budget_seed.csv")
 for row in budget:
     row["fiscal_year"] = int(row["fiscal_year"])
@@ -56,11 +97,11 @@ write_json(
     "metadata.json",
     {
         "product": "Peterborough By The Numbers",
-        "status": "foundation",
+        "status": "operating-budget-backbone",
         "scope": "2022-2026",
-        "budgetDataStatus": "2022 approved + 2023 recommended seed; 2024 audited statements seed; 2024-2026 normalization in progress",
+        "budgetDataStatus": "Approved/final 2022-2026 gross operating and taxation backbone loaded; reported department structures loaded; 2022 service-level reorganization crosswalk in progress",
         "voteDataStatus": "schema and councillor dimensions loaded; motion/vote ingestion pending",
         "authoritativeSourcePolicy": "City of Peterborough official documents and minutes are authoritative.",
-        "lastBuilt": "2026-09-10",
+        "lastBuilt": "2026-09-11",
     },
 )

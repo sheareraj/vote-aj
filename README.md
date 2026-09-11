@@ -59,3 +59,21 @@ git add .
 git commit -m "Update Peterborough By The Numbers"
 git push
 ```
+
+
+## Data population pass 1 — 2026-09-11
+
+Populated the 2022–2026 operating-budget backbone, source-reported department totals, reconciliation checks, a preliminary department crosswalk, and the final 2026 tax-levy driver dataset.
+
+New public data exports:
+- budget-overview.json
+- budget-departments-reported.json
+- budget-reconciliation.json
+- department-crosswalk.json
+- tax-drivers-2026.json
+- tax-driver-detail-2026.json
+
+New route:
+- /data/tax-drivers
+
+Normalization status: five-year totals are usable; top-level department comparisons remain source-reported until service-level crosswalks are completed. 2024 has a $203 extraction discrepancy and remains flagged for page-level verification.

@@ -1,0 +1,346 @@
+[
+  {
+    "fiscal_year": 2022,
+    "source_org_label": "City Council",
+    "canonical_group": "Council",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Direct match"
+  },
+  {
+    "fiscal_year": 2022,
+    "source_org_label": "Chief Administrative Officer",
+    "canonical_group": "",
+    "confidence": 0.4,
+    "status": "needs_service_split",
+    "notes": "2022 CAO grouping contains services later redistributed; do not compare as one department across the reorganization"
+  },
+  {
+    "fiscal_year": 2022,
+    "source_org_label": "Corporate and Legislative Services",
+    "canonical_group": "",
+    "confidence": 0.45,
+    "status": "needs_service_split",
+    "notes": "Functions split across Finance and Corporate Support Services and Legislative Services in later structure"
+  },
+  {
+    "fiscal_year": 2022,
+    "source_org_label": "Infrastructure and Planning Services",
+    "canonical_group": "",
+    "confidence": 0.4,
+    "status": "needs_service_split",
+    "notes": "Functions split across IPGM and Municipal Operations in later structure"
+  },
+  {
+    "fiscal_year": 2022,
+    "source_org_label": "Community Services",
+    "canonical_group": "",
+    "confidence": 0.45,
+    "status": "needs_service_split",
+    "notes": "Service composition changes materially in later structure"
+  },
+  {
+    "fiscal_year": 2022,
+    "source_org_label": "Financial Services - Other Financial",
+    "canonical_group": "Financial Services Other",
+    "confidence": 0.95,
+    "status": "provisional",
+    "notes": "Concept is substantially stable but detail crosswalk still required"
+  },
+  {
+    "fiscal_year": 2022,
+    "source_org_label": "Transfers to Organizations For Provision of Services",
+    "canonical_group": "Outside Organizations",
+    "confidence": 0.95,
+    "status": "provisional",
+    "notes": "Concept is substantially stable; individual agencies will be normalized separately"
+  },
+  {
+    "fiscal_year": 2023,
+    "source_org_label": "Council",
+    "canonical_group": "Council",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2023,
+    "source_org_label": "Chief Administrative Officer",
+    "canonical_group": "Chief Administrative Officer",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2023,
+    "source_org_label": "Finance and Corporate Support Services",
+    "canonical_group": "Finance and Corporate Support Services",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2023,
+    "source_org_label": "Legislative Services",
+    "canonical_group": "Legislative Services",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2023,
+    "source_org_label": "Infrastructure, Planning and Growth Management",
+    "canonical_group": "Infrastructure, Planning and Growth Management",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2023,
+    "source_org_label": "Municipal Operations",
+    "canonical_group": "Municipal Operations",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2023,
+    "source_org_label": "Community Services",
+    "canonical_group": "Community Services",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2023,
+    "source_org_label": "Financial Services Other",
+    "canonical_group": "Financial Services Other",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2023,
+    "source_org_label": "Outside Organizations",
+    "canonical_group": "Outside Organizations",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2024,
+    "source_org_label": "Council",
+    "canonical_group": "Council",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2024,
+    "source_org_label": "Chief Administrative Officer",
+    "canonical_group": "Chief Administrative Officer",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2024,
+    "source_org_label": "Finance and Corporate Support Services",
+    "canonical_group": "Finance and Corporate Support Services",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2024,
+    "source_org_label": "Legislative Services",
+    "canonical_group": "Legislative Services",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2024,
+    "source_org_label": "Infrastructure, Planning and Growth Management",
+    "canonical_group": "Infrastructure, Planning and Growth Management",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2024,
+    "source_org_label": "Municipal Operations",
+    "canonical_group": "Municipal Operations",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2024,
+    "source_org_label": "Community Services",
+    "canonical_group": "Community Services",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2024,
+    "source_org_label": "Financial Services Other",
+    "canonical_group": "Financial Services Other",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2024,
+    "source_org_label": "Outside Organizations",
+    "canonical_group": "Outside Organizations",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2025,
+    "source_org_label": "Council",
+    "canonical_group": "Council",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2025,
+    "source_org_label": "Chief Administrative Officer",
+    "canonical_group": "Chief Administrative Officer",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2025,
+    "source_org_label": "Finance and Corporate Support Services",
+    "canonical_group": "Finance and Corporate Support Services",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2025,
+    "source_org_label": "Legislative Services",
+    "canonical_group": "Legislative Services",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2025,
+    "source_org_label": "Infrastructure, Planning and Growth Management",
+    "canonical_group": "Infrastructure, Planning and Growth Management",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2025,
+    "source_org_label": "Municipal Operations",
+    "canonical_group": "Municipal Operations",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2025,
+    "source_org_label": "Community Services",
+    "canonical_group": "Community Services",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2025,
+    "source_org_label": "Financial Services Other",
+    "canonical_group": "Financial Services Other",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2025,
+    "source_org_label": "Outside Organizations",
+    "canonical_group": "Outside Organizations",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2026,
+    "source_org_label": "Council",
+    "canonical_group": "Council",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2026,
+    "source_org_label": "Chief Administrative Officer",
+    "canonical_group": "Chief Administrative Officer",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2026,
+    "source_org_label": "Finance and Corporate Support Services",
+    "canonical_group": "Finance and Corporate Support Services",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2026,
+    "source_org_label": "Legislative Services",
+    "canonical_group": "Legislative Services",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2026,
+    "source_org_label": "Infrastructure, Planning and Growth Management",
+    "canonical_group": "Infrastructure, Planning and Growth Management",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2026,
+    "source_org_label": "Municipal Operations",
+    "canonical_group": "Municipal Operations",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2026,
+    "source_org_label": "Community Services",
+    "canonical_group": "Community Services",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2026,
+    "source_org_label": "Financial Services Other",
+    "canonical_group": "Financial Services Other",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  },
+  {
+    "fiscal_year": 2026,
+    "source_org_label": "Outside Organizations",
+    "canonical_group": "Outside Organizations",
+    "confidence": 1.0,
+    "status": "approved",
+    "notes": "Stable 2023+ structure"
+  }
+]

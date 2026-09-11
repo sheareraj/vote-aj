@@ -1,9 +1,9 @@
 {
   "product": "Peterborough By The Numbers",
-  "status": "foundation",
+  "status": "operating-budget-backbone",
   "scope": "2022-2026",
-  "budgetDataStatus": "2022 approved + 2023 recommended seed; 2024 audited statements seed; 2024-2026 normalization in progress",
+  "budgetDataStatus": "Approved/final 2022-2026 gross operating and taxation backbone loaded; reported department structures loaded; 2022 service-level reorganization crosswalk in progress",
   "voteDataStatus": "schema and councillor dimensions loaded; motion/vote ingestion pending",
   "authoritativeSourcePolicy": "City of Peterborough official documents and minutes are authoritative.",
-  "lastBuilt": "2026-09-10"
+  "lastBuilt": "2026-09-11"
 }
