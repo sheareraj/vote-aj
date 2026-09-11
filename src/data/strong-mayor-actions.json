@@ -1,0 +1,182 @@
+[
+  {
+    "action_id": "MDEC23-1",
+    "action_date": "2023-11-06",
+    "action_date_display": "Nov. 6, 2023",
+    "action_type": "Delegated authority",
+    "subject": "CAO responsibilities",
+    "authority": "Municipal Act s. 284.13",
+    "summary": "Delegated to Council the authority to establish the responsibilities of the Chief Administrative Officer and pass the related by-law.",
+    "outcome_context": "Council later approved By-law 23-113 in a combined by-law vote on Nov. 27, 2023.",
+    "related_motion_ids": [
+      "2023-11-27-cao-bylaw-23-113"
+    ],
+    "source_url": "https://www.peterborough.ca/media/05bm2e1l/mdec23-1.pdf",
+    "status": "active"
+  },
+  {
+    "action_id": "MDEC23-2",
+    "action_date": "2023-11-01",
+    "action_date_display": "Nov. 1, 2023",
+    "action_type": "Budget direction",
+    "subject": "2024 draft budget direction",
+    "authority": "Municipal Act ss. 284.3 and 284.16",
+    "summary": "Directed the Treasurer to prepare and present the draft 2024 operating and capital budget and provide updates to the Mayor.",
+    "outcome_context": "Established the strong-mayor budget process for the 2024 budget.",
+    "related_motion_ids": [],
+    "source_url": "https://www.peterborough.ca/media/qqub5eva/mdec23-2.pdf",
+    "status": "completed"
+  },
+  {
+    "action_id": "MDEC23-3",
+    "action_date": "2023-12-11",
+    "action_date_display": "Dec. 11, 2023",
+    "action_type": "Budget proposal",
+    "subject": "Propose the 2024 budget",
+    "authority": "Municipal Act s. 284.16; O. Reg. 530/22 s. 7",
+    "summary": "Formally proposed the City of Peterborough 2024 Operating and Capital Budget and Forecast.",
+    "outcome_context": "Council budget amendments considered at the Dec. 11 meeting fall within the mayor-proposed budget process.",
+    "related_motion_ids": [
+      "2023-12-11-strong-mayor-shorten-budget-period"
+    ],
+    "source_url": "https://www.peterborough.ca/media/smqli4ui/mdec23-3.pdf",
+    "status": "completed"
+  },
+  {
+    "action_id": "MDEC24-1",
+    "action_date": "2024-04-08",
+    "action_date_display": "Apr. 8, 2024",
+    "action_type": "Delegated authority",
+    "subject": "Appoint IPGM Commissioner",
+    "authority": "Municipal Act s. 284.13(1)2; O. Reg. 530/22 s. 6(2)",
+    "summary": "Delegated to Council the authority to appoint the Commissioner of Infrastructure, Planning and Growth Management for the April 8 meeting.",
+    "outcome_context": "Appointment was handled through the Council/closed-session process; a separate recorded public roll-call tied to the appointment has not been added to this archive.",
+    "related_motion_ids": [],
+    "source_url": "https://www.peterborough.ca/media/cdejddka/strongmayordecision_mdec24-1.pdf",
+    "status": "completed"
+  },
+  {
+    "action_id": "MDEC24-2",
+    "action_date": "2024-06-03",
+    "action_date_display": "Jun. 3, 2024",
+    "action_type": "Delegated authority",
+    "subject": "Appoint IPGM Commissioner",
+    "authority": "Municipal Act s. 284.13(1)2; O. Reg. 530/22 s. 6(2)",
+    "summary": "Again delegated to Council the authority to appoint the Commissioner of Infrastructure, Planning and Growth Management for the June 3 meeting.",
+    "outcome_context": "Appointment was handled through the Council/closed-session process; a separate recorded public roll-call tied to the appointment has not been added to this archive.",
+    "related_motion_ids": [],
+    "source_url": "https://www.peterborough.ca/media/lshh03ll/mdec24-2-june-3-2024.pdf",
+    "status": "completed"
+  },
+  {
+    "action_id": "MDEC24-3",
+    "action_date": "2024-09-16",
+    "action_date_display": "Sep. 16, 2024",
+    "action_type": "Delegated authority",
+    "subject": "Appoint Municipal Operations Commissioner",
+    "authority": "Municipal Act s. 284.13(1)2; O. Reg. 530/22 s. 6(2)",
+    "summary": "Delegated to Council the authority to appoint the Commissioner of Municipal Operations.",
+    "outcome_context": "Council approved the related appointment direction 10-0 at the Sept. 16 special meeting.",
+    "related_motion_ids": [
+      "2024-09-16-municipal-operations-commissioner"
+    ],
+    "source_url": "https://www.peterborough.ca/media/nlndyknm/mdec24-3.pdf",
+    "status": "completed"
+  },
+  {
+    "action_id": "MDEC24-4",
+    "action_date": "2024-11-04",
+    "action_date_display": "Nov. 4, 2024",
+    "action_type": "Staff/legal direction",
+    "subject": "Appeal 654-656 Stewart Street decision",
+    "authority": "Municipal Act s. 284.3(b)",
+    "summary": "Directed City legal/planning staff to initiate an Ontario Land Tribunal appeal of a Committee of Adjustment refusal involving a proposed six-unit building.",
+    "outcome_context": "This direction was rescinded ten days later by MDEC24-5 after the property owners filed their own appeal.",
+    "related_motion_ids": [],
+    "source_url": "https://www.peterborough.ca/media/s0hjb1zg/mayor-decision-4.pdf",
+    "status": "rescinded"
+  },
+  {
+    "action_id": "MDEC24-5",
+    "action_date": "2024-11-14",
+    "action_date_display": "Nov. 14, 2024",
+    "action_type": "Staff/legal direction",
+    "subject": "Rescind City appeal; participate if required",
+    "authority": "Municipal Act s. 284.3(b)",
+    "summary": "Rescinded MDEC24-4 and directed staff to assist the OLT if summoned in the owners’ appeal.",
+    "outcome_context": "Superseded MDEC24-4.",
+    "related_motion_ids": [],
+    "source_url": "https://www.peterborough.ca/media/5yzpijss/mayor-decision-5.pdf",
+    "status": "active/completed"
+  },
+  {
+    "action_id": "MDEC24-6",
+    "action_date": "2024-12-09",
+    "action_date_display": "Dec. 9, 2024",
+    "action_type": "Budget proposal / delegation",
+    "subject": "Specific 2025 operating and capital budget items",
+    "authority": "Municipal Act s. 284.16; O. Reg. 530/22 s. 7",
+    "summary": "Proposed specific 2025 operating and capital budget items and delegated the decision on those items to Council for Dec. 9.",
+    "outcome_context": "Part of the 2025 strong-mayor budget process; the broader budget process continued into January/February 2025.",
+    "related_motion_ids": [],
+    "source_url": "https://www.peterborough.ca/media/4m4btpe4/mdec24-6-mayoral-decision.pdf",
+    "status": "completed"
+  },
+  {
+    "action_id": "MDEC25-1",
+    "action_date": "2025-02-03",
+    "action_date_display": "Feb. 3, 2025",
+    "action_type": "Provincial-priority by-law proposal",
+    "subject": "Brock Mission transitional housing at 738 Chemong Road",
+    "authority": "Municipal Act ss. 284.3 and 284.11.1(2)",
+    "summary": "Directed staff to prepare a zoning amendment and site-plan-control exemption for a transitional-housing project and bring the proposal to Council under strong-mayor provincial-priority authority.",
+    "outcome_context": "On Feb. 24 both by-laws carried 4-7 because a mayor-proposed provincial-priority by-law passes with more than one-third of Council voting in favour.",
+    "related_motion_ids": [
+      "2025-02-24-brock-general-strong-mayor",
+      "2025-02-24-brock-council-strong-mayor"
+    ],
+    "source_url": "https://www.peterborough.ca/media/uzgbvgeu/strong-mayor-powers-decision-mdec25-1.pdf",
+    "status": "active/completed"
+  },
+  {
+    "action_id": "MDEC25-2",
+    "action_date": "2025-04-01",
+    "action_date_display": "Apr. 1, 2025",
+    "action_type": "Staff/legal direction",
+    "subject": "Defend Brock Mission by-laws in court",
+    "authority": "Municipal Act s. 284.3(b)",
+    "summary": "Directed City lawyers and staff to oppose a proposed court challenge to By-laws 25-051 and 25-052 and report periodically to Council.",
+    "outcome_context": "Follow-on strong-mayor direction arising from MDEC25-1 and the Feb. 24 by-law votes.",
+    "related_motion_ids": [],
+    "source_url": "https://www.peterborough.ca/media/wbnb11lt/mdec25-2-mayoral-decision.pdf",
+    "status": "active"
+  },
+  {
+    "action_id": "MDEC25-3",
+    "action_date": "2025-05-30",
+    "action_date_display": "May 30, 2025",
+    "action_type": "Budget direction",
+    "subject": "2026 draft budget direction",
+    "authority": "Municipal Act ss. 284.3 and 284.16",
+    "summary": "Directed the Treasurer to prepare the 2026 draft budget, maintain current service levels with costing adjustments, and include an anticipated 10% Police Services increase due to legislative requirements.",
+    "outcome_context": "Established the mayor-directed framework for the 2026 draft budget; Council deliberations before the formal proposal were recommendations to the Mayor.",
+    "related_motion_ids": [],
+    "source_url": "https://www.peterborough.ca/media/jcjb1udt/mdec-may-30-2025.pdf",
+    "status": "completed"
+  },
+  {
+    "action_id": "MDEC25-4",
+    "action_date": "2025-12-08",
+    "action_date_display": "Dec. 8, 2025",
+    "action_type": "Budget proposal",
+    "subject": "Propose the 2026 budget",
+    "authority": "Municipal Act s. 284.16; O. Reg. 530/22 s. 7",
+    "summary": "Formally proposed the 2026 Operating and Capital Budget and Forecast.",
+    "outcome_context": "The proposed budget reflected Council recommendations made during the draft-budget process; the statutory amendment/veto/override framework then applied.",
+    "related_motion_ids": [
+      "2025-12-08-strong-mayor-shorten-budget-period"
+    ],
+    "source_url": "https://www.peterborough.ca/media/jvshqde0/strong-mayor-powers-dec-2025.pdf",
+    "status": "completed"
+  }
+]

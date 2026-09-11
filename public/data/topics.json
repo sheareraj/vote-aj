@@ -138,5 +138,12 @@
     "parent_topic_id": "",
     "public_label": "Health & Paramedics",
     "description": "Public health paramedics physician recruitment and health-related transfers"
+  },
+  {
+    "topic_id": "strong_mayor",
+    "topic_name": "Strong Mayor Powers",
+    "parent_topic_id": "",
+    "public_label": "Strong Mayor Powers",
+    "description": "Mayoral decisions directions delegated authorities and Council votes governed by Part VI.1 strong-mayor powers."
   }
 ]

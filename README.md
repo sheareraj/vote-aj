@@ -110,3 +110,7 @@ Service trends that cross material organizational boundaries are intentionally w
 ## Pass 5 update
 
 This pass expands the normalized service layer to 22 service/component series and the verified vote archive to 33 motions / 363 member-vote records. Infrastructure/Planning/Growth and corporate administration are now shown component-by-component from defensible post-reorganization start years rather than as a misleading full-term department trend. The vote page also adds automated insight cards for largest stated-dollar split motions, closest decisions and topic coverage.
+
+## Pass 6 — Strong Mayor Powers
+
+The vote archive now includes a dedicated Strong Mayor Powers topic and a 13-action timeline of the City's published mayoral decisions/directions. Directly associated recorded votes are tagged separately from ordinary Council motions so that the dashboard does not overstate the use of the statutory mechanism. The archive now contains 39 verified motions and 429 individual member-vote records.

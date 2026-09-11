@@ -148,6 +148,13 @@ const publicWorksAnnotations = readCsv('data/facts/fact_public_works_annotations
 }));
 writeJson('public-works-annotations.json', publicWorksAnnotations);
 
+
+const strongMayorActions = readCsv('data/facts/fact_strong_mayor_action.csv').map(row => ({
+  ...row,
+  related_motion_ids: (row.related_motion_ids || '').split('|').filter(Boolean),
+}));
+writeJson('strong-mayor-actions.json', strongMayorActions);
+
 const budget = readCsv('data/seed/stg_budget_seed.csv').map(row => ({
   ...row,
   fiscal_year: int(row.fiscal_year),
@@ -218,10 +225,10 @@ writeJson('votes.json', votesPayload);
 
 writeJson('metadata.json', {
   product: 'Peterborough By The Numbers',
-  status: 'normalization-and-votes-pass-5',
+  status: 'normalization-and-votes-pass-6',
   scope: '2022-2026',
   budgetDataStatus: 'Approved/final 2022-2026 backbone loaded; 22 normalized service/component series now published; IPGM and corporate administration are exposed only from defensible post-reorganization start years; Public Works structural-break analysis and Legacy levy-offset history remain live',
-  voteDataStatus: '33 verified recorded motions loaded from official City minutes; new summary views rank largest stated-dollar split votes, closest decisions and archive coverage by topic; ingestion continues',
+  voteDataStatus: '39 verified recorded motions loaded from official City minutes, including direct Strong Mayor Powers votes; a separate 13-action mayoral decision timeline is now published; ingestion continues',
   authoritativeSourcePolicy: 'City of Peterborough official documents and minutes are authoritative.',
   lastBuilt: '2026-09-11',
 });
