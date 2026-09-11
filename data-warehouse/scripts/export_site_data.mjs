@@ -112,6 +112,23 @@ const serviceRequirements = readCsv('data/facts/fact_service_net_requirement.csv
 }));
 writeJson('service-net-requirements.json', serviceRequirements);
 
+const outcomeSources = Object.fromEntries(readCsv('data/source_manifest.csv').map(r => [r.source_id, r]));
+const outcomeDomains = readCsv('data/dim_outcome_domain.csv').map(row => ({
+  ...row,
+  order_key: int(row.order_key),
+  linked_service_id: row.linked_service_id || null,
+}));
+const outcomeMetrics = readCsv('data/facts/fact_outcome_metric.csv').map(row => {
+  const src = outcomeSources[row.source_id] ?? {};
+  return {
+    ...row,
+    value: num(row.value),
+    source_url: src.canonical_url || null,
+    source_name: src.document_name || null,
+  };
+});
+writeJson('outcomes.json', { domains: outcomeDomains, metrics: outcomeMetrics });
+
 const legacy = readCsv('data/facts/fact_legacy_2026.csv').map(row => ({ ...row, amount_cad: int(row.amount_cad) }));
 writeJson('legacy-2026.json', legacy);
 
@@ -225,10 +242,11 @@ writeJson('votes.json', votesPayload);
 
 writeJson('metadata.json', {
   product: 'Peterborough By The Numbers',
-  status: 'normalization-and-votes-pass-6',
+  status: 'outcomes-and-votes-pass-7',
   scope: '2022-2026',
   budgetDataStatus: 'Approved/final 2022-2026 backbone loaded; 22 normalized service/component series now published; IPGM and corporate administration are exposed only from defensible post-reorganization start years; Public Works structural-break analysis and Legacy levy-offset history remain live',
-  voteDataStatus: '39 verified recorded motions loaded from official City minutes, including direct Strong Mayor Powers votes; a separate 13-action mayoral decision timeline is now published; ingestion continues',
+  voteDataStatus: '39 verified recorded motions loaded from official City minutes. Strong Mayor Powers is retained as a dedicated topic and full decision timeline, positioned after the searchable vote archive.',
+  outcomeDataStatus: 'First KPI layer published for housing creation, transit, policing, infrastructure condition, and housing/homelessness system pressure. Metrics preserve scope and source caveats and do not imply spending caused an outcome.',
   authoritativeSourcePolicy: 'City of Peterborough official documents and minutes are authoritative.',
   lastBuilt: '2026-09-11',
 });

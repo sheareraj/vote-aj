@@ -29,13 +29,18 @@ const activeCouncillors = councillors.filter((c) => c.current_member);
     </section>
     <main class="mx-auto max-w-6xl px-6 py-12 md:py-16">
       <section class="mb-10">
-        <StrongMayorExplorer client:load actions={strongMayorActions} votes={votes} />
-      </section>
-      <section class="mb-10">
         <VoteInsights client:load votes={votes} topics={topics} />
       </section>
       <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#eadde1] md:p-9">
         <VoteExplorer client:load councillors={activeCouncillors} topics={topics} votes={votes} />
+      </section>
+      <section class="mt-12 border-t border-[#d9c3ca] pt-12">
+        <div class="mb-5 max-w-3xl">
+          <div class="text-xs font-black uppercase tracking-[0.22em] text-[#651024]">Decision framework</div>
+          <h2 class="mt-2 text-2xl font-black tracking-tight">Strong Mayor Powers</h2>
+          <p class="mt-2 leading-7 text-[#7a6167]">Placed separately from the normal vote explorer because these actions can change who initiates a decision, how appointments are delegated, or even the vote threshold required for passage.</p>
+        </div>
+        <StrongMayorExplorer client:load actions={strongMayorActions} votes={votes} />
       </section>
     </main>
   </div>

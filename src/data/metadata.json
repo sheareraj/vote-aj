@@ -1,9 +1,10 @@
 {
   "product": "Peterborough By The Numbers",
-  "status": "normalization-and-votes-pass-6",
+  "status": "outcomes-and-votes-pass-7",
   "scope": "2022-2026",
   "budgetDataStatus": "Approved/final 2022-2026 backbone loaded; 22 normalized service/component series now published; IPGM and corporate administration are exposed only from defensible post-reorganization start years; Public Works structural-break analysis and Legacy levy-offset history remain live",
-  "voteDataStatus": "39 verified recorded motions loaded from official City minutes, including direct Strong Mayor Powers votes; a separate 13-action mayoral decision timeline is now published; ingestion continues",
+  "voteDataStatus": "39 verified recorded motions loaded from official City minutes. Strong Mayor Powers is retained as a dedicated topic and full decision timeline, positioned after the searchable vote archive.",
+  "outcomeDataStatus": "First KPI layer published for housing creation, transit, policing, infrastructure condition, and housing/homelessness system pressure. Metrics preserve scope and source caveats and do not imply spending caused an outcome.",
   "authoritativeSourcePolicy": "City of Peterborough official documents and minutes are authoritative.",
   "lastBuilt": "2026-09-11"
 }
