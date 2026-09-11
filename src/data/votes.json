@@ -1426,6 +1426,177 @@
     "notes": ""
   },
   {
+    "id": "2024-08-reallocate-precommitted-capital",
+    "meeting_date": "2024-08-12",
+    "meeting_date_display": "Aug. 12, 2024",
+    "meeting_type": "City Council",
+    "decision_stage": "Final Council decision",
+    "title": "Reconsider $15.95M of pre-committed projects for housing/homelessness",
+    "summary": "Council considered reconsidering six pre-committed 2025 capital projects totalling $15.95 million and using that amount to finance housing and homelessness projects.",
+    "motion_text": "Reconsider six pre-committed 2025 projects totalling $15.95 million to finance housing and homelessness projects.",
+    "mover": "Alex Bierk",
+    "result": "Lost",
+    "yes_count": 4,
+    "no_count": 7,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "finance_budget",
+      "housing",
+      "homelessness",
+      "infrastructure",
+      "recreation",
+      "econ_airport"
+    ],
+    "primary_topic_id": "finance_budget",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 15950000,
+      "direction": "proposed_reallocation",
+      "timing": "2025_capital",
+      "funding_source": "Existing pre-committed capital projects"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "Against"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "Against"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "Against"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "Against"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "Against"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "Against"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "Against"
+      }
+    ],
+    "source_id": "minutes-2024-aug12-council",
+    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=38357",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "large_dollar",
+      "capital_decision"
+    ],
+    "notes": "The $15.95M was a stated total of projects proposed for reconsideration/reallocation, not $15.95M of new spending. The motion lost."
+  },
+  {
+    "id": "2024-08-budget-cap-five-percent",
+    "meeting_date": "2024-08-12",
+    "meeting_date_display": "Aug. 12, 2024",
+    "meeting_type": "City Council",
+    "decision_stage": "Final Council direction",
+    "title": "Direct 2025 draft budget to return at no more than a 5% all-inclusive increase",
+    "summary": "Council directed staff to return with a draft 2025 budget carrying an all-inclusive rate increase not exceeding 5%.",
+    "motion_text": "That staff be directed to return to Council with an all-inclusive rate increase to the draft 2025 budget not exceeding a 5% increase.",
+    "mover": "Kevin Duguay",
+    "result": "Carried",
+    "yes_count": 9,
+    "no_count": 2,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "finance_tax",
+      "finance_budget"
+    ],
+    "primary_topic_id": "finance_tax",
+    "financial_impact": {
+      "status": "not_stated",
+      "amount_cad": null,
+      "direction": "budget_guideline",
+      "timing": "2025_budget",
+      "funding_source": null
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "For"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "For"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "Against"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "For"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "Against"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "For"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "For"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "For"
+      }
+    ],
+    "source_id": "minutes-2024-aug12-council",
+    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=38357",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "budget_guideline"
+    ],
+    "notes": "This was a budget-direction target, not a quantified dollar reduction; no dollar amount is inferred."
+  },
+  {
     "id": "2024-06-asset-management-plan",
     "meeting_date": "2024-06-03",
     "meeting_date_display": "June 3, 2024",
@@ -1590,6 +1761,89 @@
       "planning_policy"
     ],
     "notes": "The motion concerned provincial heritage-processing timelines; no direct dollar impact was stated in the recorded motion."
+  },
+  {
+    "id": "2024-04-bonnerworth-alternatives",
+    "meeting_date": "2024-04-02",
+    "meeting_date_display": "Apr. 2, 2024",
+    "meeting_type": "General Committee",
+    "decision_stage": "Committee recommendation",
+    "title": "Bonnerworth: require alternative pickleball/tennis solutions before work proceeds",
+    "summary": "Committee considered pausing the proposed Bonnerworth plan for discussion of alternative pickleball and tennis solutions before work proceeded.",
+    "motion_text": "Bring the proposed Bonnerworth Park plan before Council for discussion of alternative Pickleball/Tennis solutions, with a report back before any work proceeds.",
+    "mover": "Keith Riel",
+    "result": "Lost",
+    "yes_count": 3,
+    "no_count": 8,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "recreation",
+      "finance_budget"
+    ],
+    "primary_topic_id": "recreation",
+    "financial_impact": {
+      "status": "not_stated",
+      "amount_cad": null,
+      "direction": "potential_project_delay",
+      "timing": "2024_capital",
+      "funding_source": null
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "Against"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "Against"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "For"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "Against"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "Against"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "Against"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "For"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "Against"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "Against"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "For"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "Against"
+      }
+    ],
+    "source_id": "minutes-2024-apr2-general",
+    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=37800",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "major_policy_decision"
+    ],
+    "notes": "This vote was about whether to require reconsideration/report-back before work proceeded; it did not itself set a new project cost."
   },
   {
     "id": "2023-12-transit-fares-100k",
@@ -2436,5 +2690,88 @@
       "budget_amendment"
     ],
     "notes": "Two explicit amounts are involved ($600K reduction and $200K increase); the explorer does not collapse them into a single inferred fiscal impact."
+  },
+  {
+    "id": "2023-06-service-peterborough",
+    "meeting_date": "2023-06-26",
+    "meeting_date_display": "June 26, 2023",
+    "meeting_type": "City Council",
+    "decision_stage": "Final Council decision",
+    "title": "Service Peterborough implementation: $625K",
+    "summary": "Council approved an integrated centralized customer-service model at City Hall with a $625,000 capital budget.",
+    "motion_text": "Endorse Service Peterborough, minus the bathroom component, and establish a $625,000 capital project funded from the Capital Levy Reserve.",
+    "mover": "Lesley Parnell",
+    "result": "Carried",
+    "yes_count": 6,
+    "no_count": 5,
+    "conflict_count": 0,
+    "absent_count": 0,
+    "topic_ids": [
+      "governance",
+      "finance_budget"
+    ],
+    "primary_topic_id": "governance",
+    "financial_impact": {
+      "status": "known",
+      "amount_cad": 625000,
+      "direction": "capital_project",
+      "timing": "2023_capital",
+      "funding_source": "Capital Levy Reserve"
+    },
+    "votes": [
+      {
+        "member": "Gary Baldwin",
+        "vote": "Against"
+      },
+      {
+        "member": "Andrew Beamer",
+        "vote": "For"
+      },
+      {
+        "member": "Alex Bierk",
+        "vote": "Against"
+      },
+      {
+        "member": "Matt Crowley",
+        "vote": "For"
+      },
+      {
+        "member": "Kevin Duguay",
+        "vote": "For"
+      },
+      {
+        "member": "Dave Haacke",
+        "vote": "For"
+      },
+      {
+        "member": "Joy Lachica",
+        "vote": "Against"
+      },
+      {
+        "member": "Jeff Leal",
+        "vote": "Against"
+      },
+      {
+        "member": "Lesley Parnell",
+        "vote": "For"
+      },
+      {
+        "member": "Keith Riel",
+        "vote": "Against"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "For"
+      }
+    ],
+    "source_id": "minutes-2023-june26-council",
+    "source_url": "https://pub-peterborough.escribemeetings.com/filestream.ashx?DocumentId=36228",
+    "source_label": "Official City of Peterborough minutes",
+    "review_status": "verified_official_minutes",
+    "significance": [
+      "split_vote",
+      "capital_decision"
+    ],
+    "notes": "The original staff recommendation referenced $660,000; the amended motion that carried established the capital budget at $625,000."
   }
 ]

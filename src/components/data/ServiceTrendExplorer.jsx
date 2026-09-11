@@ -36,6 +36,16 @@ function scopeNote(item) {
   if (item.service_id === "public_health") {
     return "The public-health organization changed during the period. The dollar series is retained with a scope note rather than presented as a perfectly unchanged entity.";
   }
+
+  if (item.service_id === "asset_management" || item.service_id === "engineering_capital" || item.service_id === "planning_development") {
+    return "Published from the first post-reorganization year that maps cleanly to the modern IPGM service. These are component trends, not a full 2022–2026 department trend.";
+  }
+  if (item.service_id === "economic_development") {
+    return "Published only from the in-house economic-development transition period. Earlier years were delivered through a different organizational model, so they are not bridged into this series.";
+  }
+  if (["financial_services", "facilities", "legal_services", "strategic_comms", "people_culture"].includes(item.service_id)) {
+    return "Published only across the period where the service maps cleanly after the Corporate/Legislative reorganization. Salary allocations and service transfers can still affect year-to-year comparability.";
+  }
   return "This series is built from approved prior-year columns in later City budget books where possible, plus the final 2026 source.";
 }
 
@@ -178,7 +188,7 @@ export default function ServiceTrendExplorer({ serviceData }) {
       </div>
 
       <div className="mt-7 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950">
-        <strong>Normalization rule:</strong> Public Works and Recreation/Parks/Culture are now published from 2023 onward with explicit scope caveats. The remaining high-risk crosswalks are Infrastructure/Planning/Growth and Corporate/Legislative/Administration. No 2022 bridge will be displayed until the underlying components reconcile.
+        <strong>Normalization rule:</strong> Public Works and Recreation/Parks/Culture are now published from 2023 onward with explicit scope caveats. Infrastructure/Planning/Growth and Corporate Administration are now published as component-level series from defensible start years. No single full-term department-growth claim is displayed where reorganizations prevent an honest bridge.
       </div>
     </div>
   );

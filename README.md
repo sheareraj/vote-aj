@@ -106,3 +106,7 @@ Service trends that cross material organizational boundaries are intentionally w
 - Added sourced Public Works annotations for the municipal-lot snow-plowing transition: $473,309 of existing budget transferred into Public Works, $431,501 of additional 2025 operating cost, plus $68,000 initiated in 2024.
 - Expanded the verified vote archive to 29 motions / 319 individual member-vote records, including 2024 heritage/asset-management and 2025 governance decisions in addition to the existing budget, tax, transit, policing, homelessness and reserve records.
 - Improved the vote UI so multi-component financial decisions are not mislabeled as “not quantified,” and surfaced contextual notes directly on vote cards.
+
+## Pass 5 update
+
+This pass expands the normalized service layer to 22 service/component series and the verified vote archive to 33 motions / 363 member-vote records. Infrastructure/Planning/Growth and corporate administration are now shown component-by-component from defensible post-reorganization start years rather than as a misleading full-term department trend. The vote page also adds automated insight cards for largest stated-dollar split motions, closest decisions and topic coverage.

@@ -218,10 +218,10 @@ writeJson('votes.json', votesPayload);
 
 writeJson('metadata.json', {
   product: 'Peterborough By The Numbers',
-  status: 'normalization-and-votes-pass-4',
+  status: 'normalization-and-votes-pass-5',
   scope: '2022-2026',
-  budgetDataStatus: 'Approved/final 2022-2026 backbone loaded; 13 normalized service net-requirement series now published; Public Works component-level structural-break analysis added; Legacy levy-offset history corrected to include 2024 and 2026',
-  voteDataStatus: '29 verified recorded motions loaded from official City minutes, spanning tax policy, reserves, infrastructure, planning, governance, transit, recreation, health, environment, policing, library and homelessness decisions; ingestion continues',
+  budgetDataStatus: 'Approved/final 2022-2026 backbone loaded; 22 normalized service/component series now published; IPGM and corporate administration are exposed only from defensible post-reorganization start years; Public Works structural-break analysis and Legacy levy-offset history remain live',
+  voteDataStatus: '33 verified recorded motions loaded from official City minutes; new summary views rank largest stated-dollar split votes, closest decisions and archive coverage by topic; ingestion continues',
   authoritativeSourcePolicy: 'City of Peterborough official documents and minutes are authoritative.',
   lastBuilt: '2026-09-11',
 });

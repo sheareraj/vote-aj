@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import DataHeader from "../../components/data/DataHeader.astro";
 import VoteExplorer from "../../components/data/VoteExplorer.jsx";
+import VoteInsights from "../../components/data/VoteInsights.jsx";
 import councillors from "../../data/councillors.json";
 import topics from "../../data/topics.json";
 import votes from "../../data/votes.json";
@@ -25,6 +26,9 @@ const activeCouncillors = councillors.filter((c) => c.current_member);
       </div>
     </section>
     <main class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <section class="mb-10">
+        <VoteInsights client:load votes={votes} topics={topics} />
+      </section>
       <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#eadde1] md:p-9">
         <VoteExplorer client:load councillors={activeCouncillors} topics={topics} votes={votes} />
       </section>
