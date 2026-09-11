@@ -127,7 +127,8 @@ const outcomeMetrics = readCsv('data/facts/fact_outcome_metric.csv').map(row => 
     source_name: src.document_name || null,
   };
 });
-writeJson('outcomes.json', { domains: outcomeDomains, metrics: outcomeMetrics });
+const outcomeTrends = readCsv('data/facts/fact_outcome_trend.csv');
+writeJson('outcomes.json', { domains: outcomeDomains, metrics: outcomeMetrics, trends: outcomeTrends });
 
 const legacy = readCsv('data/facts/fact_legacy_2026.csv').map(row => ({ ...row, amount_cad: int(row.amount_cad) }));
 writeJson('legacy-2026.json', legacy);
@@ -242,11 +243,11 @@ writeJson('votes.json', votesPayload);
 
 writeJson('metadata.json', {
   product: 'Peterborough By The Numbers',
-  status: 'outcomes-and-votes-pass-7',
-  scope: '2022-2026',
+  status: 'freshness-first-outcomes-pass-9',
+  scope: 'Budgets 2022-2026 · current outcome signals through 2025/2026 with older context demoted',
   budgetDataStatus: 'Approved/final 2022-2026 backbone loaded; 22 normalized service/component series now published; IPGM and corporate administration are exposed only from defensible post-reorganization start years; Public Works structural-break analysis and Legacy levy-offset history remain live',
   voteDataStatus: '39 verified recorded motions loaded from official City minutes. Strong Mayor Powers is retained as a dedicated topic and full decision timeline, positioned after the searchable vote archive.',
-  outcomeDataStatus: 'First KPI layer published for housing creation, transit, policing, infrastructure condition, and housing/homelessness system pressure. Metrics preserve scope and source caveats and do not imply spending caused an outcome.',
-  authoritativeSourcePolicy: 'City of Peterborough official documents and minutes are authoritative.',
+  outcomeDataStatus: 'Freshness-first KPI layer leads with 2025 annual actuals published in 2026 for housing, transit, crime and homelessness. Older RGI, PPS-output and road-condition measures are demoted to historical context; infrastructure is explicitly flagged as a data-lag domain.',
+  authoritativeSourcePolicy: 'Official City of Peterborough, Peterborough Police Service, Statistics Canada and other primary-government sources are authoritative for their respective measures.',
   lastBuilt: '2026-09-11',
 });
