@@ -1,9 +1,9 @@
 {
   "product": "Peterborough By The Numbers",
-  "status": "service-normalization-pass-2",
+  "status": "normalization-and-votes-pass-3",
   "scope": "2022-2026",
-  "budgetDataStatus": "Approved/final 2022-2026 backbone loaded; 11 stable service net-requirement series normalized; Legacy Fund one-time-vs-recurring treatment documented; reorganized service crosswalk continues",
-  "voteDataStatus": "schema and councillor dimensions loaded; motion/vote ingestion pending",
+  "budgetDataStatus": "Approved/final 2022-2026 backbone loaded; 13 normalized service net-requirement series now published, including qualified 2023-2026 Public Works and Recreation/Parks/Culture series; Legacy Fund one-time-vs-recurring treatment documented",
+  "voteDataStatus": "first verified recorded-vote batch loaded from official City minutes, with budget, policing, reserve, library and homelessness decisions; ingestion continues",
   "authoritativeSourcePolicy": "City of Peterborough official documents and minutes are authoritative.",
   "lastBuilt": "2026-09-11"
 }

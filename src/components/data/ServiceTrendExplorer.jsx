@@ -20,6 +20,25 @@ function pct(start, end) {
   return ((end / start - 1) * 100);
 }
 
+function comparabilityLabel(value) {
+  if (value === "medium-high") return "Medium-high";
+  if (value === "qualified") return "Qualified";
+  return value ? value.charAt(0).toUpperCase() + value.slice(1) : "Unrated";
+}
+
+function scopeNote(item) {
+  if (item.service_id === "public_works") {
+    return "Published only from 2023 onward. The 2022 City structure combined Engineering/Construction/Public Works and Parks/Forestry, so a 2022 comparison would be misleading. Internal Public Works allocations also changed in 2025; treat the 2023–2026 family trend as qualified, not a pure service-cost increase.";
+  }
+  if (item.service_id === "recreation_parks_culture") {
+    return "Published only from 2023 onward. The canonical family combines Recreation & Parks with Arts & Culture while keeping the Library separate. A clean 2022 bridge is not available because Parks/Forestry sat inside Public Works and Library was embedded in the older Arts/Culture presentation.";
+  }
+  if (item.service_id === "public_health") {
+    return "The public-health organization changed during the period. The dollar series is retained with a scope note rather than presented as a perfectly unchanged entity.";
+  }
+  return "This series is built from approved prior-year columns in later City budget books where possible, plus the final 2026 source.";
+}
+
 export default function ServiceTrendExplorer({ serviceData }) {
   const series = useMemo(() => {
     const grouped = new Map();
@@ -33,19 +52,23 @@ export default function ServiceTrendExplorer({ serviceData }) {
           rows: [],
         });
       }
-      grouped.get(row.service_id).rows.push(row);
+      const item = grouped.get(row.service_id);
+      item.rows.push(row);
+      // Use the most cautious comparability classification in the group.
+      if (["qualified", "medium", "medium-high"].includes(row.comparability)) item.comparability = row.comparability;
     }
 
     return [...grouped.values()].map((item) => {
       item.rows.sort((a, b) => a.fiscal_year - b.fiscal_year);
-      const start = item.rows.find((r) => r.fiscal_year === 2022) || item.rows[0];
-      const end = item.rows.find((r) => r.fiscal_year === 2026) || item.rows.at(-1);
+      const start = item.rows[0];
+      const end = item.rows.at(-1);
       return {
         ...item,
         start,
         end,
         delta: end.amount_cad - start.amount_cad,
         pct: pct(start.amount_cad, end.amount_cad),
+        rangeLabel: `${start.fiscal_year} → ${end.fiscal_year}`,
       };
     }).sort((a, b) => b.delta - a.delta);
   }, [serviceData]);
@@ -53,16 +76,16 @@ export default function ServiceTrendExplorer({ serviceData }) {
   const [selectedId, setSelectedId] = useState(series[0]?.service_id || "");
   const selected = series.find((s) => s.service_id === selectedId) || series[0];
   const maxValue = Math.max(...(selected?.rows.map((r) => r.amount_cad) || [1]), 1);
-  const transit = series.find((s) => s.service_id === "transit");
   const police = series.find((s) => s.service_id === "police");
   const capital = series.find((s) => s.service_id === "capital_financing");
+  const publicWorks = series.find((s) => s.service_id === "public_works");
 
   if (!selected) return null;
 
   return (
     <div>
       <div className="grid gap-4 lg:grid-cols-3">
-        {[police, capital, transit].filter(Boolean).map((item) => (
+        {[police, capital, publicWorks].filter(Boolean).map((item) => (
           <button
             key={item.service_id}
             type="button"
@@ -72,7 +95,7 @@ export default function ServiceTrendExplorer({ serviceData }) {
             <div className={`text-xs font-black uppercase tracking-[0.18em] ${selectedId === item.service_id ? "text-white/65" : "text-[#651024]"}`}>{item.canonical_service}</div>
             <div className="mt-2 text-3xl font-black">{item.delta >= 0 ? "+" : ""}{compactMoney(item.delta)}</div>
             <div className={`mt-2 text-sm font-semibold ${selectedId === item.service_id ? "text-white/75" : "text-[#7a6167]"}`}>
-              2022 → 2026 {item.pct >= 0 ? "+" : ""}{item.pct.toFixed(1)}%
+              {item.rangeLabel} {item.pct >= 0 ? "+" : ""}{item.pct.toFixed(1)}%
             </div>
           </button>
         ))}
@@ -84,7 +107,7 @@ export default function ServiceTrendExplorer({ serviceData }) {
           <div className="mt-2 flex flex-wrap items-center gap-3">
             <h3 className="text-2xl font-black tracking-tight text-[#3a1a22]">{selected.canonical_service}</h3>
             <span className={`rounded-full px-3 py-1 text-[11px] font-black uppercase tracking-[0.12em] ${selected.comparability === "high" ? "bg-emerald-100 text-emerald-800" : "bg-amber-100 text-amber-900"}`}>
-              {selected.comparability} comparability
+              {comparabilityLabel(selected.comparability)} comparability
             </span>
           </div>
           <p className="mt-3 text-sm leading-6 text-[#7a6167]">Budgeted net requirement: service expenditures less the direct revenues attributed to that service. It is not the same thing as the final city-wide property-tax levy.</p>
@@ -104,22 +127,27 @@ export default function ServiceTrendExplorer({ serviceData }) {
           </div>
 
           <div className="mt-6 rounded-2xl bg-[#f8f1f3] p-4 text-sm leading-6 text-[#5f4149]">
-            <strong>2022 → 2026:</strong> {selected.delta >= 0 ? "+" : ""}{money.format(selected.delta)} ({selected.pct >= 0 ? "+" : ""}{selected.pct.toFixed(1)}%).
+            <strong>{selected.rangeLabel}:</strong> {selected.delta >= 0 ? "+" : ""}{money.format(selected.delta)} ({selected.pct >= 0 ? "+" : ""}{selected.pct.toFixed(1)}%).
           </div>
+          {selected.comparability !== "high" && (
+            <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">
+              <strong>Scope note:</strong> {scopeNote(selected)}
+            </div>
+          )}
         </section>
 
         <section className="overflow-hidden rounded-3xl border border-[#eadde1] bg-white">
           <div className="border-b border-[#eadde1] p-5 md:p-7">
-            <div className="text-xs font-black uppercase tracking-[0.2em] text-[#651024]">Stable service series</div>
-            <h3 className="mt-2 text-2xl font-black tracking-tight text-[#3a1a22]">Change in net requirement since 2022</h3>
-            <p className="mt-2 text-sm leading-6 text-[#7a6167]">Sorted by dollar growth. Click a row to inspect the full five-year series.</p>
+            <div className="text-xs font-black uppercase tracking-[0.2em] text-[#651024]">Normalized service series</div>
+            <h3 className="mt-2 text-2xl font-black tracking-tight text-[#3a1a22]">Change over each defensible comparison window</h3>
+            <p className="mt-2 text-sm leading-6 text-[#7a6167]">Most series begin in 2022. Where City reorganizations prevent an honest five-year comparison, the starting year moves forward rather than manufacturing a bridge.</p>
           </div>
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[650px] text-sm">
+            <table className="w-full min-w-[720px] text-sm">
               <thead className="bg-[#fffafb] text-left text-xs font-black uppercase tracking-[0.12em] text-[#7a6167]">
                 <tr>
                   <th className="px-5 py-3">Service</th>
-                  <th className="px-4 py-3 text-right">2022</th>
+                  <th className="px-4 py-3 text-right">Start</th>
                   <th className="px-4 py-3 text-right">2026</th>
                   <th className="px-4 py-3 text-right">Change</th>
                   <th className="px-5 py-3 text-right">%</th>
@@ -134,9 +162,10 @@ export default function ServiceTrendExplorer({ serviceData }) {
                   >
                     <td className="px-5 py-4">
                       <div className="font-bold text-[#3a1a22]">{item.canonical_service}</div>
+                      <div className="mt-1 text-xs font-semibold text-[#7a6167]">{item.rangeLabel}</div>
                       {item.comparability !== "high" && <div className="mt-1 text-xs font-semibold text-amber-800">Scope note applies</div>}
                     </td>
-                    <td className="px-4 py-4 text-right font-semibold text-[#5f4149]">{compactMoney(item.start.amount_cad)}</td>
+                    <td className="px-4 py-4 text-right font-semibold text-[#5f4149]"><span className="block text-[10px] font-black uppercase tracking-wide text-[#9a7f86]">{item.start.fiscal_year}</span>{compactMoney(item.start.amount_cad)}</td>
                     <td className="px-4 py-4 text-right font-semibold text-[#5f4149]">{compactMoney(item.end.amount_cad)}</td>
                     <td className={`px-4 py-4 text-right font-black ${item.delta < 0 ? "text-emerald-700" : "text-[#651024]"}`}>{item.delta >= 0 ? "+" : ""}{compactMoney(item.delta)}</td>
                     <td className={`px-5 py-4 text-right font-black ${item.pct < 0 ? "text-emerald-700" : "text-[#651024]"}`}>{item.pct >= 0 ? "+" : ""}{item.pct.toFixed(1)}%</td>
@@ -149,7 +178,7 @@ export default function ServiceTrendExplorer({ serviceData }) {
       </div>
 
       <div className="mt-7 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950">
-        <strong>Scope boundary:</strong> this is deliberately not yet a complete decomposition of the City budget. Public Works and Recreation/Parks/Culture have material scope transfers across the period, and reorganized corporate/planning divisions still need a defensible crosswalk. They are being held back rather than shown as false apples-to-apples trends.
+        <strong>Normalization rule:</strong> Public Works and Recreation/Parks/Culture are now published from 2023 onward with explicit scope caveats. The remaining high-risk crosswalks are Infrastructure/Planning/Growth and Corporate/Legislative/Administration. No 2022 bridge will be displayed until the underlying components reconcile.
       </div>
     </div>
   );
