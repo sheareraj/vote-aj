@@ -77,3 +77,16 @@ New route:
 - /data/tax-drivers
 
 Normalization status: five-year totals are usable; top-level department comparisons remain source-reported until service-level crosswalks are completed. 2024 has a $203 extraction discrepancy and remains flagged for page-level verification.
+
+
+## Data population pass 2 — 2026-09-11
+
+The public data section now includes:
+
+- A five-year approved/final operating-budget backbone for 2022–2026.
+- 11 normalized stable-service net-requirement series.
+- A dedicated 2026 Legacy Fund explainer that separates regular investment-income use for capital from the additional one-time $3M Legacy Income Retention reserve levy offset.
+- Legacy Income Retention reserve-history snapshots for Oct. 2023, Oct. 2024 and Oct. 2025.
+- A preliminary 2027 base-budget correction flag tied to the one-time 2026 reserve use.
+
+Service trends that cross material organizational boundaries are intentionally withheld until their crosswalks can be defended.

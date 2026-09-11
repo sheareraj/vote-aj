@@ -71,6 +71,23 @@ for row in tax_driver_detail:
     row["impact_pct_of_2025_levy"] = float(row["impact_pct_of_2025_levy"])
 write_json("tax-driver-detail-2026.json", tax_driver_detail)
 
+service_requirements = read_csv(WAREHOUSE / "data" / "facts" / "fact_service_net_requirement.csv")
+for row in service_requirements:
+    row["fiscal_year"] = int(row["fiscal_year"])
+    row["amount_cad"] = int(row["amount_cad"])
+write_json("service-net-requirements.json", service_requirements)
+
+legacy = read_csv(WAREHOUSE / "data" / "facts" / "fact_legacy_2026.csv")
+for row in legacy:
+    row["amount_cad"] = int(row["amount_cad"])
+write_json("legacy-2026.json", legacy)
+
+legacy_reserve = read_csv(WAREHOUSE / "data" / "facts" / "fact_legacy_reserve_history.csv")
+for row in legacy_reserve:
+    for key in ["reserve_balance_cad", "commitments_cad", "uncommitted_cad"]:
+        row[key] = int(row[key])
+write_json("legacy-reserve-history.json", legacy_reserve)
+
 budget = read_csv(WAREHOUSE / "data" / "seed" / "stg_budget_seed.csv")
 for row in budget:
     row["fiscal_year"] = int(row["fiscal_year"])
@@ -97,9 +114,9 @@ write_json(
     "metadata.json",
     {
         "product": "Peterborough By The Numbers",
-        "status": "operating-budget-backbone",
+        "status": "service-normalization-pass-2",
         "scope": "2022-2026",
-        "budgetDataStatus": "Approved/final 2022-2026 gross operating and taxation backbone loaded; reported department structures loaded; 2022 service-level reorganization crosswalk in progress",
+        "budgetDataStatus": "Approved/final 2022-2026 backbone loaded; 11 stable service net-requirement series normalized; Legacy Fund one-time-vs-recurring treatment documented; reorganized service crosswalk continues",
         "voteDataStatus": "schema and councillor dimensions loaded; motion/vote ingestion pending",
         "authoritativeSourcePolicy": "City of Peterborough official documents and minutes are authoritative.",
         "lastBuilt": "2026-09-11",

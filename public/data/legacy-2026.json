@@ -1,0 +1,44 @@
+[
+  {
+    "metric": "2025_net_tax_levy",
+    "amount_cad": 183833050,
+    "label": "2025 net tax levy",
+    "classification": "baseline",
+    "source_id": "budget-2026"
+  },
+  {
+    "metric": "2026_pre_legacy_levy",
+    "amount_cad": 201379745,
+    "label": "2026 levy before additional Legacy offset",
+    "classification": "derived",
+    "source_id": "budget-2026"
+  },
+  {
+    "metric": "2026_extra_legacy_offset",
+    "amount_cad": -3000000,
+    "label": "Additional Legacy Income Retention reserve offset",
+    "classification": "one_time",
+    "source_id": "budget-2026"
+  },
+  {
+    "metric": "2026_final_net_tax_levy",
+    "amount_cad": 198379745,
+    "label": "2026 final net tax levy",
+    "classification": "final",
+    "source_id": "budget-2026"
+  },
+  {
+    "metric": "regular_legacy_income_to_capital",
+    "amount_cad": 1500000,
+    "label": "Regular Legacy investment income used for capital",
+    "classification": "recurring_policy",
+    "source_id": "budget-2026"
+  },
+  {
+    "metric": "2027_base_budget_correction",
+    "amount_cad": 3000000,
+    "label": "Preliminary 2027 base-budget correction tied to one-time 2026 draw",
+    "classification": "future_pressure",
+    "source_id": "council-june-22-2026"
+  }
+]

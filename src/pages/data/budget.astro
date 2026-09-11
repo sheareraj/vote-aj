@@ -2,13 +2,15 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import DataHeader from "../../components/data/DataHeader.astro";
 import BudgetExplorer from "../../components/data/BudgetExplorer.jsx";
+import ServiceTrendExplorer from "../../components/data/ServiceTrendExplorer.jsx";
 import overview from "../../data/budget-overview.json";
 import departments from "../../data/budget-departments-reported.json";
 import reconciliation from "../../data/budget-reconciliation.json";
+import serviceData from "../../data/service-net-requirements.json";
 ---
 <BaseLayout
   title="Peterborough Budget Explorer | AJ Shearer"
-  description="Explore Peterborough municipal budget figures from 2022 to 2026 with approved/final totals, source links and explicit reconciliation status."
+  description="Explore Peterborough municipal budget figures from 2022 to 2026 with approved/final totals, normalized service trends, source links and explicit reconciliation status."
   canonical="https://vote.ajshearer.com/data/budget"
 >
   <div class="min-h-screen bg-[#f8f1f3] text-[#3a1a22]">
@@ -19,7 +21,7 @@ import reconciliation from "../../data/budget-reconciliation.json";
         <div class="mt-6 max-w-4xl">
           <div class="text-xs font-black uppercase tracking-[0.24em] text-[#651024]">Budget explorer</div>
           <h1 class="mt-3 text-4xl font-black tracking-tight md:text-6xl">Where does the money go?</h1>
-          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">The operating-budget backbone now covers 2022–2026. Approved prior-year numbers are taken from later City budget books wherever possible so draft and recommended figures do not quietly become final figures.</p>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">The operating-budget backbone covers 2022–2026, and the first stable service series are now normalized across organizational changes. Approved prior-year numbers are taken from later City budget books wherever possible so draft and recommended figures do not quietly become final figures.</p>
         </div>
       </div>
     </section>
@@ -27,10 +29,22 @@ import reconciliation from "../../data/budget-reconciliation.json";
       <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#eadde1] md:p-9">
         <BudgetExplorer client:load overview={overview} departments={departments} reconciliation={reconciliation} />
       </section>
+
+      <section class="mt-10 rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#eadde1] md:p-9">
+        <div class="max-w-4xl">
+          <div class="text-xs font-black uppercase tracking-[0.2em] text-[#651024]">Normalized service trends</div>
+          <h2 class="mt-2 text-3xl font-black tracking-tight md:text-4xl">Where is the growth actually showing up?</h2>
+          <p class="mt-4 max-w-3xl leading-7 text-[#7a6167]">These series follow stable municipal services rather than department names. The measure is the City's budgeted net requirement for each service — expenditures less direct revenues attributed to that service — recovered from approved prior-year columns and the final 2026 budget.</p>
+        </div>
+        <div class="mt-8">
+          <ServiceTrendExplorer client:load serviceData={serviceData} />
+        </div>
+      </section>
+
       <section class="mt-8 grid gap-5 md:grid-cols-3">
-        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Loaded</div><div class="mt-2 text-xl font-black">2022–2026 backbone</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Gross operating totals, taxation revenue and reported department structures are now in the warehouse.</p></div>
-        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">In progress</div><div class="mt-2 text-xl font-black">Service normalization</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Split the 2022 organization into stable services such as Fire, Transit, Police, Roads, Social Services and Airport.</p></div>
-        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Next analytical layer</div><div class="mt-2 text-xl font-black">Tax drivers</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Separate recurring spending growth, grants, fees, reserve draws, capital financing and other levy drivers.</p></div>
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Loaded</div><div class="mt-2 text-xl font-black">2022–2026 backbone</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Gross operating totals, taxation revenue and source-reported department structures are in the warehouse.</p></div>
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Live now</div><div class="mt-2 text-xl font-black">11 stable service series</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Police, Fire, Transit, Social Services, Environmental Services, Airport, Library, Paramedics, Public Health, Fairhaven and Capital Financing.</p></div>
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1]"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Crosswalk queue</div><div class="mt-2 text-xl font-black">Scope-break services</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Public Works, Recreation/Parks/Culture and reorganized corporate/planning functions are being split carefully before publication.</p></div>
       </section>
     </main>
   </div>

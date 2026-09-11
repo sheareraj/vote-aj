@@ -1,0 +1,56 @@
+service_id,canonical_service,service_family,fiscal_year,amount_cad,measure_type,source_id,source_basis,normalization_method,comparability,review_status
+police,Police Services,Public Safety & External Services,2022,27975484,budgeted_net_requirement,budget-2023-operating,2022 Approved in 2023 operating book,direct,high,published
+police,Police Services,Public Safety & External Services,2023,30425272,budgeted_net_requirement,budget-2024,2023 Approved in 2024 budget book,direct,high,published
+police,Police Services,Public Safety & External Services,2024,35082233,budgeted_net_requirement,budget-2025,2024 Approved in 2025 budget book,direct,high,published
+police,Police Services,Public Safety & External Services,2025,37802241,budgeted_net_requirement,budget-2026,2025 Approved in 2026 budget book,direct,high,published
+police,Police Services,Public Safety & External Services,2026,41286366,budgeted_net_requirement,budget-2026,2026 final budget overview,direct-final,high,published
+capital_financing,Capital Financing Costs,Finance & Capital,2022,30676502,budgeted_net_requirement,budget-2023-operating,2022 Approved in 2023 operating book,direct,high,published
+capital_financing,Capital Financing Costs,Finance & Capital,2023,33158072,budgeted_net_requirement,budget-2024,2023 Approved in 2024 budget book,direct,high,published
+capital_financing,Capital Financing Costs,Finance & Capital,2024,35276786,budgeted_net_requirement,budget-2025,2024 Approved in 2025 budget book,direct,high,published
+capital_financing,Capital Financing Costs,Finance & Capital,2025,36215964,budgeted_net_requirement,budget-2026,2025 Approved in 2026 budget book,direct,high,published
+capital_financing,Capital Financing Costs,Finance & Capital,2026,41295653,budgeted_net_requirement,budget-2026,2026 final budget overview,direct-final,high,published
+fire,Fire Services,Public Safety & External Services,2022,17828968,budgeted_net_requirement,budget-2023-operating,2022 Approved in 2023 operating book,direct,high,published
+fire,Fire Services,Public Safety & External Services,2023,18224495,budgeted_net_requirement,budget-2024,2023 Approved in 2024 budget book,direct,high,published
+fire,Fire Services,Public Safety & External Services,2024,19103883,budgeted_net_requirement,budget-2025,2024 Approved in 2025 budget book,direct,high,published
+fire,Fire Services,Public Safety & External Services,2025,20126160,budgeted_net_requirement,budget-2026,2025 Approved in 2026 budget book,direct,high,published
+fire,Fire Services,Public Safety & External Services,2026,21097276,budgeted_net_requirement,budget-2026,2026 final budget overview,direct-final,high,published
+social_services,Social Services,Community Services,2022,11674134,budgeted_net_requirement,budget-2023-operating,2022 Approved in 2023 operating book,direct,high,published
+social_services,Social Services,Community Services,2023,12049221,budgeted_net_requirement,budget-2024,2023 Approved in 2024 budget book,direct,high,published
+social_services,Social Services,Community Services,2024,12716536,budgeted_net_requirement,budget-2025,2024 Approved in 2025 budget book,direct,high,published
+social_services,Social Services,Community Services,2025,14124822,budgeted_net_requirement,budget-2026,2025 Approved in 2026 budget book,direct,high,published
+social_services,Social Services,Community Services,2026,16700452,budgeted_net_requirement,budget-2026,2026 final budget overview,direct-final,high,published
+transit,Transit,Municipal Operations,2022,12667939,budgeted_net_requirement,budget-2023-operating,2022 Approved in 2023 operating book,direct,high,published
+transit,Transit,Municipal Operations,2023,10835321,budgeted_net_requirement,budget-2024,2023 Approved in 2024 budget book,direct,high,published
+transit,Transit,Municipal Operations,2024,13622322,budgeted_net_requirement,budget-2025,2024 Approved in 2025 budget book,direct,high,published
+transit,Transit,Municipal Operations,2025,13337879,budgeted_net_requirement,budget-2026,2025 Approved in 2026 budget book,direct,high,published
+transit,Transit,Municipal Operations,2026,12901654,budgeted_net_requirement,budget-2026,2026 final service table,direct-final,high,published
+environmental_services,Environmental Services,Municipal Operations,2022,6638455,budgeted_net_requirement,budget-2023-operating,2022 Approved in 2023 operating book,direct,high,published
+environmental_services,Environmental Services,Municipal Operations,2023,7615397,budgeted_net_requirement,budget-2024,2023 Approved in 2024 budget book,direct,high,published
+environmental_services,Environmental Services,Municipal Operations,2024,8106996,budgeted_net_requirement,budget-2025,2024 Approved in 2025 budget book,direct,high,published
+environmental_services,Environmental Services,Municipal Operations,2025,8694947,budgeted_net_requirement,budget-2026,2025 Approved in 2026 budget book,direct,high,published
+environmental_services,Environmental Services,Municipal Operations,2026,9340815,budgeted_net_requirement,budget-2026,2026 final service table,direct-final,high,published
+airport,Peterborough Airport,Municipal Operations,2022,2314864,budgeted_net_requirement,budget-2023-operating,2022 Approved in 2023 operating book,direct,high,published
+airport,Peterborough Airport,Municipal Operations,2023,2273263,budgeted_net_requirement,budget-2024,2023 Approved in 2024 budget book,direct,high,published
+airport,Peterborough Airport,Municipal Operations,2024,2320244,budgeted_net_requirement,budget-2025,2024 Approved in 2025 budget book,direct,high,published
+airport,Peterborough Airport,Municipal Operations,2025,2203502,budgeted_net_requirement,budget-2026,2025 Approved in 2026 budget book,direct,high,published
+airport,Peterborough Airport,Municipal Operations,2026,2196973,budgeted_net_requirement,budget-2026,2026 final budget overview,direct-final,high,published
+library,Peterborough Public Library,Community Services,2022,3157661,budgeted_net_requirement,budget-2023-operating,2022 Approved library net requirement,direct,high,published
+library,Peterborough Public Library,Community Services,2023,3283516,budgeted_net_requirement,budget-2024,2023 Approved in 2024 budget book,direct,high,published
+library,Peterborough Public Library,Community Services,2024,3764273,budgeted_net_requirement,budget-2025,2024 Approved in 2025 budget book,direct,high,published
+library,Peterborough Public Library,Community Services,2025,3835700,budgeted_net_requirement,budget-2026,2025 Approved in 2026 budget book,direct,high,published
+library,Peterborough Public Library,Community Services,2026,4410418,budgeted_net_requirement,budget-2026,2026 final budget overview,direct-final,high,published
+paramedics,Peterborough County/City Paramedics,Public Safety & External Services,2022,5431715,budgeted_net_requirement,budget-2023-operating,2022 Approved in 2023 operating book,direct,high,published
+paramedics,Peterborough County/City Paramedics,Public Safety & External Services,2023,6132193,budgeted_net_requirement,budget-2024,2023 Approved in 2024 budget book,direct,high,published
+paramedics,Peterborough County/City Paramedics,Public Safety & External Services,2024,6635904,budgeted_net_requirement,budget-2025,2024 Approved in 2025 budget book,direct,high,published
+paramedics,Peterborough County/City Paramedics,Public Safety & External Services,2025,7298967,budgeted_net_requirement,budget-2026,2025 Approved in 2026 budget book,direct,high,published
+paramedics,Peterborough County/City Paramedics,Public Safety & External Services,2026,7828597,budgeted_net_requirement,budget-2026,2026 final budget overview,direct-final,high,published
+public_health,Public Health,Public Safety & External Services,2022,1343755,budgeted_net_requirement,budget-2023-operating,2022 Approved - Peterborough Public Health,direct,medium,published_with_scope_note
+public_health,Public Health,Public Safety & External Services,2023,1541352,budgeted_net_requirement,budget-2024,2023 Approved - Peterborough Public Health,direct,medium,published_with_scope_note
+public_health,Public Health,Public Safety & External Services,2024,1838499,budgeted_net_requirement,budget-2025,2024 Approved - Peterborough Public Health,direct,medium,published_with_scope_note
+public_health,Public Health,Public Safety & External Services,2025,1912039,budgeted_net_requirement,budget-2026,2025 Approved - successor health unit transition period,direct,medium,published_with_scope_note
+public_health,Public Health,Public Safety & External Services,2026,2007641,budgeted_net_requirement,budget-2026,2026 final - Lakelands Public Health,direct-final,medium,published_with_scope_note
+fairhaven,Fairhaven,Public Safety & External Services,2022,1600000,budgeted_net_requirement,budget-2023-operating,2022 Approved in 2023 operating book,direct,high,published
+fairhaven,Fairhaven,Public Safety & External Services,2023,1600000,budgeted_net_requirement,budget-2024,2023 Approved in 2024 budget book,direct,high,published
+fairhaven,Fairhaven,Public Safety & External Services,2024,1646500,budgeted_net_requirement,budget-2025,2024 Approved in 2025 budget book,direct,high,published
+fairhaven,Fairhaven,Public Safety & External Services,2025,1646500,budgeted_net_requirement,budget-2026,2025 Approved in 2026 budget book,direct,high,published
+fairhaven,Fairhaven,Public Safety & External Services,2026,1703216,budgeted_net_requirement,budget-2026,2026 final budget overview,direct-final,high,published

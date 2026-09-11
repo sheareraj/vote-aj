@@ -1,0 +1,7 @@
+metric,amount_cad,label,classification,source_id
+2025_net_tax_levy,183833050,2025 net tax levy,baseline,budget-2026
+2026_pre_legacy_levy,201379745,2026 levy before additional Legacy offset,derived,budget-2026
+2026_extra_legacy_offset,-3000000,Additional Legacy Income Retention reserve offset,one_time,budget-2026
+2026_final_net_tax_levy,198379745,2026 final net tax levy,final,budget-2026
+regular_legacy_income_to_capital,1500000,Regular Legacy investment income used for capital,recurring_policy,budget-2026
+2027_base_budget_correction,3000000,Preliminary 2027 base-budget correction tied to one-time 2026 draw,future_pressure,council-june-22-2026

@@ -3,6 +3,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import DataHeader from "../../components/data/DataHeader.astro";
 import drivers from "../../data/tax-drivers-2026.json";
 import detail from "../../data/tax-driver-detail-2026.json";
+import legacy from "../../data/legacy-2026.json";
+import legacyReserve from "../../data/legacy-reserve-history.json";
 
 const money = new Intl.NumberFormat("en-CA", { style: "currency", currency: "CAD", maximumFractionDigits: 0 });
 const compact = (v) => `${v < 0 ? "-" : ""}$${(Math.abs(v) / 1_000_000).toFixed(2)}M`;
@@ -14,6 +16,8 @@ const highlights = detail
 const startLevy = 183_833_050;
 const endLevy = 198_379_745;
 const increase = endLevy - startLevy;
+const metric = Object.fromEntries(legacy.map((row) => [row.metric, row.amount_cad]));
+const maxReserve = Math.max(...legacyReserve.map((r) => r.reserve_balance_cad));
 ---
 <BaseLayout
   title="What Drove Peterborough's 2026 Tax Levy? | AJ Shearer"
@@ -28,7 +32,7 @@ const increase = endLevy - startLevy;
         <div class="mt-6 max-w-4xl">
           <div class="text-xs font-black uppercase tracking-[0.24em] text-[#651024]">2026 tax drivers</div>
           <h1 class="mt-3 text-4xl font-black tracking-tight md:text-6xl">What actually drove the tax levy?</h1>
-          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">Rather than treating the tax increase as one number, this view uses the City's own final-budget change-factor table to separate the major pressures from the offsets.</p>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">Rather than treating the tax increase as one number, this view uses the City's own final-budget change-factor table to separate the major pressures from the offsets — and distinguishes recurring changes from one-time funding.</p>
         </div>
       </div>
     </section>
@@ -78,28 +82,106 @@ const increase = endLevy - startLevy;
       <section class="mt-8 rounded-3xl bg-[#fffafb] p-6 ring-1 ring-[#decbd1] md:p-9">
         <div class="text-xs font-black uppercase tracking-[0.2em] text-[#651024]">Largest individual factors</div>
         <div class="mt-5 grid gap-3 md:grid-cols-2">
-          {highlights.map((d) => (
-            <div class="flex items-start justify-between gap-4 rounded-2xl bg-white p-4 ring-1 ring-[#eadde1]">
-              <div>
-                <div class="font-bold leading-5">{d.description}</div>
-                <div class="mt-1 text-xs font-semibold text-[#7a6167]">Ref. {d.source_ref}</div>
+          {highlights.map((d) => {
+            const isLegacy = d.description.toLowerCase().includes("legacy");
+            return (
+              <div class={`flex items-start justify-between gap-4 rounded-2xl p-4 ring-1 ${isLegacy ? "bg-amber-50 ring-amber-200" : "bg-white ring-[#eadde1]"}`}>
+                <div>
+                  <div class="flex flex-wrap items-center gap-2">
+                    <div class="font-bold leading-5">{d.description}</div>
+                    {isLegacy && <span class="rounded-full bg-amber-200 px-2 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-amber-950">One-time</span>}
+                  </div>
+                  <div class="mt-1 text-xs font-semibold text-[#7a6167]">Ref. {d.source_ref}</div>
+                </div>
+                <div class={`shrink-0 font-black ${d.amount_cad < 0 ? "text-emerald-700" : "text-[#651024]"}`}>{d.amount_cad > 0 ? "+" : ""}{compact(d.amount_cad)}</div>
               </div>
-              <div class={`shrink-0 font-black ${d.amount_cad < 0 ? "text-emerald-700" : "text-[#651024]"}`}>{d.amount_cad > 0 ? "+" : ""}{compact(d.amount_cad)}</div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
-      <section class="mt-8 grid gap-5 md:grid-cols-2">
-        <div class="rounded-3xl border border-amber-200 bg-amber-50 p-6 text-amber-950">
-          <div class="font-black">Why reserves are shown separately</div>
-          <p class="mt-2 text-sm leading-6">The final budget uses a $3.0 million transfer from the Legacy Income Reserve as an offset. That lowers the 2026 tax requirement, but it is a funding source rather than a reduction in the underlying cost of providing services.</p>
+      <section class="mt-8 overflow-hidden rounded-3xl bg-white ring-1 ring-[#decbd1]">
+        <div class="bg-[#3a1a22] p-6 text-white md:p-9">
+          <div class="text-xs font-black uppercase tracking-[0.2em] text-[#f0cbd5]">Legacy Fund: two different uses</div>
+          <h2 class="mt-2 max-w-4xl text-3xl font-black tracking-tight md:text-4xl">Normal investment income is not the same as the 2026 one-time levy offset.</h2>
+          <p class="mt-4 max-w-4xl leading-7 text-white/75">The regular policy uses Legacy Fund investment income to support the capital program. In 2026, Council also used an additional $3 million from accumulated Legacy Fund Income Retention reserve to lower that year's tax requirement.</p>
         </div>
-        <div class="rounded-3xl bg-white p-6 ring-1 ring-[#eadde1]">
-          <div class="font-black">Source and audit trail</div>
-          <p class="mt-2 text-sm leading-6 text-[#7a6167]">The category totals above come from Chart 2, “2026 Budget: Tax Levy Requirement Change Factors,” in the City's final 2026 Budget Book.</p>
-          <a href="https://media-002-ca.cdn.govstack.com/memorialcentre-011-ca/media/21lhmi5p/budget-book-2026-final.pdf" target="_blank" rel="noreferrer" class="mt-4 inline-flex rounded-full bg-[#651024] px-4 py-2 text-sm font-bold text-white">Open official budget book ↗</a>
+
+        <div class="grid gap-0 lg:grid-cols-2">
+          <div class="border-b border-[#eadde1] p-6 lg:border-b-0 lg:border-r md:p-9">
+            <div class="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-emerald-800">Recurring policy</div>
+            <div class="mt-4 text-4xl font-black text-[#3a1a22]">{compact(metric.regular_legacy_income_to_capital)}</div>
+            <h3 class="mt-2 text-xl font-black">Investment income → capital</h3>
+            <p class="mt-3 text-sm leading-6 text-[#7a6167]">The 2026 capital financing plan continues the regular $1.5 million use of Legacy Fund investment income for capital. This is separate from the extra levy offset below.</p>
+          </div>
+          <div class="p-6 md:p-9">
+            <div class="inline-flex rounded-full bg-amber-100 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-amber-900">One-time 2026 offset</div>
+            <div class="mt-4 text-4xl font-black text-[#3a1a22]">{compact(Math.abs(metric["2026_extra_legacy_offset"]))}</div>
+            <h3 class="mt-2 text-xl font-black">Accumulated income reserve → tax levy</h3>
+            <p class="mt-3 text-sm leading-6 text-[#7a6167]">The City says this additional draw reduced the 2026 tax requirement by 1.32 percentage points. It came from accumulated Legacy Fund income retained in reserve — not a stated draw of the original PDI-sale principal.</p>
+          </div>
         </div>
+
+        <div class="border-t border-[#eadde1] bg-[#fffafb] p-6 md:p-9">
+          <div class="text-xs font-black uppercase tracking-[0.2em] text-[#651024]">What the one-time offset did</div>
+          <div class="mt-6 grid items-stretch gap-3 md:grid-cols-[1fr_auto_1fr_auto_1fr] md:items-center">
+            <div class="rounded-2xl bg-white p-5 text-center ring-1 ring-[#eadde1]">
+              <div class="text-xs font-black uppercase tracking-[0.14em] text-[#7a6167]">Before extra Legacy offset</div>
+              <div class="mt-2 text-3xl font-black">{compact(metric["2026_pre_legacy_levy"])}</div>
+            </div>
+            <div class="text-center text-3xl font-black text-[#651024]">−</div>
+            <div class="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-center text-amber-950">
+              <div class="text-xs font-black uppercase tracking-[0.14em]">One-time reserve</div>
+              <div class="mt-2 text-3xl font-black">{compact(Math.abs(metric["2026_extra_legacy_offset"]))}</div>
+            </div>
+            <div class="text-center text-3xl font-black text-[#651024]">=</div>
+            <div class="rounded-2xl bg-[#651024] p-5 text-center text-white">
+              <div class="text-xs font-black uppercase tracking-[0.14em] text-white/65">Final 2026 levy</div>
+              <div class="mt-2 text-3xl font-black">{compact(metric["2026_final_net_tax_levy"])}</div>
+            </div>
+          </div>
+          <div class="mt-6 rounded-2xl border border-rose-200 bg-rose-50 p-5 text-rose-950">
+            <div class="font-black">The pressure did not disappear.</div>
+            <p class="mt-2 text-sm leading-6">The City's preliminary 2027 budget work identifies a <strong>{compact(metric["2027_base_budget_correction"])}</strong> base-budget correction tied to the one-time 2026 Legacy reserve use. In other words, absent another offset or a structural saving/revenue source, that amount returns as a 2027 pressure.</p>
+          </div>
+        </div>
+
+        <div class="border-t border-[#eadde1] p-6 md:p-9">
+          <div class="grid gap-8 lg:grid-cols-[1fr_.85fr]">
+            <div>
+              <div class="text-xs font-black uppercase tracking-[0.2em] text-[#651024]">Income Retention reserve history</div>
+              <h3 class="mt-2 text-2xl font-black">Accumulated investment income grew before the draw.</h3>
+              <div class="mt-6 space-y-5">
+                {legacyReserve.map((row) => (
+                  <div>
+                    <div class="mb-2 flex items-end justify-between gap-4">
+                      <div class="font-bold">{row.as_of}</div>
+                      <div class="font-black text-[#651024]">{compact(row.reserve_balance_cad)}</div>
+                    </div>
+                    <div class="h-3 overflow-hidden rounded-full bg-[#f0e4e7]">
+                      <div class="h-full rounded-full bg-[#7a2337]" style={`width:${(row.reserve_balance_cad / maxReserve) * 100}%`}></div>
+                    </div>
+                    <div class="mt-1 text-xs text-[#7a6167]">Uncommitted: {compact(row.uncommitted_cad)} · Commitments: {compact(row.commitments_cad)}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div class="rounded-3xl bg-[#f8f1f3] p-6">
+              <div class="font-black">Why this classification matters</div>
+              <p class="mt-3 text-sm leading-6 text-[#5f4149]">A reserve draw can lower the tax requirement in a particular year without lowering the recurring cost base. The dashboard therefore labels it as a <strong>one-time funding offset</strong>, while the normal annual Legacy investment-income contribution to capital remains a separate recurring-policy item.</p>
+              <div class="mt-5 flex flex-wrap gap-3">
+                <a href="https://www.peterborough.ca/news/posts/city-of-peterborough-2026-budget-adopted/" target="_blank" rel="noreferrer" class="rounded-full bg-[#651024] px-4 py-2 text-sm font-bold text-white">2026 adoption release ↗</a>
+                <a href="https://www.peterborough.ca/news/posts/city-council-meeting-overview-package-for-june-22-2026/" target="_blank" rel="noreferrer" class="rounded-full border border-[#c9aab3] bg-white px-4 py-2 text-sm font-bold text-[#651024]">2027 preliminary pressure ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-8 rounded-3xl bg-white p-6 ring-1 ring-[#eadde1] md:p-9">
+        <div class="font-black">Source and audit trail</div>
+        <p class="mt-2 text-sm leading-6 text-[#7a6167]">The change-factor categories come from Chart 2, “2026 Budget: Tax Levy Requirement Change Factors,” in the City's final 2026 Budget Book. The Legacy classification also uses the City's 2026 adoption release and its preliminary 2027 budget discussion.</p>
+        <a href="https://www.peterborough.ca/media/21lhmi5p/budget-book-2026-final.pdf" target="_blank" rel="noreferrer" class="mt-4 inline-flex rounded-full bg-[#651024] px-4 py-2 text-sm font-bold text-white">Open official budget book ↗</a>
       </section>
     </main>
   </div>

@@ -1,8 +1,8 @@
 {
   "product": "Peterborough By The Numbers",
-  "status": "operating-budget-backbone",
+  "status": "service-normalization-pass-2",
   "scope": "2022-2026",
-  "budgetDataStatus": "Approved/final 2022-2026 gross operating and taxation backbone loaded; reported department structures loaded; 2022 service-level reorganization crosswalk in progress",
+  "budgetDataStatus": "Approved/final 2022-2026 backbone loaded; 11 stable service net-requirement series normalized; Legacy Fund one-time-vs-recurring treatment documented; reorganized service crosswalk continues",
   "voteDataStatus": "schema and councillor dimensions loaded; motion/vote ingestion pending",
   "authoritativeSourcePolicy": "City of Peterborough official documents and minutes are authoritative.",
   "lastBuilt": "2026-09-11"
