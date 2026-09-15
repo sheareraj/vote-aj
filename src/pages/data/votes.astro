@@ -28,13 +28,17 @@ const activeCouncillors = councillors.filter((c) => c.current_member);
       </div>
     </section>
     <main class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <aside class="mb-8 flex flex-col gap-3 rounded-2xl border border-[#d9c3ca] bg-[#fffafb] p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div><div class="font-black">Prefer the short version?</div><div class="mt-1 text-sm text-[#7a6167]">Start with a handful of significant split votes and unusual decision mechanisms.</div></div>
+        <a href="/data/decisions" class="shrink-0 rounded-full bg-[#651024] px-4 py-2 text-sm font-bold text-white">Read the 2-minute decisions summary →</a>
+      </aside>
       <section class="mb-10">
         <VoteInsights client:load votes={votes} topics={topics} />
       </section>
       <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#eadde1] md:p-9">
         <VoteExplorer client:load councillors={activeCouncillors} topics={topics} votes={votes} />
       </section>
-      <section class="mt-12 border-t border-[#d9c3ca] pt-12">
+      <section id="strong-mayor" class="mt-12 scroll-mt-24 border-t border-[#d9c3ca] pt-12">
         <div class="mb-5 max-w-3xl">
           <div class="text-xs font-black uppercase tracking-[0.22em] text-[#651024]">Decision framework</div>
           <h2 class="mt-2 text-2xl font-black tracking-tight">Strong Mayor Powers</h2>

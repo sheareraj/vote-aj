@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DataHeader from "../../components/data/DataHeader.astro";
+import overview from "../../data/budget-overview.json";
+import drivers from "../../data/tax-drivers-2026.json";
+
+const byYear = Object.fromEntries(overview.map((row) => [row.fiscal_year, row]));
+const start = byYear[2022].taxation_revenue_cad;
+const end = byYear[2026].taxation_revenue_cad;
+const change = end - start;
+const pct = (change / start) * 100;
+const compact = (v) => `${v < 0 ? "−" : ""}$${(Math.abs(v) / 1_000_000).toFixed(1)}M`;
+const positives = drivers.filter((d) => d.amount_cad > 0).sort((a,b) => b.amount_cad - a.amount_cad).slice(0,4);
+const offsets = drivers.filter((d) => d.amount_cad < 0).reduce((sum,d) => sum + d.amount_cad, 0);
+---
+<BaseLayout
+  title="Why Are Peterborough Taxes Going Up? | Peterborough By The Numbers"
+  description="A plain-language explanation of Peterborough's tax requirement growth, 2026 levy pressures and one-time Legacy Fund support."
+  canonical="https://vote.ajshearer.com/data/taxes"
+>
+  <div class="min-h-screen bg-[#f8f1f3] text-[#3a1a22]">
+    <DataHeader />
+    <section class="border-b border-[#eadde1] bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+        <a href="/data" class="text-sm font-bold text-[#651024]">← Five-minute overview</a>
+        <div class="mt-6 max-w-4xl">
+          <div class="text-xs font-black uppercase tracking-[0.24em] text-[#651024]">Taxes · the short version</div>
+          <h1 class="mt-3 text-4xl font-black tracking-tight md:text-6xl">Why are taxes going up?</h1>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">There isn't one cause. Peterborough's city-wide tax requirement has risen as operating costs, capital financing and outside-agency requirements increased, while revenues and one-time reserve draws offset part of the pressure.</p>
+        </div>
+      </div>
+    </section>
+
+    <main class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <section class="grid gap-4 md:grid-cols-[1fr_auto_1fr] md:items-center">
+        <div class="rounded-3xl bg-white p-6 ring-1 ring-[#eadde1]">
+          <div class="text-xs font-black uppercase tracking-[0.18em] text-[#7a6167]">2022 tax requirement</div>
+          <div class="mt-2 text-4xl font-black text-[#651024]">{compact(start)}</div>
+        </div>
+        <div class="hidden text-4xl font-black text-[#b78d99] md:block">→</div>
+        <div class="rounded-3xl bg-[#651024] p-6 text-white">
+          <div class="text-xs font-black uppercase tracking-[0.18em] text-white/65">2026 tax requirement</div>
+          <div class="mt-2 text-4xl font-black">{compact(end)}</div>
+          <div class="mt-2 text-sm font-bold text-white/75">+{pct.toFixed(1)}% over four budget years</div>
+        </div>
+      </section>
+
+      <section class="mt-10 rounded-[2rem] bg-white p-7 ring-1 ring-[#eadde1] md:p-9">
+        <div class="max-w-3xl">
+          <div class="text-xs font-black uppercase tracking-[0.2em] text-[#651024]">For 2026 specifically</div>
+          <h2 class="mt-2 text-3xl font-black tracking-tight">The largest published pressures.</h2>
+          <p class="mt-3 leading-7 text-[#7a6167]">The City's final 2026 budget identifies the categories below as the biggest positive pressures on the levy. These are categories, not necessarily individual departments.</p>
+        </div>
+        <div class="mt-7 grid gap-4 md:grid-cols-2">
+          {positives.map((row, i) => (
+            <div class="rounded-2xl bg-[#fffafb] p-5 ring-1 ring-[#eadde1]">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <div class="text-xs font-black uppercase tracking-[0.15em] text-[#7a6167]">#{i + 1} pressure</div>
+                  <div class="mt-1 text-lg font-black leading-6">{row.category}</div>
+                </div>
+                <div class="shrink-0 text-2xl font-black text-[#651024]">+{compact(row.amount_cad)}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-emerald-950">
+          <div class="font-black">There were offsets too: {compact(offsets)}</div>
+          <p class="mt-2 text-sm leading-6">Increased revenues and lower expenditures offset part of the positive pressures. That's why adding only the increases would overstate the final tax change.</p>
+        </div>
+      </section>
+
+      <section id="legacy" class="mt-10 scroll-mt-24 overflow-hidden rounded-[2rem] bg-[#3a1a22] text-white">
+        <div class="p-7 md:p-9">
+          <div class="text-xs font-black uppercase tracking-[0.2em] text-[#f0cbd5]">One-time funding matters</div>
+          <h2 class="mt-2 max-w-4xl text-3xl font-black tracking-tight md:text-4xl">The 2026 levy was lowered by a $3M Legacy Fund income-reserve draw.</h2>
+          <p class="mt-4 max-w-4xl leading-7 text-white/75">This was accumulated investment income, not a draw on the original PDI-sale principal. But it was still one-time money used against an ongoing budget requirement.</p>
+        </div>
+        <div class="grid gap-px bg-white/10 md:grid-cols-3">
+          <div class="bg-[#4a202b] p-6"><div class="text-xs font-black uppercase tracking-[0.16em] text-white/55">Normal annual policy</div><div class="mt-2 text-3xl font-black">~$1.5M</div><p class="mt-2 text-sm leading-6 text-white/65">Legacy investment income typically supports the capital program.</p></div>
+          <div class="bg-[#4a202b] p-6"><div class="text-xs font-black uppercase tracking-[0.16em] text-white/55">Extra 2026 tax support</div><div class="mt-2 text-3xl font-black">$3.0M</div><p class="mt-2 text-sm leading-6 text-white/65">An additional draw reduced the levy taxpayers were asked to fund in 2026.</p></div>
+          <div class="bg-[#4a202b] p-6"><div class="text-xs font-black uppercase tracking-[0.16em] text-white/55">Why it matters</div><div class="mt-2 text-xl font-black">The pressure can return</div><p class="mt-2 text-sm leading-6 text-white/65">A one-time offset does not permanently reduce the recurring cost base.</p></div>
+        </div>
+      </section>
+
+      <section class="mt-10 grid gap-5 lg:grid-cols-[1fr_.75fr]">
+        <div class="rounded-3xl bg-white p-7 ring-1 ring-[#eadde1]">
+          <div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">The takeaway</div>
+          <h2 class="mt-2 text-2xl font-black">Tax growth is a mix of recurring pressures and temporary offsets.</h2>
+          <p class="mt-3 leading-7 text-[#7a6167]">The useful question isn't simply whether the levy went up. It is which pressures are structural, which are choices, which are externally driven, and which reductions only postpone a future pressure.</p>
+        </div>
+        <div class="rounded-3xl border border-[#d9c3ca] bg-[#fffafb] p-7">
+          <div class="font-black">Want the accounting detail?</div>
+          <p class="mt-2 text-sm leading-6 text-[#7a6167]">The advanced view contains all seven levy-change categories, individual factors, Legacy reserve history and official source links.</p>
+          <a href="/data/tax-drivers" class="mt-5 inline-flex rounded-full bg-[#651024] px-5 py-3 text-sm font-bold text-white">Open full tax-driver analysis →</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>

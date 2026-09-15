@@ -1,7 +1,7 @@
 {
   "product": "Peterborough By The Numbers",
-  "status": "freshness-first-outcomes-pass-9",
-  "scope": "Budgets 2022-2026 · current outcome signals through 2025/2026 with older context demoted",
+  "status": "progressive-disclosure-pass-10",
+  "scope": "Plain-language presentation layer over budgets 2022-2026, verified Council votes and current outcome signals through 2025/2026",
   "budgetSeriesCount": 22,
   "verifiedMotionCount": 39,
   "strongMayorActionCount": 13,
@@ -10,5 +10,5 @@
   "voteDataStatus": "39 verified recorded motions loaded from official City minutes. Strong Mayor Powers is retained as a dedicated topic and full decision timeline, positioned after the searchable vote archive.",
   "outcomeDataStatus": "Freshness-first KPI layer leads with 2025 annual actuals published in 2026 for housing, transit, crime and homelessness. Older RGI, PPS-output and road-condition measures are demoted to historical context; infrastructure is explicitly flagged as a data-lag domain.",
   "authoritativeSourcePolicy": "Official City of Peterborough, Peterborough Police Service, Statistics Canada and other primary-government sources are authoritative for their respective measures.",
-  "lastBuilt": "2026-09-11"
+  "lastBuilt": "2026-09-15"
 }

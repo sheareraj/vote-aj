@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DataHeader from "../../components/data/DataHeader.astro";
+import services from "../../data/service-net-requirements.json";
+
+const compact = (v) => `${v < 0 ? "−" : ""}$${(Math.abs(v) / 1_000_000).toFixed(1)}M`;
+const stableIds = ["police","capital_financing","social_services","fire","environmental_services","paramedics","library","transit","airport"];
+const summaries = stableIds.map((id) => {
+  const rows = services.filter((r) => r.service_id === id);
+  const a = rows.find((r) => r.fiscal_year === 2022);
+  const b = rows.find((r) => r.fiscal_year === 2026);
+  if (!a || !b) return null;
+  const change = b.amount_cad - a.amount_cad;
+  return { id, label: b.canonical_service, family: b.service_family, start: a.amount_cad, end: b.amount_cad, change, pct: change / a.amount_cad * 100 };
+}).filter(Boolean);
+const biggest = summaries.filter((r) => r.change > 0).sort((a,b) => b.change - a.change).slice(0,6);
+const transit = summaries.find((r) => r.id === "transit");
+const airport = summaries.find((r) => r.id === "airport");
+---
+<BaseLayout
+  title="Where Is Peterborough Spending Growth Showing Up? | Peterborough By The Numbers"
+  description="A plain-language look at the largest comparable changes in Peterborough municipal service net requirements from 2022 to 2026."
+  canonical="https://vote.ajshearer.com/data/spending"
+>
+  <div class="min-h-screen bg-[#f8f1f3] text-[#3a1a22]">
+    <DataHeader />
+    <section class="border-b border-[#eadde1] bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+        <a href="/data" class="text-sm font-bold text-[#651024]">← Five-minute overview</a>
+        <div class="mt-6 max-w-4xl">
+          <div class="text-xs font-black uppercase tracking-[0.24em] text-[#651024]">Spending · the short version</div>
+          <h1 class="mt-3 text-4xl font-black tracking-tight md:text-6xl">Where is the growth showing up?</h1>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">Department names change. Services are more useful. These comparisons follow municipal services that can be matched cleanly from 2022 to 2026 and show the change in their budgeted net requirement.</p>
+        </div>
+      </div>
+    </section>
+
+    <main class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <section>
+        <div class="max-w-3xl">
+          <div class="text-xs font-black uppercase tracking-[0.2em] text-[#651024]">Largest comparable increases</div>
+          <h2 class="mt-2 text-3xl font-black tracking-tight">The biggest dollar changes in stable five-year series.</h2>
+          <p class="mt-3 leading-7 text-[#7a6167]">“Net requirement” means the amount left to fund after direct revenues attributed to that service. It is not the same thing as gross spending.</p>
+        </div>
+        <div class="mt-7 space-y-4">
+          {biggest.map((row, i) => (
+            <div class="rounded-3xl bg-white p-6 ring-1 ring-[#eadde1] md:flex md:items-center md:gap-6">
+              <div class="flex items-center gap-4 md:w-[40%]">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f8f1f3] text-sm font-black text-[#651024]">{i+1}</div>
+                <div><div class="text-lg font-black">{row.label}</div><div class="mt-1 text-xs font-semibold text-[#7a6167]">2022 → 2026</div></div>
+              </div>
+              <div class="mt-5 grid flex-1 grid-cols-3 gap-3 md:mt-0">
+                <div><div class="text-[10px] font-black uppercase tracking-[0.14em] text-[#7a6167]">2022</div><div class="mt-1 font-black">{compact(row.start)}</div></div>
+                <div><div class="text-[10px] font-black uppercase tracking-[0.14em] text-[#7a6167]">2026</div><div class="mt-1 font-black">{compact(row.end)}</div></div>
+                <div><div class="text-[10px] font-black uppercase tracking-[0.14em] text-[#7a6167]">Change</div><div class="mt-1 font-black text-[#651024]">+{compact(row.change)} <span class="text-xs">(+{row.pct.toFixed(0)}%)</span></div></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="mt-10 grid gap-5 md:grid-cols-2">
+        <div class="rounded-3xl border border-emerald-200 bg-emerald-50 p-7 text-emerald-950">
+          <div class="text-xs font-black uppercase tracking-[0.18em]">Not everything rose sharply</div>
+          <div class="mt-2 text-3xl font-black">Transit +{transit.pct.toFixed(1)}%</div>
+          <p class="mt-3 text-sm leading-6">Transit’s net operating requirement is roughly flat compared with 2022, even though ridership has been recovering.</p>
+        </div>
+        <div class="rounded-3xl border border-[#d9c3ca] bg-white p-7">
+          <div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">One service decreased</div>
+          <div class="mt-2 text-3xl font-black">Airport {airport.pct.toFixed(1)}%</div>
+          <p class="mt-3 text-sm leading-6 text-[#7a6167]">The Airport's comparable net requirement is slightly lower in 2026 than it was in 2022.</p>
+        </div>
+      </section>
+
+      <section class="mt-10 rounded-[2rem] bg-[#3a1a22] p-7 text-white md:p-9">
+        <div class="grid gap-7 lg:grid-cols-[1fr_.7fr] lg:items-center">
+          <div>
+            <div class="text-xs font-black uppercase tracking-[0.2em] text-[#f0cbd5]">Important limitation</div>
+            <h2 class="mt-2 text-2xl font-black">Some City reorganizations cannot be compared cleanly across all five years.</h2>
+            <p class="mt-3 leading-7 text-white/70">Public Works, recreation/culture, planning and corporate administration have changed structure. The detailed explorer uses shorter comparison windows rather than pretending those reorganizations are real spending jumps.</p>
+          </div>
+          <div><a href="/data/budget" class="inline-flex rounded-full bg-white px-5 py-3 text-sm font-bold text-[#651024]">Open full Budget Explorer →</a></div>
+        </div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>

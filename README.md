@@ -114,3 +114,7 @@ This pass expands the normalized service layer to 22 service/component series an
 ## Pass 6 — Strong Mayor Powers
 
 The vote archive now includes a dedicated Strong Mayor Powers topic and a 13-action timeline of the City's published mayoral decisions/directions. Directly associated recorded votes are tagged separately from ordinary Council motions so that the dashboard does not overstate the use of the statutory mechanism. The archive now contains 39 verified motions and 429 individual member-vote records.
+
+## Pass 10 presentation layer
+
+The default data experience now uses progressive disclosure: `/data`, `/data/taxes`, `/data/spending`, `/data/results`, and `/data/decisions` provide short resident-facing explanations, while the existing detailed budget, tax-driver, outcomes, and vote explorers remain available as advanced tools. See `PASS10_NOTES.md`.

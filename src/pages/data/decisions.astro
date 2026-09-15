@@ -1,0 +1,81 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DataHeader from "../../components/data/DataHeader.astro";
+import votes from "../../data/votes.json";
+import metadata from "../../data/metadata.json";
+
+const wanted = [
+  "2024-08-reallocate-precommitted-capital",
+  "2025-02-24-brock-council-strong-mayor",
+  "2025-06-trinity-overnight-269280",
+  "2023-06-service-peterborough",
+  "2023-11-tax-ratio-shift-3m",
+  "2025-12-08-strong-mayor-shorten-budget-period",
+];
+const picked = wanted.map((id) => votes.find((v) => v.id === id)).filter(Boolean);
+const impact = (v) => v.financial_impact?.amount_cad;
+const money = (v) => impact(v) == null ? null : `$${(Math.abs(impact(v))/1_000_000 >= 1 ? (Math.abs(impact(v))/1_000_000).toFixed(2) + "M" : (Math.abs(impact(v))/1_000).toFixed(0) + "K")}`;
+---
+<BaseLayout
+  title="Major Peterborough Council Decisions | Peterborough By The Numbers"
+  description="A plain-language selection of significant Peterborough Council decisions, split votes and Strong Mayor Powers decisions with links to the full voting archive."
+  canonical="https://vote.ajshearer.com/data/decisions"
+>
+  <div class="min-h-screen bg-[#f8f1f3] text-[#3a1a22]">
+    <DataHeader />
+    <section class="border-b border-[#eadde1] bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+        <a href="/data" class="text-sm font-bold text-[#651024]">← Five-minute overview</a>
+        <div class="mt-6 max-w-4xl">
+          <div class="text-xs font-black uppercase tracking-[0.24em] text-[#651024]">Council · the short version</div>
+          <h1 class="mt-3 text-4xl font-black tracking-tight md:text-6xl">What decisions actually mattered?</h1>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">Most Council votes are routine. These are examples where members disagreed, meaningful money was at stake, or the decision process itself was unusual. The full archive remains searchable below the presentation layer.</p>
+        </div>
+      </div>
+    </section>
+
+    <main class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <section class="grid gap-5 md:grid-cols-2">
+        {picked.map((v) => {
+          const strong = v.topic_ids.includes("strong_mayor");
+          return (
+            <article class={`rounded-[2rem] p-7 ring-1 ${strong ? "bg-amber-50 ring-amber-200" : "bg-white ring-[#eadde1]"}`}>
+              <div class="flex flex-wrap items-center gap-2 text-xs font-black uppercase tracking-[0.15em]">
+                <span class={strong ? "text-amber-900" : "text-[#651024]"}>{v.meeting_date_display}</span>
+                {strong && <span class="rounded-full bg-amber-200 px-2 py-1 text-[10px] text-amber-950">Strong Mayor Powers</span>}
+                {money(v) && <span class="rounded-full bg-[#f8f1f3] px-2 py-1 text-[10px] text-[#651024]">{money(v)} stated impact</span>}
+              </div>
+              <h2 class="mt-3 text-2xl font-black tracking-tight">{v.title}</h2>
+              <p class="mt-3 leading-7 text-[#7a6167]">{v.summary}</p>
+              <div class="mt-5 flex items-center justify-between gap-4 border-t border-[#eadde1] pt-4">
+                <div class="font-black">{v.result} · {v.yes_count}–{v.no_count}</div>
+                <a href={v.source_url} target="_blank" rel="noreferrer" class="text-sm font-bold text-[#651024]">Official record ↗</a>
+              </div>
+            </article>
+          );
+        })}
+      </section>
+
+      <section class="mt-10 overflow-hidden rounded-[2rem] bg-[#3a1a22] text-white">
+        <div class="grid gap-px bg-white/10 md:grid-cols-3">
+          <div class="bg-[#3a1a22] p-7"><div class="text-4xl font-black">{metadata.verifiedMotionCount}</div><div class="mt-2 font-black">verified significant motions</div><p class="mt-2 text-sm leading-6 text-white/60">The archive deliberately focuses on decisions with useful policy, financial or governance context.</p></div>
+          <div class="bg-[#3a1a22] p-7"><div class="text-4xl font-black">{metadata.strongMayorActionCount}</div><div class="mt-2 font-black">published Strong Mayor actions</div><p class="mt-2 text-sm leading-6 text-white/60">Tracked separately so residents can see how the decision mechanism was used.</p></div>
+          <div class="bg-[#3a1a22] p-7"><div class="text-4xl font-black">4–7</div><div class="mt-2 font-black">and still carried</div><p class="mt-2 text-sm leading-6 text-white/60">The Brock Mission by-laws illustrate the unusual more-than-one-third threshold available for qualifying mayor-proposed provincial-priority by-laws.</p></div>
+        </div>
+      </section>
+
+      <section class="mt-10 grid gap-5 lg:grid-cols-[1fr_.75fr]">
+        <div class="rounded-3xl bg-white p-7 ring-1 ring-[#eadde1]">
+          <div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Why show votes this way?</div>
+          <h2 class="mt-2 text-2xl font-black">A “yes” or “no” without the motion is almost meaningless.</h2>
+          <p class="mt-3 leading-7 text-[#7a6167]">The archive keeps the plain-language decision, stage, stated financial effect, voting result and official minutes together. It does not assign a partisan or “good/bad” score to councillors.</p>
+        </div>
+        <div class="rounded-3xl border border-[#d9c3ca] bg-[#fffafb] p-7">
+          <div class="font-black">Looking for a councillor or issue?</div>
+          <p class="mt-2 text-sm leading-6 text-[#7a6167]">Use the full explorer to filter by councillor, topic, result and financial impact, or review the complete Strong Mayor timeline at the bottom.</p>
+          <a href="/data/votes" class="mt-5 inline-flex rounded-full bg-[#651024] px-5 py-3 text-sm font-bold text-white">Open full Council Vote Explorer →</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>

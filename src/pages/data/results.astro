@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DataHeader from "../../components/data/DataHeader.astro";
+import outcomeData from "../../data/outcomes.json";
+import services from "../../data/service-net-requirements.json";
+
+const metric = (domain, metricId, period) => outcomeData.metrics.find((m) => m.domain_id === domain && m.metric_id === metricId && m.period === period);
+const housing = metric("housing_growth", "housing_progress", "2025");
+const housingTarget = metric("housing_growth", "housing_target", "2025");
+const transit = metric("transit_outcomes", "transit_ridership", "2025");
+const csi24 = metric("police_outcomes", "cma_crime_severity_index", "2024");
+const csi25 = metric("police_outcomes", "cma_crime_severity_index", "2025");
+const crimeRate24 = metric("police_outcomes", "cma_crime_rate", "2024");
+const crimeRate25 = metric("police_outcomes", "cma_crime_rate", "2025");
+const homeless24 = metric("homelessness_outcomes", "people_experienced_homelessness", "2024");
+const homeless25 = metric("homelessness_outcomes", "people_experienced_homelessness", "2025");
+const csiChange = ((csi25.value - csi24.value) / csi24.value) * 100;
+const crimeRateChange = ((crimeRate25.value - crimeRate24.value) / crimeRate24.value) * 100;
+const homelessChange = ((homeless25.value - homeless24.value) / homeless24.value) * 100;
+const housingPct = housing.value / housingTarget.value * 100;
+const serviceChange = (id) => {
+  const rows = services.filter((r) => r.service_id === id).sort((a,b) => a.fiscal_year - b.fiscal_year);
+  if (rows.length < 2) return null;
+  const a = rows[0];
+  const b = rows[rows.length - 1];
+  return { startYear: a.fiscal_year, endYear: b.fiscal_year, pct: ((b.amount_cad-a.amount_cad)/a.amount_cad)*100 };
+};
+const planningChange = serviceChange("planning_development");
+const socialChange = serviceChange("social_services");
+const policeChange = serviceChange("police");
+const transitChange = serviceChange("transit");
+---
+<BaseLayout
+  title="What Is Peterborough Getting for the Money? | Peterborough By The Numbers"
+  description="A plain-language look at current Peterborough housing, transit, crime, homelessness and infrastructure outcome signals."
+  canonical="https://vote.ajshearer.com/data/results"
+>
+  <div class="min-h-screen bg-[#f8f1f3] text-[#3a1a22]">
+    <DataHeader />
+    <section class="border-b border-[#eadde1] bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+        <a href="/data" class="text-sm font-bold text-[#651024]">← Five-minute overview</a>
+        <div class="mt-6 max-w-4xl">
+          <div class="text-xs font-black uppercase tracking-[0.24em] text-[#651024]">Results · the short version</div>
+          <h1 class="mt-3 text-4xl font-black tracking-tight md:text-6xl">What are we getting for the money?</h1>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">The best answer is mixed. Some current indicators are improving, some are worsening, and some important systems simply aren't measured often enough to give residents a current answer.</p>
+        </div>
+      </div>
+    </section>
+
+    <main class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <section class="grid gap-5 md:grid-cols-2">
+        <div class="rounded-[2rem] border border-emerald-200 bg-emerald-50 p-7 text-emerald-950">
+          <div class="flex items-center justify-between gap-4"><div class="text-xs font-black uppercase tracking-[0.18em]">Housing creation</div><div class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-black">ABOVE TARGET</div></div>
+          <div class="mt-4 text-5xl font-black">{housing.value_display}</div>
+          <div class="mt-1 text-lg font-black">homes in 2025</div>
+          <p class="mt-4 leading-7">That was about <strong>{housingPct.toFixed(0)}%</strong> of Peterborough's provincial target of {housingTarget.value_display} homes.</p>
+          <div class="mt-5 border-t border-emerald-200 pt-4 text-sm">Spending context: Planning/Development's comparable net requirement is up about <strong>{planningChange.pct.toFixed(0)}%</strong> from {planningChange.startYear} to {planningChange.endYear}. This is context, not proof of causation.</div>
+        </div>
+
+        <div class="rounded-[2rem] border border-rose-200 bg-rose-50 p-7 text-rose-950">
+          <div class="flex items-center justify-between gap-4"><div class="text-xs font-black uppercase tracking-[0.18em]">Homelessness</div><div class="rounded-full bg-rose-100 px-3 py-1 text-xs font-black">WORSENING</div></div>
+          <div class="mt-4 text-5xl font-black">{homeless25.value_display}</div>
+          <div class="mt-1 text-lg font-black">people experienced homelessness in 2025</div>
+          <p class="mt-4 leading-7">The City's service-system count was about <strong>{homelessChange.toFixed(0)}% higher</strong> than the {homeless24.value_display} people reported for 2024.</p>
+          <div class="mt-5 border-t border-rose-200 pt-4 text-sm">Spending context: Social Services' net requirement is up about <strong>{socialChange.pct.toFixed(0)}%</strong> from {socialChange.startYear} to {socialChange.endYear}, but Social Services covers much more than homelessness.</div>
+        </div>
+
+        <div class="rounded-[2rem] border border-emerald-200 bg-emerald-50 p-7 text-emerald-950">
+          <div class="flex items-center justify-between gap-4"><div class="text-xs font-black uppercase tracking-[0.18em]">Crime severity</div><div class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-black">IMPROVING</div></div>
+          <div class="mt-4 text-5xl font-black">{csi25.value_display}</div>
+          <div class="mt-1 text-lg font-black">Peterborough CMA Crime Severity Index</div>
+          <p class="mt-4 leading-7">CSI fell about <strong>{Math.abs(csiChange).toFixed(0)}%</strong> in 2025. Lower CSI means the severity-weighted measure improved.</p>
+          <div class="mt-5 border-t border-emerald-200 pt-4 text-sm">Spending context: Police Services' net requirement is up about <strong>{policeChange.pct.toFixed(0)}%</strong> from {policeChange.startYear} to {policeChange.endYear}.</div>
+        </div>
+
+        <div class="rounded-[2rem] border border-amber-200 bg-amber-50 p-7 text-amber-950">
+          <div class="flex items-center justify-between gap-4"><div class="text-xs font-black uppercase tracking-[0.18em]">Crime volume</div><div class="rounded-full bg-amber-100 px-3 py-1 text-xs font-black">MIXED</div></div>
+          <div class="mt-4 text-5xl font-black">{crimeRate25.value_display}</div>
+          <div class="mt-1 text-lg font-black">reported crimes per 100,000</div>
+          <p class="mt-4 leading-7">The crime rate rose about <strong>{crimeRateChange.toFixed(1)}%</strong> even while CSI fell. Crime volume and crime severity are not the same measure.</p>
+        </div>
+
+        <div class="rounded-[2rem] border border-emerald-200 bg-emerald-50 p-7 text-emerald-950">
+          <div class="flex items-center justify-between gap-4"><div class="text-xs font-black uppercase tracking-[0.18em]">Transit</div><div class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-black">RECOVERING</div></div>
+          <div class="mt-4 text-5xl font-black">{transit.value_display}</div>
+          <div class="mt-1 text-lg font-black">rides in 2025</div>
+          <p class="mt-4 leading-7">Ridership has grown from about 3.2M rides in 2023 while the comparable Transit net requirement is only about <strong>{transitChange.pct.toFixed(1)}%</strong> above {transitChange.startYear}.</p>
+        </div>
+
+        <div class="rounded-[2rem] border border-[#d9c3ca] bg-white p-7">
+          <div class="flex items-center justify-between gap-4"><div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Infrastructure condition</div><div class="rounded-full bg-[#f8f1f3] px-3 py-1 text-xs font-black text-[#7a6167]">DATA LAG</div></div>
+          <div class="mt-4 text-3xl font-black">No fresh network-condition reading.</div>
+          <p class="mt-4 leading-7 text-[#7a6167]">The latest asset plans contain important funding-gap and work-output data, but key road-condition measures still rely on older observations. That is useful information too: residents cannot assess a current outcome that isn't being measured frequently enough.</p>
+        </div>
+      </section>
+
+      <section class="mt-10 rounded-[2rem] bg-[#3a1a22] p-7 text-white md:p-9">
+        <div class="grid gap-7 lg:grid-cols-[1fr_.7fr] lg:items-center">
+          <div>
+            <div class="text-xs font-black uppercase tracking-[0.2em] text-[#f0cbd5]">How to read this</div>
+            <h2 class="mt-2 text-2xl font-black">Spending beside an outcome is context — not proof that the spending caused the outcome.</h2>
+            <p class="mt-3 leading-7 text-white/70">Housing, crime, homelessness and transit are affected by many things beyond the City budget. The advanced page preserves the full source, scope and historical series.</p>
+          </div>
+          <div><a href="/data/outcomes" class="inline-flex rounded-full bg-white px-5 py-3 text-sm font-bold text-[#651024]">Open full Outcomes & KPI tool →</a></div>
+        </div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>

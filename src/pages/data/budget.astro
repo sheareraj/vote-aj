@@ -29,6 +29,10 @@ import publicWorksAnnotations from "../../data/public-works-annotations.json";
       </div>
     </section>
     <main class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <aside class="mb-8 flex flex-col gap-3 rounded-2xl border border-[#d9c3ca] bg-[#fffafb] p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div><div class="font-black">Prefer the short version?</div><div class="mt-1 text-sm text-[#7a6167]">Start with the biggest comparable spending changes, then come back here for the full explorer.</div></div>
+        <a href="/data/spending" class="shrink-0 rounded-full bg-[#651024] px-4 py-2 text-sm font-bold text-white">Read the 2-minute spending summary →</a>
+      </aside>
       <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#eadde1] md:p-9">
         <BudgetExplorer client:load overview={overview} departments={departments} reconciliation={reconciliation} />
       </section>
