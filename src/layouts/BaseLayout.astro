@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Analytics from '@vercel/analytics/astro';
 
 const {
   title = "AJ Shearer for Monaghan Ward Councillor",
@@ -34,6 +35,8 @@ const {
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
+
+  <Analytics />
 </head>
 
   <body class="bg-white text-slate-900">
