@@ -81,6 +81,13 @@ export default function BudgetExplorer({ overview, departments, reconciliation }
         <p className="mt-6 text-sm leading-6 text-[#7a6167]">
           These totals use approved prior-year figures recovered from the next budget book where possible. For 2026, the City’s final budget book is the source; its summary table still labels the 2026 column “Requested Budget,” so that source label is retained in the warehouse.
         </p>
+        <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">
+          <strong>2026 source note:</strong> the final Budget Book’s detailed Chart 1 reports <strong>$454,163,028</strong> in gross operating expenditures. The City’s budget-adoption release separately summarizes <strong>$453.9 million</strong> in spending on municipal services. The release does not explain the difference, so this portal uses the detailed final Budget Book figure for the chart and flags the two City-published presentations rather than blending them.
+          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+            <a href="https://www.peterborough.ca/media/21lhmi5p/budget-book-2026-final.pdf" target="_blank" rel="noreferrer" className="font-bold underline underline-offset-2">Final Budget Book ↗</a>
+            <a href="https://www.peterborough.ca/news/posts/city-of-peterborough-2026-budget-adopted/" target="_blank" rel="noreferrer" className="font-bold underline underline-offset-2">Budget adoption release ↗</a>
+          </div>
+        </div>
       </section>
 
       <section className="mt-8">

@@ -7,12 +7,15 @@
     "dev": "astro dev --host 0.0.0.0",
     "build": "astro build",
     "preview": "astro preview --host 0.0.0.0",
-    "data:build": "node data-warehouse/scripts/export_site_data.mjs"
+    "data:build": "node data-warehouse/scripts/export_site_data.mjs",
+    "data:validate": "python data-warehouse/scripts/validate_release.py",
+    "data:preflight": "npm run data:build && npm run data:validate && astro build"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.5",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
+    "@vercel/analytics": "^2.0.1",
     "astro": "^6.3.8",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",

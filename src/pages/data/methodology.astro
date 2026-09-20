@@ -1,0 +1,117 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DataHeader from "../../components/data/DataHeader.astro";
+import metadata from "../../data/metadata.json";
+import qualityNotes from "../../data/data-quality-notes.json";
+
+const statusLabel = (status) => status === "resolved" ? "Resolved" : status === "source_discrepancy" ? "Source discrepancy" : status;
+const statusClass = (status) => status === "resolved"
+  ? "border-emerald-200 bg-emerald-50 text-emerald-900"
+  : "border-amber-200 bg-amber-50 text-amber-950";
+---
+<BaseLayout
+  title="Methodology & Corrections | Peterborough By The Numbers"
+  description="Sources, accounting definitions, verification rules and correction log for Peterborough By The Numbers."
+  canonical="https://vote.ajshearer.com/data/methodology"
+>
+  <div class="min-h-screen bg-[#f8f1f3] text-[#3a1a22]">
+    <DataHeader />
+
+    <section class="border-b border-[#eadde1] bg-white">
+      <div class="mx-auto max-w-5xl px-6 py-12 md:py-16">
+        <a href="/data" class="text-sm font-bold text-[#651024]">← Peterborough By The Numbers</a>
+        <div class="mt-6 max-w-4xl">
+          <div class="text-xs font-black uppercase tracking-[0.24em] text-[#651024]">Methodology · source notes · corrections</div>
+          <h1 class="mt-3 text-4xl font-black tracking-tight md:text-6xl">How the numbers are checked.</h1>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-[#7a6167]">This portal reorganizes public records; it does not create new municipal financial statements or crime statistics. The goal is to preserve the meaning of the original source, show calculations separately, and correct errors when a primary source shows something different.</p>
+          <div class="mt-6 flex flex-wrap gap-2 text-xs font-bold">
+            <span class="rounded-full bg-[#f8f1f3] px-3 py-2 text-[#651024]">Last validated: {metadata.lastBuilt}</span>
+            <span class="rounded-full bg-[#f8f1f3] px-3 py-2 text-[#651024]">{metadata.verifiedMotionCount} source-linked vote records</span>
+            <span class="rounded-full bg-[#f8f1f3] px-3 py-2 text-[#651024]">{metadata.outcomeMetricCount} outcome observations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="mx-auto max-w-5xl px-6 py-12 md:py-16">
+      <section class="grid gap-5 md:grid-cols-2">
+        <div class="rounded-3xl bg-white p-6 ring-1 ring-[#eadde1]">
+          <div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Source hierarchy</div>
+          <h2 class="mt-2 text-2xl font-black">Primary records first.</h2>
+          <p class="mt-3 text-sm leading-6 text-[#7a6167]">City budget books and minutes are used for municipal finances and recorded votes. Peterborough Police Service and Statistics Canada are used for their respective measures. News coverage may help locate an item, but it is not substituted for the primary record when the primary record is available.</p>
+        </div>
+        <div class="rounded-3xl bg-white p-6 ring-1 ring-[#eadde1]">
+          <div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Calculation rule</div>
+          <h2 class="mt-2 text-2xl font-black">Published values and derived values stay separate.</h2>
+          <p class="mt-3 text-sm leading-6 text-[#7a6167]">When an agency publishes an annual percentage change, the portal uses that published change rather than trying to reconstruct it from rounded display values. Calculations made by the portal are identified as calculations and should be reproducible from the displayed inputs.</p>
+        </div>
+      </section>
+
+      <section class="mt-10 rounded-3xl bg-white p-6 ring-1 ring-[#eadde1] md:p-8">
+        <div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Budget definitions</div>
+        <h2 class="mt-2 text-3xl font-black tracking-tight">Three numbers that should not be treated as interchangeable.</h2>
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <div class="rounded-2xl bg-[#f8f1f3] p-5">
+            <div class="font-black">Gross operating expenditures</div>
+            <p class="mt-2 text-sm leading-6 text-[#6c5258]">The full operating expenditure total before operating revenues are netted against it.</p>
+          </div>
+          <div class="rounded-2xl bg-[#f8f1f3] p-5">
+            <div class="font-black">Net Requirement Before Indirect Revenues</div>
+            <p class="mt-2 text-sm leading-6 text-[#6c5258]">The City measure used for the portal’s normalized service trends. It reflects a service after direct revenues but before allocated indirect revenue.</p>
+          </div>
+          <div class="rounded-2xl bg-[#f8f1f3] p-5">
+            <div class="font-black">Net Tax Levy</div>
+            <p class="mt-2 text-sm leading-6 text-[#6c5258]">The amount attributed to the property-tax levy after the City’s allocated indirect revenue is applied in the taxpayer-allocation table.</p>
+          </div>
+        </div>
+        <p class="mt-5 text-sm leading-6 text-[#7a6167]">The Budget Explorer now shows a 2026 accounting bridge for major services so a service-trend number is not mistaken for the amount ultimately attributed to property taxes.</p>
+      </section>
+
+      <section class="mt-10 rounded-3xl bg-white p-6 ring-1 ring-[#eadde1] md:p-8">
+        <div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Vote archive checks</div>
+        <h2 class="mt-2 text-3xl font-black tracking-tight">Recorded-vote integrity rules.</h2>
+        <div class="mt-5 grid gap-4 text-sm leading-6 text-[#6c5258] md:grid-cols-2">
+          <p><strong class="text-[#3a1a22]">One motion ID per recorded motion.</strong> A funding package that Council voted on as one motion is represented as one motion, even if it contained several dollar items.</p>
+          <p><strong class="text-[#3a1a22]">Member rows must reconcile.</strong> For/Against/Absent/Conflict member rows must equal the summary counts and account for all 11 members of Council.</p>
+          <p><strong class="text-[#3a1a22]">Source URL must match the manifest.</strong> Vote records cannot point to a different document than their registered official source.</p>
+          <p><strong class="text-[#3a1a22]">Special voting rules stay explicit.</strong> Strong-mayor provincial-priority votes are not forced into ordinary majority logic where the legislation uses a different threshold.</p>
+        </div>
+      </section>
+
+      <section class="mt-10">
+        <div class="max-w-3xl">
+          <div class="text-xs font-black uppercase tracking-[0.18em] text-[#651024]">Correction and source-note log</div>
+          <h2 class="mt-2 text-3xl font-black tracking-tight">What changed in the pre-release review.</h2>
+          <p class="mt-3 leading-7 text-[#7a6167]">A correction is logged when the portal changes because a primary source shows a different fact or when two primary City publications use figures that do not fully reconcile.</p>
+        </div>
+        <div class="mt-6 space-y-4">
+          {qualityNotes.map((note) => (
+            <article class="rounded-3xl bg-white p-6 ring-1 ring-[#eadde1]">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class={`rounded-full border px-3 py-1 text-[10px] font-black uppercase tracking-[0.14em] ${statusClass(note.status)}`}>{statusLabel(note.status)}</span>
+                <span class="text-xs font-bold text-[#8e747a]">{note.area} · reviewed {note.last_reviewed}</span>
+              </div>
+              <h3 class="mt-3 text-xl font-black">{note.title}</h3>
+              <p class="mt-2 text-sm leading-6 text-[#6c5258]">{note.detail}</p>
+              <div class="mt-4 flex flex-wrap gap-3 text-sm">
+                {note.primary_source_url && <a href={note.primary_source_url} target="_blank" rel="noreferrer" class="font-bold text-[#651024] underline decoration-[#c9aab3] underline-offset-2">Primary source ↗</a>}
+                {note.secondary_source_url && <a href={note.secondary_source_url} target="_blank" rel="noreferrer" class="font-bold text-[#651024] underline decoration-[#c9aab3] underline-offset-2">Second source ↗</a>}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="mt-10 rounded-[2rem] bg-[#3a1a22] p-7 text-white md:p-9">
+        <div class="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
+          <div>
+            <div class="text-xs font-black uppercase tracking-[0.18em] text-[#f0cbd5]">Found something?</div>
+            <h2 class="mt-2 text-2xl font-black">Errors should be easy to challenge and easy to correct.</h2>
+            <p class="mt-3 max-w-2xl text-sm leading-6 text-white/75">Send the figure, page and source you think needs review. A correction should change the portal when the evidence warrants it, not when someone simply disagrees with the interpretation.</p>
+          </div>
+          <a href="mailto:voteforaj@ajshearer.com?subject=Data%20portal%20correction" class="inline-flex shrink-0 rounded-full bg-white px-5 py-3 text-sm font-bold text-[#651024]">Report a data issue →</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>

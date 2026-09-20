@@ -1349,20 +1349,20 @@
     "notes": "The official motion does not state the exact dollar saving, so no amount is inferred."
   },
   {
-    "id": "2024-11-trinity-overnight-264000",
+    "id": "2024-11-homelessness-budget-package",
     "meeting_date": "2024-11-18",
     "meeting_date_display": "Nov. 18–19, 2024",
     "meeting_type": "General Committee",
     "decision_stage": "Committee recommendation",
-    "title": "Trinity overnight program: $264,000",
-    "summary": "Council supported $264,000 from the Social Services Reserve to extend the overnight drop-in program through summer 2025.",
-    "motion_text": "$264,000 for the Trinity Community Centre Overnight Drop-In Program to extend operations for six months the following summer.",
+    "title": "2025 homelessness budget package: $1.144M from Social Services Reserve",
+    "summary": "Committee approved one combined motion funding four 2025 homelessness measures from the Social Services Reserve: Trinity overnight ($264,000), Housing Stability Fund ($360,000), Brock Mission staffing ($280,000), and Trinity daytime hours ($240,000).",
+    "motion_text": "Approve the 2025 homelessness budget recommendations, including $264,000 for Trinity overnight operations, $360,000 for the Housing Stability Fund, $280,000 for Brock Mission staffing, and $240,000 for Trinity daytime hours, funded from the Social Services Reserve.",
     "mover": "Keith Riel",
     "result": "Carried",
-    "yes_count": 8,
-    "no_count": 3,
+    "yes_count": 9,
+    "no_count": 1,
     "conflict_count": 0,
-    "absent_count": 0,
+    "absent_count": 1,
     "topic_ids": [
       "homelessness",
       "finance_budget",
@@ -1371,7 +1371,7 @@
     "primary_topic_id": "homelessness",
     "financial_impact": {
       "status": "known",
-      "amount_cad": 264000,
+      "amount_cad": 1144000,
       "direction": "adds_program_funding",
       "timing": "one_time_2025",
       "funding_source": "Social Services Reserve"
@@ -1380,10 +1380,6 @@
       {
         "member": "Gary Baldwin",
         "vote": "For"
-      },
-      {
-        "member": "Andrew Beamer",
-        "vote": "Against"
       },
       {
         "member": "Alex Bierk",
@@ -1395,7 +1391,7 @@
       },
       {
         "member": "Kevin Duguay",
-        "vote": "Against"
+        "vote": "For"
       },
       {
         "member": "Dave Haacke",
@@ -1418,8 +1414,12 @@
         "vote": "For"
       },
       {
-        "member": "Don Vassiliadis",
+        "member": "Andrew Beamer",
         "vote": "Against"
+      },
+      {
+        "member": "Don Vassiliadis",
+        "vote": "Absent"
       }
     ],
     "source_id": "minutes-2024-budget-general",
@@ -1431,260 +1431,7 @@
       "financial_impact",
       "reserve_use"
     ],
-    "notes": ""
-  },
-  {
-    "id": "2024-11-trinity-daytime-240000",
-    "meeting_date": "2024-11-18",
-    "meeting_date_display": "Nov. 18–19, 2024",
-    "meeting_type": "General Committee",
-    "decision_stage": "Committee recommendation",
-    "title": "Trinity daytime drop-in hours: $240,000",
-    "summary": "Council supported $240,000 from the Social Services Reserve to extend daytime drop-in operating hours in 2025.",
-    "motion_text": "$240,000 from the Social Services Reserve to extend operating hours at the Trinity daytime drop-in program for 2025.",
-    "mover": "Jeff Leal",
-    "result": "Carried",
-    "yes_count": 8,
-    "no_count": 3,
-    "conflict_count": 0,
-    "absent_count": 0,
-    "topic_ids": [
-      "homelessness",
-      "finance_budget",
-      "social"
-    ],
-    "primary_topic_id": "homelessness",
-    "financial_impact": {
-      "status": "known",
-      "amount_cad": 240000,
-      "direction": "adds_program_funding",
-      "timing": "one_time_2025",
-      "funding_source": "Social Services Reserve"
-    },
-    "votes": [
-      {
-        "member": "Gary Baldwin",
-        "vote": "For"
-      },
-      {
-        "member": "Andrew Beamer",
-        "vote": "Against"
-      },
-      {
-        "member": "Alex Bierk",
-        "vote": "For"
-      },
-      {
-        "member": "Matt Crowley",
-        "vote": "Against"
-      },
-      {
-        "member": "Kevin Duguay",
-        "vote": "For"
-      },
-      {
-        "member": "Dave Haacke",
-        "vote": "For"
-      },
-      {
-        "member": "Joy Lachica",
-        "vote": "For"
-      },
-      {
-        "member": "Jeff Leal",
-        "vote": "For"
-      },
-      {
-        "member": "Lesley Parnell",
-        "vote": "For"
-      },
-      {
-        "member": "Keith Riel",
-        "vote": "For"
-      },
-      {
-        "member": "Don Vassiliadis",
-        "vote": "Against"
-      }
-    ],
-    "source_id": "minutes-2024-budget-general",
-    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=38914",
-    "source_label": "Official City of Peterborough minutes",
-    "review_status": "verified_official_minutes",
-    "significance": [
-      "split_vote",
-      "financial_impact",
-      "reserve_use"
-    ],
-    "notes": ""
-  },
-  {
-    "id": "2024-11-hsf-360000",
-    "meeting_date": "2024-11-18",
-    "meeting_date_display": "Nov. 18–19, 2024",
-    "meeting_type": "General Committee",
-    "decision_stage": "Committee recommendation",
-    "title": "Housing Stability Fund: +$360,000",
-    "summary": "Council unanimously supported a $360,000 increase to the Housing Stability Fund from the Social Services Reserve.",
-    "motion_text": "$360,000 increase to the Housing Stability Fund to support prevention and diversion.",
-    "mover": "Keith Riel",
-    "result": "Carried",
-    "yes_count": 11,
-    "no_count": 0,
-    "conflict_count": 0,
-    "absent_count": 0,
-    "topic_ids": [
-      "homelessness",
-      "social",
-      "finance_budget"
-    ],
-    "primary_topic_id": "homelessness",
-    "financial_impact": {
-      "status": "known",
-      "amount_cad": 360000,
-      "direction": "adds_program_funding",
-      "timing": "one_time_2025",
-      "funding_source": "Social Services Reserve"
-    },
-    "votes": [
-      {
-        "member": "Gary Baldwin",
-        "vote": "For"
-      },
-      {
-        "member": "Andrew Beamer",
-        "vote": "For"
-      },
-      {
-        "member": "Alex Bierk",
-        "vote": "For"
-      },
-      {
-        "member": "Matt Crowley",
-        "vote": "For"
-      },
-      {
-        "member": "Kevin Duguay",
-        "vote": "For"
-      },
-      {
-        "member": "Dave Haacke",
-        "vote": "For"
-      },
-      {
-        "member": "Joy Lachica",
-        "vote": "For"
-      },
-      {
-        "member": "Jeff Leal",
-        "vote": "For"
-      },
-      {
-        "member": "Lesley Parnell",
-        "vote": "For"
-      },
-      {
-        "member": "Keith Riel",
-        "vote": "For"
-      },
-      {
-        "member": "Don Vassiliadis",
-        "vote": "For"
-      }
-    ],
-    "source_id": "minutes-2024-budget-general",
-    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=38914",
-    "source_label": "Official City of Peterborough minutes",
-    "review_status": "verified_official_minutes",
-    "significance": [
-      "financial_impact",
-      "reserve_use"
-    ],
-    "notes": ""
-  },
-  {
-    "id": "2024-11-brock-worker-280000",
-    "meeting_date": "2024-11-18",
-    "meeting_date_display": "Nov. 18–19, 2024",
-    "meeting_type": "General Committee",
-    "decision_stage": "Committee recommendation",
-    "title": "Brock Mission additional worker: $280,000",
-    "summary": "Council unanimously supported $280,000 from the Social Services Reserve to maintain Brock Mission capacity at 40 beds.",
-    "motion_text": "$280,000 to Brock Mission for an additional worker to keep bed capacity at 40 beds.",
-    "mover": "Keith Riel",
-    "result": "Carried",
-    "yes_count": 11,
-    "no_count": 0,
-    "conflict_count": 0,
-    "absent_count": 0,
-    "topic_ids": [
-      "homelessness",
-      "social",
-      "finance_budget"
-    ],
-    "primary_topic_id": "homelessness",
-    "financial_impact": {
-      "status": "known",
-      "amount_cad": 280000,
-      "direction": "adds_program_funding",
-      "timing": "one_time_2025",
-      "funding_source": "Social Services Reserve"
-    },
-    "votes": [
-      {
-        "member": "Gary Baldwin",
-        "vote": "For"
-      },
-      {
-        "member": "Andrew Beamer",
-        "vote": "For"
-      },
-      {
-        "member": "Alex Bierk",
-        "vote": "For"
-      },
-      {
-        "member": "Matt Crowley",
-        "vote": "For"
-      },
-      {
-        "member": "Kevin Duguay",
-        "vote": "For"
-      },
-      {
-        "member": "Dave Haacke",
-        "vote": "For"
-      },
-      {
-        "member": "Joy Lachica",
-        "vote": "For"
-      },
-      {
-        "member": "Jeff Leal",
-        "vote": "For"
-      },
-      {
-        "member": "Lesley Parnell",
-        "vote": "For"
-      },
-      {
-        "member": "Keith Riel",
-        "vote": "For"
-      },
-      {
-        "member": "Don Vassiliadis",
-        "vote": "For"
-      }
-    ],
-    "source_id": "minutes-2024-budget-general",
-    "source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=38914",
-    "source_label": "Official City of Peterborough minutes",
-    "review_status": "verified_official_minutes",
-    "significance": [
-      "financial_impact",
-      "reserve_use"
-    ],
-    "notes": ""
+    "notes": "Corrected 2026-09-20 after re-checking the official minutes. The four funding items were recorded as one combined motion, not four separate item-level votes. Councillor Vassiliadis was not listed in the recorded vote and is treated as absent."
   },
   {
     "id": "2024-09-16-municipal-operations-commissioner",

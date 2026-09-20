@@ -16,4 +16,10 @@ const { compact = false } = Astro.props;
       <a href="/" class="rounded-full bg-[#651024] px-3 py-2 text-white hover:bg-[#7a2337]">Campaign</a>
     </nav>
   </div>
+  <div class="border-t border-[#f3eaed] bg-[#fffafb]">
+    <div class={`mx-auto flex ${compact ? 'max-w-7xl' : 'max-w-6xl'} flex-wrap items-center justify-between gap-2 px-4 py-2 text-[11px] font-semibold text-[#7a6167] md:px-6`}>
+      <span>Primary-source data · last validated Sept. 20, 2026</span>
+      <a href="/data/methodology" class="font-bold text-[#651024] hover:underline">Methodology & corrections →</a>
+    </div>
+  </div>
 </header>

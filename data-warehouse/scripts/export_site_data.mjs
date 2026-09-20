@@ -112,6 +112,15 @@ const serviceRequirements = readCsv('data/facts/fact_service_net_requirement.csv
 }));
 writeJson('service-net-requirements.json', serviceRequirements);
 
+const serviceTaxLevy2026 = readCsv('data/facts/fact_service_tax_levy_2026.csv').map(row => ({
+  ...row,
+  fiscal_year: int(row.fiscal_year),
+  net_requirement_before_indirect_revenues_cad: int(row.net_requirement_before_indirect_revenues_cad),
+  allocated_indirect_revenue_cad: int(row.allocated_indirect_revenue_cad),
+  net_tax_levy_cad: int(row.net_tax_levy_cad),
+}));
+writeJson('service-tax-levy-2026.json', serviceTaxLevy2026);
+
 const outcomeSources = Object.fromEntries(readCsv('data/source_manifest.csv').map(r => [r.source_id, r]));
 const outcomeDomains = readCsv('data/dim_outcome_domain.csv').map(row => ({
   ...row,
@@ -129,6 +138,19 @@ const outcomeMetrics = readCsv('data/facts/fact_outcome_metric.csv').map(row => 
 });
 const outcomeTrends = readCsv('data/facts/fact_outcome_trend.csv');
 writeJson('outcomes.json', { domains: outcomeDomains, metrics: outcomeMetrics, trends: outcomeTrends });
+
+const dataQualityNotes = readCsv('data/facts/fact_data_quality_note.csv').map(row => {
+  const primary = outcomeSources[row.primary_source_id] ?? {};
+  const secondary = outcomeSources[row.secondary_source_id] ?? {};
+  return {
+    ...row,
+    primary_source_url: primary.canonical_url || null,
+    primary_source_name: primary.document_name || null,
+    secondary_source_url: secondary.canonical_url || null,
+    secondary_source_name: secondary.document_name || null,
+  };
+});
+writeJson('data-quality-notes.json', dataQualityNotes);
 
 const legacy = readCsv('data/facts/fact_legacy_2026.csv').map(row => ({ ...row, amount_cad: int(row.amount_cad) }));
 writeJson('legacy-2026.json', legacy);
@@ -243,15 +265,17 @@ writeJson('votes.json', votesPayload);
 
 writeJson('metadata.json', {
   product: 'Peterborough By The Numbers',
-  status: 'progressive-disclosure-pass-10',
-  scope: 'Plain-language presentation layer over budgets 2022-2026, verified Council votes and current outcome signals through 2025/2026',
+  status: 'pre-release-audit-pass-11',
+  scope: 'Plain-language presentation layer over budgets 2022-2026, recorded Council votes and current outcome signals through 2025/2026',
   budgetSeriesCount: new Set(serviceRequirements.map(row => row.service_id)).size,
   verifiedMotionCount: votesPayload.length,
   strongMayorActionCount: strongMayorActions.length,
   outcomeMetricCount: outcomeMetrics.length,
-  budgetDataStatus: 'Approved/final 2022-2026 backbone loaded; 22 normalized service/component series now published; IPGM and corporate administration are exposed only from defensible post-reorganization start years; Public Works structural-break analysis and Legacy levy-offset history remain live',
-  voteDataStatus: '39 verified recorded motions loaded from official City minutes. Strong Mayor Powers is retained as a dedicated topic and full decision timeline, positioned after the searchable vote archive.',
-  outcomeDataStatus: 'Freshness-first KPI layer leads with 2025 annual actuals published in 2026 for housing, transit, crime and homelessness. Older RGI, PPS-output and road-condition measures are demoted to historical context; infrastructure is explicitly flagged as a data-lag domain.',
+  dataQualityNoteCount: dataQualityNotes.length,
+  budgetDataStatus: 'Approved/final 2022-2026 backbone loaded; service trends use Net Requirement Before Indirect Revenues. A 2026 accounting bridge now distinguishes that measure from Allocated Indirect Revenue and Net Tax Levy. The City publication-level 2026 operating-total discrepancy is explicitly flagged.',
+  voteDataStatus: `${votesPayload.length} significant recorded motions are source-linked to official City minutes. The September 20 pre-release review corrected the 2024 homelessness funding package from four item-level records to the single 9-1 package vote shown in the official minutes.`,
+  outcomeDataStatus: 'Freshness-first KPI layer leads with 2025 annual actuals published in 2026. The 2025 Peterborough CMA crime-rate change now uses Statistics Canada’s published +1% annual change rather than a calculation from rounded displayed rates.',
   authoritativeSourcePolicy: 'Official City of Peterborough, Peterborough Police Service, Statistics Canada and other primary-government sources are authoritative for their respective measures.',
-  lastBuilt: '2026-09-15',
+  correctionPolicy: 'Material corrections are logged publicly at /data/methodology with source links and review dates.',
+  lastBuilt: '2026-09-20',
 });

@@ -78,8 +78,8 @@ const transit = latestMetric("transit_outcomes", "transit_ridership");
           </a>
           <a href="/data/spending" class="rounded-3xl bg-white p-6 ring-1 ring-[#eadde1] transition hover:-translate-y-0.5 hover:shadow-md">
             <div class="text-3xl font-black text-[#651024]">+{policePct.toFixed(1)}%</div>
-            <div class="mt-2 text-lg font-black">Police net requirement</div>
-            <p class="mt-2 text-sm leading-6 text-[#7a6167]">Police is one of the largest identifiable areas of operating growth in the five-year service data.</p>
+            <div class="mt-2 text-lg font-black">Police service trend</div>
+            <p class="mt-2 text-sm leading-6 text-[#7a6167]">This uses the City’s Net Requirement Before Indirect Revenues measure. The spending page separately shows the 2026 bridge to Net Tax Levy.</p>
           </a>
           <a href="/data/taxes#legacy" class="rounded-3xl bg-white p-6 ring-1 ring-[#eadde1] transition hover:-translate-y-0.5 hover:shadow-md">
             <div class="text-3xl font-black text-[#651024]">$3.0M</div>
@@ -130,7 +130,7 @@ const transit = latestMetric("transit_outcomes", "transit_ridership");
         <div class="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <a href="/data/budget" class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1] hover:shadow-md"><div class="font-black">Budget Explorer</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">22 normalized service/component series and source-reported totals.</p><div class="mt-4 text-sm font-bold text-[#651024]">Open full tool →</div></a>
           <a href="/data/tax-drivers" class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1] hover:shadow-md"><div class="font-black">Tax Driver Analysis</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Detailed 2026 levy factors, offsets and Legacy Fund history.</p><div class="mt-4 text-sm font-bold text-[#651024]">Open full tool →</div></a>
-          <a href="/data/votes" class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1] hover:shadow-md"><div class="font-black">Vote Explorer</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">{metadata.verifiedMotionCount} verified significant motions plus Strong Mayor Powers.</p><div class="mt-4 text-sm font-bold text-[#651024]">Search the archive →</div></a>
+          <a href="/data/votes" class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1] hover:shadow-md"><div class="font-black">Vote Explorer</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">{metadata.verifiedMotionCount} source-linked significant motions plus Strong Mayor Powers.</p><div class="mt-4 text-sm font-bold text-[#651024]">Search the archive →</div></a>
           <a href="/data/outcomes" class="rounded-2xl bg-white p-5 ring-1 ring-[#eadde1] hover:shadow-md"><div class="font-black">Outcomes & KPIs</div><p class="mt-2 text-sm leading-6 text-[#7a6167]">Fresh signals first, with older context and data-quality notes available.</p><div class="mt-4 text-sm font-bold text-[#651024]">Open full tool →</div></a>
         </div>
         <details class="mt-7 rounded-2xl border border-[#e2d1d6] bg-[#fffafb] p-5">
@@ -139,6 +139,7 @@ const transit = latestMetric("transit_outcomes", "transit_ridership");
             <p><strong class="text-[#3a1a22]">Source it.</strong> Public claims trace to official City documents, minutes, police reporting, Statistics Canada or other primary-government sources.</p>
             <p><strong class="text-[#3a1a22]">Label it.</strong> Draft, approved, adopted and actual figures are kept distinct; reorganizations and stale outcome measures are called out rather than hidden.</p>
           </div>
+          <a href="/data/methodology" class="mt-4 inline-flex text-sm font-bold text-[#651024] underline decoration-[#c9aab3] underline-offset-2">Read methodology, source notes and correction log →</a>
         </details>
       </section>
     </main>

@@ -12,10 +12,11 @@ const csi24 = metric("police_outcomes", "cma_crime_severity_index", "2024");
 const csi25 = metric("police_outcomes", "cma_crime_severity_index", "2025");
 const crimeRate24 = metric("police_outcomes", "cma_crime_rate", "2024");
 const crimeRate25 = metric("police_outcomes", "cma_crime_rate", "2025");
+const crimeRateYoY = metric("police_outcomes", "cma_crime_rate_yoy", "2025");
 const homeless24 = metric("homelessness_outcomes", "people_experienced_homelessness", "2024");
 const homeless25 = metric("homelessness_outcomes", "people_experienced_homelessness", "2025");
 const csiChange = ((csi25.value - csi24.value) / csi24.value) * 100;
-const crimeRateChange = ((crimeRate25.value - crimeRate24.value) / crimeRate24.value) * 100;
+const crimeRateChange = crimeRateYoY?.value ?? null;
 const homelessChange = ((homeless25.value - homeless24.value) / homeless24.value) * 100;
 const housingPct = housing.value / housingTarget.value * 100;
 const serviceChange = (id) => {
@@ -78,7 +79,7 @@ const transitChange = serviceChange("transit");
           <div class="flex items-center justify-between gap-4"><div class="text-xs font-black uppercase tracking-[0.18em]">Crime volume</div><div class="rounded-full bg-amber-100 px-3 py-1 text-xs font-black">MIXED</div></div>
           <div class="mt-4 text-5xl font-black">{crimeRate25.value_display}</div>
           <div class="mt-1 text-lg font-black">reported crimes per 100,000</div>
-          <p class="mt-4 leading-7">The crime rate rose about <strong>{crimeRateChange.toFixed(1)}%</strong> even while CSI fell. Crime volume and crime severity are not the same measure.</p>
+          <p class="mt-4 leading-7">Statistics Canada reports the crime rate rose <strong>{crimeRateChange.toFixed(0)}%</strong> even while CSI fell. The published annual percentage uses Statistics Canada’s underlying series; it should not be recomputed from the rounded displayed rates.</p>
         </div>
 
         <div class="rounded-[2rem] border border-emerald-200 bg-emerald-50 p-7 text-emerald-950">

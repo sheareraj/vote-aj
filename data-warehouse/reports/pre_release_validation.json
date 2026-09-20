@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-09-20",
+  "motions": 36,
+  "vote_rows": 396,
+  "outcome_observations": 41,
+  "service_rows": 88,
+  "checks_passed": 704,
+  "errors": [],
+  "warnings": []
+}

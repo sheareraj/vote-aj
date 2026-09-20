@@ -771,6 +771,24 @@
       "context": "Current capacity context, not an outcome. City says demand continues to exceed the 127-bed system.",
       "source_url": "https://www.peterborough.ca/news/posts/city-council-meeting-overview-package-for-may-25-2026/",
       "source_name": "Winter Shelter Response Plan / May 25, 2026 Council overview"
+    },
+    {
+      "domain_id": "police_outcomes",
+      "metric_id": "cma_crime_rate_yoy",
+      "metric_label": "Peterborough CMA crime-rate annual change",
+      "period": "2025",
+      "value": 1,
+      "value_display": "+1%",
+      "unit": "percent",
+      "value_qualifier": "published_change",
+      "directionality": "lower",
+      "scope": "Peterborough Census Metropolitan Area",
+      "source_id": "statcan-csi-2025",
+      "source_basis": "Statistics Canada published 2024-to-2025 crime-rate percent change using its underlying annual series",
+      "status": "verified",
+      "context": "Use Statistics Canada’s published +1% annual change. Recomputing from the rounded displayed rates (5,368 and 5,385) yields about 0.3% and does not reproduce Statistics Canada’s unrounded-series calculation.",
+      "source_url": "https://www150.statcan.gc.ca/n1/daily-quotidien/260722/t004a-eng.htm",
+      "source_name": "Statistics Canada - Peterborough CMA Crime Severity Index 2025"
     }
   ],
   "trends": [

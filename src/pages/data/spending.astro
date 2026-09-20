@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import DataHeader from "../../components/data/DataHeader.astro";
 import services from "../../data/service-net-requirements.json";
+import serviceTaxLevy2026 from "../../data/service-tax-levy-2026.json";
 
 const compact = (v) => `${v < 0 ? "−" : ""}$${(Math.abs(v) / 1_000_000).toFixed(1)}M`;
 const stableIds = ["police","capital_financing","social_services","fire","environmental_services","paramedics","library","transit","airport"];
@@ -16,6 +17,7 @@ const summaries = stableIds.map((id) => {
 const biggest = summaries.filter((r) => r.change > 0).sort((a,b) => b.change - a.change).slice(0,6);
 const transit = summaries.find((r) => r.id === "transit");
 const airport = summaries.find((r) => r.id === "airport");
+const policeLevy = serviceTaxLevy2026.find((r) => r.service_id === "police");
 ---
 <BaseLayout
   title="Where Is Peterborough Spending Growth Showing Up? | Peterborough By The Numbers"
@@ -40,8 +42,16 @@ const airport = summaries.find((r) => r.id === "airport");
         <div class="max-w-3xl">
           <div class="text-xs font-black uppercase tracking-[0.2em] text-[#651024]">Largest comparable increases</div>
           <h2 class="mt-2 text-3xl font-black tracking-tight">The biggest dollar changes in stable five-year series.</h2>
-          <p class="mt-3 leading-7 text-[#7a6167]">“Net requirement” means the amount left to fund after direct revenues attributed to that service. It is not the same thing as gross spending.</p>
+          <p class="mt-3 leading-7 text-[#7a6167]">The trend measure is the City’s <strong>Net Requirement Before Indirect Revenues</strong>: the amount left after direct service revenues, before allocated indirect revenue is applied. It is neither gross spending nor the final Net Tax Levy.</p>
         </div>
+
+        {policeLevy && (
+          <div class="mt-6 rounded-2xl border border-[#d9c3ca] bg-[#fffafb] p-5 text-sm leading-6 text-[#5f4149]">
+            <div class="text-[10px] font-black uppercase tracking-[0.18em] text-[#651024]">How to read the measure</div>
+            <p class="mt-2">For example, the City’s 2026 table shows Police Services at <strong>$41.3M</strong> in Net Requirement Before Indirect Revenues, then <strong>−$2.7M</strong> in Allocated Indirect Revenue, producing a <strong>$38.5M Net Tax Levy</strong>. The five-year comparisons below deliberately use the first measure consistently.</p>
+            <a href={policeLevy.source_url} target="_blank" rel="noreferrer" class="mt-2 inline-flex font-bold text-[#651024] underline decoration-[#c9aab3] underline-offset-2">Open the official 2026 table ↗</a>
+          </div>
+        )}
         <div class="mt-7 space-y-4">
           {biggest.map((row, i) => (
             <div class="rounded-3xl bg-white p-6 ring-1 ring-[#eadde1] md:flex md:items-center md:gap-6">

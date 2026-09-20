@@ -42,7 +42,7 @@
     "gross_operating_expenditure_cad": 432730055,
     "taxation_revenue_cad": 183833050,
     "source_id": "budget-2026",
-    "source_url": "https://media-002-ca.cdn.govstack.com/memorialcentre-011-ca/media/21lhmi5p/budget-book-2026-final.pdf",
+    "source_url": "https://www.peterborough.ca/media/21lhmi5p/budget-book-2026-final.pdf",
     "source_table": "Chart 1 - Revenues by Type and Gross Operating Expenditures by Department",
     "review_status": "machine_checked",
     "notes": "Prior-year approved figures published in the final 2026 budget book"
@@ -54,9 +54,9 @@
     "gross_operating_expenditure_cad": 454163028,
     "taxation_revenue_cad": 198379745,
     "source_id": "budget-2026",
-    "source_url": "https://media-002-ca.cdn.govstack.com/memorialcentre-011-ca/media/21lhmi5p/budget-book-2026-final.pdf",
+    "source_url": "https://www.peterborough.ca/media/21lhmi5p/budget-book-2026-final.pdf",
     "source_table": "Chart 1 - Revenues by Type and Gross Operating Expenditures by Department",
     "review_status": "machine_checked",
-    "notes": "Final budget book after adoption; source table retains the column label Requested Budget"
+    "notes": "Final budget book after adoption; source table retains the column label Requested Budget. City adoption release separately summarizes $453.9M in spending on municipal services; the portal retains the exact $454,163,028 gross-operating total from Chart 1 and flags the source-level presentation difference."
   }
 ]

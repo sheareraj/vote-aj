@@ -1,14 +1,16 @@
 {
   "product": "Peterborough By The Numbers",
-  "status": "progressive-disclosure-pass-10",
-  "scope": "Plain-language presentation layer over budgets 2022-2026, verified Council votes and current outcome signals through 2025/2026",
+  "status": "pre-release-audit-pass-11",
+  "scope": "Plain-language presentation layer over budgets 2022-2026, recorded Council votes and current outcome signals through 2025/2026",
   "budgetSeriesCount": 22,
-  "verifiedMotionCount": 39,
+  "verifiedMotionCount": 36,
   "strongMayorActionCount": 13,
-  "outcomeMetricCount": 40,
-  "budgetDataStatus": "Approved/final 2022-2026 backbone loaded; 22 normalized service/component series now published; IPGM and corporate administration are exposed only from defensible post-reorganization start years; Public Works structural-break analysis and Legacy levy-offset history remain live",
-  "voteDataStatus": "39 verified recorded motions loaded from official City minutes. Strong Mayor Powers is retained as a dedicated topic and full decision timeline, positioned after the searchable vote archive.",
-  "outcomeDataStatus": "Freshness-first KPI layer leads with 2025 annual actuals published in 2026 for housing, transit, crime and homelessness. Older RGI, PPS-output and road-condition measures are demoted to historical context; infrastructure is explicitly flagged as a data-lag domain.",
+  "outcomeMetricCount": 41,
+  "dataQualityNoteCount": 4,
+  "budgetDataStatus": "Approved/final 2022-2026 backbone loaded; service trends use Net Requirement Before Indirect Revenues. A 2026 accounting bridge now distinguishes that measure from Allocated Indirect Revenue and Net Tax Levy. The City publication-level 2026 operating-total discrepancy is explicitly flagged.",
+  "voteDataStatus": "36 significant recorded motions are source-linked to official City minutes. The September 20 pre-release review corrected the 2024 homelessness funding package from four item-level records to the single 9-1 package vote shown in the official minutes.",
+  "outcomeDataStatus": "Freshness-first KPI layer leads with 2025 annual actuals published in 2026. The 2025 Peterborough CMA crime-rate change now uses Statistics Canada’s published +1% annual change rather than a calculation from rounded displayed rates.",
   "authoritativeSourcePolicy": "Official City of Peterborough, Peterborough Police Service, Statistics Canada and other primary-government sources are authoritative for their respective measures.",
-  "lastBuilt": "2026-09-15"
+  "correctionPolicy": "Material corrections are logged publicly at /data/methodology with source links and review dates.",
+  "lastBuilt": "2026-09-20"
 }

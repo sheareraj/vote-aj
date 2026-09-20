@@ -183,10 +183,11 @@ function TransitMetrics({ metrics }) {
 function PoliceMetrics({ metrics }) {
   const cma=metrics.filter(m=>m.metric_id==='cma_crime_severity_index');
   const crimeRate=metrics.filter(m=>m.metric_id==='cma_crime_rate');
-  const local=metrics.filter(m=>!['cma_crime_severity_index','cma_crime_rate'].includes(m.metric_id));
+  const crimeRateYoy=metrics.find(m=>m.metric_id==='cma_crime_rate_yoy' && m.period==='2025');
+  const local=metrics.filter(m=>!['cma_crime_severity_index','cma_crime_rate','cma_crime_rate_yoy'].includes(m.metric_id));
   return <div>
     <MiniSeries title="Statistics Canada Peterborough CMA Crime Severity Index" metrics={cma} lowerIsBetter={true} note="2025 is the latest annual Statistics Canada release. The CMA is broader than the Peterborough Police Service jurisdiction." />
-    <div className="mt-3"><MiniSeries title="Police-reported crime rate" metrics={crimeRate} lowerIsBetter={true} note="Severity and volume can move differently: Peterborough CMA CSI fell 6% in 2025 while the crime rate rose about 1%." /></div>
+    <div className="mt-3"><MiniSeries title="Police-reported crime rate" metrics={crimeRate} lowerIsBetter={true} note={`Severity and volume can move differently: Peterborough CMA CSI fell 6% in 2025 while Statistics Canada reports the crime rate changed ${crimeRateYoy?.value_display || '+1%'}. The published annual percentage uses the underlying series and will not necessarily equal a calculation from rounded display values.`} /></div>
     {local.length > 0 && <Historical title="Older PPS service-area outputs and context"><div className="grid gap-3 sm:grid-cols-2">{local.map(m=><MetricCard key={`${m.metric_id}-${m.period}`} metric={m} freshness={Number(m.period)<=2024 ? "Older" : undefined}/>)}</div></Historical>}
   </div>;
 }

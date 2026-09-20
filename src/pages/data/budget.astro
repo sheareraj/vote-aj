@@ -8,6 +8,7 @@ import overview from "../../data/budget-overview.json";
 import departments from "../../data/budget-departments-reported.json";
 import reconciliation from "../../data/budget-reconciliation.json";
 import serviceData from "../../data/service-net-requirements.json";
+import serviceTaxLevy2026 from "../../data/service-tax-levy-2026.json";
 import publicWorksComponents from "../../data/public-works-components.json";
 import publicWorksAnnotations from "../../data/public-works-annotations.json";
 ---
@@ -41,10 +42,10 @@ import publicWorksAnnotations from "../../data/public-works-annotations.json";
         <div class="max-w-4xl">
           <div class="text-xs font-black uppercase tracking-[0.2em] text-[#651024]">Normalized service trends</div>
           <h2 class="mt-2 text-3xl font-black tracking-tight md:text-4xl">Where is the growth actually showing up?</h2>
-          <p class="mt-4 max-w-3xl leading-7 text-[#7a6167]">These series follow stable municipal services rather than department names. The measure is the City's budgeted net requirement for each service — expenditures less direct revenues attributed to that service — recovered from approved prior-year columns and the final 2026 budget.</p>
+          <p class="mt-4 max-w-3xl leading-7 text-[#7a6167]">These series follow stable municipal services rather than department names. The trend measure is the City’s <strong>Net Requirement Before Indirect Revenues</strong>, recovered from approved prior-year columns and the final 2026 budget. For major 2026 services, the explorer also shows the bridge from that measure to <strong>Net Tax Levy</strong>.</p>
         </div>
         <div class="mt-8">
-          <ServiceTrendExplorer client:load serviceData={serviceData} />
+          <ServiceTrendExplorer client:load serviceData={serviceData} levyBridge={serviceTaxLevy2026} />
         </div>
       </section>
 

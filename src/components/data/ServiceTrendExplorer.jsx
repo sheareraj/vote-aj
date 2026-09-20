@@ -49,7 +49,7 @@ function scopeNote(item) {
   return "This series is built from approved prior-year columns in later City budget books where possible, plus the final 2026 source.";
 }
 
-export default function ServiceTrendExplorer({ serviceData }) {
+export default function ServiceTrendExplorer({ serviceData, levyBridge = [] }) {
   const series = useMemo(() => {
     const grouped = new Map();
     for (const row of serviceData) {
@@ -89,6 +89,7 @@ export default function ServiceTrendExplorer({ serviceData }) {
   const police = series.find((s) => s.service_id === "police");
   const capital = series.find((s) => s.service_id === "capital_financing");
   const publicWorks = series.find((s) => s.service_id === "public_works");
+  const selectedLevyBridge = levyBridge.find((row) => row.service_id === selected?.service_id && row.fiscal_year === 2026);
 
   if (!selected) return null;
 
@@ -120,7 +121,7 @@ export default function ServiceTrendExplorer({ serviceData }) {
               {comparabilityLabel(selected.comparability)} comparability
             </span>
           </div>
-          <p className="mt-3 text-sm leading-6 text-[#7a6167]">Budgeted net requirement: service expenditures less the direct revenues attributed to that service. It is not the same thing as the final city-wide property-tax levy.</p>
+          <p className="mt-3 text-sm leading-6 text-[#7a6167]"><strong>Trend measure:</strong> the City’s “Net Requirement Before Indirect Revenues” — the amount left after direct service revenues, before allocated indirect revenue is applied. It is not the same thing as the final Net Tax Levy attributed to the service.</p>
 
           <div className="mt-7 space-y-4">
             {selected.rows.map((row) => (
@@ -139,6 +140,20 @@ export default function ServiceTrendExplorer({ serviceData }) {
           <div className="mt-6 rounded-2xl bg-[#f8f1f3] p-4 text-sm leading-6 text-[#5f4149]">
             <strong>{selected.rangeLabel}:</strong> {selected.delta >= 0 ? "+" : ""}{money.format(selected.delta)} ({selected.pct >= 0 ? "+" : ""}{selected.pct.toFixed(1)}%).
           </div>
+
+          {selectedLevyBridge && (
+            <div className="mt-4 rounded-2xl border border-[#d9c3ca] bg-[#fffafb] p-4 text-sm text-[#5f4149]">
+              <div className="text-[10px] font-black uppercase tracking-[0.18em] text-[#651024]">2026 accounting bridge</div>
+              <div className="mt-3 grid gap-3 sm:grid-cols-3">
+                <div><div className="text-[10px] font-black uppercase tracking-wide text-[#8e747a]">Net requirement before indirect revenue</div><div className="mt-1 text-lg font-black text-[#3a1a22]">{compactMoney(selectedLevyBridge.net_requirement_before_indirect_revenues_cad)}</div></div>
+                <div><div className="text-[10px] font-black uppercase tracking-wide text-[#8e747a]">Allocated indirect revenue</div><div className="mt-1 text-lg font-black text-[#3a1a22]">{compactMoney(selectedLevyBridge.allocated_indirect_revenue_cad)}</div></div>
+                <div><div className="text-[10px] font-black uppercase tracking-wide text-[#8e747a]">Net tax levy</div><div className="mt-1 text-lg font-black text-[#651024]">{compactMoney(selectedLevyBridge.net_tax_levy_cad)}</div></div>
+              </div>
+              <p className="mt-3 leading-6">This bridge comes from the City’s 2026 taxpayer-allocation table. It shows why a service-trend figure should not be described as the amount ultimately funded by property taxes.</p>
+              <a href={selectedLevyBridge.source_url} target="_blank" rel="noreferrer" className="mt-2 inline-flex font-bold text-[#651024] underline decoration-[#c9aab3] underline-offset-2">Open official 2026 table ↗</a>
+            </div>
+          )}
+
           {selected.comparability !== "high" && (
             <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">
               <strong>Scope note:</strong> {scopeNote(selected)}
