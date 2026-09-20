@@ -1,0 +1,200 @@
+[
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2022,
+    "source_version_label": "2022 Approved",
+    "source_org_label": "City Council",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 708124,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2022,
+    "source_version_label": "2022 Approved",
+    "source_org_label": "Chief Administrative Officer",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 20913393,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2022,
+    "source_version_label": "2022 Approved",
+    "source_org_label": "Corporate and Legislative Services",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 13700801,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2022,
+    "source_version_label": "2022 Approved",
+    "source_org_label": "Infrastructure and Planning Services",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 82989954,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2022,
+    "source_version_label": "2022 Approved",
+    "source_org_label": "Community Services",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 102513776,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2022,
+    "source_version_label": "2022 Approved",
+    "source_org_label": "Financial Services - Other Financial",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 37939324,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2022,
+    "source_version_label": "2022 Approved",
+    "source_org_label": "Transfers to Organizations For Provision of Services",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 39181424,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2022,
+    "source_version_label": "2022 Approved",
+    "source_org_label": "TOTAL",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 297946795,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2022,
+    "source_version_label": "2022 Approved",
+    "source_org_label": "Tax Levy and Other Revenue",
+    "measure_type": "gross_revenue",
+    "amount_cad": 164840920,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2023,
+    "source_version_label": "2023 Recommended",
+    "source_org_label": "City Council",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 814981,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2023,
+    "source_version_label": "2023 Recommended",
+    "source_org_label": "Chief Administrative Officer",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 21821740,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2023,
+    "source_version_label": "2023 Recommended",
+    "source_org_label": "Corporate and Legislative Services",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 13796621,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2023,
+    "source_version_label": "2023 Recommended",
+    "source_org_label": "Infrastructure and Planning Services",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 88492808,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2023,
+    "source_version_label": "2023 Recommended",
+    "source_org_label": "Community Services",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 119933669,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2023,
+    "source_version_label": "2023 Recommended",
+    "source_org_label": "Financial Services - Other Financial",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 40880304,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2023,
+    "source_version_label": "2023 Recommended",
+    "source_org_label": "Transfers to Organizations For Provision of Services",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 40893541,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2023,
+    "source_version_label": "2023 Recommended",
+    "source_org_label": "TOTAL",
+    "measure_type": "gross_expenditure",
+    "amount_cad": 326633664,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  },
+  {
+    "source_id": "budget-2023-operating",
+    "fiscal_year": 2023,
+    "source_version_label": "2023 Recommended",
+    "source_org_label": "Tax Levy and Other Revenue",
+    "measure_type": "gross_revenue",
+    "amount_cad": 174469202,
+    "source_page": 4,
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked"
+  }
+]

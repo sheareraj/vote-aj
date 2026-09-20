@@ -1,0 +1,123 @@
+[
+  {
+    "councillor_id": "jeff-leal",
+    "display_name": "Jeff Leal",
+    "role": "Mayor",
+    "ward_number": null,
+    "ward_name": "",
+    "term_start": "",
+    "term_end": "",
+    "current_member": true,
+    "source_url": "https://www.peterborough.ca/council-city-hall/mayor-and-council/"
+  },
+  {
+    "councillor_id": "kevin-duguay",
+    "display_name": "Kevin Duguay",
+    "role": "Councillor",
+    "ward_number": 1,
+    "ward_name": "Otonabee",
+    "term_start": "",
+    "term_end": "",
+    "current_member": true,
+    "source_url": "https://www.peterborough.ca/council-city-hall/mayor-and-council/"
+  },
+  {
+    "councillor_id": "lesley-parnell",
+    "display_name": "Lesley Parnell",
+    "role": "Councillor",
+    "ward_number": 1,
+    "ward_name": "Otonabee",
+    "term_start": "",
+    "term_end": "",
+    "current_member": true,
+    "source_url": "https://www.peterborough.ca/council-city-hall/mayor-and-council/"
+  },
+  {
+    "councillor_id": "matt-crowley",
+    "display_name": "Matt Crowley",
+    "role": "Councillor",
+    "ward_number": 2,
+    "ward_name": "Monaghan",
+    "term_start": "",
+    "term_end": "",
+    "current_member": true,
+    "source_url": "https://www.peterborough.ca/council-city-hall/mayor-and-council/"
+  },
+  {
+    "councillor_id": "don-vassiliadis",
+    "display_name": "Don Vassiliadis",
+    "role": "Councillor",
+    "ward_number": 2,
+    "ward_name": "Monaghan",
+    "term_start": "",
+    "term_end": "",
+    "current_member": true,
+    "source_url": "https://www.peterborough.ca/council-city-hall/mayor-and-council/"
+  },
+  {
+    "councillor_id": "alex-bierk",
+    "display_name": "Alex Bierk",
+    "role": "Councillor",
+    "ward_number": 3,
+    "ward_name": "Town",
+    "term_start": "",
+    "term_end": "",
+    "current_member": true,
+    "source_url": "https://www.peterborough.ca/council-city-hall/mayor-and-council/"
+  },
+  {
+    "councillor_id": "joy-lachica",
+    "display_name": "Joy Lachica",
+    "role": "Councillor",
+    "ward_number": 3,
+    "ward_name": "Town",
+    "term_start": "",
+    "term_end": "",
+    "current_member": true,
+    "source_url": "https://www.peterborough.ca/council-city-hall/mayor-and-council/"
+  },
+  {
+    "councillor_id": "gary-baldwin",
+    "display_name": "Gary Baldwin",
+    "role": "Councillor",
+    "ward_number": 4,
+    "ward_name": "Ashburnham",
+    "term_start": "",
+    "term_end": "",
+    "current_member": true,
+    "source_url": "https://www.peterborough.ca/council-city-hall/mayor-and-council/"
+  },
+  {
+    "councillor_id": "keith-riel",
+    "display_name": "Keith Riel",
+    "role": "Councillor",
+    "ward_number": 4,
+    "ward_name": "Ashburnham",
+    "term_start": "",
+    "term_end": "",
+    "current_member": true,
+    "source_url": "https://www.peterborough.ca/council-city-hall/mayor-and-council/"
+  },
+  {
+    "councillor_id": "andrew-beamer",
+    "display_name": "Andrew Beamer",
+    "role": "Councillor",
+    "ward_number": 5,
+    "ward_name": "Northcrest",
+    "term_start": "",
+    "term_end": "",
+    "current_member": true,
+    "source_url": "https://www.peterborough.ca/council-city-hall/mayor-and-council/"
+  },
+  {
+    "councillor_id": "dave-haacke",
+    "display_name": "Dave Haacke",
+    "role": "Councillor",
+    "ward_number": 5,
+    "ward_name": "Northcrest",
+    "term_start": "",
+    "term_end": "",
+    "current_member": true,
+    "source_url": "https://www.peterborough.ca/council-city-hall/mayor-and-council/"
+  }
+]

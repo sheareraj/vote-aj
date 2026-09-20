@@ -1,0 +1,54 @@
+[
+  {
+    "service_id": "social_services",
+    "canonical_service": "Social Services",
+    "fiscal_year": 2026,
+    "net_requirement_before_indirect_revenues_cad": 16700452,
+    "allocated_indirect_revenue_cad": -1106984,
+    "net_tax_levy_cad": 15593468,
+    "source_id": "budget-2026",
+    "source_url": "https://www.peterborough.ca/media/21lhmi5p/budget-book-2026-final.pdf",
+    "source_table": "What a Residential Tax Payer Pays for Various Municipal Services",
+    "review_status": "verified_primary_source",
+    "notes": "Shows the 2026 bridge from the service trend measure to the tax-levy allocation."
+  },
+  {
+    "service_id": "fire",
+    "canonical_service": "Fire Services",
+    "fiscal_year": 2026,
+    "net_requirement_before_indirect_revenues_cad": 21097276,
+    "allocated_indirect_revenue_cad": -1398426,
+    "net_tax_levy_cad": 19698850,
+    "source_id": "budget-2026",
+    "source_url": "https://www.peterborough.ca/media/21lhmi5p/budget-book-2026-final.pdf",
+    "source_table": "What a Residential Tax Payer Pays for Various Municipal Services",
+    "review_status": "verified_primary_source",
+    "notes": "Shows the 2026 bridge from the service trend measure to the tax-levy allocation."
+  },
+  {
+    "service_id": "capital_financing",
+    "canonical_service": "Capital Financing Costs",
+    "fiscal_year": 2026,
+    "net_requirement_before_indirect_revenues_cad": 41295653,
+    "allocated_indirect_revenue_cad": -15077269,
+    "net_tax_levy_cad": 26218384,
+    "source_id": "budget-2026",
+    "source_url": "https://www.peterborough.ca/media/21lhmi5p/budget-book-2026-final.pdf",
+    "source_table": "What a Residential Tax Payer Pays for Various Municipal Services",
+    "review_status": "verified_primary_source",
+    "notes": "Shows the 2026 bridge from the service trend measure to the tax-levy allocation."
+  },
+  {
+    "service_id": "police",
+    "canonical_service": "Police Services",
+    "fiscal_year": 2026,
+    "net_requirement_before_indirect_revenues_cad": 41286366,
+    "allocated_indirect_revenue_cad": -2736654,
+    "net_tax_levy_cad": 38549712,
+    "source_id": "budget-2026",
+    "source_url": "https://www.peterborough.ca/media/21lhmi5p/budget-book-2026-final.pdf",
+    "source_table": "What a Residential Tax Payer Pays for Various Municipal Services",
+    "review_status": "verified_primary_source",
+    "notes": "Shows the 2026 bridge from the service trend measure to the tax-levy allocation."
+  }
+]

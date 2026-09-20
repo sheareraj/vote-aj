@@ -1,0 +1,65 @@
+[
+  {
+    "order_key": 1,
+    "category": "Personnel costs",
+    "amount_cad": 4980859,
+    "impact_pct_of_2025_levy": 2.71,
+    "source_ref": "2.00",
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "order_key": 2,
+    "category": "Capital financing and other capital requirements",
+    "amount_cad": 4758700,
+    "impact_pct_of_2025_levy": 2.59,
+    "source_ref": "3.00",
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "order_key": 3,
+    "category": "Inflationary factors and other increased costs",
+    "amount_cad": 2294880,
+    "impact_pct_of_2025_levy": 1.25,
+    "source_ref": "4.00",
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "order_key": 4,
+    "category": "Decreased revenues",
+    "amount_cad": 3496427,
+    "impact_pct_of_2025_levy": 1.9,
+    "source_ref": "5.00",
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "order_key": 5,
+    "category": "Increased revenues / decreased expenditures",
+    "amount_cad": -6481619,
+    "impact_pct_of_2025_levy": -3.53,
+    "source_ref": "6.00",
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "order_key": 6,
+    "category": "Outside agencies",
+    "amount_cad": 4234510,
+    "impact_pct_of_2025_levy": 2.3,
+    "source_ref": "7.00",
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "order_key": 7,
+    "category": "General inflation and other factors",
+    "amount_cad": 1262938,
+    "impact_pct_of_2025_levy": 0.69,
+    "source_ref": "9.00",
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  }
+]

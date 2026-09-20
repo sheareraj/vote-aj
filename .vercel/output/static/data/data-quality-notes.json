@@ -1,0 +1,58 @@
+[
+  {
+    "note_id": "vote-2024-homelessness-package",
+    "area": "Council votes",
+    "status": "resolved",
+    "title": "2024 homelessness funding vote corrected to one package motion",
+    "detail": "Official General Committee minutes record the four 2025 homelessness funding items as one combined motion carried 9–1, with one member not listed in the recorded vote. Four prior item-level vote records were removed and replaced by the recorded package vote.",
+    "primary_source_id": "minutes-2024-budget-general",
+    "secondary_source_id": "",
+    "last_reviewed": "2026-09-20",
+    "primary_source_url": "https://pub-peterborough.escribemeetings.com/FileStream.ashx?DocumentId=38914",
+    "primary_source_name": "General Committee Minutes - 2025 Budget Deliberations",
+    "secondary_source_url": null,
+    "secondary_source_name": null
+  },
+  {
+    "note_id": "crime-rate-2025-rounding",
+    "area": "Outcomes",
+    "status": "resolved",
+    "title": "2025 crime-rate annual change uses Statistics Canada’s published percentage",
+    "detail": "Statistics Canada reports Peterborough CMA’s 2025 crime rate at 5,385 per 100,000 and the 2024-to-2025 change at +1%. The portal now uses the published +1% rather than recalculating a percentage from rounded displayed rates.",
+    "primary_source_id": "statcan-csi-2025",
+    "secondary_source_id": "statcan-csi-2024",
+    "last_reviewed": "2026-09-20",
+    "primary_source_url": "https://www150.statcan.gc.ca/n1/daily-quotidien/260722/t004a-eng.htm",
+    "primary_source_name": "Statistics Canada - Peterborough CMA Crime Severity Index 2025",
+    "secondary_source_url": "https://www150.statcan.gc.ca/n1/daily-quotidien/250722/t004a-eng.htm",
+    "secondary_source_name": "Statistics Canada - Peterborough CMA Crime Severity Index 2024"
+  },
+  {
+    "note_id": "budget-2026-operating-total",
+    "area": "Budget",
+    "status": "source_discrepancy",
+    "title": "2026 City publications use two operating-spending presentations",
+    "detail": "The final 2026 Budget Book Chart 1 reports gross operating expenditures of $454,163,028. The City’s budget-adoption release summarizes $453.9 million in spending on municipal services. The release does not explain the difference, so the portal uses the detailed final Budget Book figure for the chart and flags the summary discrepancy instead of blending the values.",
+    "primary_source_id": "budget-2026",
+    "secondary_source_id": "budget-2026-adopted",
+    "last_reviewed": "2026-09-20",
+    "primary_source_url": "https://www.peterborough.ca/media/21lhmi5p/budget-book-2026-final.pdf",
+    "primary_source_name": "2026 Budget Book",
+    "secondary_source_url": "https://www.peterborough.ca/news/posts/city-of-peterborough-2026-budget-adopted/",
+    "secondary_source_name": "City of Peterborough 2026 Budget Adopted"
+  },
+  {
+    "note_id": "budget-2026-net-levy-bridge",
+    "area": "Budget",
+    "status": "resolved",
+    "title": "Service trends distinguished from tax-levy attribution",
+    "detail": "The service trend series uses the City’s Net Requirement Before Indirect Revenues measure. A 2026 bridge now shows Allocated Indirect Revenue and Net Tax Levy for selected major services so readers do not mistake the trend measure for the amount ultimately attributed to property taxes.",
+    "primary_source_id": "budget-2026",
+    "secondary_source_id": "",
+    "last_reviewed": "2026-09-20",
+    "primary_source_url": "https://www.peterborough.ca/media/21lhmi5p/budget-book-2026-final.pdf",
+    "primary_source_name": "2026 Budget Book",
+    "secondary_source_url": null,
+    "secondary_source_name": null
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "fiscal_year": 2022,
+    "version_label": "2022 Approved",
+    "published_column_label": "2022 Approved",
+    "gross_operating_expenditure_cad": 297946795,
+    "taxation_revenue_cad": 147400030,
+    "source_id": "budget-2023-operating",
+    "source_url": "https://media-002-ca.cdn.govstack.com/memorialcentre-011-ca/media/4xgnhf1i/2023-operating-book-draft2-1.pdf",
+    "source_table": "Summary of Gross Revenue & Expenditures",
+    "review_status": "machine_checked",
+    "notes": "Prior-year approved figures published in the 2023 operating book"
+  },
+  {
+    "fiscal_year": 2023,
+    "version_label": "2023 Approved",
+    "published_column_label": "2023 Approved",
+    "gross_operating_expenditure_cad": 326812141,
+    "taxation_revenue_cad": 154044341,
+    "source_id": "budget-2024",
+    "source_url": "https://media-002-ca.cdn.govstack.com/memorialcentre-011-ca/media/3orlt1it/2024-budget-highlights-draft-webversion.pdf",
+    "source_table": "Chart 1 - Revenues by Type and Gross Operating Expenditures by Department",
+    "review_status": "machine_checked",
+    "notes": "Prior-year approved figures published in the 2024 budget book"
+  },
+  {
+    "fiscal_year": 2024,
+    "version_label": "2024 Approved",
+    "published_column_label": "2024 Approved",
+    "gross_operating_expenditure_cad": 363108377,
+    "taxation_revenue_cad": 171934087,
+    "source_id": "budget-2025",
+    "source_url": "https://media-002-ca.cdn.govstack.com/memorialcentre-011-ca/media/qdynmy1j/budget-book-2025-draft-webversion.pdf",
+    "source_table": "Chart 1 - Revenues by Type and Gross Operating Expenditures by Department",
+    "review_status": "machine_checked",
+    "notes": "Prior-year approved figures published in the 2025 budget book"
+  },
+  {
+    "fiscal_year": 2025,
+    "version_label": "2025 Approved",
+    "published_column_label": "2025 Approved",
+    "gross_operating_expenditure_cad": 432730055,
+    "taxation_revenue_cad": 183833050,
+    "source_id": "budget-2026",
+    "source_url": "https://www.peterborough.ca/media/21lhmi5p/budget-book-2026-final.pdf",
+    "source_table": "Chart 1 - Revenues by Type and Gross Operating Expenditures by Department",
+    "review_status": "machine_checked",
+    "notes": "Prior-year approved figures published in the final 2026 budget book"
+  },
+  {
+    "fiscal_year": 2026,
+    "version_label": "2026 Final Budget Book",
+    "published_column_label": "2026 Requested Budget",
+    "gross_operating_expenditure_cad": 454163028,
+    "taxation_revenue_cad": 198379745,
+    "source_id": "budget-2026",
+    "source_url": "https://www.peterborough.ca/media/21lhmi5p/budget-book-2026-final.pdf",
+    "source_table": "Chart 1 - Revenues by Type and Gross Operating Expenditures by Department",
+    "review_status": "machine_checked",
+    "notes": "Final budget book after adoption; source table retains the column label Requested Budget. City adoption release separately summarizes $453.9M in spending on municipal services; the portal retains the exact $454,163,028 gross-operating total from Chart 1 and flags the source-level presentation difference."
+  }
+]

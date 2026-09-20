@@ -1,0 +1,346 @@
+[
+  {
+    "fiscal_year": 2022,
+    "version_label": "2022 Approved",
+    "source_org_label": "City Council",
+    "amount_cad": 708124,
+    "source_id": "budget-2023-operating",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2022,
+    "version_label": "2022 Approved",
+    "source_org_label": "Chief Administrative Officer",
+    "amount_cad": 20913393,
+    "source_id": "budget-2023-operating",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2022,
+    "version_label": "2022 Approved",
+    "source_org_label": "Corporate and Legislative Services",
+    "amount_cad": 13700801,
+    "source_id": "budget-2023-operating",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2022,
+    "version_label": "2022 Approved",
+    "source_org_label": "Infrastructure and Planning Services",
+    "amount_cad": 82989954,
+    "source_id": "budget-2023-operating",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2022,
+    "version_label": "2022 Approved",
+    "source_org_label": "Community Services",
+    "amount_cad": 102513776,
+    "source_id": "budget-2023-operating",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2022,
+    "version_label": "2022 Approved",
+    "source_org_label": "Financial Services - Other Financial",
+    "amount_cad": 37939324,
+    "source_id": "budget-2023-operating",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2022,
+    "version_label": "2022 Approved",
+    "source_org_label": "Transfers to Organizations For Provision of Services",
+    "amount_cad": 39181424,
+    "source_id": "budget-2023-operating",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2023,
+    "version_label": "2023 Approved",
+    "source_org_label": "Council",
+    "amount_cad": 805206,
+    "source_id": "budget-2024",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2023,
+    "version_label": "2023 Approved",
+    "source_org_label": "Chief Administrative Officer",
+    "amount_cad": 1694471,
+    "source_id": "budget-2024",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2023,
+    "version_label": "2023 Approved",
+    "source_org_label": "Finance and Corporate Support Services",
+    "amount_cad": 10801647,
+    "source_id": "budget-2024",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2023,
+    "version_label": "2023 Approved",
+    "source_org_label": "Legislative Services",
+    "amount_cad": 4816901,
+    "source_id": "budget-2024",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2023,
+    "version_label": "2023 Approved",
+    "source_org_label": "Infrastructure, Planning and Growth Management",
+    "amount_cad": 18532733,
+    "source_id": "budget-2024",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2023,
+    "version_label": "2023 Approved",
+    "source_org_label": "Municipal Operations",
+    "amount_cad": 67257588,
+    "source_id": "budget-2024",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2023,
+    "version_label": "2023 Approved",
+    "source_org_label": "Community Services",
+    "amount_cad": 141421515,
+    "source_id": "budget-2024",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2023,
+    "version_label": "2023 Approved",
+    "source_org_label": "Financial Services Other",
+    "amount_cad": 38916052,
+    "source_id": "budget-2024",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2023,
+    "version_label": "2023 Approved",
+    "source_org_label": "Outside Organizations",
+    "amount_cad": 42566027,
+    "source_id": "budget-2024",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2024,
+    "version_label": "2024 Approved",
+    "source_org_label": "Council",
+    "amount_cad": 873754,
+    "source_id": "budget-2025",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2024,
+    "version_label": "2024 Approved",
+    "source_org_label": "Chief Administrative Officer",
+    "amount_cad": 3131727,
+    "source_id": "budget-2025",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2024,
+    "version_label": "2024 Approved",
+    "source_org_label": "Finance and Corporate Support Services",
+    "amount_cad": 14133045,
+    "source_id": "budget-2025",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2024,
+    "version_label": "2024 Approved",
+    "source_org_label": "Legislative Services",
+    "amount_cad": 6285254,
+    "source_id": "budget-2025",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2024,
+    "version_label": "2024 Approved",
+    "source_org_label": "Infrastructure, Planning and Growth Management",
+    "amount_cad": 21446271,
+    "source_id": "budget-2025",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2024,
+    "version_label": "2024 Approved",
+    "source_org_label": "Municipal Operations",
+    "amount_cad": 72072240,
+    "source_id": "budget-2025",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2024,
+    "version_label": "2024 Approved",
+    "source_org_label": "Community Services",
+    "amount_cad": 154765079,
+    "source_id": "budget-2025",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2024,
+    "version_label": "2024 Approved",
+    "source_org_label": "Financial Services Other",
+    "amount_cad": 42328858,
+    "source_id": "budget-2025",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2024,
+    "version_label": "2024 Approved",
+    "source_org_label": "Outside Organizations",
+    "amount_cad": 48072352,
+    "source_id": "budget-2025",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2025,
+    "version_label": "2025 Approved",
+    "source_org_label": "Council",
+    "amount_cad": 919297,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2025,
+    "version_label": "2025 Approved",
+    "source_org_label": "Chief Administrative Officer",
+    "amount_cad": 3143926,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2025,
+    "version_label": "2025 Approved",
+    "source_org_label": "Finance and Corporate Support Services",
+    "amount_cad": 17485663,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2025,
+    "version_label": "2025 Approved",
+    "source_org_label": "Legislative Services",
+    "amount_cad": 7948189,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2025,
+    "version_label": "2025 Approved",
+    "source_org_label": "Infrastructure, Planning and Growth Management",
+    "amount_cad": 23075855,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2025,
+    "version_label": "2025 Approved",
+    "source_org_label": "Municipal Operations",
+    "amount_cad": 114994767,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2025,
+    "version_label": "2025 Approved",
+    "source_org_label": "Community Services",
+    "amount_cad": 170338499,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2025,
+    "version_label": "2025 Approved",
+    "source_org_label": "Financial Services Other",
+    "amount_cad": 44416111,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2025,
+    "version_label": "2025 Approved",
+    "source_org_label": "Outside Organizations",
+    "amount_cad": 50407748,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2026,
+    "version_label": "2026 Final Budget Book",
+    "source_org_label": "Council",
+    "amount_cad": 934784,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2026,
+    "version_label": "2026 Final Budget Book",
+    "source_org_label": "Chief Administrative Officer",
+    "amount_cad": 3117765,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2026,
+    "version_label": "2026 Final Budget Book",
+    "source_org_label": "Finance and Corporate Support Services",
+    "amount_cad": 18525480,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2026,
+    "version_label": "2026 Final Budget Book",
+    "source_org_label": "Legislative Services",
+    "amount_cad": 8433989,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2026,
+    "version_label": "2026 Final Budget Book",
+    "source_org_label": "Infrastructure, Planning and Growth Management",
+    "amount_cad": 24466131,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2026,
+    "version_label": "2026 Final Budget Book",
+    "source_org_label": "Municipal Operations",
+    "amount_cad": 114781904,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2026,
+    "version_label": "2026 Final Budget Book",
+    "source_org_label": "Community Services",
+    "amount_cad": 178647088,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2026,
+    "version_label": "2026 Final Budget Book",
+    "source_org_label": "Financial Services Other",
+    "amount_cad": 50613627,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  },
+  {
+    "fiscal_year": 2026,
+    "version_label": "2026 Final Budget Book",
+    "source_org_label": "Outside Organizations",
+    "amount_cad": 54642258,
+    "source_id": "budget-2026",
+    "review_status": "machine_checked"
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "topic_id": "finance",
+    "topic_name": "Taxes & Finance",
+    "parent_topic_id": "",
+    "public_label": "Taxes & Finance",
+    "description": "Tax levy budgets reserves debt and fees"
+  },
+  {
+    "topic_id": "finance_tax",
+    "topic_name": "Taxation",
+    "parent_topic_id": "finance",
+    "public_label": "Taxes",
+    "description": "Tax rates tax levy assessment and tax policy"
+  },
+  {
+    "topic_id": "finance_budget",
+    "topic_name": "Budget & Spending",
+    "parent_topic_id": "finance",
+    "public_label": "Budget & Spending",
+    "description": "Operating budgets spending reductions and additions"
+  },
+  {
+    "topic_id": "finance_debt",
+    "topic_name": "Debt & Capital Financing",
+    "parent_topic_id": "finance",
+    "public_label": "Debt & Financing",
+    "description": "Borrowing debt charges reserves and capital financing"
+  },
+  {
+    "topic_id": "housing",
+    "topic_name": "Housing",
+    "parent_topic_id": "",
+    "public_label": "Housing",
+    "description": "Housing supply affordability and housing programs"
+  },
+  {
+    "topic_id": "homelessness",
+    "topic_name": "Homelessness",
+    "parent_topic_id": "",
+    "public_label": "Homelessness",
+    "description": "Shelters outreach encampments supportive housing and homelessness services"
+  },
+  {
+    "topic_id": "public_safety",
+    "topic_name": "Public Safety",
+    "parent_topic_id": "",
+    "public_label": "Public Safety",
+    "description": "Police fire emergency management by-law and community safety"
+  },
+  {
+    "topic_id": "public_safety_police",
+    "topic_name": "Police",
+    "parent_topic_id": "public_safety",
+    "public_label": "Police",
+    "description": "Police funding policy and operations"
+  },
+  {
+    "topic_id": "public_safety_fire",
+    "topic_name": "Fire",
+    "parent_topic_id": "public_safety",
+    "public_label": "Fire",
+    "description": "Fire service funding policy and capital"
+  },
+  {
+    "topic_id": "econ",
+    "topic_name": "Economic Development",
+    "parent_topic_id": "",
+    "public_label": "Economic Development",
+    "description": "Investment jobs business attraction and employment lands"
+  },
+  {
+    "topic_id": "econ_airport",
+    "topic_name": "Airport & Aerospace",
+    "parent_topic_id": "econ",
+    "public_label": "Airport & Aerospace",
+    "description": "Airport economic development and aerospace cluster"
+  },
+  {
+    "topic_id": "development",
+    "topic_name": "Development & Planning",
+    "parent_topic_id": "",
+    "public_label": "Development & Planning",
+    "description": "Zoning approvals planning policy growth management and building services"
+  },
+  {
+    "topic_id": "infrastructure",
+    "topic_name": "Infrastructure",
+    "parent_topic_id": "",
+    "public_label": "Infrastructure",
+    "description": "Roads bridges sewer water facilities and asset management"
+  },
+  {
+    "topic_id": "transit",
+    "topic_name": "Transit",
+    "parent_topic_id": "",
+    "public_label": "Transit",
+    "description": "Transit routes operating service and fleet"
+  },
+  {
+    "topic_id": "recreation",
+    "topic_name": "Recreation Parks & Culture",
+    "parent_topic_id": "",
+    "public_label": "Recreation & Quality of Life",
+    "description": "Parks arenas recreation culture library and community facilities"
+  },
+  {
+    "topic_id": "environment",
+    "topic_name": "Environment & Waste",
+    "parent_topic_id": "",
+    "public_label": "Environment",
+    "description": "Waste landfill climate trees and environmental services"
+  },
+  {
+    "topic_id": "governance",
+    "topic_name": "Governance & Accountability",
+    "parent_topic_id": "",
+    "public_label": "Governance",
+    "description": "Procedure transparency compensation appointments and administration"
+  },
+  {
+    "topic_id": "external",
+    "topic_name": "External Agencies & Grants",
+    "parent_topic_id": "",
+    "public_label": "Outside Organizations",
+    "description": "Transfers grants boards agencies and service partners"
+  },
+  {
+    "topic_id": "social",
+    "topic_name": "Social Services",
+    "parent_topic_id": "",
+    "public_label": "Social Services",
+    "description": "Ontario Works childcare social assistance and related services"
+  },
+  {
+    "topic_id": "health",
+    "topic_name": "Health & Paramedics",
+    "parent_topic_id": "",
+    "public_label": "Health & Paramedics",
+    "description": "Public health paramedics physician recruitment and health-related transfers"
+  },
+  {
+    "topic_id": "strong_mayor",
+    "topic_name": "Strong Mayor Powers",
+    "parent_topic_id": "",
+    "public_label": "Strong Mayor Powers",
+    "description": "Mayoral decisions directions delegated authorities and Council votes governed by Part VI.1 strong-mayor powers."
+  }
+]

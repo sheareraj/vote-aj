@@ -1,0 +1,26 @@
+[
+  {
+    "as_of": "2023-10",
+    "reserve_balance_cad": 3789978,
+    "commitments_cad": 1552715,
+    "uncommitted_cad": 2237263,
+    "source_id": "budget-2024",
+    "source_label": "2024 budget reserve schedule (Oct. 2023)"
+  },
+  {
+    "as_of": "2024-10",
+    "reserve_balance_cad": 5994021,
+    "commitments_cad": 2135593,
+    "uncommitted_cad": 3858428,
+    "source_id": "budget-2025",
+    "source_label": "2025 budget reserve schedule (Oct. 2024)"
+  },
+  {
+    "as_of": "2025-10",
+    "reserve_balance_cad": 9418533,
+    "commitments_cad": 3805306,
+    "uncommitted_cad": 5613227,
+    "source_id": "budget-2026",
+    "source_label": "2026 budget reserve schedule (Oct. 2025)"
+  }
+]
