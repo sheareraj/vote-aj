@@ -1,0 +1,35 @@
+---
+const destination = 'https://www.youtube.com/playlist?list=PLfzsxh8e8t4A';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      http-equiv="refresh"
+      content={`0;url=${destination}`}
+    />
+
+    <meta name="robots" content="noindex" />
+
+    <link
+      rel="canonical"
+      href={destination}
+    />
+
+    <title>Diary of a Transparent Candidate | AJ Shearer</title>
+  </head>
+
+  <body>
+    <script define:vars={{ destination }}>
+      window.location.replace(destination);
+    </script>
+
+    <p>
+      Redirecting to the Diary of a Transparent Candidate...
+      <a href={destination}>Click here if you are not redirected.</a>
+    </p>
+  </body>
+</html>
